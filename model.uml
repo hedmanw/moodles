@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_1_xm0HPCEeSkvsspMFpoeg" name="model"/>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_1_xm0HPCEeSkvsspMFpoeg" name="model">
+  <packagedElement xmi:type="uml:Class" xmi:id="_R0bz8HScEeSXwZsvCuIXXA" name="Example"/>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_VnKesHScEeSXwZsvCuIXXA" name="SomeActivity" node="_6ABHEHScEeSXwZsvCuIXXA _8UlKsHScEeSXwZsvCuIXXA __5L54HScEeSXwZsvCuIXXA _D3W_oHSdEeSXwZsvCuIXXA _ExuWIHSdEeSXwZsvCuIXXA _F_fw0HSdEeSXwZsvCuIXXA">
+    <ownedParameter xmi:type="uml:Parameter" xmi:id="_uTS54HSfEeSXwZsvCuIXXA" name="exampleParameter" type="_R0bz8HScEeSXwZsvCuIXXA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_NTwBkHSdEeSXwZsvCuIXXA" name="yes" target="_8UlKsHScEeSXwZsvCuIXXA" source="_6ABHEHScEeSXwZsvCuIXXA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_OkPZEHSdEeSXwZsvCuIXXA" target="_D3W_oHSdEeSXwZsvCuIXXA" source="__5L54HScEeSXwZsvCuIXXA">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_W2Nu8HSgEeSXwZsvCuIXXA" value="true"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_QTH8wHSdEeSXwZsvCuIXXA" target="_ExuWIHSdEeSXwZsvCuIXXA" source="__5L54HScEeSXwZsvCuIXXA">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_ThJQkHSgEeSXwZsvCuIXXA" name="someValue"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_U9rAUHSdEeSXwZsvCuIXXA" name="end happening" target="_F_fw0HSdEeSXwZsvCuIXXA" source="_ExuWIHSdEeSXwZsvCuIXXA"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_6ABHEHScEeSXwZsvCuIXXA" name="InitialNode1" outgoing="_NTwBkHSdEeSXwZsvCuIXXA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_8UlKsHScEeSXwZsvCuIXXA" name="Select Reservation stuff" incoming="_NTwBkHSdEeSXwZsvCuIXXA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="__5L54HScEeSXwZsvCuIXXA" name="isSomething" outgoing="_OkPZEHSdEeSXwZsvCuIXXA _QTH8wHSdEeSXwZsvCuIXXA"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_D3W_oHSdEeSXwZsvCuIXXA" name="ActivityFinalNode1" incoming="_OkPZEHSdEeSXwZsvCuIXXA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_ExuWIHSdEeSXwZsvCuIXXA" name="Some other action" incoming="_QTH8wHSdEeSXwZsvCuIXXA" outgoing="_U9rAUHSdEeSXwZsvCuIXXA"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_F_fw0HSdEeSXwZsvCuIXXA" name="ActivityFinalNode2" incoming="_U9rAUHSdEeSXwZsvCuIXXA"/>
+  </packagedElement>
+</uml:Model>
