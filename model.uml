@@ -1,21 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_1_xm0HPCEeSkvsspMFpoeg" name="model">
   <packagedElement xmi:type="uml:Class" xmi:id="_R0bz8HScEeSXwZsvCuIXXA" name="Example"/>
-  <packagedElement xmi:type="uml:Activity" xmi:id="_VnKesHScEeSXwZsvCuIXXA" name="SomeActivity" node="_6ABHEHScEeSXwZsvCuIXXA _8UlKsHScEeSXwZsvCuIXXA __5L54HScEeSXwZsvCuIXXA _D3W_oHSdEeSXwZsvCuIXXA _ExuWIHSdEeSXwZsvCuIXXA _F_fw0HSdEeSXwZsvCuIXXA">
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="_uTS54HSfEeSXwZsvCuIXXA" name="exampleParameter" type="_R0bz8HScEeSXwZsvCuIXXA"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_NTwBkHSdEeSXwZsvCuIXXA" name="yes" target="_8UlKsHScEeSXwZsvCuIXXA" source="_6ABHEHScEeSXwZsvCuIXXA"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_OkPZEHSdEeSXwZsvCuIXXA" target="_D3W_oHSdEeSXwZsvCuIXXA" source="__5L54HScEeSXwZsvCuIXXA">
-      <guard xmi:type="uml:LiteralBoolean" xmi:id="_W2Nu8HSgEeSXwZsvCuIXXA" value="true"/>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_VnKesHScEeSXwZsvCuIXXA" name="SomeActivity" node="_6ABHEHScEeSXwZsvCuIXXA _8UlKsHScEeSXwZsvCuIXXA _D3W_oHSdEeSXwZsvCuIXXA _aORjAHS4EeSa8dvmBbGoMA _c97nMHS4EeSa8dvmBbGoMA _j9ou0HS5EeSa8dvmBbGoMA _1F20AHS5EeSa8dvmBbGoMA _8vBk0HS5EeSa8dvmBbGoMA _HHaU8HS6EeSa8dvmBbGoMA _eHuO4HS6EeSa8dvmBbGoMA _yw0Z0HS6EeSa8dvmBbGoMA _4ToiIHS6EeSa8dvmBbGoMA _BjiAMHS7EeSa8dvmBbGoMA _8iaaQHS7EeSa8dvmBbGoMA _B_tJYHS8EeSa8dvmBbGoMA _D_FnMHS8EeSa8dvmBbGoMA _G_LUEHS8EeSa8dvmBbGoMA">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_NTwBkHSdEeSXwZsvCuIXXA" target="_8UlKsHScEeSXwZsvCuIXXA" source="_6ABHEHScEeSXwZsvCuIXXA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_mHLDoHS4EeSa8dvmBbGoMA" target="_aORjAHS4EeSa8dvmBbGoMA" source="_c97nMHS4EeSa8dvmBbGoMA">
+      <guard xmi:type="uml:LiteralString" xmi:id="_8ktnsHS4EeSa8dvmBbGoMA" value="reservations done"/>
     </edge>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_QTH8wHSdEeSXwZsvCuIXXA" target="_ExuWIHSdEeSXwZsvCuIXXA" source="__5L54HScEeSXwZsvCuIXXA">
-      <guard xmi:type="uml:LiteralBoolean" xmi:id="_ThJQkHSgEeSXwZsvCuIXXA" name="someValue"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_zWNQwHS4EeSa8dvmBbGoMA" target="_8UlKsHScEeSXwZsvCuIXXA" source="_c97nMHS4EeSa8dvmBbGoMA">
+      <guard xmi:type="uml:LiteralString" xmi:id="_6FNfYHS4EeSa8dvmBbGoMA" value="reservations left"/>
     </edge>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_U9rAUHSdEeSXwZsvCuIXXA" name="end happening" target="_F_fw0HSdEeSXwZsvCuIXXA" source="_ExuWIHSdEeSXwZsvCuIXXA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_zYtVsHS5EeSa8dvmBbGoMA" target="_j9ou0HS5EeSa8dvmBbGoMA" source="_aORjAHS4EeSa8dvmBbGoMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_-DfdYHS5EeSa8dvmBbGoMA" target="_8vBk0HS5EeSa8dvmBbGoMA" source="_j9ou0HS5EeSa8dvmBbGoMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_-2Xr0HS5EeSa8dvmBbGoMA" target="_1F20AHS5EeSa8dvmBbGoMA" source="_8vBk0HS5EeSa8dvmBbGoMA">
+      <guard xmi:type="uml:LiteralString" xmi:id="_AwrcYHS6EeSa8dvmBbGoMA" value="does not exist"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_P5ZvAHS6EeSa8dvmBbGoMA" target="_HHaU8HS6EeSa8dvmBbGoMA" source="_8vBk0HS5EeSa8dvmBbGoMA">
+      <guard xmi:type="uml:LiteralString" xmi:id="_R9WjwHS6EeSa8dvmBbGoMA" value="exists"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WHisQHS6EeSa8dvmBbGoMA" target="_HHaU8HS6EeSa8dvmBbGoMA" source="_1F20AHS5EeSa8dvmBbGoMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_-rrCQHS6EeSa8dvmBbGoMA" target="_eHuO4HS6EeSa8dvmBbGoMA" source="_HHaU8HS6EeSa8dvmBbGoMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_DdGJ4HS7EeSa8dvmBbGoMA" target="_BjiAMHS7EeSa8dvmBbGoMA" source="_eHuO4HS6EeSa8dvmBbGoMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_EfBg8HS7EeSa8dvmBbGoMA" target="_yw0Z0HS6EeSa8dvmBbGoMA" source="_BjiAMHS7EeSa8dvmBbGoMA">
+      <guard xmi:type="uml:LiteralString" xmi:id="_VHo5AHS7EeSa8dvmBbGoMA" value="> 0"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_FbzSQHS7EeSa8dvmBbGoMA" target="_4ToiIHS6EeSa8dvmBbGoMA" source="_BjiAMHS7EeSa8dvmBbGoMA">
+      <guard xmi:type="uml:LiteralString" xmi:id="_RQXsgHS7EeSa8dvmBbGoMA" value="== 0"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_GHkMEHS7EeSa8dvmBbGoMA" target="_4ToiIHS6EeSa8dvmBbGoMA" source="_yw0Z0HS6EeSa8dvmBbGoMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_lMy-sHS7EeSa8dvmBbGoMA" target="_D3W_oHSdEeSXwZsvCuIXXA" source="_4ToiIHS6EeSa8dvmBbGoMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Lp8aEHS8EeSa8dvmBbGoMA" target="_8iaaQHS7EeSa8dvmBbGoMA" source="_8UlKsHScEeSXwZsvCuIXXA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_MVhGoHS8EeSa8dvmBbGoMA" target="_B_tJYHS8EeSa8dvmBbGoMA" source="_8iaaQHS7EeSa8dvmBbGoMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_M15P0HS8EeSa8dvmBbGoMA" target="_D_FnMHS8EeSa8dvmBbGoMA" source="_B_tJYHS8EeSa8dvmBbGoMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Nfj34HS8EeSa8dvmBbGoMA" target="_G_LUEHS8EeSa8dvmBbGoMA" source="_D_FnMHS8EeSa8dvmBbGoMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Px5G4HS8EeSa8dvmBbGoMA" target="_c97nMHS4EeSa8dvmBbGoMA" source="_G_LUEHS8EeSa8dvmBbGoMA"/>
     <node xmi:type="uml:InitialNode" xmi:id="_6ABHEHScEeSXwZsvCuIXXA" name="InitialNode1" outgoing="_NTwBkHSdEeSXwZsvCuIXXA"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_8UlKsHScEeSXwZsvCuIXXA" name="Select Reservation stuff" incoming="_NTwBkHSdEeSXwZsvCuIXXA"/>
-    <node xmi:type="uml:DecisionNode" xmi:id="__5L54HScEeSXwZsvCuIXXA" name="isSomething" outgoing="_OkPZEHSdEeSXwZsvCuIXXA _QTH8wHSdEeSXwZsvCuIXXA"/>
-    <node xmi:type="uml:ActivityFinalNode" xmi:id="_D3W_oHSdEeSXwZsvCuIXXA" name="ActivityFinalNode1" incoming="_OkPZEHSdEeSXwZsvCuIXXA"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_ExuWIHSdEeSXwZsvCuIXXA" name="Some other action" incoming="_QTH8wHSdEeSXwZsvCuIXXA" outgoing="_U9rAUHSdEeSXwZsvCuIXXA"/>
-    <node xmi:type="uml:ActivityFinalNode" xmi:id="_F_fw0HSdEeSXwZsvCuIXXA" name="ActivityFinalNode2" incoming="_U9rAUHSdEeSXwZsvCuIXXA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_8UlKsHScEeSXwZsvCuIXXA" name="Make reservation" incoming="_NTwBkHSdEeSXwZsvCuIXXA _zWNQwHS4EeSa8dvmBbGoMA" outgoing="_Lp8aEHS8EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_D3W_oHSdEeSXwZsvCuIXXA" name="ActivityFinalNode1" incoming="_lMy-sHS7EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_aORjAHS4EeSa8dvmBbGoMA" name="Generate preliminary bill" incoming="_mHLDoHS4EeSa8dvmBbGoMA" outgoing="_zYtVsHS5EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_c97nMHS4EeSa8dvmBbGoMA" name="DecisionNode1" incoming="_Px5G4HS8EeSa8dvmBbGoMA" outgoing="_mHLDoHS4EeSa8dvmBbGoMA _zWNQwHS4EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_j9ou0HS5EeSa8dvmBbGoMA" name="Lookup customer" incoming="_zYtVsHS5EeSa8dvmBbGoMA" outgoing="_-DfdYHS5EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_1F20AHS5EeSa8dvmBbGoMA" name="Create customer" incoming="_-2Xr0HS5EeSa8dvmBbGoMA" outgoing="_WHisQHS6EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_8vBk0HS5EeSa8dvmBbGoMA" name="DecisionNode2" incoming="_-DfdYHS5EeSa8dvmBbGoMA" outgoing="_-2Xr0HS5EeSa8dvmBbGoMA _P5ZvAHS6EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_HHaU8HS6EeSa8dvmBbGoMA" name="Get payment method" incoming="_P5ZvAHS6EeSa8dvmBbGoMA _WHisQHS6EeSa8dvmBbGoMA" outgoing="_-rrCQHS6EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_eHuO4HS6EeSa8dvmBbGoMA" name="Get loyalty level" incoming="_-rrCQHS6EeSa8dvmBbGoMA" outgoing="_DdGJ4HS7EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_yw0Z0HS6EeSa8dvmBbGoMA" name="Generate preliminary bill" incoming="_EfBg8HS7EeSa8dvmBbGoMA" outgoing="_GHkMEHS7EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_4ToiIHS6EeSa8dvmBbGoMA" name="Confim booking transaction" incoming="_FbzSQHS7EeSa8dvmBbGoMA _GHkMEHS7EeSa8dvmBbGoMA" outgoing="_lMy-sHS7EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_BjiAMHS7EeSa8dvmBbGoMA" name="DecisionNode3" incoming="_DdGJ4HS7EeSa8dvmBbGoMA" outgoing="_EfBg8HS7EeSa8dvmBbGoMA _FbzSQHS7EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_8iaaQHS7EeSa8dvmBbGoMA" name="Select cost category" incoming="_Lp8aEHS8EeSa8dvmBbGoMA" outgoing="_MVhGoHS8EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_B_tJYHS8EeSa8dvmBbGoMA" name="Select actual room type" incoming="_MVhGoHS8EeSa8dvmBbGoMA" outgoing="_M15P0HS8EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_D_FnMHS8EeSa8dvmBbGoMA" name="Select check in/check out date" incoming="_M15P0HS8EeSa8dvmBbGoMA" outgoing="_Nfj34HS8EeSa8dvmBbGoMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_G_LUEHS8EeSa8dvmBbGoMA" name="Select room" incoming="_Nfj34HS8EeSa8dvmBbGoMA" outgoing="_Px5G4HS8EeSa8dvmBbGoMA"/>
   </packagedElement>
 </uml:Model>
