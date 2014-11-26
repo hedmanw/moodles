@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_1_xm0HPCEeSkvsspMFpoeg" name="model">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_1_xm0HPCEeSkvsspMFpoeg" name="model">
   <ownedComment xmi:type="uml:Comment" xmi:id="_YKXjkHVSEeSFlMIer3mkJA">
     <body>TODO:
 Get back to this.
@@ -57,7 +57,7 @@ We need another class, TabItem to keep tab entries.</body>
     <node xmi:type="uml:OpaqueAction" xmi:id="_G_LUEHS8EeSa8dvmBbGoMA" name="Select room" incoming="_Nfj34HS8EeSa8dvmBbGoMA" outgoing="_Px5G4HS8EeSa8dvmBbGoMA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_Tu3wAHVPEeSFlMIer3mkJA" name="moodle">
-    <packagedElement xmi:type="uml:Class" xmi:id="_fnSvgHVPEeSFlMIer3mkJA" name="Tab">
+    <packagedElement xmi:type="uml:Class" xmi:id="_fnSvgHVPEeSFlMIer3mkJA" name="Tab" visibility="private">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_dmVu8HVQEeSFlMIer3mkJA" name="tabItems" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
       </ownedAttribute>
@@ -81,5 +81,26 @@ We need another class, TabItem to keep tab entries.</body>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_RLXxIHVSEeSFlMIer3mkJA" name="getAll"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Uh9AgHVUEeSK0eOwuSpt4Q" name="KeyCard">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5_IMoHVUEeSK0eOwuSpt4Q" name="keyCardID" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_bozucHVUEeSK0eOwuSpt4Q" name="getID">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SKQecHVWEeSK0eOwuSpt4Q" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_gaNA4HVUEeSK0eOwuSpt4Q" name="setID">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4nCtcHVWEeSK0eOwuSpt4Q" name="keyCardID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
   </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3wzT4HVUEeSK0eOwuSpt4Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3xM8gHVUEeSK0eOwuSpt4Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
 </uml:Model>
