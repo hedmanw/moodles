@@ -82,4 +82,10 @@ We need another class, TabItem to keep tab entries.</body>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_RLXxIHVSEeSFlMIer3mkJA" name="getAll"/>
     </packagedElement>
   </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_CiQEQHVVEeSFlMIer3mkJA" name="PaymentMethod">
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Ev95AHVVEeSFlMIer3mkJA" name="Bitcoin"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Fj1l8HVVEeSFlMIer3mkJA" name="Credit card"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HY1YsHVVEeSFlMIer3mkJA" name="PayPal"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_IkCnkHVVEeSFlMIer3mkJA" name="Invoice"/>
+  </packagedElement>
 </uml:Model>
