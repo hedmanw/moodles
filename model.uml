@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_1_xm0HPCEeSkvsspMFpoeg" name="model">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_YKXjkHVSEeSFlMIer3mkJA">
+    <body>TODO:
+Get back to this.
+We need another class, TabItem to keep tab entries.</body>
+  </ownedComment>
   <packagedElement xmi:type="uml:Class" xmi:id="_R0bz8HScEeSXwZsvCuIXXA" name="Example"/>
-  <packagedElement xmi:type="uml:Activity" xmi:id="_VnKesHScEeSXwZsvCuIXXA" name="SomeActivity" node="_6ABHEHScEeSXwZsvCuIXXA _8UlKsHScEeSXwZsvCuIXXA _D3W_oHSdEeSXwZsvCuIXXA _aORjAHS4EeSa8dvmBbGoMA _c97nMHS4EeSa8dvmBbGoMA _j9ou0HS5EeSa8dvmBbGoMA _1F20AHS5EeSa8dvmBbGoMA _8vBk0HS5EeSa8dvmBbGoMA _HHaU8HS6EeSa8dvmBbGoMA _eHuO4HS6EeSa8dvmBbGoMA _yw0Z0HS6EeSa8dvmBbGoMA _4ToiIHS6EeSa8dvmBbGoMA _BjiAMHS7EeSa8dvmBbGoMA _8iaaQHS7EeSa8dvmBbGoMA _B_tJYHS8EeSa8dvmBbGoMA _D_FnMHS8EeSa8dvmBbGoMA _G_LUEHS8EeSa8dvmBbGoMA">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_VnKesHScEeSXwZsvCuIXXA" name="BookingActivity" node="_6ABHEHScEeSXwZsvCuIXXA _8UlKsHScEeSXwZsvCuIXXA _D3W_oHSdEeSXwZsvCuIXXA _aORjAHS4EeSa8dvmBbGoMA _c97nMHS4EeSa8dvmBbGoMA _j9ou0HS5EeSa8dvmBbGoMA _1F20AHS5EeSa8dvmBbGoMA _8vBk0HS5EeSa8dvmBbGoMA _HHaU8HS6EeSa8dvmBbGoMA _eHuO4HS6EeSa8dvmBbGoMA _yw0Z0HS6EeSa8dvmBbGoMA _4ToiIHS6EeSa8dvmBbGoMA _BjiAMHS7EeSa8dvmBbGoMA _8iaaQHS7EeSa8dvmBbGoMA _B_tJYHS8EeSa8dvmBbGoMA _D_FnMHS8EeSa8dvmBbGoMA _G_LUEHS8EeSa8dvmBbGoMA">
     <edge xmi:type="uml:ControlFlow" xmi:id="_NTwBkHSdEeSXwZsvCuIXXA" target="_8UlKsHScEeSXwZsvCuIXXA" source="_6ABHEHScEeSXwZsvCuIXXA"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_mHLDoHS4EeSa8dvmBbGoMA" target="_aORjAHS4EeSa8dvmBbGoMA" source="_c97nMHS4EeSa8dvmBbGoMA">
       <guard xmi:type="uml:LiteralString" xmi:id="_8ktnsHS4EeSa8dvmBbGoMA" value="reservations done"/>
@@ -50,5 +55,31 @@
     <node xmi:type="uml:OpaqueAction" xmi:id="_B_tJYHS8EeSa8dvmBbGoMA" name="Select actual room type" incoming="_MVhGoHS8EeSa8dvmBbGoMA" outgoing="_M15P0HS8EeSa8dvmBbGoMA"/>
     <node xmi:type="uml:OpaqueAction" xmi:id="_D_FnMHS8EeSa8dvmBbGoMA" name="Select check in/check out date" incoming="_M15P0HS8EeSa8dvmBbGoMA" outgoing="_Nfj34HS8EeSa8dvmBbGoMA"/>
     <node xmi:type="uml:OpaqueAction" xmi:id="_G_LUEHS8EeSa8dvmBbGoMA" name="Select room" incoming="_Nfj34HS8EeSa8dvmBbGoMA" outgoing="_Px5G4HS8EeSa8dvmBbGoMA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_Tu3wAHVPEeSFlMIer3mkJA" name="moodle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_fnSvgHVPEeSFlMIer3mkJA" name="Tab">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dmVu8HVQEeSFlMIer3mkJA" name="tabItems" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_SO5gIHVREeSFlMIer3mkJA" name="addItemToTab">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-H1OwHVREeSFlMIer3mkJA" name="item">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AixAIHVSEeSFlMIer3mkJA" name="cost">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_iEnboHVREeSFlMIer3mkJA" name="getTotalCost">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_u9MQkHVREeSFlMIer3mkJA" name="value" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Kd4lcHVSEeSFlMIer3mkJA" name="removeTabItem">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PSwCoHVSEeSFlMIer3mkJA" name="itemName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_RLXxIHVSEeSFlMIer3mkJA" name="getAll"/>
+    </packagedElement>
   </packagedElement>
 </uml:Model>
