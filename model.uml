@@ -132,4 +132,35 @@ We need another class, TabItem to keep tab entries.</body>
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HY1YsHVVEeSFlMIer3mkJA" name="PayPal"/>
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_IkCnkHVVEeSFlMIer3mkJA" name="Invoice"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ah_wAHVXEeSsYr8zYJ7CRg" name="ScheduledEvents">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ecyKkHVXEeSsYr8zYJ7CRg" name="events" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rNT2wHVXEeSsYr8zYJ7CRg" name="addEvent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xiVfIHVXEeSsYr8zYJ7CRg" name="eventName">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_z-7dYHVXEeSsYr8zYJ7CRg" name="timestamp" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_1Mh48HVXEeSsYr8zYJ7CRg" name="getEvents">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7WT6oHVXEeSsYr8zYJ7CRg" name="events" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_8Zl8kHVXEeSsYr8zYJ7CRg" name="updateEvent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_8Zl8kXVXEeSsYr8zYJ7CRg" name="eventName">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_8Zl8knVXEeSsYr8zYJ7CRg" name="timestamp" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__ToEwHVXEeSsYr8zYJ7CRg" name="deleteEvent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="__ToEwXVXEeSsYr8zYJ7CRg" name="eventName">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
 </uml:Model>
