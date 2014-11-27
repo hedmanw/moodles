@@ -96,8 +96,24 @@ We need another class, TabItem to keep tab entries.</body>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_vJ1eEHVUEeSsEN78lnEQdg" name="Equipment">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_DKGHYHVVEeSsEN78lnEQdg" name="equipmentItem" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_M028gHVVEeSsEN78lnEQdg" name="addEquipmentToRoom">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Vx360HVVEeSsEN78lnEQdg" name="item">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ac7UsHVVEeSsEN78lnEQdg" name="removeEquipmentItem">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_wtcJYHVVEeSsEN78lnEQdg" name="itemName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_y26-YHVVEeSsEN78lnEQdg" name="getAll"/>
+    </packagedElement>
   </packagedElement>
- <packagedElement xmi:type="uml:Enumeration" xmi:id="_CiQEQHVVEeSFlMIer3mkJA" name="PaymentMethod">
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_CiQEQHVVEeSFlMIer3mkJA" name="PaymentMethod">
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Ev95AHVVEeSFlMIer3mkJA" name="Bitcoin"/>
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Fj1l8HVVEeSFlMIer3mkJA" name="Credit card"/>
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HY1YsHVVEeSFlMIer3mkJA" name="PayPal"/>
