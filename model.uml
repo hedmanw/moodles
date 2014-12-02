@@ -899,6 +899,17 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZUtLkHo7EeSvwbb0zOoNmg" name="getRoomOccupancy" visibility="public">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_h3u8kHo7EeSvwbb0zOoNmg" name="fromDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_nIC_oHo7EeSvwbb0zOoNmg" name="toDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_r2OmAHo7EeSvwbb0zOoNmg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_AdF9YHltEeSNP_QJ-oV69w" name="Realization0" client="_dqC1MHlsEeSNP_QJ-oV69w" supplier="_50t7MHlsEeSNP_QJ-oV69w" contract="_50t7MHlsEeSNP_QJ-oV69w"/>
   <packagedElement xmi:type="uml:Interface" xmi:id="_CDtV4HltEeSNP_QJ-oV69w" name="HotelManagerProvides"/>
@@ -1067,4 +1078,16 @@
   <packagedElement xmi:type="uml:Usage" xmi:id="_9pamgHoJEeShtIICY7OyLw" name="Usage0" client="_Tle9kHn8EeShtIICY7OyLw" supplier="_eJgLYHn7EeShtIICY7OyLw"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="_-cUqIHoJEeShtIICY7OyLw" name="Usage4" client="_V51l0Hn8EeShtIICY7OyLw" supplier="_CDtV4HltEeSNP_QJ-oV69w"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="__-Gl8HoJEeShtIICY7OyLw" name="Usage5" client="_YqGG8Hn8EeShtIICY7OyLw" supplier="_50t7MHlsEeSNP_QJ-oV69w"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_HL6sIHo5EeSvwbb0zOoNmg" name="showRoomOccupancy">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_Bp_0UHo8EeSvwbb0zOoNmg">
+      <body>Assume date range is valid</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_jbCX0Ho6EeSvwbb0zOoNmg" name="hr" type="_YqGG8Hn8EeShtIICY7OyLw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tlojkHo6EeSvwbb0zOoNmg" name="hrp" type="_50t7MHlsEeSNP_QJ-oV69w"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_hZM4YHo5EeSvwbb0zOoNmg" name="hr" represents="_jbCX0Ho6EeSvwbb0zOoNmg" coveredBy="_z1p6sHo7EeSvwbb0zOoNmg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_q58ZYHo6EeSvwbb0zOoNmg" name="Lifeline" represents="_tlojkHo6EeSvwbb0zOoNmg" coveredBy="_z1rv4Ho7EeSvwbb0zOoNmg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_z1rv4Ho7EeSvwbb0zOoNmg" name="getRoomOccupancy_MessageRecv" covered="_q58ZYHo6EeSvwbb0zOoNmg" message="_z0664Ho7EeSvwbb0zOoNmg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_z1p6sHo7EeSvwbb0zOoNmg" name="getRoomOccupancy_MessageSend" covered="_hZM4YHo5EeSvwbb0zOoNmg" message="_z0664Ho7EeSvwbb0zOoNmg"/>
+    <message xmi:type="uml:Message" xmi:id="_z0664Ho7EeSvwbb0zOoNmg" name="getRoomOccupancy_Message" messageSort="asynchCall" receiveEvent="_z1rv4Ho7EeSvwbb0zOoNmg" sendEvent="_z1p6sHo7EeSvwbb0zOoNmg" signature="_ZUtLkHo7EeSvwbb0zOoNmg"/>
+  </packagedElement>
 </uml:Model>
