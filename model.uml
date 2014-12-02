@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_1_xm0HPCEeSkvsspMFpoeg" name="model">
-  <ownedComment xmi:type="uml:Comment" xmi:id="_YKXjkHVSEeSFlMIer3mkJA">
-    <body>TODO:
-Get back to this.
-We need another class, TabItem to keep tab entries.</body>
-  </ownedComment>
-  <ownedComment xmi:type="uml:Comment" xmi:id="_77hkwHluEeSJYOaXazdB-A">
-    <body>TODO: Har customer poäng eller loyaltylevel?</body>
-  </ownedComment>
-  <ownedComment xmi:type="uml:Comment" xmi:id="_NAJoUHn8EeSJYOaXazdB-A">
-    <body>Remove reservation input?</body>
-  </ownedComment>
-  <ownedComment xmi:type="uml:Comment" xmi:id="_e5SswHn_EeSJYOaXazdB-A">
-    <body>Kan man ej få bookings om man har en customer??????</body>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_lTDGUHoOEeSJYOaXazdB-A">
+    <body>???
+</body>
   </ownedComment>
   <packagedElement xmi:type="uml:Class" xmi:id="_R0bz8HScEeSXwZsvCuIXXA" name="Example"/>
   <packagedElement xmi:type="uml:Activity" xmi:id="_VnKesHScEeSXwZsvCuIXXA" name="BookingActivity" node="_6ABHEHScEeSXwZsvCuIXXA _8UlKsHScEeSXwZsvCuIXXA _D3W_oHSdEeSXwZsvCuIXXA _aORjAHS4EeSa8dvmBbGoMA _c97nMHS4EeSa8dvmBbGoMA _j9ou0HS5EeSa8dvmBbGoMA _1F20AHS5EeSa8dvmBbGoMA _8vBk0HS5EeSa8dvmBbGoMA _HHaU8HS6EeSa8dvmBbGoMA _eHuO4HS6EeSa8dvmBbGoMA _yw0Z0HS6EeSa8dvmBbGoMA _4ToiIHS6EeSa8dvmBbGoMA _BjiAMHS7EeSa8dvmBbGoMA _8iaaQHS7EeSa8dvmBbGoMA _B_tJYHS8EeSa8dvmBbGoMA _D_FnMHS8EeSa8dvmBbGoMA _G_LUEHS8EeSa8dvmBbGoMA">
@@ -121,24 +111,6 @@ We need another class, TabItem to keep tab entries.</body>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_y26-YHVVEeSsEN78lnEQdg" name="getAll"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_WTmkUHVUEeSzra_2aSmazQ" name="LoyaltyLevel">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_-LKvQHVUEeSzra_2aSmazQ" name="DiscountLevels" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
-      </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_fXgNwHVUEeSzra_2aSmazQ" name="getDiscount">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QVqw0HVVEeSzra_2aSmazQ" name="points">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dmRrQHVVEeSzra_2aSmazQ" name="Discount" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_nGBVgHluEeSJYOaXazdB-A" name="getLoyaltyLevel" visibility="private">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_q78eMHluEeSJYOaXazdB-A" name="points">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-        </ownedParameter>
-      </ownedOperation>
-    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_1MohkHjDEeSDBKbFcXcsYQ" name="RoomType">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_FduKcHjEEeSDBKbFcXcsYQ" name="roomTypeEnum" type="_--7iEHjDEeSDBKbFcXcsYQ" association="_FduxgHjEEeSDBKbFcXcsYQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FduKcXjEEeSDBKbFcXcsYQ" value="1"/>
@@ -172,12 +144,12 @@ We need another class, TabItem to keep tab entries.</body>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_UShtcHjCEeSDBKbFcXcsYQ" name="roomNumber" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_qco_MHjCEeSDBKbFcXcsYQ" name="equipment" type="_vJ1eEHVUEeSsEN78lnEQdg" association="_qcpmQHjCEeSDBKbFcXcsYQ">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qco_MHjCEeSDBKbFcXcsYQ" name="equipment" visibility="private" type="_vJ1eEHVUEeSsEN78lnEQdg" association="_qcpmQHjCEeSDBKbFcXcsYQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qco_MXjCEeSDBKbFcXcsYQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qco_MnjCEeSDBKbFcXcsYQ" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_dXRZgHjEEeSDBKbFcXcsYQ" name="roomType" type="_1MohkHjDEeSDBKbFcXcsYQ" association="_dXSAkHjEEeSDBKbFcXcsYQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dXRZgXjEEeSDBKbFcXcsYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dXRZgHjEEeSDBKbFcXcsYQ" name="roomType" visibility="private" type="_1MohkHjDEeSDBKbFcXcsYQ" association="_dXSAkHjEEeSDBKbFcXcsYQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dXRZgXjEEeSDBKbFcXcsYQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dXRZgnjEEeSDBKbFcXcsYQ" value="*"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_ylpFYHlsEeSJYOaXazdB-A" name="cleaned" visibility="private">
@@ -192,6 +164,19 @@ We need another class, TabItem to keep tab entries.</body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_4mbtsHltEeSJYOaXazdB-A" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
         </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9AyjcHoNEeSJYOaXazdB-A" name="Operation1"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_DFhGAHoOEeSJYOaXazdB-A" name="getRoomType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DFhGAXoOEeSJYOaXazdB-A" type="_1MohkHjDEeSDBKbFcXcsYQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_DFiUIHoOEeSJYOaXazdB-A" name="addRoomType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DFiUIXoOEeSJYOaXazdB-A" name="roomType" type="_1MohkHjDEeSDBKbFcXcsYQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_DFi7MHoOEeSJYOaXazdB-A" name="removeRoomType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DFi7MXoOEeSJYOaXazdB-A" name="roomType" type="_1MohkHjDEeSDBKbFcXcsYQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_NQYXgHoOEeSJYOaXazdB-A" name="getEquipment">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Q4RrQHoOEeSJYOaXazdB-A" type="_vJ1eEHVUEeSsEN78lnEQdg" direction="return"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_qcpmQHjCEeSDBKbFcXcsYQ" memberEnd="_qcpmQXjCEeSDBKbFcXcsYQ _qco_MHjCEeSDBKbFcXcsYQ">
@@ -250,7 +235,7 @@ We need another class, TabItem to keep tab entries.</body>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_70gJAHlpEeSJYOaXazdB-A" name="grandTotal" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_doNeoHlrEeSJYOaXazdB-A" name="paymentMethod" type="_CiQEQHVVEeSFlMIer3mkJA" association="_doOFsHlrEeSJYOaXazdB-A">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_doNeoHlrEeSJYOaXazdB-A" name="paymentMethod" visibility="private" type="_CiQEQHVVEeSFlMIer3mkJA" association="_doOFsHlrEeSJYOaXazdB-A">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_doNeoXlrEeSJYOaXazdB-A" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_doNeonlrEeSJYOaXazdB-A" value="1"/>
       </ownedAttribute>
@@ -278,6 +263,12 @@ We need another class, TabItem to keep tab entries.</body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_8_s7YHlqEeSJYOaXazdB-A" name="cost">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
         </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2-aHEHoJEeSJYOaXazdB-A" name="getPaymentMethod">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6VL1oHoJEeSJYOaXazdB-A" type="_CiQEQHVVEeSFlMIer3mkJA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_7A0MkHoJEeSJYOaXazdB-A" name="setPaymentMethod">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__5iPAHoJEeSJYOaXazdB-A" name="method" type="_CiQEQHVVEeSFlMIer3mkJA"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_doOFsHlrEeSJYOaXazdB-A" memberEnd="_doOFsXlrEeSJYOaXazdB-A _doNeoHlrEeSJYOaXazdB-A">
@@ -316,7 +307,7 @@ We need another class, TabItem to keep tab entries.</body>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_JrmiEHlyEeSJYOaXazdB-A" name="loyaltyPoints" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZVw4YHlzEeSJYOaXazdB-A" name="loyaltyLevel" visibility="private" type="_WTmkUHVUEeSzra_2aSmazQ" association="_ZVxfcHlzEeSJYOaXazdB-A">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZVw4YHlzEeSJYOaXazdB-A" name="loyaltyLevel" visibility="private">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZVw4YXlzEeSJYOaXazdB-A" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZVw4YnlzEeSJYOaXazdB-A" value="1"/>
       </ownedAttribute>
@@ -455,13 +446,6 @@ We need another class, TabItem to keep tab entries.</body>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5nQ7w3lxEeSJYOaXazdB-A" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_ZVxfcHlzEeSJYOaXazdB-A" memberEnd="_ZVxfcXlzEeSJYOaXazdB-A _ZVw4YHlzEeSJYOaXazdB-A">
-      <name xsi:nil="true"/>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_ZVxfcXlzEeSJYOaXazdB-A" name="customer" type="_J3LAQHlvEeSJYOaXazdB-A" association="_ZVxfcHlzEeSJYOaXazdB-A">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZVxfcnlzEeSJYOaXazdB-A"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZVxfc3lzEeSJYOaXazdB-A" value="*"/>
-      </ownedEnd>
-    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_eUmw8HlzEeSJYOaXazdB-A" name="Reservation">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_KYDtgHl0EeSJYOaXazdB-A" name="guest" visibility="private">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KYDtgXl0EeSJYOaXazdB-A"/>
@@ -476,15 +460,15 @@ We need another class, TabItem to keep tab entries.</body>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OU4vcnl0EeSJYOaXazdB-A" value="*"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_RD1B8Hl0EeSJYOaXazdB-A" name="scheduledEvents" visibility="private" type="_ah_wAHVXEeSsYr8zYJ7CRg" association="_RD1pAHl0EeSJYOaXazdB-A">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RD1B8Xl0EeSJYOaXazdB-A"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RD1B8nl0EeSJYOaXazdB-A" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RD1B8Xl0EeSJYOaXazdB-A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RD1B8nl0EeSJYOaXazdB-A" value="1"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_WUK6MHl0EeSJYOaXazdB-A" name="room" visibility="private" type="_8xwx0HjBEeSDBKbFcXcsYQ" association="_WUK6M3l0EeSJYOaXazdB-A">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WUK6MXl0EeSJYOaXazdB-A" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WUK6Mnl0EeSJYOaXazdB-A" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_anKZYHl0EeSJYOaXazdB-A" name="roomType" visibility="private" type="_1MohkHjDEeSDBKbFcXcsYQ" association="_anKZY3l0EeSJYOaXazdB-A">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_anKZYXl0EeSJYOaXazdB-A"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_anKZYHl0EeSJYOaXazdB-A" name="costCategory" visibility="private" type="_1MohkHjDEeSDBKbFcXcsYQ" association="_anKZY3l0EeSJYOaXazdB-A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_anKZYXl0EeSJYOaXazdB-A" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_anKZYnl0EeSJYOaXazdB-A" value="*"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_zzsqIHn_EeSJYOaXazdB-A" name="checkedIn" visibility="private">
@@ -564,6 +548,37 @@ We need another class, TabItem to keep tab entries.</body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_jdnPsHoDEeSJYOaXazdB-A" name="number">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
         </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_E4pcEHoEEeSJYOaXazdB-A" name="getRoom">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_H3t1QHoEEeSJYOaXazdB-A" type="_8xwx0HjBEeSDBKbFcXcsYQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_PP6K0HoEEeSJYOaXazdB-A" name="setRoom">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_TtRuAHoEEeSJYOaXazdB-A" name="newRoom" type="_8xwx0HjBEeSDBKbFcXcsYQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_fFNPkHoEEeSJYOaXazdB-A" name="getCostCategory">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_kLoW0HoEEeSJYOaXazdB-A" type="_1MohkHjDEeSDBKbFcXcsYQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_WjQnMHoFEeSJYOaXazdB-A" name="addCostCategory">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bFzlUHoFEeSJYOaXazdB-A" name="costCategory" type="_1MohkHjDEeSDBKbFcXcsYQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_e-Jv4HoFEeSJYOaXazdB-A" name="getEvents">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_l4AjoHoFEeSJYOaXazdB-A" type="_ah_wAHVXEeSsYr8zYJ7CRg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_OkaE0HoGEeSJYOaXazdB-A" name="removeAllEvents"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_cjFmMHoGEeSJYOaXazdB-A" name="getKeyCards">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gehhAHoGEeSJYOaXazdB-A" type="_Uh9AgHVUEeSK0eOwuSpt4Q" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_YjtxIHoHEeSJYOaXazdB-A" name="addKeyCard">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_fOBtAHoHEeSJYOaXazdB-A" name="keyCard" type="_Uh9AgHVUEeSK0eOwuSpt4Q"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_k5OVQHoHEeSJYOaXazdB-A" name="removeKeyCard">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_p4JGUHoHEeSJYOaXazdB-A" name="keyCard" type="_Uh9AgHVUEeSK0eOwuSpt4Q"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_PrevsHoIEeSJYOaXazdB-A" name="removeCostCategory">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_WVphoHoIEeSJYOaXazdB-A" name="costCategory" type="_1MohkHjDEeSDBKbFcXcsYQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9X84gHoIEeSJYOaXazdB-A" name="getTab">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AhpNUHoJEeSJYOaXazdB-A" type="_fnSvgHVPEeSFlMIer3mkJA" direction="return"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_qdnKIHlzEeSJYOaXazdB-A" name="Booking">
