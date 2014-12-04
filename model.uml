@@ -107,7 +107,7 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_y26-YHVVEeSsEN78lnEQdg" name="getAll"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_1MohkHjDEeSDBKbFcXcsYQ" name="RoomType">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_FduKcHjEEeSDBKbFcXcsYQ" name="roomTypeEnum" type="_--7iEHjDEeSDBKbFcXcsYQ" association="_FduxgHjEEeSDBKbFcXcsYQ">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_FduKcHjEEeSDBKbFcXcsYQ" name="roomTypeEnum">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FduKcXjEEeSDBKbFcXcsYQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FduKcnjEEeSDBKbFcXcsYQ" value="1"/>
       </ownedAttribute>
@@ -124,16 +124,6 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
         </ownedParameter>
       </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Enumeration" xmi:id="_--7iEHjDEeSDBKbFcXcsYQ" name="RoomTypeEnum">
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HhyT8HjEEeSDBKbFcXcsYQ" name="ConferenceRoom"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_FduxgHjEEeSDBKbFcXcsYQ" memberEnd="_FduxgXjEEeSDBKbFcXcsYQ _FduKcHjEEeSDBKbFcXcsYQ">
-      <name xsi:nil="true"/>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_FduxgXjEEeSDBKbFcXcsYQ" name="roomType" type="_1MohkHjDEeSDBKbFcXcsYQ" association="_FduxgHjEEeSDBKbFcXcsYQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FduxgnjEEeSDBKbFcXcsYQ" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Fduxg3jEEeSDBKbFcXcsYQ" value="1"/>
-      </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_8xwx0HjBEeSDBKbFcXcsYQ" name="Room">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_UShtcHjCEeSDBKbFcXcsYQ" name="roomNumber" visibility="private">
@@ -1306,5 +1296,16 @@
     <message xmi:type="uml:Message" xmi:id="_yJmPQHpAEeSXTMmqtXqoMA" name="checkOutReservation_Message" messageSort="asynchCall" receiveEvent="_yJndYHpAEeSXTMmqtXqoMA" sendEvent="_yJm2UHpAEeSXTMmqtXqoMA" signature="_ctXRoHoIEeShtIICY7OyLw"/>
     <message xmi:type="uml:Message" xmi:id="_42haQHpAEeSXTMmqtXqoMA" name="getCustomer_Message" messageSort="asynchCall" receiveEvent="_42iBUXpAEeSXTMmqtXqoMA" sendEvent="_42iBUHpAEeSXTMmqtXqoMA" signature="_XFUhgHn8EeSJYOaXazdB-A"/>
     <message xmi:type="uml:Message" xmi:id="_UV_AEHpBEeSXTMmqtXqoMA" name="addLoyaltyPoints_Message" messageSort="asynchCall" receiveEvent="_UWA1QHpBEeSXTMmqtXqoMA" sendEvent="_UV_nIHpBEeSXTMmqtXqoMA" signature="_Y-mLAHlyEeSJYOaXazdB-A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_I0he0HuQEeSyZvvyd5lTNA" name="ConferenceRoom">
+    <generalization xmi:type="uml:Generalization" xmi:id="_WuCMUHuQEeSyZvvyd5lTNA" general="_1MohkHjDEeSDBKbFcXcsYQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_be1o4HuQEeSyZvvyd5lTNA" name="maxNbrOfPeople" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_uib1oHuQEeSyZvvyd5lTNA" name="getNbrOfPeople" concurrency="concurrent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_0r6VUHuQEeSyZvvyd5lTNA" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
 </uml:Model>
