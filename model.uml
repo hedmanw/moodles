@@ -158,7 +158,9 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_DFi7MXoOEeSJYOaXazdB-A" name="roomType" type="_1MohkHjDEeSDBKbFcXcsYQ"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_NQYXgHoOEeSJYOaXazdB-A" name="getEquipment">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Q4RrQHoOEeSJYOaXazdB-A" type="_vJ1eEHVUEeSsEN78lnEQdg" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Q4RrQHoOEeSJYOaXazdB-A" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_M028gHVVEeSsEN78lnEQdg" name="addEquipmentToRoom">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Vx360HVVEeSsEN78lnEQdg" name="item">
@@ -434,10 +436,6 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_eUmw8HlzEeSJYOaXazdB-A" name="Reservation">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_KYDtgHl0EeSJYOaXazdB-A" name="guest" visibility="private">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KYDtgXl0EeSJYOaXazdB-A"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KYDtgnl0EeSJYOaXazdB-A" value="*"/>
-      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_NVUI0Hl0EeSJYOaXazdB-A" name="tab" visibility="private" type="_fnSvgHVPEeSFlMIer3mkJA" association="_NVUv4Hl0EeSJYOaXazdB-A">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NVUI0Xl0EeSJYOaXazdB-A" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NVUI0nl0EeSJYOaXazdB-A" value="1"/>
