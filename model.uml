@@ -91,20 +91,14 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_vJ1eEHVUEeSsEN78lnEQdg" name="Equipment">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_DKGHYHVVEeSsEN78lnEQdg" name="equipmentItem" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rnbnoHuREeSyZvvyd5lTNA" name="name" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_M028gHVVEeSsEN78lnEQdg" name="addEquipmentToRoom">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Vx360HVVEeSsEN78lnEQdg" name="item">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_QrqIQHuSEeSyZvvyd5lTNA" name="getName" concurrency="guarded">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_U4bDoHuSEeSyZvvyd5lTNA" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ac7UsHVVEeSsEN78lnEQdg" name="removeEquipmentItem">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_wtcJYHVVEeSsEN78lnEQdg" name="itemName">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_y26-YHVVEeSsEN78lnEQdg" name="getAll"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_1MohkHjDEeSDBKbFcXcsYQ" name="RoomType">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_FduKcHjEEeSDBKbFcXcsYQ" name="roomTypeEnum">
@@ -129,7 +123,7 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_UShtcHjCEeSDBKbFcXcsYQ" name="roomNumber" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_qco_MHjCEeSDBKbFcXcsYQ" name="equipment" visibility="private" type="_vJ1eEHVUEeSsEN78lnEQdg" association="_qcpmQHjCEeSDBKbFcXcsYQ">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qco_MHjCEeSDBKbFcXcsYQ" name="equipment" visibility="private" type="_vJ1eEHVUEeSsEN78lnEQdg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qco_MXjCEeSDBKbFcXcsYQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qco_MnjCEeSDBKbFcXcsYQ" value="*"/>
       </ownedAttribute>
@@ -139,6 +133,10 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_ylpFYHlsEeSJYOaXazdB-A" name="cleaned" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_H9VGMHuSEeSyZvvyd5lTNA" name="equipment" type="_vJ1eEHVUEeSsEN78lnEQdg" association="_H9VtQHuSEeSyZvvyd5lTNA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_H9VGMXuSEeSyZvvyd5lTNA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_H9VGMnuSEeSyZvvyd5lTNA" value="1"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_GeWL4HjCEeSDBKbFcXcsYQ" name="isOccupied" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_N-PE4HjCEeSDBKbFcXcsYQ" direction="return">
@@ -162,12 +160,16 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_NQYXgHoOEeSJYOaXazdB-A" name="getEquipment">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Q4RrQHoOEeSJYOaXazdB-A" type="_vJ1eEHVUEeSsEN78lnEQdg" direction="return"/>
       </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_qcpmQHjCEeSDBKbFcXcsYQ" memberEnd="_qcpmQXjCEeSDBKbFcXcsYQ _qco_MHjCEeSDBKbFcXcsYQ">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_qcpmQXjCEeSDBKbFcXcsYQ" name="room" type="_8xwx0HjBEeSDBKbFcXcsYQ" association="_qcpmQHjCEeSDBKbFcXcsYQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qcpmQnjCEeSDBKbFcXcsYQ" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qcpmQ3jCEeSDBKbFcXcsYQ" value="1"/>
-      </ownedEnd>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_M028gHVVEeSsEN78lnEQdg" name="addEquipmentToRoom">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Vx360HVVEeSsEN78lnEQdg" name="item">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ac7UsHVVEeSsEN78lnEQdg" name="removeEquipmentItem">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_wtcJYHVVEeSsEN78lnEQdg" name="itemName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_dXSAkHjEEeSDBKbFcXcsYQ" memberEnd="_dXSAkXjEEeSDBKbFcXcsYQ _dXRZgHjEEeSDBKbFcXcsYQ">
       <ownedEnd xmi:type="uml:Property" xmi:id="_dXSAkXjEEeSDBKbFcXcsYQ" name="room" type="_8xwx0HjBEeSDBKbFcXcsYQ" association="_dXSAkHjEEeSDBKbFcXcsYQ">
@@ -176,10 +178,8 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_CiQEQHVVEeSFlMIer3mkJA" name="PaymentMethod">
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Ev95AHVVEeSFlMIer3mkJA" name="Bitcoin"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Ev95AHVVEeSFlMIer3mkJA" name="Pre payed"/>
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Fj1l8HVVEeSFlMIer3mkJA" name="Credit card"/>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HY1YsHVVEeSFlMIer3mkJA" name="PayPal"/>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_IkCnkHVVEeSFlMIer3mkJA" name="Invoice"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_ah_wAHVXEeSsYr8zYJ7CRg" name="ScheduledEvents">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_ecyKkHVXEeSsYr8zYJ7CRg" name="events" visibility="private">
@@ -672,6 +672,12 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_dqC1MHlsEeSNP_QJ-oV69w" name="Hotel"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_H9VtQHuSEeSyZvvyd5lTNA" visibility="private" memberEnd="_H9VtQXuSEeSyZvvyd5lTNA _H9VGMHuSEeSyZvvyd5lTNA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_H9VtQXuSEeSyZvvyd5lTNA" name="room" type="_8xwx0HjBEeSDBKbFcXcsYQ" association="_H9VtQHuSEeSyZvvyd5lTNA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_H9VtQnuSEeSyZvvyd5lTNA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_H9VtQ3uSEeSyZvvyd5lTNA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_ctqTkHdKEeSa9_mJi2PydA" name="KeyCardService">
     <packagedElement xmi:type="uml:Interface" xmi:id="_lfvNMHdKEeSa9_mJi2PydA" name="IKeyCardService">
