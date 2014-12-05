@@ -180,8 +180,8 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_CiQEQHVVEeSFlMIer3mkJA" name="PaymentMethod">
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Ev95AHVVEeSFlMIer3mkJA" name="Pre payed"/>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Fj1l8HVVEeSFlMIer3mkJA" name="Credit card"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Ev95AHVVEeSFlMIer3mkJA" name="Pre paid"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Fj1l8HVVEeSFlMIer3mkJA" name="Pay on checkout"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_ah_wAHVXEeSsYr8zYJ7CRg" name="ScheduledEvents">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_ecyKkHVXEeSsYr8zYJ7CRg" name="events" visibility="private">
@@ -358,10 +358,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_FA2VEHlwEeSJYOaXazdB-A" name="lastName" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_FLlBkHl0EeSJYOaXazdB-A" name="paymentMethod" visibility="private" type="_CiQEQHVVEeSFlMIer3mkJA" association="_FLlooHl0EeSJYOaXazdB-A">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FLlBkXl0EeSJYOaXazdB-A"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FLlBknl0EeSJYOaXazdB-A" value="1"/>
-      </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_JpzdMHlwEeSJYOaXazdB-A" name="getCcNumber">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_N3_U4HlwEeSJYOaXazdB-A" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
@@ -421,12 +417,6 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="__-Be8XlwEeSJYOaXazdB-A" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_aRLuoHn-EeSJYOaXazdB-A" name="getPaymentMethod">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_tf8pkHn-EeSJYOaXazdB-A" type="_CiQEQHVVEeSFlMIer3mkJA" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_t_ivoHn-EeSJYOaXazdB-A" name="setPaymentMethod">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ye2zkHn-EeSJYOaXazdB-A" name="method" type="_CiQEQHVVEeSFlMIer3mkJA"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_5nQ7wHlxEeSJYOaXazdB-A" memberEnd="_5nQ7wXlxEeSJYOaXazdB-A _5nQUsHlxEeSJYOaXazdB-A">
@@ -621,12 +611,6 @@
       <ownedEnd xmi:type="uml:Property" xmi:id="_8A-6QXlzEeSJYOaXazdB-A" name="booking" type="_qdnKIHlzEeSJYOaXazdB-A" association="_8A-6QHlzEeSJYOaXazdB-A">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8A-6QnlzEeSJYOaXazdB-A"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8A-6Q3lzEeSJYOaXazdB-A" value="*"/>
-      </ownedEnd>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_FLlooHl0EeSJYOaXazdB-A" memberEnd="_FLlooXl0EeSJYOaXazdB-A _FLlBkHl0EeSJYOaXazdB-A">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_FLlooXl0EeSJYOaXazdB-A" name="paymentDetails" type="_obLVIHlvEeSJYOaXazdB-A" association="_FLlooHl0EeSJYOaXazdB-A">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FLloonl0EeSJYOaXazdB-A"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FLloo3l0EeSJYOaXazdB-A" value="*"/>
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_NVUv4Hl0EeSJYOaXazdB-A" memberEnd="_NVUv4Xl0EeSJYOaXazdB-A _NVUI0Hl0EeSJYOaXazdB-A">
