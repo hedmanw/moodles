@@ -936,11 +936,14 @@
   <packagedElement xmi:type="uml:Usage" xmi:id="_-cUqIHoJEeShtIICY7OyLw" name="Usage4" client="_V51l0Hn8EeShtIICY7OyLw" supplier="_CDtV4HltEeSNP_QJ-oV69w"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="__-Gl8HoJEeShtIICY7OyLw" name="Usage5" client="_YqGG8Hn8EeShtIICY7OyLw"/>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_HL6sIHo5EeSvwbb0zOoNmg" name="showRoomOccupancy">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_tlojkHo6EeSvwbb0zOoNmg" name="hrp"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_q58ZYHo6EeSvwbb0zOoNmg" name="Lifeline" represents="_tlojkHo6EeSvwbb0zOoNmg" coveredBy="_LDwC4XpFEeSXTMmqtXqoMA"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LDwC4XpFEeSXTMmqtXqoMA" name="getRoomOccupancy_MessageRecv" covered="_q58ZYHo6EeSvwbb0zOoNmg" message="_LDu0wHpFEeSXTMmqtXqoMA"/>
-    <formalGate xmi:type="uml:Gate" xmi:id="_LDwC4HpFEeSXTMmqtXqoMA" name="gate0" message="_LDu0wHpFEeSXTMmqtXqoMA"/>
-    <message xmi:type="uml:Message" xmi:id="_LDu0wHpFEeSXTMmqtXqoMA" name="getRoomOccupancy_Message" messageSort="asynchCall" receiveEvent="_LDwC4XpFEeSXTMmqtXqoMA" sendEvent="_LDwC4HpFEeSXTMmqtXqoMA" signature="_ZUtLkHo7EeSvwbb0zOoNmg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tlojkHo6EeSvwbb0zOoNmg" name="u" type="_jkbPEHyEEeS59rPATntwDA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_6-CmkHyUEeSlVv_1rKRmzw" name="rm" type="_DyqAMHx8EeSyZvvyd5lTNA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_q58ZYHo6EeSvwbb0zOoNmg" name="actor" represents="_tlojkHo6EeSvwbb0zOoNmg" coveredBy="_LDwC4XpFEeSXTMmqtXqoMA _EsfB0HyVEeSlVv_1rKRmzw"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_3T4B8HyUEeSlVv_1rKRmzw" name="roomManager" represents="_6-CmkHyUEeSlVv_1rKRmzw" coveredBy="_EsfB0XyVEeSlVv_1rKRmzw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_EsfB0HyVEeSlVv_1rKRmzw" name="getRoomOccupancy_MessageSend" covered="_q58ZYHo6EeSvwbb0zOoNmg" message="_EsdzsHyVEeSlVv_1rKRmzw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_EsfB0XyVEeSlVv_1rKRmzw" name="getRoomOccupancy_MessageRecv0" covered="_3T4B8HyUEeSlVv_1rKRmzw" message="_EsdzsHyVEeSlVv_1rKRmzw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LDwC4XpFEeSXTMmqtXqoMA" name="getRoomOccupancy_MessageRecv" covered="_q58ZYHo6EeSvwbb0zOoNmg"/>
+    <message xmi:type="uml:Message" xmi:id="_EsdzsHyVEeSlVv_1rKRmzw" name="getRoomOccupancy_Message" messageSort="asynchCall" receiveEvent="_EsfB0XyVEeSlVv_1rKRmzw" sendEvent="_EsfB0HyVEeSlVv_1rKRmzw" signature="_ZUtLkHo7EeSvwbb0zOoNmg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_lb4hIHotEeSyq9V5IfgrHg" name="CheckInSuccess">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_lvknQHovEeSyq9V5IfgrHg" name="r" type="_eUmw8HlzEeSJYOaXazdB-A"/>
