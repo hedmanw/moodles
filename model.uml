@@ -1377,4 +1377,10 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Kotxs3x_EeSzd-4yXNUKkQ" value="1"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_jkbPEHyEEeS59rPATntwDA" name="HotelReceptionist"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_oQumIHyEEeS59rPATntwDA" name="Usage6" client="_jkbPEHyEEeS59rPATntwDA" supplier="_DyqAMHx8EeSyZvvyd5lTNA"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_o-FbYHyEEeS59rPATntwDA" name="Usage7" client="_jkbPEHyEEeS59rPATntwDA" supplier="_Qh5S8Hx8EeSyZvvyd5lTNA"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_pwkBMHyEEeS59rPATntwDA" name="Usage8" client="_jkbPEHyEEeS59rPATntwDA" supplier="_VffOUHx8EeSyZvvyd5lTNA"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_qXcbAHyEEeS59rPATntwDA" name="Usage9" client="_jkbPEHyEEeS59rPATntwDA" supplier="_l5AacHx8EeSyZvvyd5lTNA"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_rFjeMHyEEeS59rPATntwDA" name="Usage10" client="_jkbPEHyEEeS59rPATntwDA" supplier="_uycgUHx8EeSyZvvyd5lTNA"/>
 </uml:Model>
