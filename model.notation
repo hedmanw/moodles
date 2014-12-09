@@ -2039,7 +2039,10 @@
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_aaRGgHlsEeSNP_QJ-oV69w" type="PapyrusUMLComponentDiagram" name="ComponentDiagram" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_dqHtsHlsEeSNP_QJ-oV69w" type="2002">
+    <children xmi:type="notation:Shape" xmi:id="_dqHtsHlsEeSNP_QJ-oV69w" type="2002" fillColor="12560536">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0AVV4H-7EeS7oZ-R669c_Q" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0AVV4X-7EeS7oZ-R669c_Q" key="gradient" value="true"/>
+      </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_dqHtsnlsEeSNP_QJ-oV69w" type="5004"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_dqHts3lsEeSNP_QJ-oV69w" type="7001">
         <styles xmi:type="notation:TitleStyle" xmi:id="_dqHttHlsEeSNP_QJ-oV69w"/>
@@ -2049,6 +2052,9 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dqHtsXlsEeSNP_QJ-oV69w" x="559" y="169" width="152" height="160"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_fC76wHlsEeSNP_QJ-oV69w" type="2002">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yZIHgH-7EeS7oZ-R669c_Q" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yZIHgX-7EeS7oZ-R669c_Q" key="gradient" value="true"/>
+      </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_fC8h0HlsEeSNP_QJ-oV69w" type="5004"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_fC8h0XlsEeSNP_QJ-oV69w" type="7001">
         <styles xmi:type="notation:TitleStyle" xmi:id="_fC8h0nlsEeSNP_QJ-oV69w"/>
@@ -2133,6 +2139,9 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qlcCwHluEeSNP_QJ-oV69w" x="315" y="-98" width="311"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_qlcCxnluEeSNP_QJ-oV69w" type="2002">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xn9JQH-7EeS7oZ-R669c_Q" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xn9wUH-7EeS7oZ-R669c_Q" key="gradient" value="true"/>
+      </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_qlcCx3luEeSNP_QJ-oV69w" type="5004"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_qlcCyHluEeSNP_QJ-oV69w" type="7001">
         <styles xmi:type="notation:TitleStyle" xmi:id="_qlcCyXluEeSNP_QJ-oV69w"/>
@@ -2184,6 +2193,9 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eMBT4Xn7EeShtIICY7OyLw" x="973" y="-30" width="112"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_Tl9esHn8EeShtIICY7OyLw" type="2002">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1Sln8H-7EeS7oZ-R669c_Q" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1Sln8X-7EeS7oZ-R669c_Q" key="gradient" value="true"/>
+      </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_Tl9esnn8EeShtIICY7OyLw" type="5004"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_Tl9es3n8EeShtIICY7OyLw" type="7001">
         <styles xmi:type="notation:TitleStyle" xmi:id="_Tl9etHn8EeShtIICY7OyLw"/>
@@ -2193,6 +2205,9 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Tl9esXn8EeShtIICY7OyLw" x="1159" y="-30"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_V56eUHn8EeShtIICY7OyLw" type="2002">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1hZgAH-7EeS7oZ-R669c_Q" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1haHEH-7EeS7oZ-R669c_Q" key="gradient" value="true"/>
+      </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_V56eUnn8EeShtIICY7OyLw" type="5004"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_V57FYHn8EeShtIICY7OyLw" type="7001">
         <styles xmi:type="notation:TitleStyle" xmi:id="_V57FYXn8EeShtIICY7OyLw"/>
@@ -2387,6 +2402,9 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uyducXx8EeSyZvvyd5lTNA" x="-10" y="169" width="404"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_jonLgHyEEeS59rPATntwDA" type="2002">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_19hbUH-7EeS7oZ-R669c_Q" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_19iCYH-7EeS7oZ-R669c_Q" key="gradient" value="true"/>
+      </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_jopAsHyEEeS59rPATntwDA" type="5004"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_jopAsXyEEeS59rPATntwDA" type="7001">
         <styles xmi:type="notation:TitleStyle" xmi:id="_jopAsnyEEeS59rPATntwDA"/>
