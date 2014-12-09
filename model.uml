@@ -1038,9 +1038,7 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ctXRoHoIEeShtIICY7OyLw" name="checkOutReservation">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_uMyV4HoIEeShtIICY7OyLw" name="reservationId">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_uMyV4HoIEeShtIICY7OyLw" name="reservation" type="_eUmw8HlzEeSJYOaXazdB-A"/>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_wVERAHoIEeShtIICY7OyLw" name="success" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
@@ -1098,6 +1096,10 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_7kdhoHoIEeShtIICY7OyLw" name="bill" type="_ygK24HlpEeSJYOaXazdB-A" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_7o5VcH-JEeSLM4agWErSNA" name="getBookingByReservation">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_N95W0H-KEeSLM4agWErSNA" name="reservation" type="_eUmw8HlzEeSJYOaXazdB-A"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SztPMH-KEeSLM4agWErSNA" name="booking" type="_qdnKIHlzEeSJYOaXazdB-A"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_uycgUHx8EeSyZvvyd5lTNA" name="ICustomerManager">
@@ -1348,26 +1350,32 @@
     <message xmi:type="uml:Message" xmi:id="_PE1iQH7xEeSTPtnf2K9h1Q" name="setPaymentDetailsForCustomer_Message" messageSort="asynchCall" receiveEvent="_PE2wYH7xEeSTPtnf2K9h1Q" sendEvent="_PE2JUH7xEeSTPtnf2K9h1Q" signature="_-4Y_QHoCEeShtIICY7OyLw"/>
     <message xmi:type="uml:Message" xmi:id="_ac0HIH7xEeSTPtnf2K9h1Q" name="setPaymentDetailsForCustomer_Message0" messageSort="asynchCall" receiveEvent="_ac0uMX7xEeSTPtnf2K9h1Q" sendEvent="_ac0uMH7xEeSTPtnf2K9h1Q" signature="_-4Y_QHoCEeShtIICY7OyLw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_LA4A8Ho4EeSXTMmqtXqoMA" name="checkOut">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_Zd2n4Ho4EeSXTMmqtXqoMA" name="receptionist" type="_jkbPEHyEEeS59rPATntwDA"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_oBuhAHo4EeSXTMmqtXqoMA" name="keyCardService" type="__t4cEHluEeSNP_QJ-oV69w"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_nKjWgHo6EeSXTMmqtXqoMA" name="reservation" type="_eUmw8HlzEeSJYOaXazdB-A"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_G-NjIHpAEeSXTMmqtXqoMA" name="booking" type="_qdnKIHlzEeSJYOaXazdB-A"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_S8XXMHpAEeSXTMmqtXqoMA" name="bankingComponent" type="_qlXxQHluEeSNP_QJ-oV69w"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_BpaMMHpBEeSXTMmqtXqoMA" name="customer" type="_J3LAQHlvEeSJYOaXazdB-A"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_S3T1sH7uEeSsKvkxZhAATQ" name="reservationManager" type="_VffOUHx8EeSyZvvyd5lTNA"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_SVEnUHo4EeSXTMmqtXqoMA" name="actor" represents="_Zd2n4Ho4EeSXTMmqtXqoMA" coveredBy="_0bXsUHo6EeSXTMmqtXqoMA _7Ch0QXo_EeSXTMmqtXqoMA _yJndYHpAEeSXTMmqtXqoMA _0FAJoH7uEeSsKvkxZhAATQ"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_LA4A8Ho4EeSXTMmqtXqoMA" name="checkOutSuccess">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Zd2n4Ho4EeSXTMmqtXqoMA" name="actor" type="_jkbPEHyEEeS59rPATntwDA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_oBuhAHo4EeSXTMmqtXqoMA" name="keyCards" type="__t4cEHluEeSNP_QJ-oV69w"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_nKjWgHo6EeSXTMmqtXqoMA" name="r" type="_eUmw8HlzEeSJYOaXazdB-A"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_G-NjIHpAEeSXTMmqtXqoMA" name="b" type="_qdnKIHlzEeSJYOaXazdB-A"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_S8XXMHpAEeSXTMmqtXqoMA" name="bank" type="_qlXxQHluEeSNP_QJ-oV69w"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BpaMMHpBEeSXTMmqtXqoMA" name="c" type="_J3LAQHlvEeSJYOaXazdB-A"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_S3T1sH7uEeSsKvkxZhAATQ" name="rm" type="_VffOUHx8EeSyZvvyd5lTNA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_WAXN4H-JEeSLM4agWErSNA" name="bm" type="_l5AacHx8EeSyZvvyd5lTNA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_SVEnUHo4EeSXTMmqtXqoMA" name="actor" represents="_Zd2n4Ho4EeSXTMmqtXqoMA" coveredBy="_0bXsUHo6EeSXTMmqtXqoMA _7Ch0QXo_EeSXTMmqtXqoMA _yJndYHpAEeSXTMmqtXqoMA _M14_MH-FEeSLM4agWErSNA _K2ZXMH-GEeSLM4agWErSNA _c_angH-FEeSLM4agWErSNA _c_dq0H-FEeSLM4agWErSNA _h5NHUH-NEeSLM4agWErSNA"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_T22jIHo4EeSXTMmqtXqoMA" name="keyCard" represents="_oBuhAHo4EeSXTMmqtXqoMA" coveredBy="_halJsHo_EeSXTMmqtXqoMA"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_RCFqkHo6EeSXTMmqtXqoMA" name="Booking" represents="_G-NjIHpAEeSXTMmqtXqoMA" coveredBy="_NteQcHpAEeSXTMmqtXqoMA _42iBUXpAEeSXTMmqtXqoMA _yeIKQH8hEeSsKvkxZhAATQ _yeJYYH8hEeSsKvkxZhAATQ"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_SA74cHo6EeSXTMmqtXqoMA" name="Reservation" represents="_nKjWgHo6EeSXTMmqtXqoMA" coveredBy="_I79Q8Ho6EeSXTMmqtXqoMA _I7-fEHo6EeSXTMmqtXqoMA _udl3kXpAEeSXTMmqtXqoMA _yeIKQH8hEeSsKvkxZhAATQ _yeJYYH8hEeSsKvkxZhAATQ"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_Q62ycHpAEeSXTMmqtXqoMA" name="banking" represents="_S8XXMHpAEeSXTMmqtXqoMA" coveredBy="_g_IHUHpAEeSXTMmqtXqoMA _yeIKQH8hEeSsKvkxZhAATQ _yeJYYH8hEeSsKvkxZhAATQ"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_-gDOkHpAEeSXTMmqtXqoMA" name="Customer" represents="_BpaMMHpBEeSXTMmqtXqoMA" coveredBy="_UWA1QHpBEeSXTMmqtXqoMA"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_Pn3eMH7uEeSsKvkxZhAATQ" name="Lifeline" represents="_S3T1sH7uEeSsKvkxZhAATQ" coveredBy="_haecAHo_EeSXTMmqtXqoMA _0FAwsH7uEeSsKvkxZhAATQ _I79Q8Ho6EeSXTMmqtXqoMA _I7-fEHo6EeSXTMmqtXqoMA _udl3kHpAEeSXTMmqtXqoMA _42iBUHpAEeSXTMmqtXqoMA _UV_nIHpBEeSXTMmqtXqoMA _yeIKQH8hEeSsKvkxZhAATQ _yeJYYH8hEeSsKvkxZhAATQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0FAJoH7uEeSsKvkxZhAATQ" name="getCurrentReservationByRoomNumber_MessageSend" covered="_SVEnUHo4EeSXTMmqtXqoMA" message="_0E-UcH7uEeSsKvkxZhAATQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0FAwsH7uEeSsKvkxZhAATQ" name="getCurrentReservationByRoomNumber_MessageRecv" covered="_Pn3eMH7uEeSsKvkxZhAATQ" message="_0E-UcH7uEeSsKvkxZhAATQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_RCFqkHo6EeSXTMmqtXqoMA" name="Booking" represents="_G-NjIHpAEeSXTMmqtXqoMA" coveredBy="_c_angH-FEeSLM4agWErSNA _c_dq0H-FEeSLM4agWErSNA _2yDa8H-MEeSLM4agWErSNA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_SA74cHo6EeSXTMmqtXqoMA" name="Reservation" represents="_nKjWgHo6EeSXTMmqtXqoMA" coveredBy="_I79Q8Ho6EeSXTMmqtXqoMA _I7-fEHo6EeSXTMmqtXqoMA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Q62ycHpAEeSXTMmqtXqoMA" name="banking" represents="_S8XXMHpAEeSXTMmqtXqoMA" coveredBy="_c_angH-FEeSLM4agWErSNA _c_dq0H-FEeSLM4agWErSNA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Pn3eMH7uEeSsKvkxZhAATQ" name="Lifeline" represents="_S3T1sH7uEeSsKvkxZhAATQ" coveredBy="_haecAHo_EeSXTMmqtXqoMA _I79Q8Ho6EeSXTMmqtXqoMA _I7-fEHo6EeSXTMmqtXqoMA _M14_MX-FEeSLM4agWErSNA _K2Z-QH-GEeSLM4agWErSNA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_O38ZsH-JEeSLM4agWErSNA" name="bookingManager" represents="_WAXN4H-JEeSLM4agWErSNA" coveredBy="_c_angH-FEeSLM4agWErSNA _c_dq0H-FEeSLM4agWErSNA _DAmtYH-LEeSLM4agWErSNA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_QbkLwH-NEeSLM4agWErSNA" name="customer" represents="_BpaMMHpBEeSXTMmqtXqoMA" coveredBy="_c_angH-FEeSLM4agWErSNA _c_dq0H-FEeSLM4agWErSNA _h5NuYH-NEeSLM4agWErSNA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yJndYHpAEeSXTMmqtXqoMA" name="checkOutReservation_MessageRecv0" covered="_SVEnUHo4EeSXTMmqtXqoMA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_K2ZXMH-GEeSLM4agWErSNA" name="getCurrentReservationByRoomNumber_MessageSend" covered="_SVEnUHo4EeSXTMmqtXqoMA" message="_K2YJEH-GEeSLM4agWErSNA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_K2Z-QH-GEeSLM4agWErSNA" name="getCurrentReservationByRoomNumber_MessageRecv" covered="_Pn3eMH7uEeSsKvkxZhAATQ" message="_K2YJEH-GEeSLM4agWErSNA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_M14_MH-FEeSLM4agWErSNA" name="checkOutReservation_MessageSend" covered="_SVEnUHo4EeSXTMmqtXqoMA" message="_M1174H-FEeSLM4agWErSNA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_M14_MX-FEeSLM4agWErSNA" name="checkOutReservation_MessageRecv1" covered="_Pn3eMH7uEeSsKvkxZhAATQ" message="_M1174H-FEeSLM4agWErSNA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_haecAHo_EeSXTMmqtXqoMA" name="returnedCards_MessageSend" covered="_Pn3eMH7uEeSsKvkxZhAATQ" message="_hacm0Ho_EeSXTMmqtXqoMA"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_halJsHo_EeSXTMmqtXqoMA" name="returnedCards_MessageRecv" covered="_T22jIHo4EeSXTMmqtXqoMA" message="_hacm0Ho_EeSXTMmqtXqoMA"/>
-    <fragment xmi:type="uml:CombinedFragment" xmi:id="_I79Q8Ho6EeSXTMmqtXqoMA" name="CombinedFragment" covered="_SA74cHo6EeSXTMmqtXqoMA _Pn3eMH7uEeSsKvkxZhAATQ">
-      <operand xmi:type="uml:InteractionOperand" xmi:id="_I7-fEHo6EeSXTMmqtXqoMA" name="InteractionOperand" covered="_SA74cHo6EeSXTMmqtXqoMA _Pn3eMH7uEeSsKvkxZhAATQ">
+    <fragment xmi:type="uml:CombinedFragment" xmi:id="_I79Q8Ho6EeSXTMmqtXqoMA" name="CombinedFragment" covered="_Pn3eMH7uEeSsKvkxZhAATQ _SA74cHo6EeSXTMmqtXqoMA">
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_I7-fEHo6EeSXTMmqtXqoMA" name="InteractionOperand" covered="_Pn3eMH7uEeSsKvkxZhAATQ _SA74cHo6EeSXTMmqtXqoMA">
         <guard xmi:type="uml:InteractionConstraint" xmi:id="_I7-fEXo6EeSXTMmqtXqoMA">
           <specification xmi:type="uml:LiteralString" xmi:id="_I7_GIHo6EeSXTMmqtXqoMA" value="Use Case: View all items on tab"/>
           <maxint xmi:type="uml:LiteralInteger" xmi:id="_I7_GIno6EeSXTMmqtXqoMA" value="1"/>
@@ -1375,36 +1383,37 @@
         </guard>
       </operand>
     </fragment>
-    <fragment xmi:type="uml:ConsiderIgnoreFragment" xmi:id="_yeIKQH8hEeSsKvkxZhAATQ" name="ConsiderIgnoreFragment" covered="_Pn3eMH7uEeSsKvkxZhAATQ _SA74cHo6EeSXTMmqtXqoMA _Q62ycHpAEeSXTMmqtXqoMA _RCFqkHo6EeSXTMmqtXqoMA" interactionOperator="consider">
-      <operand xmi:type="uml:InteractionOperand" xmi:id="_yeJYYH8hEeSsKvkxZhAATQ" name="Last reservation to be checked out on booking" covered="_Pn3eMH7uEeSsKvkxZhAATQ _SA74cHo6EeSXTMmqtXqoMA _Q62ycHpAEeSXTMmqtXqoMA _RCFqkHo6EeSXTMmqtXqoMA">
-        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_NtdpYHpAEeSXTMmqtXqoMA" name="getBill_Message0Send" message="_NtcbQHpAEeSXTMmqtXqoMA"/>
-        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_NteQcHpAEeSXTMmqtXqoMA" name="getBill_Message0Recv" covered="_RCFqkHo6EeSXTMmqtXqoMA" message="_NtcbQHpAEeSXTMmqtXqoMA"/>
-        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_g_G5MHpAEeSXTMmqtXqoMA" name="makePayment_MessageSend" message="_g_FrEHpAEeSXTMmqtXqoMA"/>
-        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_g_IHUHpAEeSXTMmqtXqoMA" name="makePayment_MessageRecv" covered="_Q62ycHpAEeSXTMmqtXqoMA" message="_g_FrEHpAEeSXTMmqtXqoMA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_udl3kHpAEeSXTMmqtXqoMA" name="setCheckedOut_MessageSend" message="_udlQgHpAEeSXTMmqtXqoMA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_udl3kXpAEeSXTMmqtXqoMA" name="setCheckedOut_MessageRecv" message="_udlQgHpAEeSXTMmqtXqoMA"/>
+    <fragment xmi:type="uml:CombinedFragment" xmi:id="_c_angH-FEeSLM4agWErSNA" name="CombinedFragment0" covered="_RCFqkHo6EeSXTMmqtXqoMA _Q62ycHpAEeSXTMmqtXqoMA _O38ZsH-JEeSLM4agWErSNA _QbkLwH-NEeSLM4agWErSNA _SVEnUHo4EeSXTMmqtXqoMA" interactionOperator="opt">
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_c_dq0H-FEeSLM4agWErSNA" name="InteractionOperand" covered="_RCFqkHo6EeSXTMmqtXqoMA _Q62ycHpAEeSXTMmqtXqoMA _O38ZsH-JEeSLM4agWErSNA _QbkLwH-NEeSLM4agWErSNA _SVEnUHo4EeSXTMmqtXqoMA">
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_h5NuYH-NEeSLM4agWErSNA" name="addLoyaltyPoints_MessageRecv" covered="_QbkLwH-NEeSLM4agWErSNA" message="_h5MgQH-NEeSLM4agWErSNA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_DAmtYH-LEeSLM4agWErSNA" name="getBookingByReservation_MessageRecv" covered="_O38ZsH-JEeSLM4agWErSNA" message="_DAk4MH-LEeSLM4agWErSNA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_DAmGUH-LEeSLM4agWErSNA" name="getBookingByReservation_MessageSend" message="_DAk4MH-LEeSLM4agWErSNA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_2yDa8H-MEeSLM4agWErSNA" name="getBill_MessageRecv" covered="_RCFqkHo6EeSXTMmqtXqoMA" message="_2yCM0H-MEeSLM4agWErSNA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_2yCz4H-MEeSLM4agWErSNA" name="getBill_MessageSend" message="_2yCM0H-MEeSLM4agWErSNA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7TRgMH-IEeSLM4agWErSNA" name="getCustomer_Message0Send" message="_7TQ5IH-IEeSLM4agWErSNA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7TSHQH-IEeSLM4agWErSNA" name="getCustomer_Message0Recv" message="_7TQ5IH-IEeSLM4agWErSNA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_h5NHUH-NEeSLM4agWErSNA" name="addLoyaltyPoints_MessageSend" covered="_SVEnUHo4EeSXTMmqtXqoMA" message="_h5MgQH-NEeSLM4agWErSNA"/>
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_c_dq0X-FEeSLM4agWErSNA">
+          <specification xmi:type="uml:LiteralString" xmi:id="_c_dq0n-FEeSLM4agWErSNA" value="this is the last reservation in the booking being checked out"/>
+          <maxint xmi:type="uml:LiteralInteger" xmi:id="_c_eR4X-FEeSLM4agWErSNA" value="1"/>
+          <minint xmi:type="uml:LiteralInteger" xmi:id="_c_eR4H-FEeSLM4agWErSNA"/>
+        </guard>
       </operand>
     </fragment>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0bXsUHo6EeSXTMmqtXqoMA" name="checkOutReservation_MessageRecv" covered="_SVEnUHo4EeSXTMmqtXqoMA"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_haecAHo_EeSXTMmqtXqoMA" name="returnedCards_MessageSend" covered="_Pn3eMH7uEeSsKvkxZhAATQ" message="_hacm0Ho_EeSXTMmqtXqoMA"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_udl3kHpAEeSXTMmqtXqoMA" name="setCheckedOut_MessageSend" covered="_Pn3eMH7uEeSsKvkxZhAATQ" message="_udlQgHpAEeSXTMmqtXqoMA"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_udl3kXpAEeSXTMmqtXqoMA" name="setCheckedOut_MessageRecv" covered="_SA74cHo6EeSXTMmqtXqoMA" message="_udlQgHpAEeSXTMmqtXqoMA"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_42iBUHpAEeSXTMmqtXqoMA" name="getCustomer_MessageSend" covered="_Pn3eMH7uEeSsKvkxZhAATQ" message="_42haQHpAEeSXTMmqtXqoMA"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_42iBUXpAEeSXTMmqtXqoMA" name="getCustomer_MessageRecv" covered="_RCFqkHo6EeSXTMmqtXqoMA" message="_42haQHpAEeSXTMmqtXqoMA"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UV_nIHpBEeSXTMmqtXqoMA" name="addLoyaltyPoints_MessageSend" covered="_Pn3eMH7uEeSsKvkxZhAATQ" message="_UV_AEHpBEeSXTMmqtXqoMA"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UWA1QHpBEeSXTMmqtXqoMA" name="addLoyaltyPoints_MessageRecv" covered="_-gDOkHpAEeSXTMmqtXqoMA" message="_UV_AEHpBEeSXTMmqtXqoMA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pZmI4H-IEeSLM4agWErSNA" name="makePayment_MessageSend" message="_pZk6wH-IEeSLM4agWErSNA"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7Ch0QXo_EeSXTMmqtXqoMA" name="getBill_MessageRecv" covered="_SVEnUHo4EeSXTMmqtXqoMA"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yJndYHpAEeSXTMmqtXqoMA" name="checkOutReservation_MessageRecv0" covered="_SVEnUHo4EeSXTMmqtXqoMA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0bXsUHo6EeSXTMmqtXqoMA" name="checkOutReservation_MessageRecv" covered="_SVEnUHo4EeSXTMmqtXqoMA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pZnXAH-IEeSLM4agWErSNA" name="makePayment_MessageRecv" message="_pZk6wH-IEeSLM4agWErSNA"/>
     <message xmi:type="uml:Message" xmi:id="_hacm0Ho_EeSXTMmqtXqoMA" name="returnedCards_Message" messageSort="asynchCall" receiveEvent="_halJsHo_EeSXTMmqtXqoMA" sendEvent="_haecAHo_EeSXTMmqtXqoMA" signature="_d1ghgHlwEeSNP_QJ-oV69w"/>
-    <message xmi:type="uml:Message" xmi:id="_NtcbQHpAEeSXTMmqtXqoMA" name="getBill_Message0" messageSort="asynchCall" receiveEvent="_NteQcHpAEeSXTMmqtXqoMA" sendEvent="_NtdpYHpAEeSXTMmqtXqoMA" signature="_n8sHQHn8EeSJYOaXazdB-A"/>
-    <message xmi:type="uml:Message" xmi:id="_g_FrEHpAEeSXTMmqtXqoMA" name="makePayment_Message" messageSort="asynchCall" receiveEvent="_g_IHUHpAEeSXTMmqtXqoMA" sendEvent="_g_G5MHpAEeSXTMmqtXqoMA" signature="_qlXxQXluEeSNP_QJ-oV69w"/>
     <message xmi:type="uml:Message" xmi:id="_udlQgHpAEeSXTMmqtXqoMA" name="setCheckedOut_Message" messageSort="asynchCall" receiveEvent="_udl3kXpAEeSXTMmqtXqoMA" sendEvent="_udl3kHpAEeSXTMmqtXqoMA" signature="_p4zcYHoBEeSJYOaXazdB-A"/>
-    <message xmi:type="uml:Message" xmi:id="_42haQHpAEeSXTMmqtXqoMA" name="getCustomer_Message" messageSort="asynchCall" receiveEvent="_42iBUXpAEeSXTMmqtXqoMA" sendEvent="_42iBUHpAEeSXTMmqtXqoMA" signature="_XFUhgHn8EeSJYOaXazdB-A"/>
-    <message xmi:type="uml:Message" xmi:id="_UV_AEHpBEeSXTMmqtXqoMA" name="addLoyaltyPoints_Message" messageSort="asynchCall" receiveEvent="_UWA1QHpBEeSXTMmqtXqoMA" sendEvent="_UV_nIHpBEeSXTMmqtXqoMA" signature="_Y-mLAHlyEeSJYOaXazdB-A"/>
-    <message xmi:type="uml:Message" xmi:id="_0E-UcH7uEeSsKvkxZhAATQ" name="getCurrentReservationByRoomNumber_Message" messageSort="asynchCall" receiveEvent="_0FAwsH7uEeSsKvkxZhAATQ" sendEvent="_0FAJoH7uEeSsKvkxZhAATQ" signature="_1nyfUHo-EeSXTMmqtXqoMA"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Duration" xmi:id="_ZEMREH8iEeSsKvkxZhAATQ" name="DurationIntervalMin">
-    <expr xmi:type="uml:LiteralInteger" xmi:id="_ZEOGQH8iEeSsKvkxZhAATQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Duration" xmi:id="_ZEM4IH8iEeSsKvkxZhAATQ" name="DurationIntervalMax">
-    <expr xmi:type="uml:LiteralInteger" xmi:id="_ZEOGQX8iEeSsKvkxZhAATQ"/>
+    <message xmi:type="uml:Message" xmi:id="_M1174H-FEeSLM4agWErSNA" name="checkOutReservation_Message" messageSort="asynchCall" receiveEvent="_M14_MX-FEeSLM4agWErSNA" sendEvent="_M14_MH-FEeSLM4agWErSNA" signature="_ctXRoHoIEeShtIICY7OyLw"/>
+    <message xmi:type="uml:Message" xmi:id="_K2YJEH-GEeSLM4agWErSNA" name="getCurrentReservationByRoomNumber_Message" messageSort="asynchCall" receiveEvent="_K2Z-QH-GEeSLM4agWErSNA" sendEvent="_K2ZXMH-GEeSLM4agWErSNA" signature="_1nyfUHo-EeSXTMmqtXqoMA"/>
+    <message xmi:type="uml:Message" xmi:id="_pZk6wH-IEeSLM4agWErSNA" name="makePayment_Message" messageSort="asynchCall" receiveEvent="_pZnXAH-IEeSLM4agWErSNA" sendEvent="_pZmI4H-IEeSLM4agWErSNA" signature="_qlXxQXluEeSNP_QJ-oV69w"/>
+    <message xmi:type="uml:Message" xmi:id="_7TQ5IH-IEeSLM4agWErSNA" name="getCustomer_Message0" messageSort="asynchCall" receiveEvent="_7TSHQH-IEeSLM4agWErSNA" sendEvent="_7TRgMH-IEeSLM4agWErSNA" signature="_XFUhgHn8EeSJYOaXazdB-A"/>
+    <message xmi:type="uml:Message" xmi:id="_DAk4MH-LEeSLM4agWErSNA" name="getBookingByReservation_Message" messageSort="asynchCall" receiveEvent="_DAmtYH-LEeSLM4agWErSNA" sendEvent="_DAmGUH-LEeSLM4agWErSNA" signature="_7o5VcH-JEeSLM4agWErSNA"/>
+    <message xmi:type="uml:Message" xmi:id="_2yCM0H-MEeSLM4agWErSNA" name="getBill_Message" messageSort="asynchCall" receiveEvent="_2yDa8H-MEeSLM4agWErSNA" sendEvent="_2yCz4H-MEeSLM4agWErSNA" signature="_n8sHQHn8EeSJYOaXazdB-A"/>
+    <message xmi:type="uml:Message" xmi:id="_h5MgQH-NEeSLM4agWErSNA" name="addLoyaltyPoints_Message" messageSort="asynchCall" receiveEvent="_h5NuYH-NEeSLM4agWErSNA" sendEvent="_h5NHUH-NEeSLM4agWErSNA" signature="_Y-mLAHlyEeSJYOaXazdB-A"/>
   </packagedElement>
 </uml:Model>
