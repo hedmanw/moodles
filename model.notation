@@ -1574,7 +1574,7 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_dXTOsXjEEeSDBKbFcXcsYQ"/>
       <element xmi:type="uml:Association" href="model.uml#_dXSAkHjEEeSDBKbFcXcsYQ"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_dXTOsnjEEeSDBKbFcXcsYQ" points="[-18, 14, 67, -54]$[-87, 57, -2, -11]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_dXbxkHjEEeSDBKbFcXcsYQ" id="(0.5074626865671642,0.021645021645021644)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_dXbxkHjEEeSDBKbFcXcsYQ" id="(0.4417910447761194,0.012987012987012988)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_dXbxkXjEEeSDBKbFcXcsYQ" id="(0.9613899613899614,0.9411764705882353)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_u_BkAHlsEeSJYOaXazdB-A" type="4002" source="_ADMsIHlsEeSJYOaXazdB-A" target="_1MqWwHjDEeSDBKbFcXcsYQ">
