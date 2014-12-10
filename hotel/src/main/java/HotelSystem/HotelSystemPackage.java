@@ -1970,17 +1970,6 @@ public interface HotelSystemPackage extends EPackage {
 	int RESERVATION_MANAGER_OPERATION_COUNT = HotelServicePackage.IRESERVATION_MANAGER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link HotelSystem.PaymentMethod <em>Payment Method</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see HotelSystem.PaymentMethod
-	 * @see HotelSystem.impl.HotelSystemPackageImpl#getPaymentMethod()
-	 * @generated
-	 */
-	int PAYMENT_METHOD = 19;
-
-
-	/**
 	 * Returns the meta object for class '{@link HotelSystem.Hotel <em>Hotel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3434,16 +3423,6 @@ public interface HotelSystemPackage extends EPackage {
 	EReference getReservationManager_Reservation();
 
 	/**
-	 * Returns the meta object for enum '{@link HotelSystem.PaymentMethod <em>Payment Method</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Payment Method</em>'.
-	 * @see HotelSystem.PaymentMethod
-	 * @generated
-	 */
-	EEnum getPaymentMethod();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4631,16 +4610,6 @@ public interface HotelSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RESERVATION_MANAGER__RESERVATION = eINSTANCE.getReservationManager_Reservation();
-
-		/**
-		 * The meta object literal for the '{@link HotelSystem.PaymentMethod <em>Payment Method</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see HotelSystem.PaymentMethod
-		 * @see HotelSystem.impl.HotelSystemPackageImpl#getPaymentMethod()
-		 * @generated
-		 */
-		EEnum PAYMENT_METHOD = eINSTANCE.getPaymentMethod();
 
 	}
 

@@ -195,13 +195,6 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 	private EClass reservationManagerEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum paymentMethodEEnum = null;
-
-	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -1553,15 +1546,6 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getPaymentMethod() {
-		return paymentMethodEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public HotelSystemFactory getHotelSystemFactory() {
 		return (HotelSystemFactory)getEFactoryInstance();
 	}
@@ -1744,9 +1728,6 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 
 		reservationManagerEClass = createEClass(RESERVATION_MANAGER);
 		createEReference(reservationManagerEClass, RESERVATION_MANAGER__RESERVATION);
-
-		// Create enums
-		paymentMethodEEnum = createEEnum(PAYMENT_METHOD);
 	}
 
 	/**
@@ -2072,39 +2053,8 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 		initEClass(reservationManagerEClass, ReservationManager.class, "ReservationManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getReservationManager_Reservation(), this.getReservation(), null, "reservation", null, 0, -1, ReservationManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		// Initialize enums and add enum literals
-		initEEnum(paymentMethodEEnum, PaymentMethod.class, "PaymentMethod");
-		addEEnumLiteral(paymentMethodEEnum, PaymentMethod.PREPAID);
-		addEEnumLiteral(paymentMethodEEnum, PaymentMethod.PAYONCHECKOUT);
-
 		// Create resource
 		createResource(eNS_URI);
-
-		// Create annotations
-		// http://www.eclipse.org/uml2/2.0.0/UML
-		createUMLAnnotations();
-	}
-
-	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/uml2/2.0.0/UML</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createUMLAnnotations() {
-		String source = "http://www.eclipse.org/uml2/2.0.0/UML";	
-		addAnnotation
-		  (paymentMethodEEnum.getELiterals().get(0), 
-		   source, 
-		   new String[] {
-			 "originalName", "Pre paid"
-		   });	
-		addAnnotation
-		  (paymentMethodEEnum.getELiterals().get(1), 
-		   source, 
-		   new String[] {
-			 "originalName", "Pay on checkout"
-		   });
 	}
 
 } //HotelSystemPackageImpl

@@ -32,10 +32,6 @@
   <foreignModel>file:/home/wilhelm/develop/moodles/HotelSystem.uml</foreignModel>
   <genPackages xsi:type="genmodel:GenPackage" prefix="HotelSystem" disposableProviderFactory="true"
       ecorePackage="HotelSystem.ecore#/">
-    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="HotelSystem.ecore#//PaymentMethod">
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="HotelSystem.ecore#//PaymentMethod/Prepaid"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="HotelSystem.ecore#//PaymentMethod/Payoncheckout"/>
-    </genEnums>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="HotelSystem.ecore#//Hotel"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="HotelSystem.ecore#//Tab">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute HotelSystem.ecore#//Tab/tabItems"/>
@@ -368,8 +364,8 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//checkOutSuccess/bm"/>
     </genClasses>
-    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="BankingService" disposableProviderFactory="true"
-        ecorePackage="model.ecore#//BankingService">
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="BankingService" basePackage="model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//BankingService">
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="model.ecore#//BankingService/AdministratorProvides">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//BankingService/AdministratorProvides/makeDeposit">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//BankingService/AdministratorProvides/makeDeposit/ccNumber"/>
@@ -426,8 +422,8 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//BankingService/BankComponent"/>
     </nestedGenPackages>
-    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="KeyCardService" disposableProviderFactory="true"
-        ecorePackage="model.ecore#//KeyCardService">
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="KeyCardService" basePackage="model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//KeyCardService">
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//KeyCardService/KeyCards"/>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="model.ecore#//KeyCardService/KeyCardsProvides">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//KeyCardService/KeyCardsProvides/returnedCards">
@@ -439,8 +435,8 @@
         </genOperations>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="HotelService" disposableProviderFactory="true"
-        ecorePackage="model.ecore#//HotelService">
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="HotelService" basePackage="model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//HotelService">
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//HotelService/HotelReceptionist"/>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="model.ecore#//HotelService/IRoomManager">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IRoomManager/getAvailableRooms">

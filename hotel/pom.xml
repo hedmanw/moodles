@@ -74,4 +74,14 @@
             <version>2.10.1</version>
         </dependency>
     </dependencies>
+    <repositories>
+        <!-- Only required if a snapshot version of Spock is used -->
+        <repository>
+            <id>spock-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
