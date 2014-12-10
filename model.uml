@@ -506,17 +506,6 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_9X84gHoIEeSJYOaXazdB-A" name="getTab">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_AhpNUHoJEeSJYOaXazdB-A" type="_fnSvgHVPEeSFlMIer3mkJA" direction="return"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_-BsOgH7pEeSyZvvyd5lTNA" name="nbrOfGuestsIsOkay" visibility="public">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_GqxkMH7qEeSyZvvyd5lTNA" name="nbrOfbeds">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KPj5kH7qEeSyZvvyd5lTNA" name="nbrOfGuests">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PGWCUH7qEeSyZvvyd5lTNA" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
-        </ownedParameter>
-      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_qdnKIHlzEeSJYOaXazdB-A" name="Booking">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_5C5YgHlzEeSJYOaXazdB-A" name="bill" visibility="private" type="_ygK24HlpEeSJYOaXazdB-A" association="_5C5Yg3lzEeSJYOaXazdB-A">
@@ -1158,7 +1147,7 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_D4G8YHyGEeSzd-4yXNUKkQ" name="bm" type="_l5AacHx8EeSyZvvyd5lTNA"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_x0Fg0HyGEeSzd-4yXNUKkQ" name="b" type="_qdnKIHlzEeSJYOaXazdB-A"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_lnCxoHyFEeSzd-4yXNUKkQ" name="actor" represents="_pjjDcHyFEeSzd-4yXNUKkQ" coveredBy="_ZJ77QHyGEeSzd-4yXNUKkQ _UAlw8HyIEeSzd-4yXNUKkQ _ddAoEHyIEeSzd-4yXNUKkQ _ngzoQHyIEeSzd-4yXNUKkQ _uZcUAHyIEeSzd-4yXNUKkQ _33JkkHyIEeSzd-4yXNUKkQ __p_10HyIEeSzd-4yXNUKkQ _oAsucH7nEeSyZvvyd5lTNA _oAw_4H7nEeSyZvvyd5lTNA"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_4rsuUHyFEeSzd-4yXNUKkQ" name="reservation" represents="_lvknQHovEeSyq9V5IfgrHg" coveredBy="_ddBPIHyIEeSzd-4yXNUKkQ _ngzoQXyIEeSzd-4yXNUKkQ _33KysHyIEeSzd-4yXNUKkQ __p_10XyIEeSzd-4yXNUKkQ _W-iGkH7qEeSyZvvyd5lTNA _W-itoH7qEeSyZvvyd5lTNA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_4rsuUHyFEeSzd-4yXNUKkQ" name="reservation" represents="_lvknQHovEeSyq9V5IfgrHg" coveredBy="_ddBPIHyIEeSzd-4yXNUKkQ _ngzoQXyIEeSzd-4yXNUKkQ _33KysHyIEeSzd-4yXNUKkQ __p_10XyIEeSzd-4yXNUKkQ"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_8yQ7EHyFEeSzd-4yXNUKkQ" name="booking" represents="_D4G8YHyGEeSzd-4yXNUKkQ" coveredBy="_ZJ9JYHyGEeSzd-4yXNUKkQ _oAsucH7nEeSyZvvyd5lTNA _oAw_4H7nEeSyZvvyd5lTNA"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_SM53sHyGEeSzd-4yXNUKkQ" name="keycardsys" represents="_rluiUHovEeSyq9V5IfgrHg" coveredBy="_uZc7EHyIEeSzd-4yXNUKkQ"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_pe7MsHyGEeSzd-4yXNUKkQ" name="b" represents="_x0Fg0HyGEeSzd-4yXNUKkQ" coveredBy="_UAmYAHyIEeSzd-4yXNUKkQ"/>
@@ -1181,8 +1170,6 @@
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ddBPIHyIEeSzd-4yXNUKkQ" name="setResponsible_MessageRecv" covered="_4rsuUHyFEeSzd-4yXNUKkQ" message="_dc_Z8HyIEeSzd-4yXNUKkQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ngzoQHyIEeSzd-4yXNUKkQ" name="setNbrOfGuests_MessageSend" covered="_lnCxoHyFEeSzd-4yXNUKkQ" message="_ngzBMHyIEeSzd-4yXNUKkQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ngzoQXyIEeSzd-4yXNUKkQ" name="setNbrOfGuests_MessageRecv" covered="_4rsuUHyFEeSzd-4yXNUKkQ" message="_ngzBMHyIEeSzd-4yXNUKkQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_W-iGkH7qEeSyZvvyd5lTNA" name="nbrOfGuestsIsOkay_MessageSend" covered="_4rsuUHyFEeSzd-4yXNUKkQ" message="_W-fDQH7qEeSyZvvyd5lTNA"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_W-itoH7qEeSyZvvyd5lTNA" name="nbrOfGuestsIsOkay_MessageRecv" covered="_4rsuUHyFEeSzd-4yXNUKkQ" message="_W-fDQH7qEeSyZvvyd5lTNA"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_uZcUAHyIEeSzd-4yXNUKkQ" name="assignCardsToReservation_MessageSend" covered="_lnCxoHyFEeSzd-4yXNUKkQ" message="_uZbs8HyIEeSzd-4yXNUKkQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_uZc7EHyIEeSzd-4yXNUKkQ" name="assignCardsToReservation_MessageRecv" covered="_SM53sHyGEeSzd-4yXNUKkQ" message="_uZbs8HyIEeSzd-4yXNUKkQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_33JkkHyIEeSzd-4yXNUKkQ" name="addKeyCard_MessageSend" covered="_lnCxoHyFEeSzd-4yXNUKkQ" message="_33HvYHyIEeSzd-4yXNUKkQ"/>
@@ -1197,7 +1184,6 @@
     <message xmi:type="uml:Message" xmi:id="_uZbs8HyIEeSzd-4yXNUKkQ" name="assignCardsToReservation_Message" messageSort="asynchCall" receiveEvent="_uZc7EHyIEeSzd-4yXNUKkQ" sendEvent="_uZcUAHyIEeSzd-4yXNUKkQ" signature="_rGKCwHlxEeSNP_QJ-oV69w"/>
     <message xmi:type="uml:Message" xmi:id="_33HvYHyIEeSzd-4yXNUKkQ" name="addKeyCard_Message" messageSort="asynchCall" receiveEvent="_33KysHyIEeSzd-4yXNUKkQ" sendEvent="_33JkkHyIEeSzd-4yXNUKkQ" signature="_YjtxIHoHEeSJYOaXazdB-A"/>
     <message xmi:type="uml:Message" xmi:id="__p-nsHyIEeSzd-4yXNUKkQ" name="setCheckedIn_Message" messageSort="asynchCall" receiveEvent="__p_10XyIEeSzd-4yXNUKkQ" sendEvent="__p_10HyIEeSzd-4yXNUKkQ" signature="_k2YrYHoBEeSJYOaXazdB-A"/>
-    <message xmi:type="uml:Message" xmi:id="_W-fDQH7qEeSyZvvyd5lTNA" name="nbrOfGuestsIsOkay_Message" messageSort="asynchCall" receiveEvent="_W-itoH7qEeSyZvvyd5lTNA" sendEvent="_W-iGkH7qEeSyZvvyd5lTNA" signature="_-BsOgH7pEeSyZvvyd5lTNA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_BRP0kHolEeSXTMmqtXqoMA" name="reserveARoom">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_vUCSAHotEeSXTMmqtXqoMA" name="r" type="_jkbPEHyEEeS59rPATntwDA"/>
