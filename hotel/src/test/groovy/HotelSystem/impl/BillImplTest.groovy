@@ -7,7 +7,11 @@ import spock.lang.Specification
  * Created by wilhelm on 12/10/14.
  */
 class BillImplTest extends Specification {
-    def bill = HotelSystemFactory.eINSTANCE.createBill();
+    def bill;
+
+    def setup() {
+        bill = HotelSystemFactory.eINSTANCE.createBill();
+    }
 
     def "GetPaid"() {
         when:
