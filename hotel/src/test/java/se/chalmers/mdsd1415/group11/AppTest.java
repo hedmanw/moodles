@@ -1,7 +1,9 @@
 package se.chalmers.mdsd1415.group11;
 
 import HotelSystem.Bill;
+import HotelSystem.HotelSystemFactory;
 import HotelSystem.impl.BillImpl;
+import HotelSystem.impl.HotelSystemFactoryImpl;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -35,6 +37,8 @@ public class AppTest
      */
     public void testApp()
     {
-        
+        Bill bill = HotelSystemFactory.eINSTANCE.createBill();
+        bill.addToBill(5);
+        assertEquals(5, bill.getGrandTotal());
     }
 }

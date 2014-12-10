@@ -7,7 +7,53 @@
     <version>1.0-SNAPSHOT</version>
     <name>hotel</name>
     <url>http://maven.apache.org</url>
+
+    <build>
+        <!-- Mandatory plugins for using Spock -->
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.gmaven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>1.4</version>
+                <configuration>
+                    <providerSelection>2.0</providerSelection>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.gmaven.runtime</groupId>
+                        <artifactId>gmaven-runtime-2.0</artifactId>
+                        <version>1.4</version>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>org.codehaus.groovy</groupId>
+                                <artifactId>groovy-all</artifactId>
+                            </exclusion>
+                        </exclusions>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.codehaus.groovy</groupId>
+                        <artifactId>groovy-all</artifactId>
+                        <version>2.3.8</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
     <dependencies>
+        <dependency>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-core</artifactId>
+            <version>1.0-groovy-2.3-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -25,15 +71,24 @@
             <version>2.10.1</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>org.eclipse.uml2</groupId>-->
-            <!--<artifactId>uml</artifactId>-->
-            <!--<version>5.0.0-v20140602-0749</version>-->
+        <!--<groupId>org.eclipse.uml2</groupId>-->
+        <!--<artifactId>uml</artifactId>-->
+        <!--<version>5.0.0-v20140602-0749</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.eclipse.uml2</groupId>-->
-            <!--<artifactId>types</artifactId>-->
-            <!--<version>2.0.0-v20140602-0749</version>-->
+        <!--<groupId>org.eclipse.uml2</groupId>-->
+        <!--<artifactId>types</artifactId>-->
+        <!--<version>2.0.0-v20140602-0749</version>-->
         <!--</dependency>-->
-
     </dependencies>
+    <repositories>
+        <!-- Only required if a snapshot version of Spock is used -->
+        <repository>
+            <id>spock-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
