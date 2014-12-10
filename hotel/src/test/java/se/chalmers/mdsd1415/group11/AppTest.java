@@ -1,5 +1,7 @@
 package se.chalmers.mdsd1415.group11;
 
+import HotelSystem.Bill;
+import HotelSystem.impl.BillImpl;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -33,6 +35,6 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+        
     }
 }
