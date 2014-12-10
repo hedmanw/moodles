@@ -1103,7 +1103,7 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getReservation_NbrOfGuests() {
+	public EAttribute getReservation_NumberOfGuests() {
 		return (EAttribute)reservationEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -1202,7 +1202,7 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getReservation__GetNbrOfGuests() {
+	public EOperation getReservation__GetNumberOfGuests() {
 		return reservationEClass.getEOperations().get(10);
 	}
 
@@ -1211,7 +1211,7 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getReservation__SetNbrOfGuests__int() {
+	public EOperation getReservation__SetNumberOfGuests__int() {
 		return reservationEClass.getEOperations().get(11);
 	}
 
@@ -1687,7 +1687,7 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 		createEAttribute(reservationEClass, RESERVATION__START_DAY);
 		createEAttribute(reservationEClass, RESERVATION__END_DAY);
 		createEAttribute(reservationEClass, RESERVATION__RESPONSIBLE);
-		createEAttribute(reservationEClass, RESERVATION__NBR_OF_GUESTS);
+		createEAttribute(reservationEClass, RESERVATION__NUMBER_OF_GUESTS);
 		createEOperation(reservationEClass, RESERVATION___GET_CHECKED_IN);
 		createEOperation(reservationEClass, RESERVATION___SET_CHECKED_IN__LONG);
 		createEOperation(reservationEClass, RESERVATION___GET_CHECKED_OUT);
@@ -1698,8 +1698,8 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 		createEOperation(reservationEClass, RESERVATION___GET_END_DAY);
 		createEOperation(reservationEClass, RESERVATION___GET_RESPONSIBLE);
 		createEOperation(reservationEClass, RESERVATION___SET_RESPONSIBLE__STRING);
-		createEOperation(reservationEClass, RESERVATION___GET_NBR_OF_GUESTS);
-		createEOperation(reservationEClass, RESERVATION___SET_NBR_OF_GUESTS__INT);
+		createEOperation(reservationEClass, RESERVATION___GET_NUMBER_OF_GUESTS);
+		createEOperation(reservationEClass, RESERVATION___SET_NUMBER_OF_GUESTS__INT);
 		createEOperation(reservationEClass, RESERVATION___GET_ROOM);
 		createEOperation(reservationEClass, RESERVATION___SET_ROOM__ROOM);
 		createEOperation(reservationEClass, RESERVATION___GET_COST_CATEGORY);
@@ -1967,7 +1967,7 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 		initEAttribute(getReservation_StartDay(), ecorePackage.getELong(), "startDay", null, 1, 1, Reservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getReservation_EndDay(), ecorePackage.getELong(), "endDay", null, 1, 1, Reservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getReservation_Responsible(), ecorePackage.getEString(), "responsible", null, 1, 1, Reservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getReservation_NbrOfGuests(), ecorePackage.getEInt(), "nbrOfGuests", null, 1, 1, Reservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getReservation_NumberOfGuests(), ecorePackage.getEInt(), "numberOfGuests", null, 1, 1, Reservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEOperation(getReservation__GetCheckedIn(), ecorePackage.getELong(), "getCheckedIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -1994,9 +1994,9 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 		op = initEOperation(getReservation__SetResponsible__String(), null, "setResponsible", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "responsible", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getReservation__GetNbrOfGuests(), ecorePackage.getEInt(), "getNbrOfGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getReservation__GetNumberOfGuests(), ecorePackage.getEInt(), "getNumberOfGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getReservation__SetNbrOfGuests__int(), null, "setNbrOfGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getReservation__SetNumberOfGuests__int(), null, "setNumberOfGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "number", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getReservation__GetRoom(), this.getRoom(), "getRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);

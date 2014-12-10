@@ -1117,13 +1117,13 @@ public interface HotelSystemPackage extends EPackage {
 	int RESERVATION__RESPONSIBLE = 9;
 
 	/**
-	 * The feature id for the '<em><b>Nbr Of Guests</b></em>' attribute.
+	 * The feature id for the '<em><b>Number Of Guests</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION__NBR_OF_GUESTS = 10;
+	int RESERVATION__NUMBER_OF_GUESTS = 10;
 
 	/**
 	 * The number of structural features of the '<em>Reservation</em>' class.
@@ -1225,22 +1225,22 @@ public interface HotelSystemPackage extends EPackage {
 	int RESERVATION___SET_RESPONSIBLE__STRING = 9;
 
 	/**
-	 * The operation id for the '<em>Get Nbr Of Guests</em>' operation.
+	 * The operation id for the '<em>Get Number Of Guests</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___GET_NBR_OF_GUESTS = 10;
+	int RESERVATION___GET_NUMBER_OF_GUESTS = 10;
 
 	/**
-	 * The operation id for the '<em>Set Nbr Of Guests</em>' operation.
+	 * The operation id for the '<em>Set Number Of Guests</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___SET_NBR_OF_GUESTS__INT = 11;
+	int RESERVATION___SET_NUMBER_OF_GUESTS__INT = 11;
 
 	/**
 	 * The operation id for the '<em>Get Room</em>' operation.
@@ -2923,15 +2923,15 @@ public interface HotelSystemPackage extends EPackage {
 	EAttribute getReservation_Responsible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link HotelSystem.Reservation#getNbrOfGuests <em>Nbr Of Guests</em>}'.
+	 * Returns the meta object for the attribute '{@link HotelSystem.Reservation#getNumberOfGuests <em>Number Of Guests</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nbr Of Guests</em>'.
-	 * @see HotelSystem.Reservation#getNbrOfGuests()
+	 * @return the meta object for the attribute '<em>Number Of Guests</em>'.
+	 * @see HotelSystem.Reservation#getNumberOfGuests()
 	 * @see #getReservation()
 	 * @generated
 	 */
-	EAttribute getReservation_NbrOfGuests();
+	EAttribute getReservation_NumberOfGuests();
 
 	/**
 	 * Returns the meta object for the '{@link HotelSystem.Reservation#getCheckedIn() <em>Get Checked In</em>}' operation.
@@ -3034,24 +3034,24 @@ public interface HotelSystemPackage extends EPackage {
 	EOperation getReservation__SetResponsible__String();
 
 	/**
-	 * Returns the meta object for the '{@link HotelSystem.Reservation#getNbrOfGuests() <em>Get Nbr Of Guests</em>}' operation.
+	 * Returns the meta object for the '{@link HotelSystem.Reservation#getNumberOfGuests() <em>Get Number Of Guests</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Nbr Of Guests</em>' operation.
-	 * @see HotelSystem.Reservation#getNbrOfGuests()
+	 * @return the meta object for the '<em>Get Number Of Guests</em>' operation.
+	 * @see HotelSystem.Reservation#getNumberOfGuests()
 	 * @generated
 	 */
-	EOperation getReservation__GetNbrOfGuests();
+	EOperation getReservation__GetNumberOfGuests();
 
 	/**
-	 * Returns the meta object for the '{@link HotelSystem.Reservation#setNbrOfGuests(int) <em>Set Nbr Of Guests</em>}' operation.
+	 * Returns the meta object for the '{@link HotelSystem.Reservation#setNumberOfGuests(int) <em>Set Number Of Guests</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Nbr Of Guests</em>' operation.
-	 * @see HotelSystem.Reservation#setNbrOfGuests(int)
+	 * @return the meta object for the '<em>Set Number Of Guests</em>' operation.
+	 * @see HotelSystem.Reservation#setNumberOfGuests(int)
 	 * @generated
 	 */
-	EOperation getReservation__SetNbrOfGuests__int();
+	EOperation getReservation__SetNumberOfGuests__int();
 
 	/**
 	 * Returns the meta object for the '{@link HotelSystem.Reservation#getRoom() <em>Get Room</em>}' operation.
@@ -4219,12 +4219,12 @@ public interface HotelSystemPackage extends EPackage {
 		EAttribute RESERVATION__RESPONSIBLE = eINSTANCE.getReservation_Responsible();
 
 		/**
-		 * The meta object literal for the '<em><b>Nbr Of Guests</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Number Of Guests</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESERVATION__NBR_OF_GUESTS = eINSTANCE.getReservation_NbrOfGuests();
+		EAttribute RESERVATION__NUMBER_OF_GUESTS = eINSTANCE.getReservation_NumberOfGuests();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Checked In</b></em>' operation.
@@ -4307,20 +4307,20 @@ public interface HotelSystemPackage extends EPackage {
 		EOperation RESERVATION___SET_RESPONSIBLE__STRING = eINSTANCE.getReservation__SetResponsible__String();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Nbr Of Guests</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Number Of Guests</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation RESERVATION___GET_NBR_OF_GUESTS = eINSTANCE.getReservation__GetNbrOfGuests();
+		EOperation RESERVATION___GET_NUMBER_OF_GUESTS = eINSTANCE.getReservation__GetNumberOfGuests();
 
 		/**
-		 * The meta object literal for the '<em><b>Set Nbr Of Guests</b></em>' operation.
+		 * The meta object literal for the '<em><b>Set Number Of Guests</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation RESERVATION___SET_NBR_OF_GUESTS__INT = eINSTANCE.getReservation__SetNbrOfGuests__int();
+		EOperation RESERVATION___SET_NUMBER_OF_GUESTS__INT = eINSTANCE.getReservation__SetNumberOfGuests__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Room</b></em>' operation.

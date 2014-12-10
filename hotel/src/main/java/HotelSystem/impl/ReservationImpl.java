@@ -43,7 +43,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link HotelSystem.impl.ReservationImpl#getStartDay <em>Start Day</em>}</li>
  *   <li>{@link HotelSystem.impl.ReservationImpl#getEndDay <em>End Day</em>}</li>
  *   <li>{@link HotelSystem.impl.ReservationImpl#getResponsible <em>Responsible</em>}</li>
- *   <li>{@link HotelSystem.impl.ReservationImpl#getNbrOfGuests <em>Nbr Of Guests</em>}</li>
+ *   <li>{@link HotelSystem.impl.ReservationImpl#getNumberOfGuests <em>Number Of Guests</em>}</li>
  * </ul>
  * </p>
  *
@@ -201,24 +201,24 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	protected String responsible = RESPONSIBLE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNbrOfGuests() <em>Nbr Of Guests</em>}' attribute.
+	 * The default value of the '{@link #getNumberOfGuests() <em>Number Of Guests</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNbrOfGuests()
+	 * @see #getNumberOfGuests()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NBR_OF_GUESTS_EDEFAULT = 0;
+	protected static final int NUMBER_OF_GUESTS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getNbrOfGuests() <em>Nbr Of Guests</em>}' attribute.
+	 * The cached value of the '{@link #getNumberOfGuests() <em>Number Of Guests</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNbrOfGuests()
+	 * @see #getNumberOfGuests()
 	 * @generated
 	 * @ordered
 	 */
-	protected int nbrOfGuests = NBR_OF_GUESTS_EDEFAULT;
+	protected int numberOfGuests = NUMBER_OF_GUESTS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -487,8 +487,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNbrOfGuests() {
-		return nbrOfGuests;
+	public int getNumberOfGuests() {
+		return numberOfGuests;
 	}
 
 	/**
@@ -496,11 +496,11 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNbrOfGuests(int newNbrOfGuests) {
-		int oldNbrOfGuests = nbrOfGuests;
-		nbrOfGuests = newNbrOfGuests;
+	public void setNumberOfGuests(int newNumberOfGuests) {
+		int oldNumberOfGuests = numberOfGuests;
+		numberOfGuests = newNumberOfGuests;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelSystemPackage.RESERVATION__NBR_OF_GUESTS, oldNbrOfGuests, nbrOfGuests));
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelSystemPackage.RESERVATION__NUMBER_OF_GUESTS, oldNumberOfGuests, numberOfGuests));
 	}
 
 	/**
@@ -611,8 +611,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 				return getEndDay();
 			case HotelSystemPackage.RESERVATION__RESPONSIBLE:
 				return getResponsible();
-			case HotelSystemPackage.RESERVATION__NBR_OF_GUESTS:
-				return getNbrOfGuests();
+			case HotelSystemPackage.RESERVATION__NUMBER_OF_GUESTS:
+				return getNumberOfGuests();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -658,8 +658,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 			case HotelSystemPackage.RESERVATION__RESPONSIBLE:
 				setResponsible((String)newValue);
 				return;
-			case HotelSystemPackage.RESERVATION__NBR_OF_GUESTS:
-				setNbrOfGuests((Integer)newValue);
+			case HotelSystemPackage.RESERVATION__NUMBER_OF_GUESTS:
+				setNumberOfGuests((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -703,8 +703,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 			case HotelSystemPackage.RESERVATION__RESPONSIBLE:
 				setResponsible(RESPONSIBLE_EDEFAULT);
 				return;
-			case HotelSystemPackage.RESERVATION__NBR_OF_GUESTS:
-				setNbrOfGuests(NBR_OF_GUESTS_EDEFAULT);
+			case HotelSystemPackage.RESERVATION__NUMBER_OF_GUESTS:
+				setNumberOfGuests(NUMBER_OF_GUESTS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -738,8 +738,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 				return endDay != END_DAY_EDEFAULT;
 			case HotelSystemPackage.RESERVATION__RESPONSIBLE:
 				return RESPONSIBLE_EDEFAULT == null ? responsible != null : !RESPONSIBLE_EDEFAULT.equals(responsible);
-			case HotelSystemPackage.RESERVATION__NBR_OF_GUESTS:
-				return nbrOfGuests != NBR_OF_GUESTS_EDEFAULT;
+			case HotelSystemPackage.RESERVATION__NUMBER_OF_GUESTS:
+				return numberOfGuests != NUMBER_OF_GUESTS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -795,8 +795,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 		result.append(endDay);
 		result.append(", responsible: ");
 		result.append(responsible);
-		result.append(", nbrOfGuests: ");
-		result.append(nbrOfGuests);
+		result.append(", numberOfGuests: ");
+		result.append(numberOfGuests);
 		result.append(')');
 		return result.toString();
 	}

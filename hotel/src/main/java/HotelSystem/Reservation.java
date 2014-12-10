@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link HotelSystem.Reservation#getStartDay <em>Start Day</em>}</li>
  *   <li>{@link HotelSystem.Reservation#getEndDay <em>End Day</em>}</li>
  *   <li>{@link HotelSystem.Reservation#getResponsible <em>Responsible</em>}</li>
- *   <li>{@link HotelSystem.Reservation#getNbrOfGuests <em>Nbr Of Guests</em>}</li>
+ *   <li>{@link HotelSystem.Reservation#getNumberOfGuests <em>Number Of Guests</em>}</li>
  * </ul>
  * </p>
  *
@@ -274,30 +274,30 @@ public interface Reservation extends EObject {
 	void setResponsible(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Nbr Of Guests</b></em>' attribute.
+	 * Returns the value of the '<em><b>Number Of Guests</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nbr Of Guests</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Number Of Guests</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nbr Of Guests</em>' attribute.
-	 * @see #setNbrOfGuests(int)
-	 * @see HotelSystem.HotelSystemPackage#getReservation_NbrOfGuests()
+	 * @return the value of the '<em>Number Of Guests</em>' attribute.
+	 * @see #setNumberOfGuests(int)
+	 * @see HotelSystem.HotelSystemPackage#getReservation_NumberOfGuests()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	int getNbrOfGuests();
+	int getNumberOfGuests();
 
 	/**
-	 * Sets the value of the '{@link HotelSystem.Reservation#getNbrOfGuests <em>Nbr Of Guests</em>}' attribute.
+	 * Sets the value of the '{@link HotelSystem.Reservation#getNumberOfGuests <em>Number Of Guests</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nbr Of Guests</em>' attribute.
-	 * @see #getNbrOfGuests()
+	 * @param value the new value of the '<em>Number Of Guests</em>' attribute.
+	 * @see #getNumberOfGuests()
 	 * @generated
 	 */
-	void setNbrOfGuests(int value);
+	void setNumberOfGuests(int value);
 
 	/**
 	 * <!-- begin-user-doc -->
