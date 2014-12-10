@@ -13,7 +13,13 @@ hs_err_pid*
 
 .DS_Store
 .metadata/
+.classpath
 
+build.properties
+plugin.properties
+plugin.xml
+
+hotel/target/
 *.iml
 .idea/
 /bin/
