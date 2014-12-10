@@ -105,10 +105,6 @@
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Enumeration" xmi:id="_CiQEQHVVEeSFlMIer3mkJA" name="PaymentMethod">
-    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Ev95AHVVEeSFlMIer3mkJA" name="Pre paid"/>
-    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Fj1l8HVVEeSFlMIer3mkJA" name="Pay on checkout"/>
-  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_ah_wAHVXEeSsYr8zYJ7CRg" name="ScheduledEvents">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_ecyKkHVXEeSsYr8zYJ7CRg" name="events" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
