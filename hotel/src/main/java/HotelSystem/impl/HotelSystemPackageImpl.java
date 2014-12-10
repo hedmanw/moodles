@@ -14,7 +14,6 @@ import HotelSystem.HotelSystemFactory;
 import HotelSystem.HotelSystemPackage;
 import HotelSystem.KeyCard;
 import HotelSystem.PaymentDetails;
-import HotelSystem.PaymentMethod;
 import HotelSystem.Reservation;
 import HotelSystem.ReservationManager;
 import HotelSystem.Room;
