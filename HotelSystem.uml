@@ -573,53 +573,6 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_anKZZnl0EeSJYOaXazdB-A" value="*"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_9Eb34Hx_EeSzd-4yXNUKkQ">
-    <name xsi:nil="true"/>
-    <memberEnd xmi:type="uml:Property" href="#_9Ece8Hx_EeSzd-4yXNUKkQ"/>
-    <memberEnd xmi:type="uml:Property" href="model.uml#_9EbQ0Hx_EeSzd-4yXNUKkQ"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_9Ece8Hx_EeSzd-4yXNUKkQ" name="bookingManager" association="_9Eb34Hx_EeSzd-4yXNUKkQ">
-      <type xmi:type="uml:Class" href="model.uml#_uGG3YHx_EeSzd-4yXNUKkQ"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9Ece8Xx_EeSzd-4yXNUKkQ" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9Ece8nx_EeSzd-4yXNUKkQ" value="1"/>
-    </ownedEnd>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_AuXL8HyAEeSzd-4yXNUKkQ">
-    <name xsi:nil="true"/>
-    <memberEnd xmi:type="uml:Property" href="#_AuXL8XyAEeSzd-4yXNUKkQ"/>
-    <memberEnd xmi:type="uml:Property" href="model.uml#_AuV90HyAEeSzd-4yXNUKkQ"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_AuXL8XyAEeSzd-4yXNUKkQ" name="customerManager" association="_AuXL8HyAEeSzd-4yXNUKkQ">
-      <type xmi:type="uml:Class" href="model.uml#_15RRsHx_EeSzd-4yXNUKkQ"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AuXL8nyAEeSzd-4yXNUKkQ" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AuXL83yAEeSzd-4yXNUKkQ" value="1"/>
-    </ownedEnd>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_FbPx0HyAEeSzd-4yXNUKkQ">
-    <memberEnd xmi:type="uml:Property" href="#_FbPx0XyAEeSzd-4yXNUKkQ"/>
-    <memberEnd xmi:type="uml:Property" href="model.uml#_FbN8oHyAEeSzd-4yXNUKkQ"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_FbPx0XyAEeSzd-4yXNUKkQ" name="reservationManager" association="_FbPx0HyAEeSzd-4yXNUKkQ">
-      <type xmi:type="uml:Class" href="model.uml#_zzWuEHx_EeSzd-4yXNUKkQ"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FbPx0nyAEeSzd-4yXNUKkQ" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FbPx03yAEeSzd-4yXNUKkQ" value="1"/>
-    </ownedEnd>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_Kx1cAHyAEeSzd-4yXNUKkQ">
-    <memberEnd xmi:type="uml:Property" href="#_Kx1cAXyAEeSzd-4yXNUKkQ"/>
-    <memberEnd xmi:type="uml:Property" href="model.uml#_Kxy_wHyAEeSzd-4yXNUKkQ"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_Kx1cAXyAEeSzd-4yXNUKkQ" name="roomManager" association="_Kx1cAHyAEeSzd-4yXNUKkQ">
-      <type xmi:type="uml:Class" href="model.uml#_x4N3EHx_EeSzd-4yXNUKkQ"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Kx1cAnyAEeSzd-4yXNUKkQ" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Kx1cA3yAEeSzd-4yXNUKkQ" value="1"/>
-    </ownedEnd>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_KotxsHx_EeSzd-4yXNUKkQ">
-    <memberEnd xmi:type="uml:Property" href="#_KotxsXx_EeSzd-4yXNUKkQ"/>
-    <memberEnd xmi:type="uml:Property" href="model.uml#_Koo5MHx_EeSzd-4yXNUKkQ"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_KotxsXx_EeSzd-4yXNUKkQ" name="roomTypeManager" association="_KotxsHx_EeSzd-4yXNUKkQ">
-      <type xmi:type="uml:Class" href="model.uml#_FfKd8Hx_EeSzd-4yXNUKkQ"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Kotxsnx_EeSzd-4yXNUKkQ" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Kotxs3x_EeSzd-4yXNUKkQ" value="1"/>
-    </ownedEnd>
-  </packagedElement>
   <packagedElement xmi:type="uml:Usage" xmi:id="_GlvH0HyoEeSemIR3Zeitew" name="Usage0" client="_dqC1MHlsEeSNP_QJ-oV69w">
     <supplier xmi:type="uml:Interface" href="model.uml#_qlXxQHluEeSNP_QJ-oV69w"/>
   </packagedElement>
@@ -628,26 +581,6 @@
   </packagedElement>
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_SBojYHyoEeSemIR3Zeitew" name="Realization0" client="_dqC1MHlsEeSNP_QJ-oV69w"/>
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_SaWlYHyoEeSemIR3Zeitew" name="Realization1" client="_dqC1MHlsEeSNP_QJ-oV69w"/>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_S7xQYHyoEeSemIR3Zeitew" name="Realization2" client="_dqC1MHlsEeSNP_QJ-oV69w">
-    <supplier xmi:type="uml:Interface" href="model.uml#_DyqAMHx8EeSyZvvyd5lTNA"/>
-    <contract xmi:type="uml:Interface" href="model.uml#_DyqAMHx8EeSyZvvyd5lTNA"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_TaiQAHyoEeSemIR3Zeitew" name="Realization3" client="_dqC1MHlsEeSNP_QJ-oV69w">
-    <supplier xmi:type="uml:Interface" href="model.uml#_VffOUHx8EeSyZvvyd5lTNA"/>
-    <contract xmi:type="uml:Interface" href="model.uml#_VffOUHx8EeSyZvvyd5lTNA"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_UI8OIHyoEeSemIR3Zeitew" name="Realization4" client="_dqC1MHlsEeSNP_QJ-oV69w">
-    <supplier xmi:type="uml:Interface" href="model.uml#_l5AacHx8EeSyZvvyd5lTNA"/>
-    <contract xmi:type="uml:Interface" href="model.uml#_l5AacHx8EeSyZvvyd5lTNA"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_UgE7wHyoEeSemIR3Zeitew" name="Realization5" client="_dqC1MHlsEeSNP_QJ-oV69w">
-    <supplier xmi:type="uml:Interface" href="model.uml#_uycgUHx8EeSyZvvyd5lTNA"/>
-    <contract xmi:type="uml:Interface" href="model.uml#_uycgUHx8EeSyZvvyd5lTNA"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_U4pMwHyoEeSemIR3Zeitew" name="Realization6" client="_dqC1MHlsEeSNP_QJ-oV69w">
-    <supplier xmi:type="uml:Interface" href="model.uml#_Qh5S8Hx8EeSyZvvyd5lTNA"/>
-    <contract xmi:type="uml:Interface" href="model.uml#_Qh5S8Hx8EeSyZvvyd5lTNA"/>
-  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_PmmNoH_EEeSbJeGPS5kPQg" memberEnd="_PmmNoX_EEeSbJeGPS5kPQg _Pmk_gH_EEeSbJeGPS5kPQg">
     <name xsi:nil="true"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_PmmNoX_EEeSbJeGPS5kPQg" name="room" type="_8xwx0HjBEeSDBKbFcXcsYQ" association="_PmmNoH_EEeSbJeGPS5kPQg">
