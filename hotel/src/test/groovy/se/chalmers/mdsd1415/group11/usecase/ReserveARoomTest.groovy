@@ -1,9 +1,9 @@
 package se.chalmers.mdsd1415.group11.usecase
 
+import hotelCore.Room
+import hotelCore.RoomType
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
-import se.chalmers.mdsd1415.group11.util.EArrayList
-import se.chalmers.mdsd1415.group11.model.HotelCore.Room
-import se.chalmers.mdsd1415.group11.model.HotelCore.RoomType
+import datastructs.EArrayList
 
 /**
  * Created by emmawestman on 14-12-12.

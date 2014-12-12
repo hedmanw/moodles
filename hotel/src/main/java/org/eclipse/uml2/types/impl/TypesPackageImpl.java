@@ -2,29 +2,9 @@
  */
 package org.eclipse.uml2.types.impl;
 
-import se.chalmers.mdsd1415.group11.model.BankingService.BankingServicePackage;
-
-import se.chalmers.mdsd1415.group11.model.BankingService.impl.BankingServicePackageImpl;
-
-import se.chalmers.mdsd1415.group11.model.HotelCore.HotelCorePackage;
-import se.chalmers.mdsd1415.group11.model.HotelCore.impl.HotelCorePackageImpl;
-import se.chalmers.mdsd1415.group11.model.HotelService.HotelServicePackage;
-
-import se.chalmers.mdsd1415.group11.model.HotelService.impl.HotelServicePackageImpl;
-
-import se.chalmers.mdsd1415.group11.model.KeyCardService.KeyCardServicePackage;
-
-import se.chalmers.mdsd1415.group11.model.KeyCardService.impl.KeyCardServicePackageImpl;
-
-import se.chalmers.mdsd1415.group11.model.ModelPackage;
-
-import se.chalmers.mdsd1415.group11.model.impl.ModelPackageImpl;
-
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.uml2.types.TypesFactory;
 import org.eclipse.uml2.types.TypesPackage;
 
@@ -117,26 +97,17 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		ModelPackageImpl theModelPackage = (ModelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModelPackage.eNS_URI) instanceof ModelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModelPackage.eNS_URI) : ModelPackage.eINSTANCE);
-		HotelCorePackageImpl theHotelCorePackage = (HotelCorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI) instanceof HotelCorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI) : HotelCorePackage.eINSTANCE);
-		BankingServicePackageImpl theBankingServicePackage = (BankingServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) instanceof BankingServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) : BankingServicePackage.eINSTANCE);
-		KeyCardServicePackageImpl theKeyCardServicePackage = (KeyCardServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI) instanceof KeyCardServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI) : KeyCardServicePackage.eINSTANCE);
-		HotelServicePackageImpl theHotelServicePackage = (HotelServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) instanceof HotelServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) : HotelServicePackage.eINSTANCE);
+		hotelCore.impl.HotelCorePackageImpl theHotelCorePackage = (hotelCore.impl.HotelCorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(hotelCore.HotelCorePackage.eNS_URI) instanceof hotelCore.impl.HotelCorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(hotelCore.HotelCorePackage.eNS_URI) : hotelCore.HotelCorePackage.eINSTANCE);
+		hotelService.impl.HotelServicePackageImpl theHotelServicePackage = (hotelService.impl.HotelServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(hotelService.HotelServicePackage.eNS_URI) instanceof hotelService.impl.HotelServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(hotelService.HotelServicePackage.eNS_URI) : hotelService.HotelServicePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theTypesPackage.createPackageContents();
-		theModelPackage.createPackageContents();
 		theHotelCorePackage.createPackageContents();
-		theBankingServicePackage.createPackageContents();
-		theKeyCardServicePackage.createPackageContents();
 		theHotelServicePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theTypesPackage.initializePackageContents();
-		theModelPackage.initializePackageContents();
 		theHotelCorePackage.initializePackageContents();
-		theBankingServicePackage.initializePackageContents();
-		theKeyCardServicePackage.initializePackageContents();
 		theHotelServicePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed

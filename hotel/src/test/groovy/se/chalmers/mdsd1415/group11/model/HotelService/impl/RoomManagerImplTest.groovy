@@ -1,9 +1,9 @@
 package se.chalmers.mdsd1415.group11.model.HotelService.impl
 
+import datastructs.EArrayList
+import hotelCore.Room
+import hotelCore.RoomType
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
-import se.chalmers.mdsd1415.group11.model.HotelCore.Room
-import se.chalmers.mdsd1415.group11.util.EArrayList
-import se.chalmers.mdsd1415.group11.model.HotelCore.RoomType
 
 /**
  * Created by wilhelm 2014-12-12.

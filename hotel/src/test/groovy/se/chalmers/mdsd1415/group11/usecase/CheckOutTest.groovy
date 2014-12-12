@@ -1,8 +1,8 @@
 package se.chalmers.mdsd1415.group11.usecase
 
+import hotelCore.HotelCoreFactory
+import hotelCore.Reservation
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
-import se.chalmers.mdsd1415.group11.model.HotelCore.HotelCoreFactory
-import se.chalmers.mdsd1415.group11.model.HotelCore.Reservation
 import spock.lang.Ignore
 
 /**

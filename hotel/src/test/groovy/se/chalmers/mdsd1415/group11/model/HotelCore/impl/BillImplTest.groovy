@@ -1,7 +1,7 @@
 package se.chalmers.mdsd1415.group11.model.HotelCore.impl
 
-import se.chalmers.mdsd1415.group11.model.HotelCore.Bill
-import se.chalmers.mdsd1415.group11.model.HotelCore.HotelCoreFactory
+import hotelCore.Bill
+import hotelCore.HotelCoreFactory
 import spock.lang.Specification
 
 /**

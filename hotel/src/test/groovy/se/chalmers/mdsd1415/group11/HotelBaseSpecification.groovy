@@ -1,10 +1,10 @@
 package se.chalmers.mdsd1415.group11
 
-import se.chalmers.mdsd1415.group11.model.HotelService.BookingManager
-import se.chalmers.mdsd1415.group11.model.HotelService.ReservationManager
-import se.chalmers.mdsd1415.group11.model.HotelService.RoomManager
-import se.chalmers.mdsd1415.group11.model.HotelService.RoomTypeManager
-import se.chalmers.mdsd1415.group11.model.ManagerSingleton
+import hotelService.BookingManager
+import hotelService.ManagerSingleton
+import hotelService.ReservationManager
+import hotelService.RoomManager
+import hotelService.RoomTypeManager
 import spock.lang.Specification
 
 /**
