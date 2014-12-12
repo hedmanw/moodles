@@ -1657,7 +1657,7 @@ public interface HotelSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__LONG_STRING_STRING_STRING_STRING_INT_INT = HotelServicePackage.ICUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__LONG_STRING_STRING_STRING_STRING_INT_INT;
+	int CUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__CUSTOMER_STRING_STRING_STRING_STRING_INT_INT = HotelServicePackage.ICUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__CUSTOMER_STRING_STRING_STRING_STRING_INT_INT;
 
 	/**
 	 * The operation id for the '<em>Get Payment Details By Customer</em>' operation.
@@ -1666,7 +1666,7 @@ public interface HotelSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__LONG = HotelServicePackage.ICUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__LONG;
+	int CUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__CUSTOMER = HotelServicePackage.ICUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__CUSTOMER;
 
 	/**
 	 * The number of operations of the '<em>Customer Manager</em>' class.
@@ -1761,13 +1761,13 @@ public interface HotelSystemPackage extends EPackage {
 	int BOOKING_MANAGER___CREATE_BOOKING = HotelServicePackage.IBOOKING_MANAGER___CREATE_BOOKING;
 
 	/**
-	 * The operation id for the '<em>Get Booking</em>' operation.
+	 * The operation id for the '<em>Get Booking By Number</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER___GET_BOOKING__LONG = HotelServicePackage.IBOOKING_MANAGER___GET_BOOKING__LONG;
+	int BOOKING_MANAGER___GET_BOOKING_BY_NUMBER__LONG = HotelServicePackage.IBOOKING_MANAGER___GET_BOOKING_BY_NUMBER__LONG;
 
 	/**
 	 * The operation id for the '<em>Delete Booking</em>' operation.
@@ -1776,7 +1776,7 @@ public interface HotelSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER___DELETE_BOOKING__LONG = HotelServicePackage.IBOOKING_MANAGER___DELETE_BOOKING__LONG;
+	int BOOKING_MANAGER___DELETE_BOOKING__BOOKING = HotelServicePackage.IBOOKING_MANAGER___DELETE_BOOKING__BOOKING;
 
 	/**
 	 * The operation id for the '<em>Get Bookings By Customer</em>' operation.
@@ -1785,7 +1785,7 @@ public interface HotelSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER___GET_BOOKINGS_BY_CUSTOMER__LONG = HotelServicePackage.IBOOKING_MANAGER___GET_BOOKINGS_BY_CUSTOMER__LONG;
+	int BOOKING_MANAGER___GET_BOOKINGS_BY_CUSTOMER__CUSTOMER = HotelServicePackage.IBOOKING_MANAGER___GET_BOOKINGS_BY_CUSTOMER__CUSTOMER;
 
 	/**
 	 * The operation id for the '<em>Set Booking Customer</em>' operation.
@@ -1794,7 +1794,7 @@ public interface HotelSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER___SET_BOOKING_CUSTOMER__LONG_LONG = HotelServicePackage.IBOOKING_MANAGER___SET_BOOKING_CUSTOMER__LONG_LONG;
+	int BOOKING_MANAGER___SET_BOOKING_CUSTOMER__BOOKING_CUSTOMER = HotelServicePackage.IBOOKING_MANAGER___SET_BOOKING_CUSTOMER__BOOKING_CUSTOMER;
 
 	/**
 	 * The operation id for the '<em>Is Bill Paid In Full</em>' operation.
@@ -1803,7 +1803,7 @@ public interface HotelSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER___IS_BILL_PAID_IN_FULL__LONG = HotelServicePackage.IBOOKING_MANAGER___IS_BILL_PAID_IN_FULL__LONG;
+	int BOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING = HotelServicePackage.IBOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING;
 
 	/**
 	 * The operation id for the '<em>Get Bill</em>' operation.
@@ -1812,7 +1812,7 @@ public interface HotelSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER___GET_BILL__LONG = HotelServicePackage.IBOOKING_MANAGER___GET_BILL__LONG;
+	int BOOKING_MANAGER___GET_BILL__BOOKING = HotelServicePackage.IBOOKING_MANAGER___GET_BILL__BOOKING;
 
 	/**
 	 * The operation id for the '<em>Get Booking By Reservation</em>' operation.
@@ -1934,31 +1934,13 @@ public interface HotelSystemPackage extends EPackage {
 	int RESERVATION_MANAGER___GET_RESERVATION__LONG = HotelServicePackage.IRESERVATION_MANAGER___GET_RESERVATION__LONG;
 
 	/**
-	 * The operation id for the '<em>Set Responsible For Reservation</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION_MANAGER___SET_RESPONSIBLE_FOR_RESERVATION__LONG_STRING = HotelServicePackage.IRESERVATION_MANAGER___SET_RESPONSIBLE_FOR_RESERVATION__LONG_STRING;
-
-	/**
 	 * The operation id for the '<em>Get Non Checked In Reservation</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__LONG = HotelServicePackage.IRESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__LONG;
-
-	/**
-	 * The operation id for the '<em>Set Number Of Guests For Reservation</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION_MANAGER___SET_NUMBER_OF_GUESTS_FOR_RESERVATION__LONG_INT = HotelServicePackage.IRESERVATION_MANAGER___SET_NUMBER_OF_GUESTS_FOR_RESERVATION__LONG_INT;
+	int RESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING = HotelServicePackage.IRESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING;
 
 	/**
 	 * The operation id for the '<em>Check In Reservation</em>' operation.

@@ -6,6 +6,7 @@ import HotelSystem.HotelSystemPackage;
 import HotelSystem.Room;
 import HotelSystem.RoomManager;
 
+import HotelSystem.RoomType;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -80,7 +81,7 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EList getAvailableRooms(Date fromDate, Date toDate, EList roomTypeIds) {
+	public EList<Room> getAvailableRooms(Date fromDate, Date toDate, EList<RoomType> roomTypes) {
 		EList<Room> matching  = new EObjectResolvingEList<>(Room.class, this, HotelSystemPackage.ROOM_MANAGER__ROOM);
 		for (Room room : getRoom()) {
 			matching.add(room);
@@ -165,10 +166,11 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case HotelSystemPackage.ROOM_MANAGER___GET_AVAILABLE_ROOMS__DATE_DATE_ELIST:
-				return getAvailableRooms((Date)arguments.get(0), (Date)arguments.get(1), (EList)arguments.get(2));
+				return getAvailableRooms((Date)arguments.get(0), (Date)arguments.get(1), (EList<RoomType>)arguments.get(2));
 			case HotelSystemPackage.ROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE:
 				return getRoomOccupancy((Date)arguments.get(0), (Date)arguments.get(1));
 		}

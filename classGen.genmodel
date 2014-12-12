@@ -452,24 +452,24 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="model.ecore#//HotelService/IBookingManager">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IBookingManager/createBooking"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IBookingManager/getBooking">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/getBooking/bookingId"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IBookingManager/getBookingByNumber">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/getBookingByNumber/bookingId"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IBookingManager/deleteBooking">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/deleteBooking/bookingId"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/deleteBooking/booking"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IBookingManager/getBookingsByCustomer">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/getBookingsByCustomer/customerId"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/getBookingsByCustomer/customer"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IBookingManager/setBookingCustomer">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/setBookingCustomer/bookingId"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/setBookingCustomer/customerId"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/setBookingCustomer/booking"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/setBookingCustomer/customer"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IBookingManager/isBillPaidInFull">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/isBillPaidInFull/bookingId"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/isBillPaidInFull/booking"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IBookingManager/getBill">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/getBill/bookingId"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/getBill/booking"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IBookingManager/getBookingByReservation">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IBookingManager/getBookingByReservation/reservation"/>
@@ -487,16 +487,8 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IReservationManager/getReservation">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IReservationManager/getReservation/reservationId"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IReservationManager/setResponsibleForReservation">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IReservationManager/setResponsibleForReservation/reservationId"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IReservationManager/setResponsibleForReservation/responsible"/>
-        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IReservationManager/getNonCheckedInReservation">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IReservationManager/getNonCheckedInReservation/bookingId"/>
-        </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IReservationManager/setNumberOfGuestsForReservation">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IReservationManager/setNumberOfGuestsForReservation/reservationId"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IReservationManager/setNumberOfGuestsForReservation/guests"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IReservationManager/getNonCheckedInReservation/booking"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IReservationManager/checkInReservation">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IReservationManager/checkInReservation/reservationId"/>

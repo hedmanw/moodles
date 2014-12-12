@@ -78,7 +78,7 @@ public class RoomTypeManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList getRoomTypes() {
+	public EList<RoomType> getRoomTypes() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

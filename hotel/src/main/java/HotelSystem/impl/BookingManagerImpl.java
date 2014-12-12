@@ -5,6 +5,7 @@ package HotelSystem.impl;
 import HotelSystem.Bill;
 import HotelSystem.Booking;
 import HotelSystem.BookingManager;
+import HotelSystem.Customer;
 import HotelSystem.HotelSystemPackage;
 import HotelSystem.Reservation;
 
@@ -80,7 +81,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long createBooking() {
+	public Booking createBooking() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -91,7 +92,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Booking getBooking(long bookingId) {
+	public Booking getBookingByNumber(long bookingId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -102,7 +103,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void deleteBooking(long bookingId) {
+	public void deleteBooking(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -113,7 +114,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList getBookingsByCustomer(long customerId) {
+	public EList getBookingsByCustomer(Customer customer) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -124,7 +125,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBookingCustomer(long bookingId, long customerId) {
+	public void setBookingCustomer(Booking booking, Customer customer) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -135,7 +136,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isBillPaidInFull(long bookingId) {
+	public boolean isBillPaidInFull(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -146,7 +147,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Bill getBill(long bookingId) {
+	public Bill getBill(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -233,20 +234,20 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		switch (operationID) {
 			case HotelSystemPackage.BOOKING_MANAGER___CREATE_BOOKING:
 				return createBooking();
-			case HotelSystemPackage.BOOKING_MANAGER___GET_BOOKING__LONG:
-				return getBooking((Long)arguments.get(0));
-			case HotelSystemPackage.BOOKING_MANAGER___DELETE_BOOKING__LONG:
-				deleteBooking((Long)arguments.get(0));
+			case HotelSystemPackage.BOOKING_MANAGER___GET_BOOKING_BY_NUMBER__LONG:
+				return getBookingByNumber((Long)arguments.get(0));
+			case HotelSystemPackage.BOOKING_MANAGER___DELETE_BOOKING__BOOKING:
+				deleteBooking((Booking)arguments.get(0));
 				return null;
-			case HotelSystemPackage.BOOKING_MANAGER___GET_BOOKINGS_BY_CUSTOMER__LONG:
-				return getBookingsByCustomer((Long)arguments.get(0));
-			case HotelSystemPackage.BOOKING_MANAGER___SET_BOOKING_CUSTOMER__LONG_LONG:
-				setBookingCustomer((Long)arguments.get(0), (Long)arguments.get(1));
+			case HotelSystemPackage.BOOKING_MANAGER___GET_BOOKINGS_BY_CUSTOMER__CUSTOMER:
+				return getBookingsByCustomer((Customer)arguments.get(0));
+			case HotelSystemPackage.BOOKING_MANAGER___SET_BOOKING_CUSTOMER__BOOKING_CUSTOMER:
+				setBookingCustomer((Booking)arguments.get(0), (Customer)arguments.get(1));
 				return null;
-			case HotelSystemPackage.BOOKING_MANAGER___IS_BILL_PAID_IN_FULL__LONG:
-				return isBillPaidInFull((Long)arguments.get(0));
-			case HotelSystemPackage.BOOKING_MANAGER___GET_BILL__LONG:
-				return getBill((Long)arguments.get(0));
+			case HotelSystemPackage.BOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING:
+				return isBillPaidInFull((Booking)arguments.get(0));
+			case HotelSystemPackage.BOOKING_MANAGER___GET_BILL__BOOKING:
+				return getBill((Booking)arguments.get(0));
 			case HotelSystemPackage.BOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION_BOOKING:
 				getBookingByReservation((Reservation)arguments.get(0), (Booking)arguments.get(1));
 				return null;

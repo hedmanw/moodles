@@ -4,6 +4,7 @@ package model.HotelService;
 
 import HotelSystem.Bill;
 import HotelSystem.Booking;
+import HotelSystem.Customer;
 import HotelSystem.Reservation;
 
 import org.eclipse.emf.common.util.EList;
@@ -27,7 +28,7 @@ public interface IBookingManager extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	long createBooking();
+	Booking createBooking();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,47 +36,47 @@ public interface IBookingManager extends EObject {
 	 * @model required="true" ordered="false" bookingIdRequired="true" bookingIdOrdered="false"
 	 * @generated
 	 */
-	Booking getBooking(long bookingId);
+	Booking getBookingByNumber(long bookingId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingIdRequired="true" bookingIdOrdered="false"
+	 * @model bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	void deleteBooking(long bookingId);
+	void deleteBooking(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" many="false" ordered="false" customerIdRequired="true" customerIdOrdered="false"
+	 * @model required="true" many="false" ordered="false" customerRequired="true" customerOrdered="false"
 	 * @generated
 	 */
-	EList getBookingsByCustomer(long customerId);
+	EList getBookingsByCustomer(Customer customer);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingIdRequired="true" bookingIdOrdered="false" customerIdRequired="true" customerIdOrdered="false"
+	 * @model bookingRequired="true" bookingOrdered="false" customerRequired="true" customerOrdered="false"
 	 * @generated
 	 */
-	void setBookingCustomer(long bookingId, long customerId);
+	void setBookingCustomer(Booking booking, Customer customer);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" bookingIdRequired="true" bookingIdOrdered="false"
+	 * @model required="true" ordered="false" bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	boolean isBillPaidInFull(long bookingId);
+	boolean isBillPaidInFull(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" bookingIdRequired="true" bookingIdOrdered="false"
+	 * @model required="true" ordered="false" bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	Bill getBill(long bookingId);
+	Bill getBill(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->

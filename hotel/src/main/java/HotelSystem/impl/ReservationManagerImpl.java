@@ -102,29 +102,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setResponsibleForReservation(long reservationId, String responsible) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList getNonCheckedInReservation(long bookingId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNumberOfGuestsForReservation(long reservationId, int guests) {
+	public EList<Reservation> getNonCheckedInReservation(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -235,14 +213,8 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 				return createReservation((Booking)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (Long)arguments.get(3), (Long)arguments.get(4));
 			case HotelSystemPackage.RESERVATION_MANAGER___GET_RESERVATION__LONG:
 				return getReservation((Long)arguments.get(0));
-			case HotelSystemPackage.RESERVATION_MANAGER___SET_RESPONSIBLE_FOR_RESERVATION__LONG_STRING:
-				setResponsibleForReservation((Long)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case HotelSystemPackage.RESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__LONG:
-				return getNonCheckedInReservation((Long)arguments.get(0));
-			case HotelSystemPackage.RESERVATION_MANAGER___SET_NUMBER_OF_GUESTS_FOR_RESERVATION__LONG_INT:
-				setNumberOfGuestsForReservation((Long)arguments.get(0), (Integer)arguments.get(1));
-				return null;
+			case HotelSystemPackage.RESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING:
+				return getNonCheckedInReservation((Booking)arguments.get(0));
 			case HotelSystemPackage.RESERVATION_MANAGER___CHECK_IN_RESERVATION__LONG:
 				return checkInReservation((Long)arguments.get(0));
 			case HotelSystemPackage.RESERVATION_MANAGER___CHECK_OUT_RESERVATION__RESERVATION:

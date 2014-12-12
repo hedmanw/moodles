@@ -158,13 +158,13 @@ public interface HotelServicePackage extends EPackage {
 	int IBOOKING_MANAGER___CREATE_BOOKING = 0;
 
 	/**
-	 * The operation id for the '<em>Get Booking</em>' operation.
+	 * The operation id for the '<em>Get Booking By Number</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER___GET_BOOKING__LONG = 1;
+	int IBOOKING_MANAGER___GET_BOOKING_BY_NUMBER__LONG = 1;
 
 	/**
 	 * The operation id for the '<em>Delete Booking</em>' operation.
@@ -173,7 +173,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER___DELETE_BOOKING__LONG = 2;
+	int IBOOKING_MANAGER___DELETE_BOOKING__BOOKING = 2;
 
 	/**
 	 * The operation id for the '<em>Get Bookings By Customer</em>' operation.
@@ -182,7 +182,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER___GET_BOOKINGS_BY_CUSTOMER__LONG = 3;
+	int IBOOKING_MANAGER___GET_BOOKINGS_BY_CUSTOMER__CUSTOMER = 3;
 
 	/**
 	 * The operation id for the '<em>Set Booking Customer</em>' operation.
@@ -191,7 +191,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER___SET_BOOKING_CUSTOMER__LONG_LONG = 4;
+	int IBOOKING_MANAGER___SET_BOOKING_CUSTOMER__BOOKING_CUSTOMER = 4;
 
 	/**
 	 * The operation id for the '<em>Is Bill Paid In Full</em>' operation.
@@ -200,7 +200,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER___IS_BILL_PAID_IN_FULL__LONG = 5;
+	int IBOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING = 5;
 
 	/**
 	 * The operation id for the '<em>Get Bill</em>' operation.
@@ -209,7 +209,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER___GET_BILL__LONG = 6;
+	int IBOOKING_MANAGER___GET_BILL__BOOKING = 6;
 
 	/**
 	 * The operation id for the '<em>Get Booking By Reservation</em>' operation.
@@ -267,31 +267,13 @@ public interface HotelServicePackage extends EPackage {
 	int IRESERVATION_MANAGER___GET_RESERVATION__LONG = 1;
 
 	/**
-	 * The operation id for the '<em>Set Responsible For Reservation</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IRESERVATION_MANAGER___SET_RESPONSIBLE_FOR_RESERVATION__LONG_STRING = 2;
-
-	/**
 	 * The operation id for the '<em>Get Non Checked In Reservation</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__LONG = 3;
-
-	/**
-	 * The operation id for the '<em>Set Number Of Guests For Reservation</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IRESERVATION_MANAGER___SET_NUMBER_OF_GUESTS_FOR_RESERVATION__LONG_INT = 4;
+	int IRESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING = 2;
 
 	/**
 	 * The operation id for the '<em>Check In Reservation</em>' operation.
@@ -300,7 +282,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___CHECK_IN_RESERVATION__LONG = 5;
+	int IRESERVATION_MANAGER___CHECK_IN_RESERVATION__LONG = 3;
 
 	/**
 	 * The operation id for the '<em>Check Out Reservation</em>' operation.
@@ -309,7 +291,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___CHECK_OUT_RESERVATION__RESERVATION = 6;
+	int IRESERVATION_MANAGER___CHECK_OUT_RESERVATION__RESERVATION = 4;
 
 	/**
 	 * The operation id for the '<em>Get Current Reservation By Room Number</em>' operation.
@@ -318,7 +300,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___GET_CURRENT_RESERVATION_BY_ROOM_NUMBER__INT = 7;
+	int IRESERVATION_MANAGER___GET_CURRENT_RESERVATION_BY_ROOM_NUMBER__INT = 5;
 
 	/**
 	 * The number of operations of the '<em>IReservation Manager</em>' class.
@@ -327,7 +309,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER_OPERATION_COUNT = 8;
+	int IRESERVATION_MANAGER_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link model.HotelService.impl.HotelManagerImpl <em>Hotel Manager</em>}' class.
@@ -540,7 +522,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__LONG_STRING_STRING_STRING_STRING_INT_INT = 4;
+	int ICUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__CUSTOMER_STRING_STRING_STRING_STRING_INT_INT = 4;
 
 	/**
 	 * The operation id for the '<em>Get Payment Details By Customer</em>' operation.
@@ -549,7 +531,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__LONG = 5;
+	int ICUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__CUSTOMER = 5;
 
 	/**
 	 * The number of operations of the '<em>ICustomer Manager</em>' class.
@@ -622,64 +604,64 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIBookingManager__CreateBooking();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#getBooking(long) <em>Get Booking</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#getBookingByNumber(long) <em>Get Booking By Number</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Booking</em>' operation.
-	 * @see model.HotelService.IBookingManager#getBooking(long)
+	 * @return the meta object for the '<em>Get Booking By Number</em>' operation.
+	 * @see model.HotelService.IBookingManager#getBookingByNumber(long)
 	 * @generated
 	 */
-	EOperation getIBookingManager__GetBooking__long();
+	EOperation getIBookingManager__GetBookingByNumber__long();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#deleteBooking(long) <em>Delete Booking</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#deleteBooking(HotelSystem.Booking) <em>Delete Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Delete Booking</em>' operation.
-	 * @see model.HotelService.IBookingManager#deleteBooking(long)
+	 * @see model.HotelService.IBookingManager#deleteBooking(HotelSystem.Booking)
 	 * @generated
 	 */
-	EOperation getIBookingManager__DeleteBooking__long();
+	EOperation getIBookingManager__DeleteBooking__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#getBookingsByCustomer(long) <em>Get Bookings By Customer</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#getBookingsByCustomer(HotelSystem.Customer) <em>Get Bookings By Customer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Bookings By Customer</em>' operation.
-	 * @see model.HotelService.IBookingManager#getBookingsByCustomer(long)
+	 * @see model.HotelService.IBookingManager#getBookingsByCustomer(HotelSystem.Customer)
 	 * @generated
 	 */
-	EOperation getIBookingManager__GetBookingsByCustomer__long();
+	EOperation getIBookingManager__GetBookingsByCustomer__Customer();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#setBookingCustomer(long, long) <em>Set Booking Customer</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#setBookingCustomer(HotelSystem.Booking, HotelSystem.Customer) <em>Set Booking Customer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Set Booking Customer</em>' operation.
-	 * @see model.HotelService.IBookingManager#setBookingCustomer(long, long)
+	 * @see model.HotelService.IBookingManager#setBookingCustomer(HotelSystem.Booking, HotelSystem.Customer)
 	 * @generated
 	 */
-	EOperation getIBookingManager__SetBookingCustomer__long_long();
+	EOperation getIBookingManager__SetBookingCustomer__Booking_Customer();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#isBillPaidInFull(long) <em>Is Bill Paid In Full</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#isBillPaidInFull(HotelSystem.Booking) <em>Is Bill Paid In Full</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Bill Paid In Full</em>' operation.
-	 * @see model.HotelService.IBookingManager#isBillPaidInFull(long)
+	 * @see model.HotelService.IBookingManager#isBillPaidInFull(HotelSystem.Booking)
 	 * @generated
 	 */
-	EOperation getIBookingManager__IsBillPaidInFull__long();
+	EOperation getIBookingManager__IsBillPaidInFull__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#getBill(long) <em>Get Bill</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#getBill(HotelSystem.Booking) <em>Get Bill</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Bill</em>' operation.
-	 * @see model.HotelService.IBookingManager#getBill(long)
+	 * @see model.HotelService.IBookingManager#getBill(HotelSystem.Booking)
 	 * @generated
 	 */
-	EOperation getIBookingManager__GetBill__long();
+	EOperation getIBookingManager__GetBill__Booking();
 
 	/**
 	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#getBookingByReservation(HotelSystem.Reservation, HotelSystem.Booking) <em>Get Booking By Reservation</em>}' operation.
@@ -722,34 +704,14 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIReservationManager__GetReservation__long();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IReservationManager#setResponsibleForReservation(long, java.lang.String) <em>Set Responsible For Reservation</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Responsible For Reservation</em>' operation.
-	 * @see model.HotelService.IReservationManager#setResponsibleForReservation(long, java.lang.String)
-	 * @generated
-	 */
-	EOperation getIReservationManager__SetResponsibleForReservation__long_String();
-
-	/**
-	 * Returns the meta object for the '{@link model.HotelService.IReservationManager#getNonCheckedInReservation(long) <em>Get Non Checked In Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IReservationManager#getNonCheckedInReservation(HotelSystem.Booking) <em>Get Non Checked In Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Non Checked In Reservation</em>' operation.
-	 * @see model.HotelService.IReservationManager#getNonCheckedInReservation(long)
+	 * @see model.HotelService.IReservationManager#getNonCheckedInReservation(HotelSystem.Booking)
 	 * @generated
 	 */
-	EOperation getIReservationManager__GetNonCheckedInReservation__long();
-
-	/**
-	 * Returns the meta object for the '{@link model.HotelService.IReservationManager#setNumberOfGuestsForReservation(long, int) <em>Set Number Of Guests For Reservation</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Number Of Guests For Reservation</em>' operation.
-	 * @see model.HotelService.IReservationManager#setNumberOfGuestsForReservation(long, int)
-	 * @generated
-	 */
-	EOperation getIReservationManager__SetNumberOfGuestsForReservation__long_int();
+	EOperation getIReservationManager__GetNonCheckedInReservation__Booking();
 
 	/**
 	 * Returns the meta object for the '{@link model.HotelService.IReservationManager#checkInReservation(long) <em>Check In Reservation</em>}' operation.
@@ -892,24 +854,24 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getICustomerManager__CreateCustomer__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.ICustomerManager#setPaymentDetailsForCustomer(long, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int) <em>Set Payment Details For Customer</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.ICustomerManager#setPaymentDetailsForCustomer(HotelSystem.Customer, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int) <em>Set Payment Details For Customer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Set Payment Details For Customer</em>' operation.
-	 * @see model.HotelService.ICustomerManager#setPaymentDetailsForCustomer(long, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int)
+	 * @see model.HotelService.ICustomerManager#setPaymentDetailsForCustomer(HotelSystem.Customer, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int)
 	 * @generated
 	 */
-	EOperation getICustomerManager__SetPaymentDetailsForCustomer__long_String_String_String_String_int_int();
+	EOperation getICustomerManager__SetPaymentDetailsForCustomer__Customer_String_String_String_String_int_int();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.ICustomerManager#getPaymentDetailsByCustomer(long) <em>Get Payment Details By Customer</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.ICustomerManager#getPaymentDetailsByCustomer(HotelSystem.Customer) <em>Get Payment Details By Customer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Payment Details By Customer</em>' operation.
-	 * @see model.HotelService.ICustomerManager#getPaymentDetailsByCustomer(long)
+	 * @see model.HotelService.ICustomerManager#getPaymentDetailsByCustomer(HotelSystem.Customer)
 	 * @generated
 	 */
-	EOperation getICustomerManager__GetPaymentDetailsByCustomer__long();
+	EOperation getICustomerManager__GetPaymentDetailsByCustomer__Customer();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -989,12 +951,12 @@ public interface HotelServicePackage extends EPackage {
 		EOperation IBOOKING_MANAGER___CREATE_BOOKING = eINSTANCE.getIBookingManager__CreateBooking();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Booking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Booking By Number</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_MANAGER___GET_BOOKING__LONG = eINSTANCE.getIBookingManager__GetBooking__long();
+		EOperation IBOOKING_MANAGER___GET_BOOKING_BY_NUMBER__LONG = eINSTANCE.getIBookingManager__GetBookingByNumber__long();
 
 		/**
 		 * The meta object literal for the '<em><b>Delete Booking</b></em>' operation.
@@ -1002,7 +964,7 @@ public interface HotelServicePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_MANAGER___DELETE_BOOKING__LONG = eINSTANCE.getIBookingManager__DeleteBooking__long();
+		EOperation IBOOKING_MANAGER___DELETE_BOOKING__BOOKING = eINSTANCE.getIBookingManager__DeleteBooking__Booking();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Bookings By Customer</b></em>' operation.
@@ -1010,7 +972,7 @@ public interface HotelServicePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_MANAGER___GET_BOOKINGS_BY_CUSTOMER__LONG = eINSTANCE.getIBookingManager__GetBookingsByCustomer__long();
+		EOperation IBOOKING_MANAGER___GET_BOOKINGS_BY_CUSTOMER__CUSTOMER = eINSTANCE.getIBookingManager__GetBookingsByCustomer__Customer();
 
 		/**
 		 * The meta object literal for the '<em><b>Set Booking Customer</b></em>' operation.
@@ -1018,7 +980,7 @@ public interface HotelServicePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_MANAGER___SET_BOOKING_CUSTOMER__LONG_LONG = eINSTANCE.getIBookingManager__SetBookingCustomer__long_long();
+		EOperation IBOOKING_MANAGER___SET_BOOKING_CUSTOMER__BOOKING_CUSTOMER = eINSTANCE.getIBookingManager__SetBookingCustomer__Booking_Customer();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Bill Paid In Full</b></em>' operation.
@@ -1026,7 +988,7 @@ public interface HotelServicePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_MANAGER___IS_BILL_PAID_IN_FULL__LONG = eINSTANCE.getIBookingManager__IsBillPaidInFull__long();
+		EOperation IBOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING = eINSTANCE.getIBookingManager__IsBillPaidInFull__Booking();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Bill</b></em>' operation.
@@ -1034,7 +996,7 @@ public interface HotelServicePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_MANAGER___GET_BILL__LONG = eINSTANCE.getIBookingManager__GetBill__long();
+		EOperation IBOOKING_MANAGER___GET_BILL__BOOKING = eINSTANCE.getIBookingManager__GetBill__Booking();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Booking By Reservation</b></em>' operation.
@@ -1071,28 +1033,12 @@ public interface HotelServicePackage extends EPackage {
 		EOperation IRESERVATION_MANAGER___GET_RESERVATION__LONG = eINSTANCE.getIReservationManager__GetReservation__long();
 
 		/**
-		 * The meta object literal for the '<em><b>Set Responsible For Reservation</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IRESERVATION_MANAGER___SET_RESPONSIBLE_FOR_RESERVATION__LONG_STRING = eINSTANCE.getIReservationManager__SetResponsibleForReservation__long_String();
-
-		/**
 		 * The meta object literal for the '<em><b>Get Non Checked In Reservation</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IRESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__LONG = eINSTANCE.getIReservationManager__GetNonCheckedInReservation__long();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Number Of Guests For Reservation</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IRESERVATION_MANAGER___SET_NUMBER_OF_GUESTS_FOR_RESERVATION__LONG_INT = eINSTANCE.getIReservationManager__SetNumberOfGuestsForReservation__long_int();
+		EOperation IRESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING = eINSTANCE.getIReservationManager__GetNonCheckedInReservation__Booking();
 
 		/**
 		 * The meta object literal for the '<em><b>Check In Reservation</b></em>' operation.
@@ -1224,7 +1170,7 @@ public interface HotelServicePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__LONG_STRING_STRING_STRING_STRING_INT_INT = eINSTANCE.getICustomerManager__SetPaymentDetailsForCustomer__long_String_String_String_String_int_int();
+		EOperation ICUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__CUSTOMER_STRING_STRING_STRING_STRING_INT_INT = eINSTANCE.getICustomerManager__SetPaymentDetailsForCustomer__Customer_String_String_String_String_int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Payment Details By Customer</b></em>' operation.
@@ -1232,7 +1178,7 @@ public interface HotelServicePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__LONG = eINSTANCE.getICustomerManager__GetPaymentDetailsByCustomer__long();
+		EOperation ICUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__CUSTOMER = eINSTANCE.getICustomerManager__GetPaymentDetailsByCustomer__Customer();
 
 	}
 

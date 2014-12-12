@@ -41,26 +41,10 @@ public interface IReservationManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model reservationIdRequired="true" reservationIdOrdered="false" responsibleDataType="org.eclipse.uml2.types.String" responsibleRequired="true" responsibleOrdered="false"
+	 * @model ordered="false" bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	void setResponsibleForReservation(long reservationId, String responsible);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model required="true" many="false" ordered="false" bookingIdRequired="true" bookingIdOrdered="false"
-	 * @generated
-	 */
-	EList getNonCheckedInReservation(long bookingId);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model reservationIdRequired="true" reservationIdOrdered="false" guestsRequired="true" guestsOrdered="false"
-	 * @generated
-	 */
-	void setNumberOfGuestsForReservation(long reservationId, int guests);
+	EList<Reservation> getNonCheckedInReservation(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->

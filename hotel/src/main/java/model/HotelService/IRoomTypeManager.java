@@ -2,6 +2,7 @@
  */
 package model.HotelService;
 
+import HotelSystem.RoomType;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -20,9 +21,9 @@ public interface IRoomTypeManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" many="false" ordered="false"
+	 * @model kind="operation" ordered="false"
 	 * @generated
 	 */
-	EList getRoomTypes();
+	EList<RoomType> getRoomTypes();
 
 } // IRoomTypeManager

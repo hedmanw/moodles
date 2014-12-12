@@ -2,6 +2,8 @@
  */
 package model.HotelService;
 
+import HotelSystem.Room;
+import HotelSystem.RoomType;
 import java.util.Date;
 import java.util.Map;
 
@@ -23,10 +25,10 @@ public interface IRoomManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" many="false" ordered="false" fromDateRequired="true" fromDateOrdered="false" toDateRequired="true" toDateOrdered="false" roomTypeIdsRequired="true" roomTypeIdsMany="false" roomTypeIdsOrdered="false"
+	 * @model ordered="false" fromDateRequired="true" fromDateOrdered="false" toDateRequired="true" toDateOrdered="false" roomTypeIdsMany="true" roomTypeIdsOrdered="false"
 	 * @generated
 	 */
-	EList getAvailableRooms(Date fromDate, Date toDate, EList roomTypeIds);
+	EList<Room> getAvailableRooms(Date fromDate, Date toDate, EList<RoomType> roomTypeIds);
 
 	/**
 	 * <!-- begin-user-doc -->

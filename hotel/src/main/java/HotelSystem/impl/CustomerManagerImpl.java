@@ -90,7 +90,7 @@ public class CustomerManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList getCustomersByName(String name) {
+	public EList<Customer> getCustomersByName(String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -112,7 +112,7 @@ public class CustomerManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long createCustomer(String idNumber, String name) {
+	public Customer createCustomer(String idNumber, String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -123,7 +123,7 @@ public class CustomerManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long setPaymentDetailsForCustomer(long customerId, String firstName, String lastName, String ccNumber, String ccvNumber, int expireMonth, int expireYear) {
+	public long setPaymentDetailsForCustomer(Customer customerId, String firstName, String lastName, String ccNumber, String ccvNumber, int expireMonth, int expireYear) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -134,7 +134,7 @@ public class CustomerManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PaymentDetails getPaymentDetailsByCustomer(long customerId) {
+	public PaymentDetails getPaymentDetailsByCustomer(Customer customerId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -216,10 +216,10 @@ public class CustomerManagerImpl extends MinimalEObjectImpl.Container implements
 				return getCustomer((Long)arguments.get(0));
 			case HotelSystemPackage.CUSTOMER_MANAGER___CREATE_CUSTOMER__STRING_STRING:
 				return createCustomer((String)arguments.get(0), (String)arguments.get(1));
-			case HotelSystemPackage.CUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__LONG_STRING_STRING_STRING_STRING_INT_INT:
-				return setPaymentDetailsForCustomer((Long)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (Integer)arguments.get(5), (Integer)arguments.get(6));
-			case HotelSystemPackage.CUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__LONG:
-				return getPaymentDetailsByCustomer((Long)arguments.get(0));
+			case HotelSystemPackage.CUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__CUSTOMER_STRING_STRING_STRING_STRING_INT_INT:
+				return setPaymentDetailsForCustomer((Customer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (Integer)arguments.get(5), (Integer)arguments.get(6));
+			case HotelSystemPackage.CUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__CUSTOMER:
+				return getPaymentDetailsByCustomer((Customer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
