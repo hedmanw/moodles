@@ -19,16 +19,17 @@ class ReserveARoomTest extends Specification{
     }
 
     def "success scenario"() {
-        when:
+        setup:
+        RoomType roomType = roomTypeManager.createRoomType("Double room", 1000)
         Room room = HotelCoreFactory.eINSTANCE.createRoom()
-        RoomType roomType = HotelCoreFactory.eINSTANCE.createRoomType()
-        roomTypeManager.getAllRoomTypes().add(roomType)
-        roomType.costPerNight = 1000
         room.roomNumber = 1
         room.roomType = roomType
         roomManager.getAllRooms().add(room)
+
+        when:
         //TODO implement get available rooms with search feature
         def availableRooms = roomManager.getAvailableRooms(new Date(), new Date()+1, roomTypeManager.getAllRoomTypes())
+
         then:
         availableRooms.size() == 1
 

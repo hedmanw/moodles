@@ -438,6 +438,10 @@
     <eClassifiers xsi:type="ecore:EClass" name="IRoomTypeManager" abstract="true"
         interface="true">
       <eOperations name="getRoomTypes" ordered="false" upperBound="-1" eType="#//HotelCore/RoomType"/>
+      <eOperations name="createRoomType" ordered="false" lowerBound="1" eType="#//HotelCore/RoomType">
+        <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="costPerNight" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RoomTypeManager" eSuperTypes="#//HotelService/IRoomTypeManager">
       <eStructuralFeatures xsi:type="ecore:EReference" name="allRoomTypes" ordered="false"

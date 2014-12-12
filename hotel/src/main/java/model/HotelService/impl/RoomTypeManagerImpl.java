@@ -6,9 +6,11 @@ import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 
+import model.HotelCore.HotelCoreFactory;
 import model.HotelCore.Room;
 import model.HotelCore.RoomType;
 
+import model.HotelCore.SleepRoom;
 import model.HotelService.HotelServicePackage;
 import model.HotelService.RoomTypeManager;
 
@@ -88,6 +90,20 @@ public class RoomTypeManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public RoomType createRoomType(String name, double costPerNight) {
+		SleepRoom sleepRoom = HotelCoreFactory.eINSTANCE.createSleepRoom();
+		sleepRoom.setNbrOfBeds(2);
+		sleepRoom.setName(name);
+		sleepRoom.setCostPerNight(costPerNight);
+		getAllRoomTypes().add(sleepRoom);
+		return sleepRoom;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -155,6 +171,8 @@ public class RoomTypeManagerImpl extends MinimalEObjectImpl.Container implements
 		switch (operationID) {
 			case HotelServicePackage.ROOM_TYPE_MANAGER___GET_ROOM_TYPES:
 				return getRoomTypes();
+			case HotelServicePackage.ROOM_TYPE_MANAGER___CREATE_ROOM_TYPE__STRING_DOUBLE:
+				return createRoomType((String) arguments.get(0), (Double) arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

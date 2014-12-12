@@ -25,4 +25,12 @@ public interface IRoomTypeManager extends EObject {
 	 */
 	EList<RoomType> getRoomTypes();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" nameRequired="true" nameOrdered="false" costPerNightRequired="true" costPerNightOrdered="false"
+	 * @generated
+	 */
+	RoomType createRoomType(String name, double costPerNight);
+
 } // IRoomTypeManager

@@ -282,6 +282,17 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2vSDsYIREeStbpNcMqf5hQ" value="*"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_EEndYIIjEeStbpNcMqf5hQ" name="createRoomType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_RZqL4IIjEeStbpNcMqf5hQ" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bBQYQIIjEeStbpNcMqf5hQ" name="costPerNight">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_h1azsIIjEeStbpNcMqf5hQ" name="createdRoomType" direction="return">
+          <type xmi:type="uml:Class" href="HotelSystem.uml#_1MohkHjDEeSDBKbFcXcsYQ"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_FfKd8Hx_EeSzd-4yXNUKkQ" name="RoomTypeManager">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Q7_SEIIbEeStbpNcMqf5hQ" name="allRoomTypes" association="_Q7_5IIIbEeStbpNcMqf5hQ">

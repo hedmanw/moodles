@@ -530,6 +530,15 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getIRoomTypeManager__CreateRoomType__String_double() {
+		return iRoomTypeManagerEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRoomTypeManager() {
 		return roomTypeManagerEClass;
 	}
@@ -671,6 +680,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 
 		iRoomTypeManagerEClass = createEClass(IROOM_TYPE_MANAGER);
 		createEOperation(iRoomTypeManagerEClass, IROOM_TYPE_MANAGER___GET_ROOM_TYPES);
+		createEOperation(iRoomTypeManagerEClass, IROOM_TYPE_MANAGER___CREATE_ROOM_TYPE__STRING_DOUBLE);
 
 		roomTypeManagerEClass = createEClass(ROOM_TYPE_MANAGER);
 		createEReference(roomTypeManagerEClass, ROOM_TYPE_MANAGER__ALL_ROOM_TYPES);
@@ -777,6 +787,10 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		initEClass(iRoomTypeManagerEClass, IRoomTypeManager.class, "IRoomTypeManager", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEOperation(getIRoomTypeManager__GetRoomTypes(), theHotelCorePackage.getRoomType(), "getRoomTypes", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIRoomTypeManager__CreateRoomType__String_double(), theHotelCorePackage.getRoomType(), "createRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "costPerNight", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(roomTypeManagerEClass, RoomTypeManager.class, "RoomTypeManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoomTypeManager_AllRoomTypes(), theHotelCorePackage.getRoomType(), null, "allRoomTypes", null, 0, -1, RoomTypeManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

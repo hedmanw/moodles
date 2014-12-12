@@ -440,6 +440,10 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="model.ecore#//HotelService/IRoomTypeManager">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IRoomTypeManager/getRoomTypes"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//HotelService/IRoomTypeManager/createRoomType">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IRoomTypeManager/createRoomType/name"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//HotelService/IRoomTypeManager/createRoomType/costPerNight"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//HotelService/RoomTypeManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

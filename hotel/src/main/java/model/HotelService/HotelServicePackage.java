@@ -366,13 +366,22 @@ public interface HotelServicePackage extends EPackage {
 	int IROOM_TYPE_MANAGER___GET_ROOM_TYPES = 0;
 
 	/**
+	 * The operation id for the '<em>Create Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM_TYPE_MANAGER___CREATE_ROOM_TYPE__STRING_DOUBLE = 1;
+
+	/**
 	 * The number of operations of the '<em>IRoom Type Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_TYPE_MANAGER_OPERATION_COUNT = 1;
+	int IROOM_TYPE_MANAGER_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link model.HotelService.impl.RoomTypeManagerImpl <em>Room Type Manager</em>}' class.
@@ -410,6 +419,15 @@ public interface HotelServicePackage extends EPackage {
 	 * @ordered
 	 */
 	int ROOM_TYPE_MANAGER___GET_ROOM_TYPES = IROOM_TYPE_MANAGER___GET_ROOM_TYPES;
+
+	/**
+	 * The operation id for the '<em>Create Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_MANAGER___CREATE_ROOM_TYPE__STRING_DOUBLE = IROOM_TYPE_MANAGER___CREATE_ROOM_TYPE__STRING_DOUBLE;
 
 	/**
 	 * The number of operations of the '<em>Room Type Manager</em>' class.
@@ -1261,6 +1279,16 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIRoomTypeManager__GetRoomTypes();
 
 	/**
+	 * Returns the meta object for the '{@link model.HotelService.IRoomTypeManager#createRoomType(java.lang.String, double) <em>Create Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Room Type</em>' operation.
+	 * @see model.HotelService.IRoomTypeManager#createRoomType(java.lang.String, double)
+	 * @generated
+	 */
+	EOperation getIRoomTypeManager__CreateRoomType__String_double();
+
+	/**
 	 * Returns the meta object for class '{@link model.HotelService.RoomTypeManager <em>Room Type Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1674,6 +1702,14 @@ public interface HotelServicePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IROOM_TYPE_MANAGER___GET_ROOM_TYPES = eINSTANCE.getIRoomTypeManager__GetRoomTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_TYPE_MANAGER___CREATE_ROOM_TYPE__STRING_DOUBLE = eINSTANCE.getIRoomTypeManager__CreateRoomType__String_double();
 
 		/**
 		 * The meta object literal for the '{@link model.HotelService.impl.RoomTypeManagerImpl <em>Room Type Manager</em>}' class.
