@@ -78,7 +78,6 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="HotelSystem.ecore#//Room/removeRoomType">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="HotelSystem.ecore#//Room/removeRoomType/roomType"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="HotelSystem.ecore#//Room/getEquipment"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="HotelSystem.ecore#//Room/addEquipmentToRoom">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="HotelSystem.ecore#//Room/addEquipmentToRoom/item"/>
       </genOperations>

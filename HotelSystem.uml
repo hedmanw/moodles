@@ -92,11 +92,6 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_DFi7MHoOEeSJYOaXazdB-A" name="removeRoomType">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_DFi7MXoOEeSJYOaXazdB-A" name="roomType" type="_1MohkHjDEeSDBKbFcXcsYQ"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_NQYXgHoOEeSJYOaXazdB-A" name="getEquipment">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Q4RrQHoOEeSJYOaXazdB-A" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
-      </ownedParameter>
-    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_M028gHVVEeSsEN78lnEQdg" name="addEquipmentToRoom">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_Vx360HVVEeSsEN78lnEQdg" name="item">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
