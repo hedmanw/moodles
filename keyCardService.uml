@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ctqTkHdKEeSa9_mJi2PydA" name="keyCardService">
+  <packagedElement xmi:type="uml:Component" xmi:id="_fC3CQHlsEeSNP_QJ-oV69w" name="KeyCards"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="__t4cEHluEeSNP_QJ-oV69w" name="KeyCardsProvides">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_d1ghgHlwEeSNP_QJ-oV69w" name="returnedCards">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_zrLNQHlwEeSNP_QJ-oV69w" name="amount" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_k6nGgHlxEeSNP_QJ-oV69w" name="reservation">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rGKCwHlxEeSNP_QJ-oV69w" name="assignCardsToReservation" visibility="public">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_WxjEoHlyEeSNP_QJ-oV69w" name="reservation">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_aI7QIHlyEeSNP_QJ-oV69w" name="numberOfCards">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ltGd8HlyEeSNP_QJ-oV69w" name="cards" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_9KQr4HynEeSemIR3Zeitew" name="Realization0" client="_fC3CQHlsEeSNP_QJ-oV69w" supplier="__t4cEHluEeSNP_QJ-oV69w" contract="__t4cEHluEeSNP_QJ-oV69w"/>
+</uml:Package>

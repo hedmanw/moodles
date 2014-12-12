@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Tu3wAHVPEeSFlMIer3mkJA" name="HotelCore">
+<uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Tu3wAHVPEeSFlMIer3mkJA" name="hotelCore">
   <packagedElement xmi:type="uml:Component" xmi:id="_dqC1MHlsEeSNP_QJ-oV69w" name="Hotel"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_fnSvgHVPEeSFlMIer3mkJA" name="Tab">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_dmVu8HVQEeSFlMIer3mkJA" name="tabItems" visibility="private">
@@ -574,10 +574,10 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Usage" xmi:id="_GlvH0HyoEeSemIR3Zeitew" name="Usage0" client="_dqC1MHlsEeSNP_QJ-oV69w">
-    <supplier xmi:type="uml:Interface" href="model.uml#_qlXxQHluEeSNP_QJ-oV69w"/>
+    <supplier xmi:type="uml:Interface" href="bankingService.uml#_qlXxQHluEeSNP_QJ-oV69w"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Usage" xmi:id="_HTIZUHyoEeSemIR3Zeitew" name="Usage1" client="_dqC1MHlsEeSNP_QJ-oV69w">
-    <supplier xmi:type="uml:Interface" href="model.uml#__t4cEHluEeSNP_QJ-oV69w"/>
+    <supplier xmi:type="uml:Interface" href="keyCardService.uml#__t4cEHluEeSNP_QJ-oV69w"/>
   </packagedElement>
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_SBojYHyoEeSemIR3Zeitew" name="Realization0" client="_dqC1MHlsEeSNP_QJ-oV69w"/>
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_SaWlYHyoEeSemIR3Zeitew" name="Realization1" client="_dqC1MHlsEeSNP_QJ-oV69w"/>
@@ -589,23 +589,23 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_s9UEQIIaEeStbpNcMqf5hQ" name="Realization2" client="_dqC1MHlsEeSNP_QJ-oV69w">
-    <supplier xmi:type="uml:Interface" href="model.uml#_uycgUHx8EeSyZvvyd5lTNA"/>
-    <contract xmi:type="uml:Interface" href="model.uml#_uycgUHx8EeSyZvvyd5lTNA"/>
+    <supplier xmi:type="uml:Interface" href="hotelService.uml#_uycgUHx8EeSyZvvyd5lTNA"/>
+    <contract xmi:type="uml:Interface" href="hotelService.uml#_uycgUHx8EeSyZvvyd5lTNA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_tatK4IIaEeStbpNcMqf5hQ" name="Realization3" client="_dqC1MHlsEeSNP_QJ-oV69w">
-    <supplier xmi:type="uml:Interface" href="model.uml#_l5AacHx8EeSyZvvyd5lTNA"/>
-    <contract xmi:type="uml:Interface" href="model.uml#_l5AacHx8EeSyZvvyd5lTNA"/>
+    <supplier xmi:type="uml:Interface" href="hotelService.uml#_l5AacHx8EeSyZvvyd5lTNA"/>
+    <contract xmi:type="uml:Interface" href="hotelService.uml#_l5AacHx8EeSyZvvyd5lTNA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_t1JEIIIaEeStbpNcMqf5hQ" name="Realization4" client="_dqC1MHlsEeSNP_QJ-oV69w">
-    <supplier xmi:type="uml:Interface" href="model.uml#_DyqAMHx8EeSyZvvyd5lTNA"/>
-    <contract xmi:type="uml:Interface" href="model.uml#_DyqAMHx8EeSyZvvyd5lTNA"/>
+    <supplier xmi:type="uml:Interface" href="hotelService.uml#_DyqAMHx8EeSyZvvyd5lTNA"/>
+    <contract xmi:type="uml:Interface" href="hotelService.uml#_DyqAMHx8EeSyZvvyd5lTNA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_uQoGQIIaEeStbpNcMqf5hQ" name="Realization5" client="_dqC1MHlsEeSNP_QJ-oV69w">
-    <supplier xmi:type="uml:Interface" href="model.uml#_Qh5S8Hx8EeSyZvvyd5lTNA"/>
-    <contract xmi:type="uml:Interface" href="model.uml#_Qh5S8Hx8EeSyZvvyd5lTNA"/>
+    <supplier xmi:type="uml:Interface" href="hotelService.uml#_Qh5S8Hx8EeSyZvvyd5lTNA"/>
+    <contract xmi:type="uml:Interface" href="hotelService.uml#_Qh5S8Hx8EeSyZvvyd5lTNA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_u2qLgIIaEeStbpNcMqf5hQ" name="Realization6" client="_dqC1MHlsEeSNP_QJ-oV69w">
-    <supplier xmi:type="uml:Interface" href="model.uml#_VffOUHx8EeSyZvvyd5lTNA"/>
-    <contract xmi:type="uml:Interface" href="model.uml#_VffOUHx8EeSyZvvyd5lTNA"/>
+    <supplier xmi:type="uml:Interface" href="hotelService.uml#_VffOUHx8EeSyZvvyd5lTNA"/>
+    <contract xmi:type="uml:Interface" href="hotelService.uml#_VffOUHx8EeSyZvvyd5lTNA"/>
   </packagedElement>
 </uml:Package>

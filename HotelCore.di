@@ -4,7 +4,7 @@
     <windows>
       <children xsi:type="di:TabFolder">
         <children>
-          <emfPageIdentifier href="HotelSystem.notation#_G67G8HVQEeSFlMIer3mkJA"/>
+          <emfPageIdentifier href="HotelCore.notation#_G67G8HVQEeSFlMIer3mkJA"/>
         </children>
       </children>
     </windows>
