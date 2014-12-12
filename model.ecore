@@ -453,12 +453,12 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IReservationManager" abstract="true"
         interface="true">
-      <eOperations name="createReservation" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eOperations name="createReservation" ordered="false" lowerBound="1" eType="#//HotelCore/Reservation">
         <eParameters name="booking" ordered="false" lowerBound="1" eType="#//HotelCore/Booking"/>
         <eParameters name="fromDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
         <eParameters name="toDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="roomId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
-        <eParameters name="costCategoryId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+        <eParameters name="room" ordered="false" lowerBound="1" eType="#//HotelCore/Room"/>
+        <eParameters name="costCategory" ordered="false" lowerBound="1" eType="#//HotelCore/RoomType"/>
       </eOperations>
       <eOperations name="getReservation" ordered="false" lowerBound="1" eType="#//HotelCore/Reservation">
         <eParameters name="reservationId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>

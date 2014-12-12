@@ -13,7 +13,6 @@ import se.chalmers.mdsd1415.group11.model.HotelCore.Room;
 import se.chalmers.mdsd1415.group11.model.HotelCore.RoomType;
 import se.chalmers.mdsd1415.group11.model.HotelService.HotelServicePackage;
 import se.chalmers.mdsd1415.group11.model.HotelService.RoomManager;
-import util.EArrayList;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -22,6 +21,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import se.chalmers.mdsd1415.group11.util.EArrayList;
 
 /**
  * <!-- begin-user-doc -->

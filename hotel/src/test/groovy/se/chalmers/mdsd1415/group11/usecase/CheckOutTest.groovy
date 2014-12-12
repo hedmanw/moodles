@@ -3,10 +3,12 @@ package se.chalmers.mdsd1415.group11.usecase
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 import se.chalmers.mdsd1415.group11.model.HotelCore.HotelCoreFactory
 import se.chalmers.mdsd1415.group11.model.HotelCore.Reservation
+import spock.lang.Ignore
 
 /**
  * Created by Oskar on 14-12-12.
  */
+@Ignore
 class CheckOutTest extends HotelBaseSpecification {
     Reservation reservation = HotelCoreFactory.eINSTANCE.createReservation()
 

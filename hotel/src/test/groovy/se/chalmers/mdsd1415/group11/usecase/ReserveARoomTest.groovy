@@ -1,7 +1,7 @@
 package se.chalmers.mdsd1415.group11.usecase
 
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
-import util.EArrayList
+import se.chalmers.mdsd1415.group11.util.EArrayList
 import se.chalmers.mdsd1415.group11.model.HotelCore.Room
 import se.chalmers.mdsd1415.group11.model.HotelCore.RoomType
 

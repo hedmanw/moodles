@@ -1,4 +1,4 @@
-package util;
+package se.chalmers.mdsd1415.group11.util;
 
 import org.eclipse.emf.common.util.EList;
 

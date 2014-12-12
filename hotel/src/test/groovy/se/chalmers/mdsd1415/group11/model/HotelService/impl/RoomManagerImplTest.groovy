@@ -1,7 +1,8 @@
 package se.chalmers.mdsd1415.group11.model.HotelService.impl
 
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
-import util.EArrayList
+import se.chalmers.mdsd1415.group11.model.HotelCore.Room
+import se.chalmers.mdsd1415.group11.util.EArrayList
 import se.chalmers.mdsd1415.group11.model.HotelCore.RoomType
 
 /**
@@ -10,8 +11,21 @@ import se.chalmers.mdsd1415.group11.model.HotelCore.RoomType
 class RoomManagerImplTest extends HotelBaseSpecification {
     Date today = new Date()
     Date tomorrow = new Date()+1
+    RoomType a
+    RoomType b
+    Room one
+    Room two
+    def searchCriteria = new EArrayList<RoomType>()
 
-    def "getAvailableRooms is empty when there are no rooms in the hotel"() {
+    def setup() {
+        a = roomTypeManager.createRoomType("A", 10)
+        b = roomTypeManager.createRoomType("B", 20)
+        one = roomManager.createRoom(1, this.a)
+        two = roomManager.createRoom(2, this.b)
+        searchCriteria.add(a)
+    }
+
+    def "is empty when there are no rooms in the hotel"() {
         setup:
         roomManager.getAllRooms().clear()
 
@@ -19,21 +33,29 @@ class RoomManagerImplTest extends HotelBaseSpecification {
         roomManager.getAvailableRooms(today, tomorrow, roomTypeManager.getAllRoomTypes()).isEmpty()
     }
 
-    def "getAvailableRooms returns the correct RoomType"() {
-        setup:
-        def a = roomTypeManager.createRoomType("A", 10)
-        def b = roomTypeManager.createRoomType("B", 20)
-        roomManager.createRoom(1, a)
-        roomManager.createRoom(2, b)
-
+    def "filters on RoomType"() {
         when:
-        def searchCriteria = new EArrayList<RoomType>()
-        searchCriteria.add(a)
         def results = roomManager.getAvailableRooms(today, tomorrow, searchCriteria)
 
         then:
         results.size() == 1
         results.get(0).getRoomType() == a
+    }
+
+    def "filters on date"() {
+        setup:
+        def booking = bookingManager.createBooking()
+//        reservationManager.createReservation(booking, today, tomorrow, )
+
+        when:
+        def results = roomManager.getAvailableRooms(today, tomorrow, searchCriteria)
+
+        then:
+        results.isEmpty()
+    }
+
+    def "filters on multiple RoomType and date"() {
+
     }
 
     def "silly dates throw"() {

@@ -2,11 +2,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>se.chalmers.mdsd1415.group11</groupId>
-    <artifactId>hotel</artifactId>
+    <artifactId>hotel-system</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>hotel</name>
-    <url>http://maven.apache.org</url>
+    <name>Best hotel system!</name>
+    <url>https://github.com/hedmanw/moodles</url>
 
     <build>
         <!-- Mandatory plugins for using Spock -->
