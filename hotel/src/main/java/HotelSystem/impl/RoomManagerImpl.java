@@ -78,12 +78,14 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList getAvailableRooms(Date fromDate, Date toDate, EList roomTypeIds) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList matching  = new EObjectResolvingEList<Room>(Room.class, this, HotelSystemPackage.ROOM_MANAGER__ROOM);
+		for (Room room : getRoom()) {
+			matching.add(room);
+		}
+		return matching;
 	}
 
 	/**
