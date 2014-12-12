@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.uml2.types.impl;
+package se.chalmers.mdsd1415.group11.model.KeyCardService.impl;
 
 import se.chalmers.mdsd1415.group11.model.BankingService.BankingServicePackage;
 
@@ -12,21 +12,24 @@ import se.chalmers.mdsd1415.group11.model.HotelService.HotelServicePackage;
 
 import se.chalmers.mdsd1415.group11.model.HotelService.impl.HotelServicePackageImpl;
 
+import se.chalmers.mdsd1415.group11.model.KeyCardService.KeyCardServiceFactory;
 import se.chalmers.mdsd1415.group11.model.KeyCardService.KeyCardServicePackage;
-
-import se.chalmers.mdsd1415.group11.model.KeyCardService.impl.KeyCardServicePackageImpl;
+import se.chalmers.mdsd1415.group11.model.KeyCardService.KeyCards;
+import se.chalmers.mdsd1415.group11.model.KeyCardService.KeyCardsProvides;
 
 import se.chalmers.mdsd1415.group11.model.ModelPackage;
 
 import se.chalmers.mdsd1415.group11.model.impl.ModelPackageImpl;
 
-import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.uml2.types.TypesFactory;
 import org.eclipse.uml2.types.TypesPackage;
+
+import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,41 +37,20 @@ import org.eclipse.uml2.types.TypesPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
+public class KeyCardServicePackageImpl extends EPackageImpl implements KeyCardServicePackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType booleanEDataType = null;
+	private EClass keyCardsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType integerEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType realEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType unlimitedNaturalEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType stringEDataType = null;
+	private EClass keyCardsProvidesEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -81,12 +63,12 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.uml2.types.TypesPackage#eNS_URI
+	 * @see se.chalmers.mdsd1415.group11.model.KeyCardService.KeyCardServicePackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private TypesPackageImpl() {
-		super(eNS_URI, TypesFactory.eINSTANCE);
+	private KeyCardServicePackageImpl() {
+		super(eNS_URI, KeyCardServiceFactory.eINSTANCE);
 	}
 
 	/**
@@ -99,7 +81,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link TypesPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link KeyCardServicePackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -108,11 +90,11 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static TypesPackage init() {
-		if (isInited) return (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+	public static KeyCardServicePackage init() {
+		if (isInited) return (KeyCardServicePackage)EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI);
 
 		// Obtain or create and register package
-		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new TypesPackageImpl());
+		KeyCardServicePackageImpl theKeyCardServicePackage = (KeyCardServicePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof KeyCardServicePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new KeyCardServicePackageImpl());
 
 		isInited = true;
 
@@ -120,32 +102,32 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		ModelPackageImpl theModelPackage = (ModelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModelPackage.eNS_URI) instanceof ModelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModelPackage.eNS_URI) : ModelPackage.eINSTANCE);
 		HotelCorePackageImpl theHotelCorePackage = (HotelCorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI) instanceof HotelCorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI) : HotelCorePackage.eINSTANCE);
 		BankingServicePackageImpl theBankingServicePackage = (BankingServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) instanceof BankingServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) : BankingServicePackage.eINSTANCE);
-		KeyCardServicePackageImpl theKeyCardServicePackage = (KeyCardServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI) instanceof KeyCardServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI) : KeyCardServicePackage.eINSTANCE);
 		HotelServicePackageImpl theHotelServicePackage = (HotelServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) instanceof HotelServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) : HotelServicePackage.eINSTANCE);
+		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 
 		// Create package meta-data objects
-		theTypesPackage.createPackageContents();
+		theKeyCardServicePackage.createPackageContents();
 		theModelPackage.createPackageContents();
 		theHotelCorePackage.createPackageContents();
 		theBankingServicePackage.createPackageContents();
-		theKeyCardServicePackage.createPackageContents();
 		theHotelServicePackage.createPackageContents();
+		theTypesPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theTypesPackage.initializePackageContents();
+		theKeyCardServicePackage.initializePackageContents();
 		theModelPackage.initializePackageContents();
 		theHotelCorePackage.initializePackageContents();
 		theBankingServicePackage.initializePackageContents();
-		theKeyCardServicePackage.initializePackageContents();
 		theHotelServicePackage.initializePackageContents();
+		theTypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theTypesPackage.freeze();
+		theKeyCardServicePackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(TypesPackage.eNS_URI, theTypesPackage);
-		return theTypesPackage;
+		EPackage.Registry.INSTANCE.put(KeyCardServicePackage.eNS_URI, theKeyCardServicePackage);
+		return theKeyCardServicePackage;
 	}
 
 	/**
@@ -153,8 +135,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getBoolean() {
-		return booleanEDataType;
+	public EClass getKeyCards() {
+		return keyCardsEClass;
 	}
 
 	/**
@@ -162,8 +144,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getInteger() {
-		return integerEDataType;
+	public EClass getKeyCardsProvides() {
+		return keyCardsProvidesEClass;
 	}
 
 	/**
@@ -171,8 +153,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getReal() {
-		return realEDataType;
+	public EOperation getKeyCardsProvides__ReturnedCards__long() {
+		return keyCardsProvidesEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -180,8 +162,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getUnlimitedNatural() {
-		return unlimitedNaturalEDataType;
+	public EOperation getKeyCardsProvides__AssignCardsToReservation__long_int() {
+		return keyCardsProvidesEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -189,17 +171,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getString() {
-		return stringEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TypesFactory getTypesFactory() {
-		return (TypesFactory)getEFactoryInstance();
+	public KeyCardServiceFactory getKeyCardServiceFactory() {
+		return (KeyCardServiceFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -220,12 +193,12 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		if (isCreated) return;
 		isCreated = true;
 
-		// Create data types
-		booleanEDataType = createEDataType(BOOLEAN);
-		integerEDataType = createEDataType(INTEGER);
-		realEDataType = createEDataType(REAL);
-		unlimitedNaturalEDataType = createEDataType(UNLIMITED_NATURAL);
-		stringEDataType = createEDataType(STRING);
+		// Create classes and their features
+		keyCardsEClass = createEClass(KEY_CARDS);
+
+		keyCardsProvidesEClass = createEClass(KEY_CARDS_PROVIDES);
+		createEOperation(keyCardsProvidesEClass, KEY_CARDS_PROVIDES___RETURNED_CARDS__LONG);
+		createEOperation(keyCardsProvidesEClass, KEY_CARDS_PROVIDES___ASSIGN_CARDS_TO_RESERVATION__LONG_INT);
 	}
 
 	/**
@@ -251,35 +224,23 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Initialize data types
-		initEDataType(booleanEDataType, boolean.class, "Boolean", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(integerEDataType, int.class, "Integer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(realEDataType, double.class, "Real", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(unlimitedNaturalEDataType, int.class, "UnlimitedNatural", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(stringEDataType, String.class, "String", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		// Create type parameters
 
-		// Create resource
-		createResource(eNS_URI);
+		// Set bounds for type parameters
 
-		// Create annotations
-		// http://www.eclipse.org/uml2/2.0.0/UML
-		createUMLAnnotations();
+		// Add supertypes to classes
+
+		// Initialize classes, features, and operations; add parameters
+		initEClass(keyCardsEClass, KeyCards.class, "KeyCards", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(keyCardsProvidesEClass, KeyCardsProvides.class, "KeyCardsProvides", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		EOperation op = initEOperation(getKeyCardsProvides__ReturnedCards__long(), ecorePackage.getEInt(), "returnedCards", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getELong(), "reservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getKeyCardsProvides__AssignCardsToReservation__long_int(), ecorePackage.getEEList(), "assignCardsToReservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getELong(), "reservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "numberOfCards", 1, 1, IS_UNIQUE, !IS_ORDERED);
 	}
 
-	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/uml2/2.0.0/UML</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createUMLAnnotations() {
-		String source = "http://www.eclipse.org/uml2/2.0.0/UML";	
-		addAnnotation
-		  (this, 
-		   source, 
-		   new String[] {
-			 "originalName", "PrimitiveTypes"
-		   });
-	}
-
-} //TypesPackageImpl
+} //KeyCardServicePackageImpl
