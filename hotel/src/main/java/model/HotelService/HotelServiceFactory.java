@@ -22,31 +22,58 @@ public interface HotelServiceFactory extends EFactory {
 	HotelServiceFactory eINSTANCE = model.HotelService.impl.HotelServiceFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Hotel Receptionist</em>'.
+	 * Returns a new object of class '<em>System User</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Hotel Receptionist</em>'.
+	 * @return a new object of class '<em>System User</em>'.
 	 * @generated
 	 */
-	HotelReceptionist createHotelReceptionist();
+	SystemUser createSystemUser();
 
 	/**
-	 * Returns a new object of class '<em>Hotel Manager</em>'.
+	 * Returns a new object of class '<em>Room Manager</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Hotel Manager</em>'.
+	 * @return a new object of class '<em>Room Manager</em>'.
 	 * @generated
 	 */
-	HotelManager createHotelManager();
+	RoomManager createRoomManager();
 
 	/**
-	 * Returns a new object of class '<em>Hotel Staff</em>'.
+	 * Returns a new object of class '<em>Room Type Manager</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Hotel Staff</em>'.
+	 * @return a new object of class '<em>Room Type Manager</em>'.
 	 * @generated
 	 */
-	HotelStaff createHotelStaff();
+	RoomTypeManager createRoomTypeManager();
+
+	/**
+	 * Returns a new object of class '<em>Reservation Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Reservation Manager</em>'.
+	 * @generated
+	 */
+	ReservationManager createReservationManager();
+
+	/**
+	 * Returns a new object of class '<em>Booking Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Booking Manager</em>'.
+	 * @generated
+	 */
+	BookingManager createBookingManager();
+
+	/**
+	 * Returns a new object of class '<em>Customer Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Customer Manager</em>'.
+	 * @generated
+	 */
+	CustomerManager createCustomerManager();
 
 	/**
 	 * Returns the package supported by this factory.

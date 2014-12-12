@@ -2,13 +2,10 @@
  */
 package model.HotelService;
 
-import HotelSystem.Booking;
-import HotelSystem.Reservation;
-
 import java.util.Date;
-
+import model.HotelCore.Booking;
+import model.HotelCore.Reservation;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**

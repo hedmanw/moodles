@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see model.HotelService.HotelServicePackage#getHotelManager()
- * @model
+ * @model interface="true" abstract="true"
  * @generated
  */
 public interface HotelManager extends EObject {

@@ -2,15 +2,15 @@
  */
 package model.impl;
 
-import HotelSystem.Booking;
-import HotelSystem.Customer;
-import HotelSystem.Reservation;
-
 import model.CheckInSuccess;
 
+import model.HotelCore.Booking;
+import model.HotelCore.Customer;
+import model.HotelCore.Reservation;
 import model.HotelService.HotelReceptionist;
 import model.HotelService.IBookingManager;
 
+import model.HotelService.SystemUser;
 import model.KeyCardService.KeyCardsProvides;
 
 import model.ModelPackage;
@@ -80,7 +80,7 @@ public class CheckInSuccessImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected HotelReceptionist actor;
+	protected SystemUser actor;
 
 	/**
 	 * The cached value of the '{@link #getBm() <em>Bm</em>}' reference.
@@ -240,10 +240,10 @@ public class CheckInSuccessImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HotelReceptionist getActor() {
+	public SystemUser getActor() {
 		if (actor != null && actor.eIsProxy()) {
 			InternalEObject oldActor = (InternalEObject)actor;
-			actor = (HotelReceptionist)eResolveProxy(oldActor);
+			actor = (SystemUser)eResolveProxy(oldActor);
 			if (actor != oldActor) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.CHECK_IN_SUCCESS__ACTOR, oldActor, actor));
@@ -257,7 +257,7 @@ public class CheckInSuccessImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HotelReceptionist basicGetActor() {
+	public SystemUser basicGetActor() {
 		return actor;
 	}
 
@@ -266,8 +266,8 @@ public class CheckInSuccessImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setActor(HotelReceptionist newActor) {
-		HotelReceptionist oldActor = actor;
+	public void setActor(SystemUser newActor) {
+		SystemUser oldActor = actor;
 		actor = newActor;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CHECK_IN_SUCCESS__ACTOR, oldActor, actor));
@@ -397,7 +397,7 @@ public class CheckInSuccessImpl extends MinimalEObjectImpl.Container implements 
 				setCustomer((Customer)newValue);
 				return;
 			case ModelPackage.CHECK_IN_SUCCESS__ACTOR:
-				setActor((HotelReceptionist)newValue);
+				setActor((SystemUser)newValue);
 				return;
 			case ModelPackage.CHECK_IN_SUCCESS__BM:
 				setBm((IBookingManager)newValue);
@@ -427,7 +427,7 @@ public class CheckInSuccessImpl extends MinimalEObjectImpl.Container implements 
 				setCustomer((Customer)null);
 				return;
 			case ModelPackage.CHECK_IN_SUCCESS__ACTOR:
-				setActor((HotelReceptionist)null);
+				setActor((SystemUser)null);
 				return;
 			case ModelPackage.CHECK_IN_SUCCESS__BM:
 				setBm((IBookingManager)null);

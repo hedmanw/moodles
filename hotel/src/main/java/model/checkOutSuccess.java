@@ -2,18 +2,14 @@
  */
 package model;
 
-import HotelSystem.Booking;
-import HotelSystem.Customer;
-import HotelSystem.Reservation;
-
 import model.BankingService.CustomerProvides;
-
-import model.HotelService.HotelReceptionist;
+import model.HotelCore.Booking;
+import model.HotelCore.Customer;
+import model.HotelCore.Reservation;
 import model.HotelService.IBookingManager;
 import model.HotelService.IReservationManager;
-
+import model.HotelService.SystemUser;
 import model.KeyCardService.KeyCardsProvides;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -49,12 +45,12 @@ public interface checkOutSuccess extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actor</em>' reference.
-	 * @see #setActor(HotelReceptionist)
+	 * @see #setActor(SystemUser)
 	 * @see model.ModelPackage#getcheckOutSuccess_Actor()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	HotelReceptionist getActor();
+	SystemUser getActor();
 
 	/**
 	 * Sets the value of the '{@link model.checkOutSuccess#getActor <em>Actor</em>}' reference.
@@ -64,7 +60,7 @@ public interface checkOutSuccess extends EObject {
 	 * @see #getActor()
 	 * @generated
 	 */
-	void setActor(HotelReceptionist value);
+	void setActor(SystemUser value);
 
 	/**
 	 * Returns the value of the '<em><b>Key Cards</b></em>' reference.

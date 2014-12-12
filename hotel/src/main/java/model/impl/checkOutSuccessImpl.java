@@ -2,16 +2,16 @@
  */
 package model.impl;
 
-import HotelSystem.Booking;
-import HotelSystem.Customer;
-import HotelSystem.Reservation;
-
 import model.BankingService.CustomerProvides;
 
+import model.HotelCore.Booking;
+import model.HotelCore.Customer;
+import model.HotelCore.Reservation;
 import model.HotelService.HotelReceptionist;
 import model.HotelService.IBookingManager;
 import model.HotelService.IReservationManager;
 
+import model.HotelService.SystemUser;
 import model.KeyCardService.KeyCardsProvides;
 
 import model.ModelPackage;
@@ -54,7 +54,7 @@ public class checkOutSuccessImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected HotelReceptionist actor;
+	protected SystemUser actor;
 
 	/**
 	 * The cached value of the '{@link #getKeyCards() <em>Key Cards</em>}' reference.
@@ -150,10 +150,10 @@ public class checkOutSuccessImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HotelReceptionist getActor() {
+	public SystemUser getActor() {
 		if (actor != null && actor.eIsProxy()) {
 			InternalEObject oldActor = (InternalEObject)actor;
-			actor = (HotelReceptionist)eResolveProxy(oldActor);
+			actor = (SystemUser)eResolveProxy(oldActor);
 			if (actor != oldActor) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.CHECK_OUT_SUCCESS__ACTOR, oldActor, actor));
@@ -167,7 +167,7 @@ public class checkOutSuccessImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HotelReceptionist basicGetActor() {
+	public SystemUser basicGetActor() {
 		return actor;
 	}
 
@@ -176,8 +176,8 @@ public class checkOutSuccessImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setActor(HotelReceptionist newActor) {
-		HotelReceptionist oldActor = actor;
+	public void setActor(SystemUser newActor) {
+		SystemUser oldActor = actor;
 		actor = newActor;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CHECK_OUT_SUCCESS__ACTOR, oldActor, actor));
@@ -494,7 +494,7 @@ public class checkOutSuccessImpl extends MinimalEObjectImpl.Container implements
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ModelPackage.CHECK_OUT_SUCCESS__ACTOR:
-				setActor((HotelReceptionist)newValue);
+				setActor((SystemUser)newValue);
 				return;
 			case ModelPackage.CHECK_OUT_SUCCESS__KEY_CARDS:
 				setKeyCards((KeyCardsProvides)newValue);
@@ -530,7 +530,7 @@ public class checkOutSuccessImpl extends MinimalEObjectImpl.Container implements
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ModelPackage.CHECK_OUT_SUCCESS__ACTOR:
-				setActor((HotelReceptionist)null);
+				setActor((SystemUser)null);
 				return;
 			case ModelPackage.CHECK_OUT_SUCCESS__KEY_CARDS:
 				setKeyCards((KeyCardsProvides)null);

@@ -5,6 +5,7 @@ package model.impl;
 import model.HotelService.HotelReceptionist;
 import model.HotelService.IRoomManager;
 
+import model.HotelService.SystemUser;
 import model.ModelPackage;
 import model.showRoomOccupancy;
 
@@ -39,7 +40,7 @@ public class showRoomOccupancyImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected HotelReceptionist u;
+	protected SystemUser u;
 
 	/**
 	 * The cached value of the '{@link #getRm() <em>Rm</em>}' reference.
@@ -75,10 +76,10 @@ public class showRoomOccupancyImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HotelReceptionist getU() {
+	public SystemUser getU() {
 		if (u != null && u.eIsProxy()) {
 			InternalEObject oldU = (InternalEObject)u;
-			u = (HotelReceptionist)eResolveProxy(oldU);
+			u = (SystemUser)eResolveProxy(oldU);
 			if (u != oldU) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.SHOW_ROOM_OCCUPANCY__U, oldU, u));
@@ -92,7 +93,7 @@ public class showRoomOccupancyImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HotelReceptionist basicGetU() {
+	public SystemUser basicGetU() {
 		return u;
 	}
 
@@ -101,8 +102,8 @@ public class showRoomOccupancyImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setU(HotelReceptionist newU) {
-		HotelReceptionist oldU = u;
+	public void setU(SystemUser newU) {
+		SystemUser oldU = u;
 		u = newU;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SHOW_ROOM_OCCUPANCY__U, oldU, u));
@@ -173,7 +174,7 @@ public class showRoomOccupancyImpl extends MinimalEObjectImpl.Container implemen
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ModelPackage.SHOW_ROOM_OCCUPANCY__U:
-				setU((HotelReceptionist)newValue);
+				setU((SystemUser)newValue);
 				return;
 			case ModelPackage.SHOW_ROOM_OCCUPANCY__RM:
 				setRm((IRoomManager)newValue);
@@ -191,7 +192,7 @@ public class showRoomOccupancyImpl extends MinimalEObjectImpl.Container implemen
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ModelPackage.SHOW_ROOM_OCCUPANCY__U:
-				setU((HotelReceptionist)null);
+				setU((SystemUser)null);
 				return;
 			case ModelPackage.SHOW_ROOM_OCCUPANCY__RM:
 				setRm((IRoomManager)null);

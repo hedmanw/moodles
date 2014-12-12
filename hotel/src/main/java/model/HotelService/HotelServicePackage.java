@@ -5,6 +5,7 @@ package model.HotelService;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -56,14 +57,168 @@ public interface HotelServicePackage extends EPackage {
 	HotelServicePackage eINSTANCE = model.HotelService.impl.HotelServicePackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link model.HotelService.impl.HotelReceptionistImpl <em>Hotel Receptionist</em>}' class.
+	 * The meta object id for the '{@link model.HotelService.impl.SystemUserImpl <em>System User</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see model.HotelService.impl.HotelReceptionistImpl
+	 * @see model.HotelService.impl.SystemUserImpl
+	 * @see model.HotelService.impl.HotelServicePackageImpl#getSystemUser()
+	 * @generated
+	 */
+	int SYSTEM_USER = 0;
+
+	/**
+	 * The number of structural features of the '<em>System User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_USER_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>System User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_USER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link model.HotelService.ExternalUser <em>External User</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.HotelService.ExternalUser
+	 * @see model.HotelService.impl.HotelServicePackageImpl#getExternalUser()
+	 * @generated
+	 */
+	int EXTERNAL_USER = 1;
+
+	/**
+	 * The number of structural features of the '<em>External User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTERNAL_USER_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>External User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTERNAL_USER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link model.HotelService.HotelReceptionist <em>Hotel Receptionist</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.HotelService.HotelReceptionist
 	 * @see model.HotelService.impl.HotelServicePackageImpl#getHotelReceptionist()
 	 * @generated
 	 */
-	int HOTEL_RECEPTIONIST = 0;
+	int HOTEL_RECEPTIONIST = 3;
+
+	/**
+	 * The meta object id for the '{@link model.HotelService.IRoomManager <em>IRoom Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.HotelService.IRoomManager
+	 * @see model.HotelService.impl.HotelServicePackageImpl#getIRoomManager()
+	 * @generated
+	 */
+	int IROOM_MANAGER = 5;
+
+	/**
+	 * The meta object id for the '{@link model.HotelService.impl.RoomManagerImpl <em>Room Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.HotelService.impl.RoomManagerImpl
+	 * @see model.HotelService.impl.HotelServicePackageImpl#getRoomManager()
+	 * @generated
+	 */
+	int ROOM_MANAGER = 6;
+
+	/**
+	 * The meta object id for the '{@link model.HotelService.IBookingManager <em>IBooking Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.HotelService.IBookingManager
+	 * @see model.HotelService.impl.HotelServicePackageImpl#getIBookingManager()
+	 * @generated
+	 */
+	int IBOOKING_MANAGER = 11;
+
+	/**
+	 * The meta object id for the '{@link model.HotelService.impl.BookingManagerImpl <em>Booking Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.HotelService.impl.BookingManagerImpl
+	 * @see model.HotelService.impl.HotelServicePackageImpl#getBookingManager()
+	 * @generated
+	 */
+	int BOOKING_MANAGER = 12;
+
+	/**
+	 * The meta object id for the '{@link model.HotelService.IReservationManager <em>IReservation Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.HotelService.IReservationManager
+	 * @see model.HotelService.impl.HotelServicePackageImpl#getIReservationManager()
+	 * @generated
+	 */
+	int IRESERVATION_MANAGER = 9;
+
+	/**
+	 * The meta object id for the '{@link model.HotelService.impl.ReservationManagerImpl <em>Reservation Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.HotelService.impl.ReservationManagerImpl
+	 * @see model.HotelService.impl.HotelServicePackageImpl#getReservationManager()
+	 * @generated
+	 */
+	int RESERVATION_MANAGER = 10;
+
+	/**
+	 * The meta object id for the '{@link model.HotelService.HotelManager <em>Hotel Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.HotelService.HotelManager
+	 * @see model.HotelService.impl.HotelServicePackageImpl#getHotelManager()
+	 * @generated
+	 */
+	int HOTEL_MANAGER = 4;
+
+	/**
+	 * The meta object id for the '{@link model.HotelService.HotelStaff <em>Hotel Staff</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.HotelService.HotelStaff
+	 * @see model.HotelService.impl.HotelServicePackageImpl#getHotelStaff()
+	 * @generated
+	 */
+	int HOTEL_STAFF = 2;
+
+	/**
+	 * The number of structural features of the '<em>Hotel Staff</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_STAFF_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Hotel Staff</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_STAFF_OPERATION_COUNT = 0;
 
 	/**
 	 * The number of structural features of the '<em>Hotel Receptionist</em>' class.
@@ -84,14 +239,22 @@ public interface HotelServicePackage extends EPackage {
 	int HOTEL_RECEPTIONIST_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link model.HotelService.IRoomManager <em>IRoom Manager</em>}' class.
+	 * The number of structural features of the '<em>Hotel Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see model.HotelService.IRoomManager
-	 * @see model.HotelService.impl.HotelServicePackageImpl#getIRoomManager()
 	 * @generated
+	 * @ordered
 	 */
-	int IROOM_MANAGER = 1;
+	int HOTEL_MANAGER_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Hotel Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_MANAGER_OPERATION_COUNT = 0;
 
 	/**
 	 * The number of structural features of the '<em>IRoom Manager</em>' class.
@@ -130,14 +293,285 @@ public interface HotelServicePackage extends EPackage {
 	int IROOM_MANAGER_OPERATION_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link model.HotelService.IBookingManager <em>IBooking Manager</em>}' class.
+	 * The feature id for the '<em><b>All Rooms</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see model.HotelService.IBookingManager
-	 * @see model.HotelService.impl.HotelServicePackageImpl#getIBookingManager()
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MANAGER__ALL_ROOMS = IROOM_MANAGER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Room Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MANAGER_FEATURE_COUNT = IROOM_MANAGER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Available Rooms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MANAGER___GET_AVAILABLE_ROOMS__DATE_DATE_ELIST = IROOM_MANAGER___GET_AVAILABLE_ROOMS__DATE_DATE_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Room Occupancy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE = IROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE;
+
+	/**
+	 * The number of operations of the '<em>Room Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MANAGER_OPERATION_COUNT = IROOM_MANAGER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link model.HotelService.IRoomTypeManager <em>IRoom Type Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.HotelService.IRoomTypeManager
+	 * @see model.HotelService.impl.HotelServicePackageImpl#getIRoomTypeManager()
 	 * @generated
 	 */
-	int IBOOKING_MANAGER = 2;
+	int IROOM_TYPE_MANAGER = 7;
+
+	/**
+	 * The number of structural features of the '<em>IRoom Type Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM_TYPE_MANAGER_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Get Room Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM_TYPE_MANAGER___GET_ROOM_TYPES = 0;
+
+	/**
+	 * The number of operations of the '<em>IRoom Type Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM_TYPE_MANAGER_OPERATION_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link model.HotelService.impl.RoomTypeManagerImpl <em>Room Type Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.HotelService.impl.RoomTypeManagerImpl
+	 * @see model.HotelService.impl.HotelServicePackageImpl#getRoomTypeManager()
+	 * @generated
+	 */
+	int ROOM_TYPE_MANAGER = 8;
+
+	/**
+	 * The feature id for the '<em><b>All Room Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_MANAGER__ALL_ROOM_TYPES = IROOM_TYPE_MANAGER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Room Type Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_MANAGER_FEATURE_COUNT = IROOM_TYPE_MANAGER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Room Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_MANAGER___GET_ROOM_TYPES = IROOM_TYPE_MANAGER___GET_ROOM_TYPES;
+
+	/**
+	 * The number of operations of the '<em>Room Type Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_MANAGER_OPERATION_COUNT = IROOM_TYPE_MANAGER_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>IReservation Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IRESERVATION_MANAGER_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Create Reservation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IRESERVATION_MANAGER___CREATE_RESERVATION__BOOKING_DATE_DATE_LONG_LONG = 0;
+
+	/**
+	 * The operation id for the '<em>Get Reservation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IRESERVATION_MANAGER___GET_RESERVATION__LONG = 1;
+
+	/**
+	 * The operation id for the '<em>Get Non Checked In Reservation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IRESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING = 2;
+
+	/**
+	 * The operation id for the '<em>Check In Reservation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IRESERVATION_MANAGER___CHECK_IN_RESERVATION__LONG = 3;
+
+	/**
+	 * The operation id for the '<em>Check Out Reservation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IRESERVATION_MANAGER___CHECK_OUT_RESERVATION__RESERVATION = 4;
+
+	/**
+	 * The operation id for the '<em>Get Current Reservation By Room Number</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IRESERVATION_MANAGER___GET_CURRENT_RESERVATION_BY_ROOM_NUMBER__INT = 5;
+
+	/**
+	 * The number of operations of the '<em>IReservation Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IRESERVATION_MANAGER_OPERATION_COUNT = 6;
+
+	/**
+	 * The feature id for the '<em><b>All Reservations</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESERVATION_MANAGER__ALL_RESERVATIONS = IRESERVATION_MANAGER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Reservation Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESERVATION_MANAGER_FEATURE_COUNT = IRESERVATION_MANAGER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Create Reservation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESERVATION_MANAGER___CREATE_RESERVATION__BOOKING_DATE_DATE_LONG_LONG = IRESERVATION_MANAGER___CREATE_RESERVATION__BOOKING_DATE_DATE_LONG_LONG;
+
+	/**
+	 * The operation id for the '<em>Get Reservation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESERVATION_MANAGER___GET_RESERVATION__LONG = IRESERVATION_MANAGER___GET_RESERVATION__LONG;
+
+	/**
+	 * The operation id for the '<em>Get Non Checked In Reservation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING = IRESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING;
+
+	/**
+	 * The operation id for the '<em>Check In Reservation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESERVATION_MANAGER___CHECK_IN_RESERVATION__LONG = IRESERVATION_MANAGER___CHECK_IN_RESERVATION__LONG;
+
+	/**
+	 * The operation id for the '<em>Check Out Reservation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESERVATION_MANAGER___CHECK_OUT_RESERVATION__RESERVATION = IRESERVATION_MANAGER___CHECK_OUT_RESERVATION__RESERVATION;
+
+	/**
+	 * The operation id for the '<em>Get Current Reservation By Room Number</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESERVATION_MANAGER___GET_CURRENT_RESERVATION_BY_ROOM_NUMBER__INT = IRESERVATION_MANAGER___GET_CURRENT_RESERVATION_BY_ROOM_NUMBER__INT;
+
+	/**
+	 * The number of operations of the '<em>Reservation Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESERVATION_MANAGER_OPERATION_COUNT = IRESERVATION_MANAGER_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>IBooking Manager</em>' class.
@@ -230,235 +664,103 @@ public interface HotelServicePackage extends EPackage {
 	int IBOOKING_MANAGER_OPERATION_COUNT = 8;
 
 	/**
-	 * The meta object id for the '{@link model.HotelService.IReservationManager <em>IReservation Manager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see model.HotelService.IReservationManager
-	 * @see model.HotelService.impl.HotelServicePackageImpl#getIReservationManager()
-	 * @generated
-	 */
-	int IRESERVATION_MANAGER = 3;
-
-	/**
-	 * The number of structural features of the '<em>IReservation Manager</em>' class.
+	 * The feature id for the '<em><b>All Bookings</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER_FEATURE_COUNT = 0;
+	int BOOKING_MANAGER__ALL_BOOKINGS = IBOOKING_MANAGER_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Create Reservation</em>' operation.
+	 * The number of structural features of the '<em>Booking Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___CREATE_RESERVATION__BOOKING_DATE_DATE_LONG_LONG = 0;
+	int BOOKING_MANAGER_FEATURE_COUNT = IBOOKING_MANAGER_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Reservation</em>' operation.
+	 * The operation id for the '<em>Create Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___GET_RESERVATION__LONG = 1;
+	int BOOKING_MANAGER___CREATE_BOOKING = IBOOKING_MANAGER___CREATE_BOOKING;
 
 	/**
-	 * The operation id for the '<em>Get Non Checked In Reservation</em>' operation.
+	 * The operation id for the '<em>Get Booking By Number</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING = 2;
+	int BOOKING_MANAGER___GET_BOOKING_BY_NUMBER__LONG = IBOOKING_MANAGER___GET_BOOKING_BY_NUMBER__LONG;
 
 	/**
-	 * The operation id for the '<em>Check In Reservation</em>' operation.
+	 * The operation id for the '<em>Delete Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___CHECK_IN_RESERVATION__LONG = 3;
+	int BOOKING_MANAGER___DELETE_BOOKING__BOOKING = IBOOKING_MANAGER___DELETE_BOOKING__BOOKING;
 
 	/**
-	 * The operation id for the '<em>Check Out Reservation</em>' operation.
+	 * The operation id for the '<em>Get Bookings By Customer</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___CHECK_OUT_RESERVATION__RESERVATION = 4;
+	int BOOKING_MANAGER___GET_BOOKINGS_BY_CUSTOMER__CUSTOMER = IBOOKING_MANAGER___GET_BOOKINGS_BY_CUSTOMER__CUSTOMER;
 
 	/**
-	 * The operation id for the '<em>Get Current Reservation By Room Number</em>' operation.
+	 * The operation id for the '<em>Set Booking Customer</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___GET_CURRENT_RESERVATION_BY_ROOM_NUMBER__INT = 5;
+	int BOOKING_MANAGER___SET_BOOKING_CUSTOMER__BOOKING_CUSTOMER = IBOOKING_MANAGER___SET_BOOKING_CUSTOMER__BOOKING_CUSTOMER;
 
 	/**
-	 * The number of operations of the '<em>IReservation Manager</em>' class.
+	 * The operation id for the '<em>Is Bill Paid In Full</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER_OPERATION_COUNT = 6;
+	int BOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING = IBOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING;
 
 	/**
-	 * The meta object id for the '{@link model.HotelService.impl.HotelManagerImpl <em>Hotel Manager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see model.HotelService.impl.HotelManagerImpl
-	 * @see model.HotelService.impl.HotelServicePackageImpl#getHotelManager()
-	 * @generated
-	 */
-	int HOTEL_MANAGER = 4;
-
-	/**
-	 * The number of structural features of the '<em>Hotel Manager</em>' class.
+	 * The operation id for the '<em>Get Bill</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_MANAGER_FEATURE_COUNT = 0;
+	int BOOKING_MANAGER___GET_BILL__BOOKING = IBOOKING_MANAGER___GET_BILL__BOOKING;
 
 	/**
-	 * The number of operations of the '<em>Hotel Manager</em>' class.
+	 * The operation id for the '<em>Get Booking By Reservation</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_MANAGER_OPERATION_COUNT = 0;
+	int BOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION_BOOKING = IBOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION_BOOKING;
 
 	/**
-	 * The meta object id for the '{@link model.HotelService.HotelManagerProvides <em>Hotel Manager Provides</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see model.HotelService.HotelManagerProvides
-	 * @see model.HotelService.impl.HotelServicePackageImpl#getHotelManagerProvides()
-	 * @generated
-	 */
-	int HOTEL_MANAGER_PROVIDES = 5;
-
-	/**
-	 * The number of structural features of the '<em>Hotel Manager Provides</em>' class.
+	 * The number of operations of the '<em>Booking Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_MANAGER_PROVIDES_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Hotel Manager Provides</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_MANAGER_PROVIDES_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link model.HotelService.impl.HotelStaffImpl <em>Hotel Staff</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see model.HotelService.impl.HotelStaffImpl
-	 * @see model.HotelService.impl.HotelServicePackageImpl#getHotelStaff()
-	 * @generated
-	 */
-	int HOTEL_STAFF = 6;
-
-	/**
-	 * The number of structural features of the '<em>Hotel Staff</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_STAFF_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Hotel Staff</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_STAFF_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link model.HotelService.HotelStaffProvides <em>Hotel Staff Provides</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see model.HotelService.HotelStaffProvides
-	 * @see model.HotelService.impl.HotelServicePackageImpl#getHotelStaffProvides()
-	 * @generated
-	 */
-	int HOTEL_STAFF_PROVIDES = 7;
-
-	/**
-	 * The number of structural features of the '<em>Hotel Staff Provides</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_STAFF_PROVIDES_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Hotel Staff Provides</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_STAFF_PROVIDES_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link model.HotelService.IRoomTypeManager <em>IRoom Type Manager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see model.HotelService.IRoomTypeManager
-	 * @see model.HotelService.impl.HotelServicePackageImpl#getIRoomTypeManager()
-	 * @generated
-	 */
-	int IROOM_TYPE_MANAGER = 8;
-
-	/**
-	 * The number of structural features of the '<em>IRoom Type Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IROOM_TYPE_MANAGER_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Get Room Types</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IROOM_TYPE_MANAGER___GET_ROOM_TYPES = 0;
-
-	/**
-	 * The number of operations of the '<em>IRoom Type Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IROOM_TYPE_MANAGER_OPERATION_COUNT = 1;
+	int BOOKING_MANAGER_OPERATION_COUNT = IBOOKING_MANAGER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link model.HotelService.ICustomerManager <em>ICustomer Manager</em>}' class.
@@ -468,7 +770,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @see model.HotelService.impl.HotelServicePackageImpl#getICustomerManager()
 	 * @generated
 	 */
-	int ICUSTOMER_MANAGER = 9;
+	int ICUSTOMER_MANAGER = 13;
 
 	/**
 	 * The number of structural features of the '<em>ICustomer Manager</em>' class.
@@ -544,6 +846,118 @@ public interface HotelServicePackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link model.HotelService.impl.CustomerManagerImpl <em>Customer Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.HotelService.impl.CustomerManagerImpl
+	 * @see model.HotelService.impl.HotelServicePackageImpl#getCustomerManager()
+	 * @generated
+	 */
+	int CUSTOMER_MANAGER = 14;
+
+	/**
+	 * The feature id for the '<em><b>All Customers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_MANAGER__ALL_CUSTOMERS = ICUSTOMER_MANAGER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Customer Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_MANAGER_FEATURE_COUNT = ICUSTOMER_MANAGER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Customer By Id Number</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_MANAGER___GET_CUSTOMER_BY_ID_NUMBER__STRING = ICUSTOMER_MANAGER___GET_CUSTOMER_BY_ID_NUMBER__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Customers By Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_MANAGER___GET_CUSTOMERS_BY_NAME__STRING = ICUSTOMER_MANAGER___GET_CUSTOMERS_BY_NAME__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Customer</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_MANAGER___GET_CUSTOMER__LONG = ICUSTOMER_MANAGER___GET_CUSTOMER__LONG;
+
+	/**
+	 * The operation id for the '<em>Create Customer</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_MANAGER___CREATE_CUSTOMER__STRING_STRING = ICUSTOMER_MANAGER___CREATE_CUSTOMER__STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Set Payment Details For Customer</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__CUSTOMER_STRING_STRING_STRING_STRING_INT_INT = ICUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__CUSTOMER_STRING_STRING_STRING_STRING_INT_INT;
+
+	/**
+	 * The operation id for the '<em>Get Payment Details By Customer</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__CUSTOMER = ICUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__CUSTOMER;
+
+	/**
+	 * The number of operations of the '<em>Customer Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_MANAGER_OPERATION_COUNT = ICUSTOMER_MANAGER_OPERATION_COUNT + 0;
+
+
+	/**
+	 * Returns the meta object for class '{@link model.HotelService.SystemUser <em>System User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>System User</em>'.
+	 * @see model.HotelService.SystemUser
+	 * @generated
+	 */
+	EClass getSystemUser();
+
+	/**
+	 * Returns the meta object for class '{@link model.HotelService.ExternalUser <em>External User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>External User</em>'.
+	 * @see model.HotelService.ExternalUser
+	 * @generated
+	 */
+	EClass getExternalUser();
+
+	/**
 	 * Returns the meta object for class '{@link model.HotelService.HotelReceptionist <em>Hotel Receptionist</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -584,6 +998,27 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIRoomManager__GetRoomOccupancy__Date_Date();
 
 	/**
+	 * Returns the meta object for class '{@link model.HotelService.RoomManager <em>Room Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Room Manager</em>'.
+	 * @see model.HotelService.RoomManager
+	 * @generated
+	 */
+	EClass getRoomManager();
+
+	/**
+	 * Returns the meta object for the reference list '{@link model.HotelService.RoomManager#getAllRooms <em>All Rooms</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>All Rooms</em>'.
+	 * @see model.HotelService.RoomManager#getAllRooms()
+	 * @see #getRoomManager()
+	 * @generated
+	 */
+	EReference getRoomManager_AllRooms();
+
+	/**
 	 * Returns the meta object for class '{@link model.HotelService.IBookingManager <em>IBooking Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -614,64 +1049,85 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIBookingManager__GetBookingByNumber__long();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#deleteBooking(HotelSystem.Booking) <em>Delete Booking</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#deleteBooking(model.HotelCore.Booking) <em>Delete Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Delete Booking</em>' operation.
-	 * @see model.HotelService.IBookingManager#deleteBooking(HotelSystem.Booking)
+	 * @see model.HotelService.IBookingManager#deleteBooking(model.HotelCore.Booking)
 	 * @generated
 	 */
 	EOperation getIBookingManager__DeleteBooking__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#getBookingsByCustomer(HotelSystem.Customer) <em>Get Bookings By Customer</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#getBookingsByCustomer(model.HotelCore.Customer) <em>Get Bookings By Customer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Bookings By Customer</em>' operation.
-	 * @see model.HotelService.IBookingManager#getBookingsByCustomer(HotelSystem.Customer)
+	 * @see model.HotelService.IBookingManager#getBookingsByCustomer(model.HotelCore.Customer)
 	 * @generated
 	 */
 	EOperation getIBookingManager__GetBookingsByCustomer__Customer();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#setBookingCustomer(HotelSystem.Booking, HotelSystem.Customer) <em>Set Booking Customer</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#setBookingCustomer(model.HotelCore.Booking, model.HotelCore.Customer) <em>Set Booking Customer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Set Booking Customer</em>' operation.
-	 * @see model.HotelService.IBookingManager#setBookingCustomer(HotelSystem.Booking, HotelSystem.Customer)
+	 * @see model.HotelService.IBookingManager#setBookingCustomer(model.HotelCore.Booking, model.HotelCore.Customer)
 	 * @generated
 	 */
 	EOperation getIBookingManager__SetBookingCustomer__Booking_Customer();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#isBillPaidInFull(HotelSystem.Booking) <em>Is Bill Paid In Full</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#isBillPaidInFull(model.HotelCore.Booking) <em>Is Bill Paid In Full</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Bill Paid In Full</em>' operation.
-	 * @see model.HotelService.IBookingManager#isBillPaidInFull(HotelSystem.Booking)
+	 * @see model.HotelService.IBookingManager#isBillPaidInFull(model.HotelCore.Booking)
 	 * @generated
 	 */
 	EOperation getIBookingManager__IsBillPaidInFull__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#getBill(HotelSystem.Booking) <em>Get Bill</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#getBill(model.HotelCore.Booking) <em>Get Bill</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Bill</em>' operation.
-	 * @see model.HotelService.IBookingManager#getBill(HotelSystem.Booking)
+	 * @see model.HotelService.IBookingManager#getBill(model.HotelCore.Booking)
 	 * @generated
 	 */
 	EOperation getIBookingManager__GetBill__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#getBookingByReservation(HotelSystem.Reservation, HotelSystem.Booking) <em>Get Booking By Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IBookingManager#getBookingByReservation(model.HotelCore.Reservation, model.HotelCore.Booking) <em>Get Booking By Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Booking By Reservation</em>' operation.
-	 * @see model.HotelService.IBookingManager#getBookingByReservation(HotelSystem.Reservation, HotelSystem.Booking)
+	 * @see model.HotelService.IBookingManager#getBookingByReservation(model.HotelCore.Reservation, model.HotelCore.Booking)
 	 * @generated
 	 */
 	EOperation getIBookingManager__GetBookingByReservation__Reservation_Booking();
+
+	/**
+	 * Returns the meta object for class '{@link model.HotelService.BookingManager <em>Booking Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Booking Manager</em>'.
+	 * @see model.HotelService.BookingManager
+	 * @generated
+	 */
+	EClass getBookingManager();
+
+	/**
+	 * Returns the meta object for the reference list '{@link model.HotelService.BookingManager#getAllBookings <em>All Bookings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>All Bookings</em>'.
+	 * @see model.HotelService.BookingManager#getAllBookings()
+	 * @see #getBookingManager()
+	 * @generated
+	 */
+	EReference getBookingManager_AllBookings();
 
 	/**
 	 * Returns the meta object for class '{@link model.HotelService.IReservationManager <em>IReservation Manager</em>}'.
@@ -684,11 +1140,11 @@ public interface HotelServicePackage extends EPackage {
 	EClass getIReservationManager();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IReservationManager#createReservation(HotelSystem.Booking, java.util.Date, java.util.Date, long, long) <em>Create Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IReservationManager#createReservation(model.HotelCore.Booking, java.util.Date, java.util.Date, long, long) <em>Create Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Reservation</em>' operation.
-	 * @see model.HotelService.IReservationManager#createReservation(HotelSystem.Booking, java.util.Date, java.util.Date, long, long)
+	 * @see model.HotelService.IReservationManager#createReservation(model.HotelCore.Booking, java.util.Date, java.util.Date, long, long)
 	 * @generated
 	 */
 	EOperation getIReservationManager__CreateReservation__Booking_Date_Date_long_long();
@@ -704,11 +1160,11 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIReservationManager__GetReservation__long();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IReservationManager#getNonCheckedInReservation(HotelSystem.Booking) <em>Get Non Checked In Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IReservationManager#getNonCheckedInReservation(model.HotelCore.Booking) <em>Get Non Checked In Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Non Checked In Reservation</em>' operation.
-	 * @see model.HotelService.IReservationManager#getNonCheckedInReservation(HotelSystem.Booking)
+	 * @see model.HotelService.IReservationManager#getNonCheckedInReservation(model.HotelCore.Booking)
 	 * @generated
 	 */
 	EOperation getIReservationManager__GetNonCheckedInReservation__Booking();
@@ -724,11 +1180,11 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIReservationManager__CheckInReservation__long();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.IReservationManager#checkOutReservation(HotelSystem.Reservation) <em>Check Out Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.IReservationManager#checkOutReservation(model.HotelCore.Reservation) <em>Check Out Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Out Reservation</em>' operation.
-	 * @see model.HotelService.IReservationManager#checkOutReservation(HotelSystem.Reservation)
+	 * @see model.HotelService.IReservationManager#checkOutReservation(model.HotelCore.Reservation)
 	 * @generated
 	 */
 	EOperation getIReservationManager__CheckOutReservation__Reservation();
@@ -744,6 +1200,27 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIReservationManager__GetCurrentReservationByRoomNumber__int();
 
 	/**
+	 * Returns the meta object for class '{@link model.HotelService.ReservationManager <em>Reservation Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Reservation Manager</em>'.
+	 * @see model.HotelService.ReservationManager
+	 * @generated
+	 */
+	EClass getReservationManager();
+
+	/**
+	 * Returns the meta object for the reference list '{@link model.HotelService.ReservationManager#getAllReservations <em>All Reservations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>All Reservations</em>'.
+	 * @see model.HotelService.ReservationManager#getAllReservations()
+	 * @see #getReservationManager()
+	 * @generated
+	 */
+	EReference getReservationManager_AllReservations();
+
+	/**
 	 * Returns the meta object for class '{@link model.HotelService.HotelManager <em>Hotel Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -754,16 +1231,6 @@ public interface HotelServicePackage extends EPackage {
 	EClass getHotelManager();
 
 	/**
-	 * Returns the meta object for class '{@link model.HotelService.HotelManagerProvides <em>Hotel Manager Provides</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Hotel Manager Provides</em>'.
-	 * @see model.HotelService.HotelManagerProvides
-	 * @generated
-	 */
-	EClass getHotelManagerProvides();
-
-	/**
 	 * Returns the meta object for class '{@link model.HotelService.HotelStaff <em>Hotel Staff</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -772,16 +1239,6 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getHotelStaff();
-
-	/**
-	 * Returns the meta object for class '{@link model.HotelService.HotelStaffProvides <em>Hotel Staff Provides</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Hotel Staff Provides</em>'.
-	 * @see model.HotelService.HotelStaffProvides
-	 * @generated
-	 */
-	EClass getHotelStaffProvides();
 
 	/**
 	 * Returns the meta object for class '{@link model.HotelService.IRoomTypeManager <em>IRoom Type Manager</em>}'.
@@ -802,6 +1259,27 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIRoomTypeManager__GetRoomTypes();
+
+	/**
+	 * Returns the meta object for class '{@link model.HotelService.RoomTypeManager <em>Room Type Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Room Type Manager</em>'.
+	 * @see model.HotelService.RoomTypeManager
+	 * @generated
+	 */
+	EClass getRoomTypeManager();
+
+	/**
+	 * Returns the meta object for the reference list '{@link model.HotelService.RoomTypeManager#getAllRoomTypes <em>All Room Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>All Room Types</em>'.
+	 * @see model.HotelService.RoomTypeManager#getAllRoomTypes()
+	 * @see #getRoomTypeManager()
+	 * @generated
+	 */
+	EReference getRoomTypeManager_AllRoomTypes();
 
 	/**
 	 * Returns the meta object for class '{@link model.HotelService.ICustomerManager <em>ICustomer Manager</em>}'.
@@ -854,24 +1332,45 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getICustomerManager__CreateCustomer__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.ICustomerManager#setPaymentDetailsForCustomer(HotelSystem.Customer, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int) <em>Set Payment Details For Customer</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.ICustomerManager#setPaymentDetailsForCustomer(model.HotelCore.Customer, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int) <em>Set Payment Details For Customer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Set Payment Details For Customer</em>' operation.
-	 * @see model.HotelService.ICustomerManager#setPaymentDetailsForCustomer(HotelSystem.Customer, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int)
+	 * @see model.HotelService.ICustomerManager#setPaymentDetailsForCustomer(model.HotelCore.Customer, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int)
 	 * @generated
 	 */
 	EOperation getICustomerManager__SetPaymentDetailsForCustomer__Customer_String_String_String_String_int_int();
 
 	/**
-	 * Returns the meta object for the '{@link model.HotelService.ICustomerManager#getPaymentDetailsByCustomer(HotelSystem.Customer) <em>Get Payment Details By Customer</em>}' operation.
+	 * Returns the meta object for the '{@link model.HotelService.ICustomerManager#getPaymentDetailsByCustomer(model.HotelCore.Customer) <em>Get Payment Details By Customer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Payment Details By Customer</em>' operation.
-	 * @see model.HotelService.ICustomerManager#getPaymentDetailsByCustomer(HotelSystem.Customer)
+	 * @see model.HotelService.ICustomerManager#getPaymentDetailsByCustomer(model.HotelCore.Customer)
 	 * @generated
 	 */
 	EOperation getICustomerManager__GetPaymentDetailsByCustomer__Customer();
+
+	/**
+	 * Returns the meta object for class '{@link model.HotelService.CustomerManager <em>Customer Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Customer Manager</em>'.
+	 * @see model.HotelService.CustomerManager
+	 * @generated
+	 */
+	EClass getCustomerManager();
+
+	/**
+	 * Returns the meta object for the reference list '{@link model.HotelService.CustomerManager#getAllCustomers <em>All Customers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>All Customers</em>'.
+	 * @see model.HotelService.CustomerManager#getAllCustomers()
+	 * @see #getCustomerManager()
+	 * @generated
+	 */
+	EReference getCustomerManager_AllCustomers();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -897,10 +1396,30 @@ public interface HotelServicePackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link model.HotelService.impl.HotelReceptionistImpl <em>Hotel Receptionist</em>}' class.
+		 * The meta object literal for the '{@link model.HotelService.impl.SystemUserImpl <em>System User</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see model.HotelService.impl.HotelReceptionistImpl
+		 * @see model.HotelService.impl.SystemUserImpl
+		 * @see model.HotelService.impl.HotelServicePackageImpl#getSystemUser()
+		 * @generated
+		 */
+		EClass SYSTEM_USER = eINSTANCE.getSystemUser();
+
+		/**
+		 * The meta object literal for the '{@link model.HotelService.ExternalUser <em>External User</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see model.HotelService.ExternalUser
+		 * @see model.HotelService.impl.HotelServicePackageImpl#getExternalUser()
+		 * @generated
+		 */
+		EClass EXTERNAL_USER = eINSTANCE.getExternalUser();
+
+		/**
+		 * The meta object literal for the '{@link model.HotelService.HotelReceptionist <em>Hotel Receptionist</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see model.HotelService.HotelReceptionist
 		 * @see model.HotelService.impl.HotelServicePackageImpl#getHotelReceptionist()
 		 * @generated
 		 */
@@ -931,6 +1450,24 @@ public interface HotelServicePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE = eINSTANCE.getIRoomManager__GetRoomOccupancy__Date_Date();
+
+		/**
+		 * The meta object literal for the '{@link model.HotelService.impl.RoomManagerImpl <em>Room Manager</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see model.HotelService.impl.RoomManagerImpl
+		 * @see model.HotelService.impl.HotelServicePackageImpl#getRoomManager()
+		 * @generated
+		 */
+		EClass ROOM_MANAGER = eINSTANCE.getRoomManager();
+
+		/**
+		 * The meta object literal for the '<em><b>All Rooms</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROOM_MANAGER__ALL_ROOMS = eINSTANCE.getRoomManager_AllRooms();
 
 		/**
 		 * The meta object literal for the '{@link model.HotelService.IBookingManager <em>IBooking Manager</em>}' class.
@@ -1007,6 +1544,24 @@ public interface HotelServicePackage extends EPackage {
 		EOperation IBOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION_BOOKING = eINSTANCE.getIBookingManager__GetBookingByReservation__Reservation_Booking();
 
 		/**
+		 * The meta object literal for the '{@link model.HotelService.impl.BookingManagerImpl <em>Booking Manager</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see model.HotelService.impl.BookingManagerImpl
+		 * @see model.HotelService.impl.HotelServicePackageImpl#getBookingManager()
+		 * @generated
+		 */
+		EClass BOOKING_MANAGER = eINSTANCE.getBookingManager();
+
+		/**
+		 * The meta object literal for the '<em><b>All Bookings</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOOKING_MANAGER__ALL_BOOKINGS = eINSTANCE.getBookingManager_AllBookings();
+
+		/**
 		 * The meta object literal for the '{@link model.HotelService.IReservationManager <em>IReservation Manager</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1065,44 +1620,42 @@ public interface HotelServicePackage extends EPackage {
 		EOperation IRESERVATION_MANAGER___GET_CURRENT_RESERVATION_BY_ROOM_NUMBER__INT = eINSTANCE.getIReservationManager__GetCurrentReservationByRoomNumber__int();
 
 		/**
-		 * The meta object literal for the '{@link model.HotelService.impl.HotelManagerImpl <em>Hotel Manager</em>}' class.
+		 * The meta object literal for the '{@link model.HotelService.impl.ReservationManagerImpl <em>Reservation Manager</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see model.HotelService.impl.HotelManagerImpl
+		 * @see model.HotelService.impl.ReservationManagerImpl
+		 * @see model.HotelService.impl.HotelServicePackageImpl#getReservationManager()
+		 * @generated
+		 */
+		EClass RESERVATION_MANAGER = eINSTANCE.getReservationManager();
+
+		/**
+		 * The meta object literal for the '<em><b>All Reservations</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESERVATION_MANAGER__ALL_RESERVATIONS = eINSTANCE.getReservationManager_AllReservations();
+
+		/**
+		 * The meta object literal for the '{@link model.HotelService.HotelManager <em>Hotel Manager</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see model.HotelService.HotelManager
 		 * @see model.HotelService.impl.HotelServicePackageImpl#getHotelManager()
 		 * @generated
 		 */
 		EClass HOTEL_MANAGER = eINSTANCE.getHotelManager();
 
 		/**
-		 * The meta object literal for the '{@link model.HotelService.HotelManagerProvides <em>Hotel Manager Provides</em>}' class.
+		 * The meta object literal for the '{@link model.HotelService.HotelStaff <em>Hotel Staff</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see model.HotelService.HotelManagerProvides
-		 * @see model.HotelService.impl.HotelServicePackageImpl#getHotelManagerProvides()
-		 * @generated
-		 */
-		EClass HOTEL_MANAGER_PROVIDES = eINSTANCE.getHotelManagerProvides();
-
-		/**
-		 * The meta object literal for the '{@link model.HotelService.impl.HotelStaffImpl <em>Hotel Staff</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see model.HotelService.impl.HotelStaffImpl
+		 * @see model.HotelService.HotelStaff
 		 * @see model.HotelService.impl.HotelServicePackageImpl#getHotelStaff()
 		 * @generated
 		 */
 		EClass HOTEL_STAFF = eINSTANCE.getHotelStaff();
-
-		/**
-		 * The meta object literal for the '{@link model.HotelService.HotelStaffProvides <em>Hotel Staff Provides</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see model.HotelService.HotelStaffProvides
-		 * @see model.HotelService.impl.HotelServicePackageImpl#getHotelStaffProvides()
-		 * @generated
-		 */
-		EClass HOTEL_STAFF_PROVIDES = eINSTANCE.getHotelStaffProvides();
 
 		/**
 		 * The meta object literal for the '{@link model.HotelService.IRoomTypeManager <em>IRoom Type Manager</em>}' class.
@@ -1121,6 +1674,24 @@ public interface HotelServicePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IROOM_TYPE_MANAGER___GET_ROOM_TYPES = eINSTANCE.getIRoomTypeManager__GetRoomTypes();
+
+		/**
+		 * The meta object literal for the '{@link model.HotelService.impl.RoomTypeManagerImpl <em>Room Type Manager</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see model.HotelService.impl.RoomTypeManagerImpl
+		 * @see model.HotelService.impl.HotelServicePackageImpl#getRoomTypeManager()
+		 * @generated
+		 */
+		EClass ROOM_TYPE_MANAGER = eINSTANCE.getRoomTypeManager();
+
+		/**
+		 * The meta object literal for the '<em><b>All Room Types</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROOM_TYPE_MANAGER__ALL_ROOM_TYPES = eINSTANCE.getRoomTypeManager_AllRoomTypes();
 
 		/**
 		 * The meta object literal for the '{@link model.HotelService.ICustomerManager <em>ICustomer Manager</em>}' class.
@@ -1179,6 +1750,24 @@ public interface HotelServicePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ICUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__CUSTOMER = eINSTANCE.getICustomerManager__GetPaymentDetailsByCustomer__Customer();
+
+		/**
+		 * The meta object literal for the '{@link model.HotelService.impl.CustomerManagerImpl <em>Customer Manager</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see model.HotelService.impl.CustomerManagerImpl
+		 * @see model.HotelService.impl.HotelServicePackageImpl#getCustomerManager()
+		 * @generated
+		 */
+		EClass CUSTOMER_MANAGER = eINSTANCE.getCustomerManager();
+
+		/**
+		 * The meta object literal for the '<em><b>All Customers</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CUSTOMER_MANAGER__ALL_CUSTOMERS = eINSTANCE.getCustomerManager_AllCustomers();
 
 	}
 

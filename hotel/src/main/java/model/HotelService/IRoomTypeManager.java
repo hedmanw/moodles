@@ -2,9 +2,8 @@
  */
 package model.HotelService;
 
-import HotelSystem.RoomType;
+import model.HotelCore.RoomType;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**

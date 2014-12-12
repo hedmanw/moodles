@@ -1,17 +1,16 @@
 /**
  */
 package model.impl;
-
-import HotelSystem.Booking;
-import HotelSystem.Customer;
-import HotelSystem.PaymentDetails;
-
 import model.BankingService.CustomerProvides;
 
+import model.HotelCore.Booking;
+import model.HotelCore.Customer;
+import model.HotelCore.PaymentDetails;
 import model.HotelService.HotelReceptionist;
 import model.HotelService.IBookingManager;
 import model.HotelService.ICustomerManager;
 
+import model.HotelService.SystemUser;
 import model.ModelPackage;
 import model.makeABooking;
 
@@ -51,7 +50,7 @@ public class makeABookingImpl extends MinimalEObjectImpl.Container implements ma
 	 * @generated
 	 * @ordered
 	 */
-	protected HotelReceptionist r;
+	protected SystemUser r;
 
 	/**
 	 * The cached value of the '{@link #getB() <em>B</em>}' reference.
@@ -137,10 +136,10 @@ public class makeABookingImpl extends MinimalEObjectImpl.Container implements ma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HotelReceptionist getR() {
+	public SystemUser getR() {
 		if (r != null && r.eIsProxy()) {
 			InternalEObject oldR = (InternalEObject)r;
-			r = (HotelReceptionist)eResolveProxy(oldR);
+			r = (SystemUser)eResolveProxy(oldR);
 			if (r != oldR) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.MAKE_ABOOKING__R, oldR, r));
@@ -154,7 +153,7 @@ public class makeABookingImpl extends MinimalEObjectImpl.Container implements ma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HotelReceptionist basicGetR() {
+	public SystemUser basicGetR() {
 		return r;
 	}
 
@@ -163,8 +162,8 @@ public class makeABookingImpl extends MinimalEObjectImpl.Container implements ma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setR(HotelReceptionist newR) {
-		HotelReceptionist oldR = r;
+	public void setR(SystemUser newR) {
+		SystemUser oldR = r;
 		r = newR;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MAKE_ABOOKING__R, oldR, r));
@@ -440,7 +439,7 @@ public class makeABookingImpl extends MinimalEObjectImpl.Container implements ma
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ModelPackage.MAKE_ABOOKING__R:
-				setR((HotelReceptionist)newValue);
+				setR((SystemUser)newValue);
 				return;
 			case ModelPackage.MAKE_ABOOKING__B:
 				setB((Booking)newValue);
@@ -473,7 +472,7 @@ public class makeABookingImpl extends MinimalEObjectImpl.Container implements ma
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ModelPackage.MAKE_ABOOKING__R:
-				setR((HotelReceptionist)null);
+				setR((SystemUser)null);
 				return;
 			case ModelPackage.MAKE_ABOOKING__B:
 				setB((Booking)null);

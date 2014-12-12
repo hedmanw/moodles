@@ -1,8 +1,9 @@
-import HotelSystem.HotelSystemFactory
-import HotelSystem.Room
-import HotelSystem.RoomManager
-import HotelSystem.RoomType
-import HotelSystem.RoomTypeManager
+import model.HotelCore.HotelCoreFactory
+import model.HotelCore.Room
+import model.HotelCore.RoomType
+import model.HotelService.HotelServiceFactory
+import model.HotelService.RoomManager
+import model.HotelService.RoomTypeManager
 import spock.lang.Specification
 
 /**
@@ -13,21 +14,21 @@ class ReserveARoomTest extends Specification{
     RoomTypeManager roomTypeManager
 
     def setup() {
-        roomManager = HotelSystemFactory.eINSTANCE.createRoomManager()
-        roomTypeManager = HotelSystemFactory.eINSTANCE.createRoomTypeManager()
+        roomManager = HotelServiceFactory.eINSTANCE.createRoomManager()
+        roomTypeManager = HotelServiceFactory.eINSTANCE.createRoomTypeManager()
     }
 
     def "success scenario"() {
         when:
-        Room room = HotelSystemFactory.eINSTANCE.createRoom()
-        RoomType roomType = HotelSystemFactory.eINSTANCE.createRoomType()
-        roomTypeManager.roomType.add(roomType)
+        Room room = HotelCoreFactory.eINSTANCE.createRoom()
+        RoomType roomType = HotelCoreFactory.eINSTANCE.createRoomType()
+        roomTypeManager.getAllRoomTypes().add(roomType)
         roomType.costPerNight = 1000
         room.roomNumber = 1
         room.roomType = roomType
-        roomManager.getRoom().add(room)
+        roomManager.getAllRooms().add(room)
         //TODO implement get available rooms with search feature
-        def availableRooms = roomManager.getAvailableRooms(new Date(), new Date()+1, roomTypeManager.roomType)
+        def availableRooms = roomManager.getAvailableRooms(new Date(), new Date()+1, roomTypeManager.getAllRoomTypes())
         then:
         availableRooms.size() == 1
 

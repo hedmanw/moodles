@@ -588,4 +588,24 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PmmNo3_EEeSbJeGPS5kPQg" value="1"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_s9UEQIIaEeStbpNcMqf5hQ" name="Realization2" client="_dqC1MHlsEeSNP_QJ-oV69w">
+    <supplier xmi:type="uml:Interface" href="model.uml#_uycgUHx8EeSyZvvyd5lTNA"/>
+    <contract xmi:type="uml:Interface" href="model.uml#_uycgUHx8EeSyZvvyd5lTNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_tatK4IIaEeStbpNcMqf5hQ" name="Realization3" client="_dqC1MHlsEeSNP_QJ-oV69w">
+    <supplier xmi:type="uml:Interface" href="model.uml#_l5AacHx8EeSyZvvyd5lTNA"/>
+    <contract xmi:type="uml:Interface" href="model.uml#_l5AacHx8EeSyZvvyd5lTNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_t1JEIIIaEeStbpNcMqf5hQ" name="Realization4" client="_dqC1MHlsEeSNP_QJ-oV69w">
+    <supplier xmi:type="uml:Interface" href="model.uml#_DyqAMHx8EeSyZvvyd5lTNA"/>
+    <contract xmi:type="uml:Interface" href="model.uml#_DyqAMHx8EeSyZvvyd5lTNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_uQoGQIIaEeStbpNcMqf5hQ" name="Realization5" client="_dqC1MHlsEeSNP_QJ-oV69w">
+    <supplier xmi:type="uml:Interface" href="model.uml#_Qh5S8Hx8EeSyZvvyd5lTNA"/>
+    <contract xmi:type="uml:Interface" href="model.uml#_Qh5S8Hx8EeSyZvvyd5lTNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_u2qLgIIaEeStbpNcMqf5hQ" name="Realization6" client="_dqC1MHlsEeSNP_QJ-oV69w">
+    <supplier xmi:type="uml:Interface" href="model.uml#_VffOUHx8EeSyZvvyd5lTNA"/>
+    <contract xmi:type="uml:Interface" href="model.uml#_VffOUHx8EeSyZvvyd5lTNA"/>
+  </packagedElement>
 </uml:Package>

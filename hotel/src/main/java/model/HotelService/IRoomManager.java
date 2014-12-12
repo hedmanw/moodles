@@ -2,13 +2,11 @@
  */
 package model.HotelService;
 
-import HotelSystem.Room;
-import HotelSystem.RoomType;
 import java.util.Date;
 import java.util.Map;
-
+import model.HotelCore.Room;
+import model.HotelCore.RoomType;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**

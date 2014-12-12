@@ -2,14 +2,12 @@
  */
 package model;
 
-import HotelSystem.Booking;
-import HotelSystem.Reservation;
-
-import model.HotelService.HotelReceptionist;
+import model.HotelCore.Booking;
+import model.HotelCore.Reservation;
 import model.HotelService.IBookingManager;
 import model.HotelService.IReservationManager;
 import model.HotelService.IRoomManager;
-
+import model.HotelService.SystemUser;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -43,12 +41,12 @@ public interface reserveARoom extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>R</em>' reference.
-	 * @see #setR(HotelReceptionist)
+	 * @see #setR(SystemUser)
 	 * @see model.ModelPackage#getreserveARoom_R()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	HotelReceptionist getR();
+	SystemUser getR();
 
 	/**
 	 * Sets the value of the '{@link model.reserveARoom#getR <em>R</em>}' reference.
@@ -58,7 +56,7 @@ public interface reserveARoom extends EObject {
 	 * @see #getR()
 	 * @generated
 	 */
-	void setR(HotelReceptionist value);
+	void setR(SystemUser value);
 
 	/**
 	 * Returns the value of the '<em><b>Reservation</b></em>' reference.

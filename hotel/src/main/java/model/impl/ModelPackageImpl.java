@@ -2,10 +2,6 @@
  */
 package model.impl;
 
-import HotelSystem.HotelSystemPackage;
-
-import HotelSystem.impl.HotelSystemPackageImpl;
-
 import model.BankingService.BankingServicePackage;
 
 import model.BankingService.impl.BankingServicePackageImpl;
@@ -13,6 +9,8 @@ import model.BankingService.impl.BankingServicePackageImpl;
 import model.BookingActivity;
 import model.CheckInSuccess;
 
+import model.HotelCore.HotelCorePackage;
+import model.HotelCore.impl.HotelCorePackageImpl;
 import model.HotelService.HotelServicePackage;
 
 import model.HotelService.impl.HotelServicePackageImpl;
@@ -134,7 +132,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		HotelSystemPackageImpl theHotelSystemPackage = (HotelSystemPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelSystemPackage.eNS_URI) instanceof HotelSystemPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelSystemPackage.eNS_URI) : HotelSystemPackage.eINSTANCE);
+		HotelCorePackageImpl theHotelCorePackage = (HotelCorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI) instanceof HotelCorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI) : HotelCorePackage.eINSTANCE);
 		BankingServicePackageImpl theBankingServicePackage = (BankingServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) instanceof BankingServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) : BankingServicePackage.eINSTANCE);
 		KeyCardServicePackageImpl theKeyCardServicePackage = (KeyCardServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI) instanceof KeyCardServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI) : KeyCardServicePackage.eINSTANCE);
 		HotelServicePackageImpl theHotelServicePackage = (HotelServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) instanceof HotelServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) : HotelServicePackage.eINSTANCE);
@@ -142,7 +140,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		// Create package meta-data objects
 		theModelPackage.createPackageContents();
-		theHotelSystemPackage.createPackageContents();
+		theHotelCorePackage.createPackageContents();
 		theBankingServicePackage.createPackageContents();
 		theKeyCardServicePackage.createPackageContents();
 		theHotelServicePackage.createPackageContents();
@@ -150,7 +148,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		// Initialize created meta-data
 		theModelPackage.initializePackageContents();
-		theHotelSystemPackage.initializePackageContents();
+		theHotelCorePackage.initializePackageContents();
 		theBankingServicePackage.initializePackageContents();
 		theKeyCardServicePackage.initializePackageContents();
 		theHotelServicePackage.initializePackageContents();
@@ -574,12 +572,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		HotelCorePackage theHotelCorePackage = (HotelCorePackage)EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI);
 		BankingServicePackage theBankingServicePackage = (BankingServicePackage)EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI);
 		KeyCardServicePackage theKeyCardServicePackage = (KeyCardServicePackage)EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI);
 		HotelServicePackage theHotelServicePackage = (HotelServicePackage)EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI);
-		HotelSystemPackage theHotelSystemPackage = (HotelSystemPackage)EPackage.Registry.INSTANCE.getEPackage(HotelSystemPackage.eNS_URI);
 
 		// Add subpackages
+		getESubpackages().add(theHotelCorePackage);
 		getESubpackages().add(theBankingServicePackage);
 		getESubpackages().add(theKeyCardServicePackage);
 		getESubpackages().add(theHotelServicePackage);
@@ -594,41 +593,41 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEClass(bookingActivityEClass, BookingActivity.class, "BookingActivity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(showRoomOccupancyEClass, showRoomOccupancy.class, "showRoomOccupancy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getshowRoomOccupancy_U(), theHotelServicePackage.getHotelReceptionist(), null, "u", null, 1, 1, showRoomOccupancy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getshowRoomOccupancy_U(), theHotelServicePackage.getSystemUser(), null, "u", null, 1, 1, showRoomOccupancy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getshowRoomOccupancy_Rm(), theHotelServicePackage.getIRoomManager(), null, "rm", null, 1, 1, showRoomOccupancy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(checkInSuccessEClass, CheckInSuccess.class, "CheckInSuccess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCheckInSuccess_R(), theHotelSystemPackage.getReservation(), null, "r", null, 1, 1, CheckInSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCheckInSuccess_R(), theHotelCorePackage.getReservation(), null, "r", null, 1, 1, CheckInSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCheckInSuccess_K(), theKeyCardServicePackage.getKeyCardsProvides(), null, "k", null, 1, 1, CheckInSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getCheckInSuccess_Customer(), theHotelSystemPackage.getCustomer(), null, "customer", null, 1, 1, CheckInSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getCheckInSuccess_Actor(), theHotelServicePackage.getHotelReceptionist(), null, "actor", null, 1, 1, CheckInSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCheckInSuccess_Customer(), theHotelCorePackage.getCustomer(), null, "customer", null, 1, 1, CheckInSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCheckInSuccess_Actor(), theHotelServicePackage.getSystemUser(), null, "actor", null, 1, 1, CheckInSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCheckInSuccess_Bm(), theHotelServicePackage.getIBookingManager(), null, "bm", null, 1, 1, CheckInSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getCheckInSuccess_B(), theHotelSystemPackage.getBooking(), null, "b", null, 1, 1, CheckInSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCheckInSuccess_B(), theHotelCorePackage.getBooking(), null, "b", null, 1, 1, CheckInSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(reserveARoomEClass, reserveARoom.class, "reserveARoom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getreserveARoom_R(), theHotelServicePackage.getHotelReceptionist(), null, "r", null, 1, 1, reserveARoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getreserveARoom_Reservation(), theHotelSystemPackage.getReservation(), null, "reservation", null, 1, 1, reserveARoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getreserveARoom_Booking(), theHotelSystemPackage.getBooking(), null, "booking", null, 1, 1, reserveARoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getreserveARoom_R(), theHotelServicePackage.getSystemUser(), null, "r", null, 1, 1, reserveARoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getreserveARoom_Reservation(), theHotelCorePackage.getReservation(), null, "reservation", null, 1, 1, reserveARoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getreserveARoom_Booking(), theHotelCorePackage.getBooking(), null, "booking", null, 1, 1, reserveARoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getreserveARoom_RoomManager(), theHotelServicePackage.getIRoomManager(), null, "roomManager", null, 1, 1, reserveARoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getreserveARoom_ReservationManager(), theHotelServicePackage.getIReservationManager(), null, "reservationManager", null, 1, 1, reserveARoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getreserveARoom_BookingManager(), theHotelServicePackage.getIBookingManager(), null, "bookingManager", null, 1, 1, reserveARoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(makeABookingEClass, makeABooking.class, "makeABooking", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getmakeABooking_R(), theHotelServicePackage.getHotelReceptionist(), null, "r", null, 1, 1, makeABooking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getmakeABooking_B(), theHotelSystemPackage.getBooking(), null, "b", null, 1, 1, makeABooking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getmakeABooking_C(), theHotelSystemPackage.getCustomer(), null, "c", null, 1, 1, makeABooking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getmakeABooking_Pd(), theHotelSystemPackage.getPaymentDetails(), null, "pd", null, 1, 1, makeABooking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getmakeABooking_R(), theHotelServicePackage.getSystemUser(), null, "r", null, 1, 1, makeABooking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getmakeABooking_B(), theHotelCorePackage.getBooking(), null, "b", null, 1, 1, makeABooking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getmakeABooking_C(), theHotelCorePackage.getCustomer(), null, "c", null, 1, 1, makeABooking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getmakeABooking_Pd(), theHotelCorePackage.getPaymentDetails(), null, "pd", null, 1, 1, makeABooking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getmakeABooking_Bank(), theBankingServicePackage.getCustomerProvides(), null, "bank", null, 1, 1, makeABooking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getmakeABooking_Bm(), theHotelServicePackage.getIBookingManager(), null, "bm", null, 1, 1, makeABooking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getmakeABooking_Cm(), theHotelServicePackage.getICustomerManager(), null, "cm", null, 1, 1, makeABooking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(checkOutSuccessEClass, checkOutSuccess.class, "checkOutSuccess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getcheckOutSuccess_Actor(), theHotelServicePackage.getHotelReceptionist(), null, "actor", null, 1, 1, checkOutSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getcheckOutSuccess_Actor(), theHotelServicePackage.getSystemUser(), null, "actor", null, 1, 1, checkOutSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getcheckOutSuccess_KeyCards(), theKeyCardServicePackage.getKeyCardsProvides(), null, "keyCards", null, 1, 1, checkOutSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getcheckOutSuccess_R(), theHotelSystemPackage.getReservation(), null, "r", null, 1, 1, checkOutSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getcheckOutSuccess_B(), theHotelSystemPackage.getBooking(), null, "b", null, 1, 1, checkOutSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getcheckOutSuccess_R(), theHotelCorePackage.getReservation(), null, "r", null, 1, 1, checkOutSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getcheckOutSuccess_B(), theHotelCorePackage.getBooking(), null, "b", null, 1, 1, checkOutSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getcheckOutSuccess_Bank(), theBankingServicePackage.getCustomerProvides(), null, "bank", null, 1, 1, checkOutSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getcheckOutSuccess_C(), theHotelSystemPackage.getCustomer(), null, "c", null, 1, 1, checkOutSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getcheckOutSuccess_C(), theHotelCorePackage.getCustomer(), null, "c", null, 1, 1, checkOutSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getcheckOutSuccess_Rm(), theHotelServicePackage.getIReservationManager(), null, "rm", null, 1, 1, checkOutSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getcheckOutSuccess_Bm(), theHotelServicePackage.getIBookingManager(), null, "bm", null, 1, 1, checkOutSuccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 

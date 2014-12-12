@@ -2,14 +2,12 @@
  */
 package model.KeyCardService.impl;
 
-import HotelSystem.HotelSystemPackage;
-
-import HotelSystem.impl.HotelSystemPackageImpl;
-
 import model.BankingService.BankingServicePackage;
 
 import model.BankingService.impl.BankingServicePackageImpl;
 
+import model.HotelCore.HotelCorePackage;
+import model.HotelCore.impl.HotelCorePackageImpl;
 import model.HotelService.HotelServicePackage;
 
 import model.HotelService.impl.HotelServicePackageImpl;
@@ -101,24 +99,24 @@ public class KeyCardServicePackageImpl extends EPackageImpl implements KeyCardSe
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		HotelSystemPackageImpl theHotelSystemPackage = (HotelSystemPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelSystemPackage.eNS_URI) instanceof HotelSystemPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelSystemPackage.eNS_URI) : HotelSystemPackage.eINSTANCE);
 		ModelPackageImpl theModelPackage = (ModelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModelPackage.eNS_URI) instanceof ModelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModelPackage.eNS_URI) : ModelPackage.eINSTANCE);
+		HotelCorePackageImpl theHotelCorePackage = (HotelCorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI) instanceof HotelCorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI) : HotelCorePackage.eINSTANCE);
 		BankingServicePackageImpl theBankingServicePackage = (BankingServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) instanceof BankingServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) : BankingServicePackage.eINSTANCE);
 		HotelServicePackageImpl theHotelServicePackage = (HotelServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) instanceof HotelServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) : HotelServicePackage.eINSTANCE);
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theKeyCardServicePackage.createPackageContents();
-		theHotelSystemPackage.createPackageContents();
 		theModelPackage.createPackageContents();
+		theHotelCorePackage.createPackageContents();
 		theBankingServicePackage.createPackageContents();
 		theHotelServicePackage.createPackageContents();
 		theTypesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theKeyCardServicePackage.initializePackageContents();
-		theHotelSystemPackage.initializePackageContents();
 		theModelPackage.initializePackageContents();
+		theHotelCorePackage.initializePackageContents();
 		theBankingServicePackage.initializePackageContents();
 		theHotelServicePackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();

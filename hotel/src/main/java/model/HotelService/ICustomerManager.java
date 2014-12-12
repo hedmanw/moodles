@@ -2,11 +2,9 @@
  */
 package model.HotelService;
 
-import HotelSystem.Customer;
-import HotelSystem.PaymentDetails;
-
+import model.HotelCore.Customer;
+import model.HotelCore.PaymentDetails;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**

@@ -68,44 +68,64 @@ public class HotelServiceAdapterFactory extends AdapterFactoryImpl {
 	protected HotelServiceSwitch<Adapter> modelSwitch =
 		new HotelServiceSwitch<Adapter>() {
 			@Override
-			public Adapter caseHotelReceptionist(HotelReceptionist object) {
-				return createHotelReceptionistAdapter();
+			public Adapter caseSystemUser(SystemUser object) {
+				return createSystemUserAdapter();
 			}
 			@Override
-			public Adapter caseIRoomManager(IRoomManager object) {
-				return createIRoomManagerAdapter();
-			}
-			@Override
-			public Adapter caseIBookingManager(IBookingManager object) {
-				return createIBookingManagerAdapter();
-			}
-			@Override
-			public Adapter caseIReservationManager(IReservationManager object) {
-				return createIReservationManagerAdapter();
-			}
-			@Override
-			public Adapter caseHotelManager(HotelManager object) {
-				return createHotelManagerAdapter();
-			}
-			@Override
-			public Adapter caseHotelManagerProvides(HotelManagerProvides object) {
-				return createHotelManagerProvidesAdapter();
+			public Adapter caseExternalUser(ExternalUser object) {
+				return createExternalUserAdapter();
 			}
 			@Override
 			public Adapter caseHotelStaff(HotelStaff object) {
 				return createHotelStaffAdapter();
 			}
 			@Override
-			public Adapter caseHotelStaffProvides(HotelStaffProvides object) {
-				return createHotelStaffProvidesAdapter();
+			public Adapter caseHotelReceptionist(HotelReceptionist object) {
+				return createHotelReceptionistAdapter();
+			}
+			@Override
+			public Adapter caseHotelManager(HotelManager object) {
+				return createHotelManagerAdapter();
+			}
+			@Override
+			public Adapter caseIRoomManager(IRoomManager object) {
+				return createIRoomManagerAdapter();
+			}
+			@Override
+			public Adapter caseRoomManager(RoomManager object) {
+				return createRoomManagerAdapter();
 			}
 			@Override
 			public Adapter caseIRoomTypeManager(IRoomTypeManager object) {
 				return createIRoomTypeManagerAdapter();
 			}
 			@Override
+			public Adapter caseRoomTypeManager(RoomTypeManager object) {
+				return createRoomTypeManagerAdapter();
+			}
+			@Override
+			public Adapter caseIReservationManager(IReservationManager object) {
+				return createIReservationManagerAdapter();
+			}
+			@Override
+			public Adapter caseReservationManager(ReservationManager object) {
+				return createReservationManagerAdapter();
+			}
+			@Override
+			public Adapter caseIBookingManager(IBookingManager object) {
+				return createIBookingManagerAdapter();
+			}
+			@Override
+			public Adapter caseBookingManager(BookingManager object) {
+				return createBookingManagerAdapter();
+			}
+			@Override
 			public Adapter caseICustomerManager(ICustomerManager object) {
 				return createICustomerManagerAdapter();
+			}
+			@Override
+			public Adapter caseCustomerManager(CustomerManager object) {
+				return createCustomerManagerAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -126,6 +146,34 @@ public class HotelServiceAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link model.HotelService.SystemUser <em>System User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see model.HotelService.SystemUser
+	 * @generated
+	 */
+	public Adapter createSystemUserAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link model.HotelService.ExternalUser <em>External User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see model.HotelService.ExternalUser
+	 * @generated
+	 */
+	public Adapter createExternalUserAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link model.HotelService.HotelReceptionist <em>Hotel Receptionist</em>}'.
@@ -156,6 +204,20 @@ public class HotelServiceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link model.HotelService.RoomManager <em>Room Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see model.HotelService.RoomManager
+	 * @generated
+	 */
+	public Adapter createRoomManagerAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link model.HotelService.IBookingManager <em>IBooking Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -166,6 +228,20 @@ public class HotelServiceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIBookingManagerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link model.HotelService.BookingManager <em>Booking Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see model.HotelService.BookingManager
+	 * @generated
+	 */
+	public Adapter createBookingManagerAdapter() {
 		return null;
 	}
 
@@ -184,6 +260,20 @@ public class HotelServiceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link model.HotelService.ReservationManager <em>Reservation Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see model.HotelService.ReservationManager
+	 * @generated
+	 */
+	public Adapter createReservationManagerAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link model.HotelService.HotelManager <em>Hotel Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -194,20 +284,6 @@ public class HotelServiceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createHotelManagerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link model.HotelService.HotelManagerProvides <em>Hotel Manager Provides</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see model.HotelService.HotelManagerProvides
-	 * @generated
-	 */
-	public Adapter createHotelManagerProvidesAdapter() {
 		return null;
 	}
 
@@ -226,20 +302,6 @@ public class HotelServiceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link model.HotelService.HotelStaffProvides <em>Hotel Staff Provides</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see model.HotelService.HotelStaffProvides
-	 * @generated
-	 */
-	public Adapter createHotelStaffProvidesAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link model.HotelService.IRoomTypeManager <em>IRoom Type Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -254,6 +316,20 @@ public class HotelServiceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link model.HotelService.RoomTypeManager <em>Room Type Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see model.HotelService.RoomTypeManager
+	 * @generated
+	 */
+	public Adapter createRoomTypeManagerAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link model.HotelService.ICustomerManager <em>ICustomer Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -264,6 +340,20 @@ public class HotelServiceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createICustomerManagerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link model.HotelService.CustomerManager <em>Customer Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see model.HotelService.CustomerManager
+	 * @generated
+	 */
+	public Adapter createCustomerManagerAdapter() {
 		return null;
 	}
 

@@ -2,9 +2,8 @@
  */
 package model;
 
-import model.HotelService.HotelReceptionist;
 import model.HotelService.IRoomManager;
-
+import model.HotelService.SystemUser;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -34,12 +33,12 @@ public interface showRoomOccupancy extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>U</em>' reference.
-	 * @see #setU(HotelReceptionist)
+	 * @see #setU(SystemUser)
 	 * @see model.ModelPackage#getshowRoomOccupancy_U()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	HotelReceptionist getU();
+	SystemUser getU();
 
 	/**
 	 * Sets the value of the '{@link model.showRoomOccupancy#getU <em>U</em>}' reference.
@@ -49,7 +48,7 @@ public interface showRoomOccupancy extends EObject {
 	 * @see #getU()
 	 * @generated
 	 */
-	void setU(HotelReceptionist value);
+	void setU(SystemUser value);
 
 	/**
 	 * Returns the value of the '<em><b>Rm</b></em>' reference.
