@@ -159,41 +159,6 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 	private EClass conferenceRoomEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass customerManagerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass roomTypeManagerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass bookingManagerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass roomManagerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass reservationManagerEClass = null;
-
-	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -239,28 +204,11 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 
 		isInited = true;
 
-		// Obtain or create and register interdependencies
-		ModelPackageImpl theModelPackage = (ModelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModelPackage.eNS_URI) instanceof ModelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModelPackage.eNS_URI) : ModelPackage.eINSTANCE);
-		BankingServicePackageImpl theBankingServicePackage = (BankingServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) instanceof BankingServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) : BankingServicePackage.eINSTANCE);
-		KeyCardServicePackageImpl theKeyCardServicePackage = (KeyCardServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI) instanceof KeyCardServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI) : KeyCardServicePackage.eINSTANCE);
-		HotelServicePackageImpl theHotelServicePackage = (HotelServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) instanceof HotelServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) : HotelServicePackage.eINSTANCE);
-		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
-
 		// Create package meta-data objects
 		theHotelSystemPackage.createPackageContents();
-		theModelPackage.createPackageContents();
-		theBankingServicePackage.createPackageContents();
-		theKeyCardServicePackage.createPackageContents();
-		theHotelServicePackage.createPackageContents();
-		theTypesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theHotelSystemPackage.initializePackageContents();
-		theModelPackage.initializePackageContents();
-		theBankingServicePackage.initializePackageContents();
-		theKeyCardServicePackage.initializePackageContents();
-		theHotelServicePackage.initializePackageContents();
-		theTypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theHotelSystemPackage.freeze();
@@ -519,7 +467,7 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoom__GetEquipment() {
+	public EOperation getRoom__AddEquipmentToRoom__String() {
 		return roomEClass.getEOperations().get(3);
 	}
 
@@ -528,17 +476,8 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoom__AddEquipmentToRoom__String() {
-		return roomEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getRoom__RemoveEquipmentItem__String() {
-		return roomEClass.getEOperations().get(5);
+		return roomEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1464,96 +1403,6 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCustomerManager() {
-		return customerManagerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCustomerManager_Customer() {
-		return (EReference)customerManagerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getRoomTypeManager() {
-		return roomTypeManagerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRoomTypeManager_RoomType() {
-		return (EReference)roomTypeManagerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getBookingManager() {
-		return bookingManagerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBookingManager_Booking() {
-		return (EReference)bookingManagerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getRoomManager() {
-		return roomManagerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRoomManager_Room() {
-		return (EReference)roomManagerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getReservationManager() {
-		return reservationManagerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getReservationManager_Reservation() {
-		return (EReference)reservationManagerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public HotelSystemFactory getHotelSystemFactory() {
 		return (HotelSystemFactory)getEFactoryInstance();
 	}
@@ -1609,7 +1458,6 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 		createEOperation(roomEClass, ROOM___GET_ROOM_TYPE);
 		createEOperation(roomEClass, ROOM___ADD_ROOM_TYPE__ROOMTYPE);
 		createEOperation(roomEClass, ROOM___REMOVE_ROOM_TYPE__ROOMTYPE);
-		createEOperation(roomEClass, ROOM___GET_EQUIPMENT);
 		createEOperation(roomEClass, ROOM___ADD_EQUIPMENT_TO_ROOM__STRING);
 		createEOperation(roomEClass, ROOM___REMOVE_EQUIPMENT_ITEM__STRING);
 
@@ -1722,21 +1570,6 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 		conferenceRoomEClass = createEClass(CONFERENCE_ROOM);
 		createEAttribute(conferenceRoomEClass, CONFERENCE_ROOM__MAX_NBR_OF_PEOPLE);
 		createEOperation(conferenceRoomEClass, CONFERENCE_ROOM___GET_NBR_OF_PEOPLE);
-
-		customerManagerEClass = createEClass(CUSTOMER_MANAGER);
-		createEReference(customerManagerEClass, CUSTOMER_MANAGER__CUSTOMER);
-
-		roomTypeManagerEClass = createEClass(ROOM_TYPE_MANAGER);
-		createEReference(roomTypeManagerEClass, ROOM_TYPE_MANAGER__ROOM_TYPE);
-
-		bookingManagerEClass = createEClass(BOOKING_MANAGER);
-		createEReference(bookingManagerEClass, BOOKING_MANAGER__BOOKING);
-
-		roomManagerEClass = createEClass(ROOM_MANAGER);
-		createEReference(roomManagerEClass, ROOM_MANAGER__ROOM);
-
-		reservationManagerEClass = createEClass(RESERVATION_MANAGER);
-		createEReference(reservationManagerEClass, RESERVATION_MANAGER__RESERVATION);
 	}
 
 	/**
@@ -1762,9 +1595,6 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		HotelServicePackage theHotelServicePackage = (HotelServicePackage)EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI);
-
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -1772,11 +1602,6 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 		// Add supertypes to classes
 		sleepRoomEClass.getESuperTypes().add(this.getRoomType());
 		conferenceRoomEClass.getESuperTypes().add(this.getRoomType());
-		customerManagerEClass.getESuperTypes().add(theHotelServicePackage.getICustomerManager());
-		roomTypeManagerEClass.getESuperTypes().add(theHotelServicePackage.getIRoomTypeManager());
-		bookingManagerEClass.getESuperTypes().add(theHotelServicePackage.getIBookingManager());
-		roomManagerEClass.getESuperTypes().add(theHotelServicePackage.getIRoomManager());
-		reservationManagerEClass.getESuperTypes().add(theHotelServicePackage.getIReservationManager());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(hotelEClass, Hotel.class, "Hotel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1830,8 +1655,6 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 
 		op = initEOperation(getRoom__RemoveRoomType__RoomType(), null, "removeRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getRoomType(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoom__GetEquipment(), ecorePackage.getEEList(), "getEquipment", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getRoom__AddEquipmentToRoom__String(), null, "addEquipmentToRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "item", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2047,21 +1870,6 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 		initEAttribute(getConferenceRoom_MaxNbrOfPeople(), ecorePackage.getEInt(), "maxNbrOfPeople", null, 1, 1, ConferenceRoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEOperation(getConferenceRoom__GetNbrOfPeople(), ecorePackage.getEInt(), "getNbrOfPeople", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(customerManagerEClass, CustomerManager.class, "CustomerManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCustomerManager_Customer(), this.getCustomer(), null, "customer", null, 0, -1, CustomerManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(roomTypeManagerEClass, RoomTypeManager.class, "RoomTypeManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRoomTypeManager_RoomType(), this.getRoomType(), null, "roomType", null, 0, -1, RoomTypeManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(bookingManagerEClass, BookingManager.class, "BookingManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBookingManager_Booking(), this.getBooking(), null, "booking", null, 0, -1, BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(roomManagerEClass, RoomManager.class, "RoomManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRoomManager_Room(), this.getRoom(), null, "room", null, 0, -1, RoomManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(reservationManagerEClass, ReservationManager.class, "ReservationManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReservationManager_Reservation(), this.getReservation(), null, "reservation", null, 0, -1, ReservationManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

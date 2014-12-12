@@ -3,18 +3,9 @@
 package HotelSystem.util;
 
 import HotelSystem.*;
-
-import model.HotelService.IBookingManager;
-import model.HotelService.ICustomerManager;
-import model.HotelService.IReservationManager;
-import model.HotelService.IRoomManager;
-import model.HotelService.IRoomTypeManager;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -128,46 +119,6 @@ public class HotelSystemAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseConferenceRoom(ConferenceRoom object) {
 				return createConferenceRoomAdapter();
-			}
-			@Override
-			public Adapter caseCustomerManager(CustomerManager object) {
-				return createCustomerManagerAdapter();
-			}
-			@Override
-			public Adapter caseRoomTypeManager(RoomTypeManager object) {
-				return createRoomTypeManagerAdapter();
-			}
-			@Override
-			public Adapter caseBookingManager(BookingManager object) {
-				return createBookingManagerAdapter();
-			}
-			@Override
-			public Adapter caseRoomManager(RoomManager object) {
-				return createRoomManagerAdapter();
-			}
-			@Override
-			public Adapter caseReservationManager(ReservationManager object) {
-				return createReservationManagerAdapter();
-			}
-			@Override
-			public Adapter caseICustomerManager(ICustomerManager object) {
-				return createICustomerManagerAdapter();
-			}
-			@Override
-			public Adapter caseIRoomTypeManager(IRoomTypeManager object) {
-				return createIRoomTypeManagerAdapter();
-			}
-			@Override
-			public Adapter caseIBookingManager(IBookingManager object) {
-				return createIBookingManagerAdapter();
-			}
-			@Override
-			public Adapter caseIRoomManager(IRoomManager object) {
-				return createIRoomManagerAdapter();
-			}
-			@Override
-			public Adapter caseIReservationManager(IReservationManager object) {
-				return createIReservationManagerAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -382,146 +333,6 @@ public class HotelSystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createConferenceRoomAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link HotelSystem.CustomerManager <em>Customer Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see HotelSystem.CustomerManager
-	 * @generated
-	 */
-	public Adapter createCustomerManagerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link HotelSystem.RoomTypeManager <em>Room Type Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see HotelSystem.RoomTypeManager
-	 * @generated
-	 */
-	public Adapter createRoomTypeManagerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link HotelSystem.BookingManager <em>Booking Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see HotelSystem.BookingManager
-	 * @generated
-	 */
-	public Adapter createBookingManagerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link HotelSystem.RoomManager <em>Room Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see HotelSystem.RoomManager
-	 * @generated
-	 */
-	public Adapter createRoomManagerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link HotelSystem.ReservationManager <em>Reservation Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see HotelSystem.ReservationManager
-	 * @generated
-	 */
-	public Adapter createReservationManagerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link model.HotelService.ICustomerManager <em>ICustomer Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see model.HotelService.ICustomerManager
-	 * @generated
-	 */
-	public Adapter createICustomerManagerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link model.HotelService.IRoomTypeManager <em>IRoom Type Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see model.HotelService.IRoomTypeManager
-	 * @generated
-	 */
-	public Adapter createIRoomTypeManagerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link model.HotelService.IBookingManager <em>IBooking Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see model.HotelService.IBookingManager
-	 * @generated
-	 */
-	public Adapter createIBookingManagerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link model.HotelService.IRoomManager <em>IRoom Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see model.HotelService.IRoomManager
-	 * @generated
-	 */
-	public Adapter createIRoomManagerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link model.HotelService.IReservationManager <em>IReservation Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see model.HotelService.IReservationManager
-	 * @generated
-	 */
-	public Adapter createIReservationManagerAdapter() {
 		return null;
 	}
 

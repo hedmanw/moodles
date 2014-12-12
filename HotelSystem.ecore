@@ -269,24 +269,4 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxNbrOfPeople" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CustomerManager" eSuperTypes="model.ecore#//HotelService/ICustomerManager">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="customer" ordered="false"
-        upperBound="-1" eType="#//Customer"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RoomTypeManager" eSuperTypes="model.ecore#//HotelService/IRoomTypeManager">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="roomType" ordered="false"
-        upperBound="-1" eType="#//RoomType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BookingManager" eSuperTypes="model.ecore#//HotelService/IBookingManager">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="booking" ordered="false"
-        upperBound="-1" eType="#//Booking"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RoomManager" eSuperTypes="model.ecore#//HotelService/IRoomManager">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="room" ordered="false" upperBound="-1"
-        eType="#//Room"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReservationManager" eSuperTypes="model.ecore#//HotelService/IReservationManager">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reservation" ordered="false"
-        upperBound="-1" eType="#//Reservation"/>
-  </eClassifiers>
 </ecore:EPackage>

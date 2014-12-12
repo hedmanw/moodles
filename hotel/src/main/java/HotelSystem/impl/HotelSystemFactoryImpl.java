@@ -71,11 +71,6 @@ public class HotelSystemFactoryImpl extends EFactoryImpl implements HotelSystemF
 			case HotelSystemPackage.RESERVATION: return createReservation();
 			case HotelSystemPackage.BOOKING: return createBooking();
 			case HotelSystemPackage.CONFERENCE_ROOM: return createConferenceRoom();
-			case HotelSystemPackage.CUSTOMER_MANAGER: return createCustomerManager();
-			case HotelSystemPackage.ROOM_TYPE_MANAGER: return createRoomTypeManager();
-			case HotelSystemPackage.BOOKING_MANAGER: return createBookingManager();
-			case HotelSystemPackage.ROOM_MANAGER: return createRoomManager();
-			case HotelSystemPackage.RESERVATION_MANAGER: return createReservationManager();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -219,56 +214,6 @@ public class HotelSystemFactoryImpl extends EFactoryImpl implements HotelSystemF
 	public ConferenceRoom createConferenceRoom() {
 		ConferenceRoomImpl conferenceRoom = new ConferenceRoomImpl();
 		return conferenceRoom;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CustomerManager createCustomerManager() {
-		CustomerManagerImpl customerManager = new CustomerManagerImpl();
-		return customerManager;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoomTypeManager createRoomTypeManager() {
-		RoomTypeManagerImpl roomTypeManager = new RoomTypeManagerImpl();
-		return roomTypeManager;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BookingManager createBookingManager() {
-		BookingManagerImpl bookingManager = new BookingManagerImpl();
-		return bookingManager;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoomManager createRoomManager() {
-		RoomManagerImpl roomManager = new RoomManagerImpl();
-		return roomManager;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ReservationManager createReservationManager() {
-		ReservationManagerImpl reservationManager = new ReservationManagerImpl();
-		return reservationManager;
 	}
 
 	/**

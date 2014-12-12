@@ -3,16 +3,8 @@
 package HotelSystem.util;
 
 import HotelSystem.*;
-
-import model.HotelService.IBookingManager;
-import model.HotelService.ICustomerManager;
-import model.HotelService.IReservationManager;
-import model.HotelService.IRoomManager;
-import model.HotelService.IRoomTypeManager;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
 
 /**
@@ -155,41 +147,6 @@ public class HotelSystemSwitch<T> extends Switch<T> {
 				ConferenceRoom conferenceRoom = (ConferenceRoom)theEObject;
 				T result = caseConferenceRoom(conferenceRoom);
 				if (result == null) result = caseRoomType(conferenceRoom);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelSystemPackage.CUSTOMER_MANAGER: {
-				CustomerManager customerManager = (CustomerManager)theEObject;
-				T result = caseCustomerManager(customerManager);
-				if (result == null) result = caseICustomerManager(customerManager);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelSystemPackage.ROOM_TYPE_MANAGER: {
-				RoomTypeManager roomTypeManager = (RoomTypeManager)theEObject;
-				T result = caseRoomTypeManager(roomTypeManager);
-				if (result == null) result = caseIRoomTypeManager(roomTypeManager);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelSystemPackage.BOOKING_MANAGER: {
-				BookingManager bookingManager = (BookingManager)theEObject;
-				T result = caseBookingManager(bookingManager);
-				if (result == null) result = caseIBookingManager(bookingManager);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelSystemPackage.ROOM_MANAGER: {
-				RoomManager roomManager = (RoomManager)theEObject;
-				T result = caseRoomManager(roomManager);
-				if (result == null) result = caseIRoomManager(roomManager);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelSystemPackage.RESERVATION_MANAGER: {
-				ReservationManager reservationManager = (ReservationManager)theEObject;
-				T result = caseReservationManager(reservationManager);
-				if (result == null) result = caseIReservationManager(reservationManager);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -404,156 +361,6 @@ public class HotelSystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseConferenceRoom(ConferenceRoom object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Customer Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Customer Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCustomerManager(CustomerManager object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Room Type Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Room Type Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRoomTypeManager(RoomTypeManager object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Booking Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Booking Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBookingManager(BookingManager object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Room Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Room Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRoomManager(RoomManager object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reservation Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reservation Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseReservationManager(ReservationManager object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ICustomer Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ICustomer Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseICustomerManager(ICustomerManager object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IRoom Type Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IRoom Type Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIRoomTypeManager(IRoomTypeManager object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IBooking Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IBooking Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIBookingManager(IBookingManager object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IRoom Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IRoom Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIRoomManager(IRoomManager object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IReservation Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IReservation Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIReservationManager(IReservationManager object) {
 		return null;
 	}
 

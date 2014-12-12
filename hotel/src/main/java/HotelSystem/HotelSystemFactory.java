@@ -148,51 +148,6 @@ public interface HotelSystemFactory extends EFactory {
 	ConferenceRoom createConferenceRoom();
 
 	/**
-	 * Returns a new object of class '<em>Customer Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Customer Manager</em>'.
-	 * @generated
-	 */
-	CustomerManager createCustomerManager();
-
-	/**
-	 * Returns a new object of class '<em>Room Type Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Room Type Manager</em>'.
-	 * @generated
-	 */
-	RoomTypeManager createRoomTypeManager();
-
-	/**
-	 * Returns a new object of class '<em>Booking Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Booking Manager</em>'.
-	 * @generated
-	 */
-	BookingManager createBookingManager();
-
-	/**
-	 * Returns a new object of class '<em>Room Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Room Manager</em>'.
-	 * @generated
-	 */
-	RoomManager createRoomManager();
-
-	/**
-	 * Returns a new object of class '<em>Reservation Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reservation Manager</em>'.
-	 * @generated
-	 */
-	ReservationManager createReservationManager();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
