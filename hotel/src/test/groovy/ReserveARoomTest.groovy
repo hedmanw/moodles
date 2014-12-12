@@ -1,4 +1,4 @@
-import model.HotelCore.HotelCoreFactory
+import util.EArrayList
 import model.HotelCore.Room
 import model.HotelCore.RoomType
 import model.HotelService.HotelServiceFactory
@@ -9,7 +9,7 @@ import spock.lang.Specification
 /**
  * Created by emmawestman on 14-12-12.
  */
-class ReserveARoomTest extends Specification{
+class ReserveARoomTest extends Specification {
     RoomManager roomManager
     RoomTypeManager roomTypeManager
 
@@ -24,11 +24,11 @@ class ReserveARoomTest extends Specification{
         Room room = roomManager.createRoom(1, roomType)
 
         when:
-        //TODO implement get available rooms with search feature
-        def availableRooms = roomManager.getAvailableRooms(new Date(), new Date()+1, roomTypeManager.getAllRoomTypes())
+        def searchCriteria = new EArrayList<RoomType>()
+        searchCriteria.add(roomType)
+        def availableRooms = roomManager.getAvailableRooms(new Date(), new Date()+1, searchCriteria)
 
         then:
         availableRooms.size() == 1
-
     }
 }

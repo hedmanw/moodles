@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Map;
 
+import util.EArrayList;
 import model.HotelCore.HotelCoreFactory;
 import model.HotelCore.Room;
 import model.HotelCore.RoomType;
@@ -83,9 +84,15 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * @generated NOT
 	 */
 	public EList<Room> getAvailableRooms(Date fromDate, Date toDate, EList<RoomType> roomTypes) {
-		EList<Room> matching  = new EObjectResolvingEList<>(Room.class, this, HotelServicePackage.ROOM_MANAGER__ALL_ROOMS);
+		if (toDate.before(fromDate)) {
+			throw new IllegalArgumentException("To must be after from!");
+		}
+
+		EList<Room> matching = new EArrayList<>();
 		for (Room room : getAllRooms()) {
-			matching.add(room);
+			if (roomTypes.contains(room.getRoomType())) {
+				matching.add(room);
+			}
 		}
 		return matching;
 	}
