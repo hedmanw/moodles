@@ -228,6 +228,10 @@
         <element xmi:type="uml:Property" href="HotelSystem.uml#_Ou6B8HjEEeSDBKbFcXcsYQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Ou7QEXjEEeSDBKbFcXcsYQ"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_Od0kUIIMEeStbpNcMqf5hQ" type="3012">
+        <element xmi:type="uml:Property" href="HotelSystem.uml#_OcEQ0IIMEeStbpNcMqf5hQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Od0kUYIMEeStbpNcMqf5hQ"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_1Mq90XjDEeSDBKbFcXcsYQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_1Mq90njDEeSDBKbFcXcsYQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_1Mq903jDEeSDBKbFcXcsYQ"/>

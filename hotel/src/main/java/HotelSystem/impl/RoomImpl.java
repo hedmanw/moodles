@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -60,14 +61,14 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	protected int roomNumber = ROOM_NUMBER_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRoomType() <em>Room Type</em>}' reference list.
+	 * The cached value of the '{@link #getRoomType() <em>Room Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRoomType()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RoomType> roomType;
+	protected RoomType roomType;
 
 	/**
 	 * The default value of the '{@link #isCleaned() <em>Cleaned</em>}' attribute.
@@ -144,11 +145,37 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<RoomType> getRoomType() {
-		if (roomType == null) {
-			roomType = new EObjectResolvingEList<RoomType>(RoomType.class, this, HotelSystemPackage.ROOM__ROOM_TYPE);
+	public RoomType getRoomType() {
+		if (roomType != null && roomType.eIsProxy()) {
+			InternalEObject oldRoomType = (InternalEObject)roomType;
+			roomType = (RoomType)eResolveProxy(oldRoomType);
+			if (roomType != oldRoomType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelSystemPackage.ROOM__ROOM_TYPE, oldRoomType, roomType));
+			}
 		}
 		return roomType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomType basicGetRoomType() {
+		return roomType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoomType(RoomType newRoomType) {
+		RoomType oldRoomType = roomType;
+		roomType = newRoomType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelSystemPackage.ROOM__ROOM_TYPE, oldRoomType, roomType));
 	}
 
 	/**
@@ -239,7 +266,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case HotelSystemPackage.ROOM__ROOM_NUMBER:
 				return getRoomNumber();
 			case HotelSystemPackage.ROOM__ROOM_TYPE:
-				return getRoomType();
+				if (resolve) return getRoomType();
+				return basicGetRoomType();
 			case HotelSystemPackage.ROOM__CLEANED:
 				return isCleaned();
 			case HotelSystemPackage.ROOM__EQUIPMENT:
@@ -261,8 +289,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 				setRoomNumber((Integer)newValue);
 				return;
 			case HotelSystemPackage.ROOM__ROOM_TYPE:
-				getRoomType().clear();
-				getRoomType().addAll((Collection<? extends RoomType>)newValue);
+				setRoomType((RoomType)newValue);
 				return;
 			case HotelSystemPackage.ROOM__CLEANED:
 				setCleaned((Boolean)newValue);
@@ -287,7 +314,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 				setRoomNumber(ROOM_NUMBER_EDEFAULT);
 				return;
 			case HotelSystemPackage.ROOM__ROOM_TYPE:
-				getRoomType().clear();
+				setRoomType((RoomType)null);
 				return;
 			case HotelSystemPackage.ROOM__CLEANED:
 				setCleaned(CLEANED_EDEFAULT);
@@ -310,7 +337,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case HotelSystemPackage.ROOM__ROOM_NUMBER:
 				return roomNumber != ROOM_NUMBER_EDEFAULT;
 			case HotelSystemPackage.ROOM__ROOM_TYPE:
-				return roomType != null && !roomType.isEmpty();
+				return roomType != null;
 			case HotelSystemPackage.ROOM__CLEANED:
 				return cleaned != CLEANED_EDEFAULT;
 			case HotelSystemPackage.ROOM__EQUIPMENT:

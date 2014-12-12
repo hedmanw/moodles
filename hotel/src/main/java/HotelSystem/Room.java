@@ -53,20 +53,30 @@ public interface Room extends EObject {
 	void setRoomNumber(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Room Type</b></em>' reference list.
-	 * The list contents are of type {@link HotelSystem.RoomType}.
+	 * Returns the value of the '<em><b>Room Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Room Type</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room Type</em>' reference list.
+	 * @return the value of the '<em>Room Type</em>' reference.
+	 * @see #setRoomType(RoomType)
 	 * @see HotelSystem.HotelSystemPackage#getRoom_RoomType()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	EList<RoomType> getRoomType();
+	RoomType getRoomType();
+
+	/**
+	 * Sets the value of the '{@link HotelSystem.Room#getRoomType <em>Room Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Room Type</em>' reference.
+	 * @see #getRoomType()
+	 * @generated
+	 */
+	void setRoomType(RoomType value);
 
 	/**
 	 * Returns the value of the '<em><b>Cleaned</b></em>' attribute.

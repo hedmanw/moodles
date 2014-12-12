@@ -282,13 +282,22 @@ public interface HotelSystemPackage extends EPackage {
 	int ROOM_TYPE__COST_PER_NIGHT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Room Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_FEATURE_COUNT = 1;
+	int ROOM_TYPE_FEATURE_COUNT = 2;
 
 	/**
 	 * The operation id for the '<em>Get Cost Per Night</em>' operation.
@@ -337,7 +346,7 @@ public interface HotelSystemPackage extends EPackage {
 	int ROOM__ROOM_NUMBER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Room Type</b></em>' reference list.
+	 * The feature id for the '<em><b>Room Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -617,6 +626,15 @@ public interface HotelSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLEEP_ROOM__COST_PER_NIGHT = ROOM_TYPE__COST_PER_NIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLEEP_ROOM__NAME = ROOM_TYPE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Nbr Of Beds</b></em>' attribute.
@@ -1506,6 +1524,15 @@ public interface HotelSystemPackage extends EPackage {
 	int CONFERENCE_ROOM__COST_PER_NIGHT = ROOM_TYPE__COST_PER_NIGHT;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFERENCE_ROOM__NAME = ROOM_TYPE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Max Nbr Of People</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2134,6 +2161,17 @@ public interface HotelSystemPackage extends EPackage {
 	EAttribute getRoomType_CostPerNight();
 
 	/**
+	 * Returns the meta object for the attribute '{@link HotelSystem.RoomType#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see HotelSystem.RoomType#getName()
+	 * @see #getRoomType()
+	 * @generated
+	 */
+	EAttribute getRoomType_Name();
+
+	/**
 	 * Returns the meta object for the '{@link HotelSystem.RoomType#getCostPerNight() <em>Get Cost Per Night</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2175,10 +2213,10 @@ public interface HotelSystemPackage extends EPackage {
 	EAttribute getRoom_RoomNumber();
 
 	/**
-	 * Returns the meta object for the reference list '{@link HotelSystem.Room#getRoomType <em>Room Type</em>}'.
+	 * Returns the meta object for the reference '{@link HotelSystem.Room#getRoomType <em>Room Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Room Type</em>'.
+	 * @return the meta object for the reference '<em>Room Type</em>'.
 	 * @see HotelSystem.Room#getRoomType()
 	 * @see #getRoom()
 	 * @generated
@@ -3584,6 +3622,14 @@ public interface HotelSystemPackage extends EPackage {
 		EAttribute ROOM_TYPE__COST_PER_NIGHT = eINSTANCE.getRoomType_CostPerNight();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOM_TYPE__NAME = eINSTANCE.getRoomType_Name();
+
+		/**
 		 * The meta object literal for the '<em><b>Get Cost Per Night</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3618,7 +3664,7 @@ public interface HotelSystemPackage extends EPackage {
 		EAttribute ROOM__ROOM_NUMBER = eINSTANCE.getRoom_RoomNumber();
 
 		/**
-		 * The meta object literal for the '<em><b>Room Type</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Room Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

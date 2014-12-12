@@ -35,6 +35,8 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="costPerNight" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Room">
     <eOperations name="getRoomType" ordered="false" lowerBound="1" eType="#//RoomType"/>
@@ -54,7 +56,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomNumber" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="roomType" ordered="false"
-        lowerBound="1" upperBound="-1" eType="#//RoomType"/>
+        lowerBound="1" eType="#//RoomType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cleaned" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="equipment" ordered="false"

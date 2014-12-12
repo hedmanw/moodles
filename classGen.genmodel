@@ -58,6 +58,7 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="HotelSystem.ecore#//RoomType">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute HotelSystem.ecore#//RoomType/costPerNight"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute HotelSystem.ecore#//RoomType/name"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="HotelSystem.ecore#//RoomType/getCostPerNight"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="HotelSystem.ecore#//RoomType/setCostPerNight">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="HotelSystem.ecore#//RoomType/setCostPerNight/cost"/>

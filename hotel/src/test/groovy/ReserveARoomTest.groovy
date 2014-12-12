@@ -24,9 +24,9 @@ class ReserveARoomTest extends Specification{
         roomTypeManager.roomType.add(roomType)
         roomType.costPerNight = 1000
         room.roomNumber = 1
-        room.getRoomType().add(roomType)
+        room.roomType = roomType
         roomManager.getRoom().add(room)
-        //TODO implement get availible rooms with search feature
+        //TODO implement get available rooms with search feature
         def availableRooms = roomManager.getAvailableRooms(new Date(), new Date()+1, roomTypeManager.roomType)
         then:
         availableRooms.size() == 1

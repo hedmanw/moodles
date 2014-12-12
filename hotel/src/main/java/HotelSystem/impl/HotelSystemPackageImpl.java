@@ -420,6 +420,15 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRoomType_Name() {
+		return (EAttribute)roomTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getRoomType__GetCostPerNight() {
 		return roomTypeEClass.getEOperations().get(0);
 	}
@@ -1588,6 +1597,7 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 
 		roomTypeEClass = createEClass(ROOM_TYPE);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__COST_PER_NIGHT);
+		createEAttribute(roomTypeEClass, ROOM_TYPE__NAME);
 		createEOperation(roomTypeEClass, ROOM_TYPE___GET_COST_PER_NIGHT);
 		createEOperation(roomTypeEClass, ROOM_TYPE___SET_COST_PER_NIGHT__DOUBLE);
 
@@ -1800,6 +1810,7 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 
 		initEClass(roomTypeEClass, RoomType.class, "RoomType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoomType_CostPerNight(), ecorePackage.getEDouble(), "costPerNight", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoomType_Name(), ecorePackage.getEString(), "name", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEOperation(getRoomType__GetCostPerNight(), ecorePackage.getEDouble(), "getCostPerNight", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -1808,7 +1819,7 @@ public class HotelSystemPackageImpl extends EPackageImpl implements HotelSystemP
 
 		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoom_RoomNumber(), ecorePackage.getEInt(), "roomNumber", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getRoom_RoomType(), this.getRoomType(), null, "roomType", null, 1, -1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRoom_RoomType(), this.getRoomType(), null, "roomType", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoom_Cleaned(), ecorePackage.getEBoolean(), "cleaned", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoom_Equipment(), this.getEquipment(), null, "equipment", null, 0, -1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
