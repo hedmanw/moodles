@@ -296,6 +296,15 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getIRoomManager__CreateRoom__int_RoomType() {
+		return iRoomManagerEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRoomManager() {
 		return roomManagerEClass;
 	}
@@ -674,6 +683,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		iRoomManagerEClass = createEClass(IROOM_MANAGER);
 		createEOperation(iRoomManagerEClass, IROOM_MANAGER___GET_AVAILABLE_ROOMS__DATE_DATE_ELIST);
 		createEOperation(iRoomManagerEClass, IROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE);
+		createEOperation(iRoomManagerEClass, IROOM_MANAGER___CREATE_ROOM__INT_ROOMTYPE);
 
 		roomManagerEClass = createEClass(ROOM_MANAGER);
 		createEReference(roomManagerEClass, ROOM_MANAGER__ALL_ROOMS);
@@ -780,6 +790,10 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		op = initEOperation(getIRoomManager__GetRoomOccupancy__Date_Date(), ecorePackage.getEMap(), "getRoomOccupancy", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "fromDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "toDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIRoomManager__CreateRoom__int_RoomType(), theHotelCorePackage.getRoom(), "createRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theHotelCorePackage.getRoomType(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(roomManagerEClass, RoomManager.class, "RoomManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoomManager_AllRooms(), theHotelCorePackage.getRoom(), null, "allRooms", null, 0, -1, RoomManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

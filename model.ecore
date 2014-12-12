@@ -430,6 +430,10 @@
         <eParameters name="fromDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
         <eParameters name="toDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       </eOperations>
+      <eOperations name="createRoom" ordered="false" lowerBound="1" eType="#//HotelCore/Room">
+        <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//HotelCore/RoomType"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RoomManager" eSuperTypes="#//HotelService/IRoomManager">
       <eStructuralFeatures xsi:type="ecore:EReference" name="allRooms" ordered="false"

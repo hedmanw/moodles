@@ -1824,6 +1824,10 @@
           <element xmi:type="uml:Operation" href="model.uml#_ZUtLkHo7EeSvwbb0zOoNmg"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_1KPsoYIeEeStbpNcMqf5hQ"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_puhogIIkEeStbpNcMqf5hQ" type="3007">
+          <element xmi:type="uml:Operation" href="model.uml#_pugaYIIkEeStbpNcMqf5hQ"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_puhogYIkEeStbpNcMqf5hQ"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_j-kvCYIXEeStbpNcMqf5hQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_j-kvCoIXEeStbpNcMqf5hQ"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_j-kvC4IXEeStbpNcMqf5hQ"/>

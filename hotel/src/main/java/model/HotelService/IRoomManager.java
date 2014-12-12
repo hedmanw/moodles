@@ -36,4 +36,12 @@ public interface IRoomManager extends EObject {
 	 */
 	Map getRoomOccupancy(Date fromDate, Date toDate);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" roomNumberRequired="true" roomNumberOrdered="false" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @generated
+	 */
+	Room createRoom(int roomNumber, RoomType roomType);
+
 } // IRoomManager

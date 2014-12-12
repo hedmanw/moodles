@@ -172,7 +172,7 @@ public class RoomTypeManagerImpl extends MinimalEObjectImpl.Container implements
 			case HotelServicePackage.ROOM_TYPE_MANAGER___GET_ROOM_TYPES:
 				return getRoomTypes();
 			case HotelServicePackage.ROOM_TYPE_MANAGER___CREATE_ROOM_TYPE__STRING_DOUBLE:
-				return createRoomType((String) arguments.get(0), (Double) arguments.get(1));
+				return createRoomType((String)arguments.get(0), (Double)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Map;
 
+import model.HotelCore.HotelCoreFactory;
 import model.HotelCore.Room;
 import model.HotelCore.RoomType;
 
@@ -103,6 +104,19 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public Room createRoom(int roomNumber, RoomType roomType) {
+		Room room = HotelCoreFactory.eINSTANCE.createRoom();
+		room.setRoomNumber(roomNumber);
+		room.setRoomType(roomType);
+		getAllRooms().add(room);
+		return room;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -172,7 +186,9 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 			case HotelServicePackage.ROOM_MANAGER___GET_AVAILABLE_ROOMS__DATE_DATE_ELIST:
 				return getAvailableRooms((Date)arguments.get(0), (Date)arguments.get(1), (EList<RoomType>)arguments.get(2));
 			case HotelServicePackage.ROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE:
-				return getRoomOccupancy((Date)arguments.get(0), (Date)arguments.get(1));
+				return getRoomOccupancy((Date) arguments.get(0), (Date) arguments.get(1));
+			case HotelServicePackage.ROOM_MANAGER___CREATE_ROOM__INT_ROOMTYPE:
+				return createRoom((Integer) arguments.get(0), (RoomType) arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

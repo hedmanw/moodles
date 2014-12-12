@@ -284,13 +284,22 @@ public interface HotelServicePackage extends EPackage {
 	int IROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE = 1;
 
 	/**
+	 * The operation id for the '<em>Create Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM_MANAGER___CREATE_ROOM__INT_ROOMTYPE = 2;
+
+	/**
 	 * The number of operations of the '<em>IRoom Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_MANAGER_OPERATION_COUNT = 2;
+	int IROOM_MANAGER_OPERATION_COUNT = 3;
 
 	/**
 	 * The feature id for the '<em><b>All Rooms</b></em>' reference list.
@@ -327,6 +336,15 @@ public interface HotelServicePackage extends EPackage {
 	 * @ordered
 	 */
 	int ROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE = IROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE;
+
+	/**
+	 * The operation id for the '<em>Create Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MANAGER___CREATE_ROOM__INT_ROOMTYPE = IROOM_MANAGER___CREATE_ROOM__INT_ROOMTYPE;
 
 	/**
 	 * The number of operations of the '<em>Room Manager</em>' class.
@@ -1016,6 +1034,16 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIRoomManager__GetRoomOccupancy__Date_Date();
 
 	/**
+	 * Returns the meta object for the '{@link model.HotelService.IRoomManager#createRoom(int, model.HotelCore.RoomType) <em>Create Room</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Room</em>' operation.
+	 * @see model.HotelService.IRoomManager#createRoom(int, model.HotelCore.RoomType)
+	 * @generated
+	 */
+	EOperation getIRoomManager__CreateRoom__int_RoomType();
+
+	/**
 	 * Returns the meta object for class '{@link model.HotelService.RoomManager <em>Room Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1478,6 +1506,14 @@ public interface HotelServicePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE = eINSTANCE.getIRoomManager__GetRoomOccupancy__Date_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Room</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_MANAGER___CREATE_ROOM__INT_ROOMTYPE = eINSTANCE.getIRoomManager__CreateRoom__int_RoomType();
 
 		/**
 		 * The meta object literal for the '{@link model.HotelService.impl.RoomManagerImpl <em>Room Manager</em>}' class.
