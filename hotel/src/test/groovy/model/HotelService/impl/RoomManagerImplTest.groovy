@@ -1,26 +1,15 @@
 package model.HotelService.impl
 
+import base.HotelSpecification
 import util.EArrayList
 import model.HotelCore.RoomType
-import model.HotelService.HotelServiceFactory
-import model.HotelService.RoomManager
-import model.HotelService.RoomTypeManager
-import spock.lang.Specification
 
 /**
  * Created by wilhelm 2014-12-12.
  */
-class RoomManagerImplTest extends Specification {
+class RoomManagerImplTest extends HotelSpecification {
     Date today = new Date()
     Date tomorrow = new Date()+1
-    RoomManager roomManager
-    RoomTypeManager roomTypeManager
-
-    def setup() {
-        roomManager = HotelServiceFactory.eINSTANCE.createRoomManager()
-        roomTypeManager = HotelServiceFactory.eINSTANCE.createRoomTypeManager()
-    }
-
 
     def "getAvailableRooms is empty when there are no rooms in the hotel"() {
         setup:

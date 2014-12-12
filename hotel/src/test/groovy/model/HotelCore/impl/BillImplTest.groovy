@@ -11,7 +11,7 @@ class BillImplTest extends Specification {
     Bill bill;
 
     def setup() {
-        bill = HotelCoreFactory.eINSTANCE.createBill();
+        bill = HotelCoreFactory.eINSTANCE.createBill()
     }
 
     def "GetPaid"() {

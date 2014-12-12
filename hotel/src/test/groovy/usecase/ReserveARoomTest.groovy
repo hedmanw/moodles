@@ -1,22 +1,14 @@
+package usecase
+
+import base.HotelSpecification
 import util.EArrayList
 import model.HotelCore.Room
 import model.HotelCore.RoomType
-import model.HotelService.HotelServiceFactory
-import model.HotelService.RoomManager
-import model.HotelService.RoomTypeManager
-import spock.lang.Specification
 
 /**
  * Created by emmawestman on 14-12-12.
  */
-class ReserveARoomTest extends Specification {
-    RoomManager roomManager
-    RoomTypeManager roomTypeManager
-
-    def setup() {
-        roomManager = HotelServiceFactory.eINSTANCE.createRoomManager()
-        roomTypeManager = HotelServiceFactory.eINSTANCE.createRoomTypeManager()
-    }
+class ReserveARoomTest extends HotelSpecification {
 
     def "success scenario"() {
         setup:
