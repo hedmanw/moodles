@@ -9,6 +9,7 @@ import hotelCore.RoomType;
 import hotelCore.*;
 
 import hotelService.HotelServicePackage;
+import hotelService.ManagerSingleton;
 import hotelService.ReservationManager;
 
 import java.lang.reflect.InvocationTargetException;
@@ -85,6 +86,20 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public Reservation createReservation(Booking booking, Date fromDate, Date toDate, Room room, RoomType costCategory) {
+		if (toDate.before(fromDate)) {
+			throw new IllegalArgumentException("Illegal date range");
+		}
+
+		EList<Booking> bookings = ManagerSingleton.getInstance().BOOKING_MANAGER.getAllBookings();
+		for (Booking b : bookings) {
+			for (Reservation r : b.getReservation()) {
+				if (r.getRoom().getRoomNumber() == room.getRoomNumber()) {
+					// Check if dates overlap
+					throw new IllegalArgumentException("Room is occupied");
+				}
+			}
+		}
+
 		Reservation reservation = HotelCoreFactory.eINSTANCE.createReservation();
 		reservation.setCostCategory(costCategory);
 		reservation.setStartDay(fromDate.getTime());

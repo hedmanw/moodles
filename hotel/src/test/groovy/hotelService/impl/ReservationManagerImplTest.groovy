@@ -50,10 +50,38 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
     }
 
     def "make the same reservation twice"() {
+        when:
+        def booking = bookingManager.createBooking()
+        def res = reservationManager.createReservation(booking, today, tomorrow, one, a)
+        reservationManager.createReservation(booking, today, tomorrow, one, a)
 
+        then:
+        thrown(IllegalArgumentException)
+        booking.getReservation().size() == 1
+        booking.getReservation().get(0) == res
+        bookingManager.allBookings.size() == 1
+    }
+
+    def "room is blocked regardless of cost category"() {
+        when:
+        def booking = bookingManager.createBooking()
+        reservationManager.createReservation(booking, today, tomorrow, one, a)
+        reservationManager.createReservation(booking, today, tomorrow, one, b)
+
+        then:
+        thrown(IllegalArgumentException)
     }
 
     def "make a reservation that overlaps with another reservation"() {
 
+    }
+
+    def "silly dates thow"() {
+        when:
+        def booking = bookingManager.createBooking()
+        def first = reservationManager.createReservation(booking, tomorrow, today, one, a)
+
+        then:
+        thrown(IllegalArgumentException)
     }
 }
