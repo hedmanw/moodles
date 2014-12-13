@@ -2,6 +2,7 @@
  */
 package hotelCore;
 
+import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -162,12 +163,12 @@ public interface Reservation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Checked In</em>' attribute.
-	 * @see #setCheckedIn(long)
+	 * @see #setCheckedIn(Date)
 	 * @see hotelCore.HotelCorePackage#getReservation_CheckedIn()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	long getCheckedIn();
+	Date getCheckedIn();
 
 	/**
 	 * Sets the value of the '{@link hotelCore.Reservation#getCheckedIn <em>Checked In</em>}' attribute.
@@ -177,7 +178,7 @@ public interface Reservation extends EObject {
 	 * @see #getCheckedIn()
 	 * @generated
 	 */
-	void setCheckedIn(long value);
+	void setCheckedIn(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Checked Out</b></em>' attribute.
@@ -188,12 +189,12 @@ public interface Reservation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Checked Out</em>' attribute.
-	 * @see #setCheckedOut(long)
+	 * @see #setCheckedOut(Date)
 	 * @see hotelCore.HotelCorePackage#getReservation_CheckedOut()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	long getCheckedOut();
+	Date getCheckedOut();
 
 	/**
 	 * Sets the value of the '{@link hotelCore.Reservation#getCheckedOut <em>Checked Out</em>}' attribute.
@@ -203,7 +204,7 @@ public interface Reservation extends EObject {
 	 * @see #getCheckedOut()
 	 * @generated
 	 */
-	void setCheckedOut(long value);
+	void setCheckedOut(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Start Day</b></em>' attribute.
@@ -214,12 +215,12 @@ public interface Reservation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Start Day</em>' attribute.
-	 * @see #setStartDay(long)
+	 * @see #setStartDay(Date)
 	 * @see hotelCore.HotelCorePackage#getReservation_StartDay()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	long getStartDay();
+	Date getStartDay();
 
 	/**
 	 * Sets the value of the '{@link hotelCore.Reservation#getStartDay <em>Start Day</em>}' attribute.
@@ -229,7 +230,7 @@ public interface Reservation extends EObject {
 	 * @see #getStartDay()
 	 * @generated
 	 */
-	void setStartDay(long value);
+	void setStartDay(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>End Day</b></em>' attribute.
@@ -240,12 +241,12 @@ public interface Reservation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End Day</em>' attribute.
-	 * @see #setEndDay(long)
+	 * @see #setEndDay(Date)
 	 * @see hotelCore.HotelCorePackage#getReservation_EndDay()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	long getEndDay();
+	Date getEndDay();
 
 	/**
 	 * Sets the value of the '{@link hotelCore.Reservation#getEndDay <em>End Day</em>}' attribute.
@@ -255,7 +256,7 @@ public interface Reservation extends EObject {
 	 * @see #getEndDay()
 	 * @generated
 	 */
-	void setEndDay(long value);
+	void setEndDay(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Responsible</b></em>' attribute.

@@ -14,6 +14,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
@@ -108,7 +109,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long CHECKED_IN_EDEFAULT = 0L;
+	protected static final Date CHECKED_IN_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCheckedIn() <em>Checked In</em>}' attribute.
@@ -118,7 +119,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 * @ordered
 	 */
-	protected long checkedIn = CHECKED_IN_EDEFAULT;
+	protected Date checkedIn = CHECKED_IN_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCheckedOut() <em>Checked Out</em>}' attribute.
@@ -128,7 +129,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long CHECKED_OUT_EDEFAULT = 0L;
+	protected static final Date CHECKED_OUT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCheckedOut() <em>Checked Out</em>}' attribute.
@@ -138,7 +139,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 * @ordered
 	 */
-	protected long checkedOut = CHECKED_OUT_EDEFAULT;
+	protected Date checkedOut = CHECKED_OUT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getStartDay() <em>Start Day</em>}' attribute.
@@ -148,7 +149,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long START_DAY_EDEFAULT = 0L;
+	protected static final Date START_DAY_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getStartDay() <em>Start Day</em>}' attribute.
@@ -158,7 +159,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 * @ordered
 	 */
-	protected long startDay = START_DAY_EDEFAULT;
+	protected Date startDay = START_DAY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getEndDay() <em>End Day</em>}' attribute.
@@ -168,7 +169,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long END_DAY_EDEFAULT = 0L;
+	protected static final Date END_DAY_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getEndDay() <em>End Day</em>}' attribute.
@@ -178,7 +179,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 * @ordered
 	 */
-	protected long endDay = END_DAY_EDEFAULT;
+	protected Date endDay = END_DAY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getResponsible() <em>Responsible</em>}' attribute.
@@ -408,7 +409,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long getCheckedIn() {
+	public Date getCheckedIn() {
 		return checkedIn;
 	}
 
@@ -417,8 +418,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCheckedIn(long newCheckedIn) {
-		long oldCheckedIn = checkedIn;
+	public void setCheckedIn(Date newCheckedIn) {
+		Date oldCheckedIn = checkedIn;
 		checkedIn = newCheckedIn;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HotelCorePackage.RESERVATION__CHECKED_IN, oldCheckedIn, checkedIn));
@@ -429,7 +430,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long getCheckedOut() {
+	public Date getCheckedOut() {
 		return checkedOut;
 	}
 
@@ -438,8 +439,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCheckedOut(long newCheckedOut) {
-		long oldCheckedOut = checkedOut;
+	public void setCheckedOut(Date newCheckedOut) {
+		Date oldCheckedOut = checkedOut;
 		checkedOut = newCheckedOut;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HotelCorePackage.RESERVATION__CHECKED_OUT, oldCheckedOut, checkedOut));
@@ -450,7 +451,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long getStartDay() {
+	public Date getStartDay() {
 		return startDay;
 	}
 
@@ -459,8 +460,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStartDay(long newStartDay) {
-		long oldStartDay = startDay;
+	public void setStartDay(Date newStartDay) {
+		Date oldStartDay = startDay;
 		startDay = newStartDay;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HotelCorePackage.RESERVATION__START_DAY, oldStartDay, startDay));
@@ -471,7 +472,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long getEndDay() {
+	public Date getEndDay() {
 		return endDay;
 	}
 
@@ -480,8 +481,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEndDay(long newEndDay) {
-		long oldEndDay = endDay;
+	public void setEndDay(Date newEndDay) {
+		Date oldEndDay = endDay;
 		endDay = newEndDay;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HotelCorePackage.RESERVATION__END_DAY, oldEndDay, endDay));
@@ -670,16 +671,16 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 				setCostCategory((RoomType)newValue);
 				return;
 			case HotelCorePackage.RESERVATION__CHECKED_IN:
-				setCheckedIn((Long)newValue);
+				setCheckedIn((Date)newValue);
 				return;
 			case HotelCorePackage.RESERVATION__CHECKED_OUT:
-				setCheckedOut((Long)newValue);
+				setCheckedOut((Date)newValue);
 				return;
 			case HotelCorePackage.RESERVATION__START_DAY:
-				setStartDay((Long)newValue);
+				setStartDay((Date)newValue);
 				return;
 			case HotelCorePackage.RESERVATION__END_DAY:
-				setEndDay((Long)newValue);
+				setEndDay((Date)newValue);
 				return;
 			case HotelCorePackage.RESERVATION__RESPONSIBLE:
 				setResponsible((String)newValue);
@@ -755,13 +756,13 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 			case HotelCorePackage.RESERVATION__COST_CATEGORY:
 				return costCategory != null;
 			case HotelCorePackage.RESERVATION__CHECKED_IN:
-				return checkedIn != CHECKED_IN_EDEFAULT;
+				return CHECKED_IN_EDEFAULT == null ? checkedIn != null : !CHECKED_IN_EDEFAULT.equals(checkedIn);
 			case HotelCorePackage.RESERVATION__CHECKED_OUT:
-				return checkedOut != CHECKED_OUT_EDEFAULT;
+				return CHECKED_OUT_EDEFAULT == null ? checkedOut != null : !CHECKED_OUT_EDEFAULT.equals(checkedOut);
 			case HotelCorePackage.RESERVATION__START_DAY:
-				return startDay != START_DAY_EDEFAULT;
+				return START_DAY_EDEFAULT == null ? startDay != null : !START_DAY_EDEFAULT.equals(startDay);
 			case HotelCorePackage.RESERVATION__END_DAY:
-				return endDay != END_DAY_EDEFAULT;
+				return END_DAY_EDEFAULT == null ? endDay != null : !END_DAY_EDEFAULT.equals(endDay);
 			case HotelCorePackage.RESERVATION__RESPONSIBLE:
 				return RESPONSIBLE_EDEFAULT == null ? responsible != null : !RESPONSIBLE_EDEFAULT.equals(responsible);
 			case HotelCorePackage.RESERVATION__NUMBER_OF_GUESTS:

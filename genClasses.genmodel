@@ -198,22 +198,6 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//Reservation/endDay"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//Reservation/responsible"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//Reservation/numberOfGuests"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Reservation/getCheckedIn"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Reservation/setCheckedIn">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelCore.ecore#//Reservation/setCheckedIn/timestamp"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Reservation/getCheckedOut"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Reservation/setCheckedOut">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelCore.ecore#//Reservation/setCheckedOut/timestamp"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Reservation/setStartDay">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelCore.ecore#//Reservation/setStartDay/timestamp"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Reservation/getStartDay"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Reservation/setEndDay">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelCore.ecore#//Reservation/setEndDay/timestamp"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Reservation/getEndDay"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Reservation/getResponsible"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Reservation/setResponsible">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelCore.ecore#//Reservation/setResponsible/responsible"/>
@@ -253,7 +237,6 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference hotelCore.ecore#//Booking/reservation"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//Booking/bookingNbr"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Booking/getBookingNbr"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Booking/getReservations"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Booking/addReservation">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelCore.ecore#//Booking/addReservation/reservation"/>
       </genOperations>

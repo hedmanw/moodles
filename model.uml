@@ -125,9 +125,7 @@
     <message xmi:type="uml:Message" xmi:id="_C6H0sHyHEeSzd-4yXNUKkQ" name="getBooking_Message" messageSort="asynchCall" receiveEvent="_C6IbwXyHEeSzd-4yXNUKkQ" sendEvent="_C6IbwHyHEeSzd-4yXNUKkQ">
       <signature xmi:type="uml:Operation" href="hotelService.uml#_P2Z1A3oCEeShtIICY7OyLw"/>
     </message>
-    <message xmi:type="uml:Message" xmi:id="_UAj7wHyIEeSzd-4yXNUKkQ" name="getReservations_Message" messageSort="asynchCall" receiveEvent="_UAmYAHyIEeSzd-4yXNUKkQ" sendEvent="_UAlw8HyIEeSzd-4yXNUKkQ">
-      <signature xmi:type="uml:Operation" href="HotelCore.uml#_kDsR4Hn7EeSJYOaXazdB-A"/>
-    </message>
+    <message xmi:type="uml:Message" xmi:id="_UAj7wHyIEeSzd-4yXNUKkQ" name="getReservations_Message" messageSort="asynchCall" receiveEvent="_UAmYAHyIEeSzd-4yXNUKkQ" sendEvent="_UAlw8HyIEeSzd-4yXNUKkQ"/>
     <message xmi:type="uml:Message" xmi:id="_dc_Z8HyIEeSzd-4yXNUKkQ" name="setResponsible_Message" messageSort="asynchCall" receiveEvent="_ddBPIHyIEeSzd-4yXNUKkQ" sendEvent="_ddAoEHyIEeSzd-4yXNUKkQ">
       <signature xmi:type="uml:Operation" href="HotelCore.uml#_4LPAMHoBEeSJYOaXazdB-A"/>
     </message>
@@ -140,9 +138,7 @@
     <message xmi:type="uml:Message" xmi:id="_33HvYHyIEeSzd-4yXNUKkQ" name="addKeyCard_Message" messageSort="asynchCall" receiveEvent="_33KysHyIEeSzd-4yXNUKkQ" sendEvent="_33JkkHyIEeSzd-4yXNUKkQ">
       <signature xmi:type="uml:Operation" href="HotelCore.uml#_YjtxIHoHEeSJYOaXazdB-A"/>
     </message>
-    <message xmi:type="uml:Message" xmi:id="__p-nsHyIEeSzd-4yXNUKkQ" name="setCheckedIn_Message" messageSort="asynchCall" receiveEvent="__p_10XyIEeSzd-4yXNUKkQ" sendEvent="__p_10HyIEeSzd-4yXNUKkQ">
-      <signature xmi:type="uml:Operation" href="HotelCore.uml#_k2YrYHoBEeSJYOaXazdB-A"/>
-    </message>
+    <message xmi:type="uml:Message" xmi:id="__p-nsHyIEeSzd-4yXNUKkQ" name="setCheckedIn_Message" messageSort="asynchCall" receiveEvent="__p_10XyIEeSzd-4yXNUKkQ" sendEvent="__p_10HyIEeSzd-4yXNUKkQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_BRP0kHolEeSXTMmqtXqoMA" name="reserveARoom">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_vUCSAHotEeSXTMmqtXqoMA" name="r">
@@ -188,12 +184,8 @@
     <message xmi:type="uml:Message" xmi:id="_92UZEHyFEeSgHNlcR1u9fg" name="createReservation_Message" messageSort="asynchCall" receiveEvent="_92W1UHyFEeSgHNlcR1u9fg" sendEvent="_92VnMHyFEeSgHNlcR1u9fg">
       <signature xmi:type="uml:Operation" href="hotelService.uml#_ak6YYHn9EeShtIICY7OyLw"/>
     </message>
-    <message xmi:type="uml:Message" xmi:id="_N8hnoHyGEeSgHNlcR1u9fg" name="setStartDay_Message" messageSort="asynchCall" receiveEvent="_N8jc0HyGEeSgHNlcR1u9fg" sendEvent="_N8i1wHyGEeSgHNlcR1u9fg">
-      <signature xmi:type="uml:Operation" href="HotelCore.uml#_uW4xQHoBEeSJYOaXazdB-A"/>
-    </message>
-    <message xmi:type="uml:Message" xmi:id="_QQGz0HyGEeSgHNlcR1u9fg" name="setEndDay_Message" messageSort="asynchCall" receiveEvent="_QQIB8HyGEeSgHNlcR1u9fg" sendEvent="_QQHa4HyGEeSgHNlcR1u9fg">
-      <signature xmi:type="uml:Operation" href="HotelCore.uml#_xQkUIHoBEeSJYOaXazdB-A"/>
-    </message>
+    <message xmi:type="uml:Message" xmi:id="_N8hnoHyGEeSgHNlcR1u9fg" name="setStartDay_Message" messageSort="asynchCall" receiveEvent="_N8jc0HyGEeSgHNlcR1u9fg" sendEvent="_N8i1wHyGEeSgHNlcR1u9fg"/>
+    <message xmi:type="uml:Message" xmi:id="_QQGz0HyGEeSgHNlcR1u9fg" name="setEndDay_Message" messageSort="asynchCall" receiveEvent="_QQIB8HyGEeSgHNlcR1u9fg" sendEvent="_QQHa4HyGEeSgHNlcR1u9fg"/>
     <message xmi:type="uml:Message" xmi:id="_UUQlwHyGEeSgHNlcR1u9fg" name="addCostCategory_Message" messageSort="asynchCall" receiveEvent="_UUTCAHyGEeSgHNlcR1u9fg" sendEvent="_UUSa8HyGEeSgHNlcR1u9fg">
       <signature xmi:type="uml:Operation" href="HotelCore.uml#_WjQnMHoFEeSJYOaXazdB-A"/>
     </message>
@@ -393,9 +385,7 @@
     <message xmi:type="uml:Message" xmi:id="_hacm0Ho_EeSXTMmqtXqoMA" name="returnedCards_Message" messageSort="asynchCall" receiveEvent="_halJsHo_EeSXTMmqtXqoMA" sendEvent="_haecAHo_EeSXTMmqtXqoMA">
       <signature xmi:type="uml:Operation" href="keyCardService.uml#_d1ghgHlwEeSNP_QJ-oV69w"/>
     </message>
-    <message xmi:type="uml:Message" xmi:id="_udlQgHpAEeSXTMmqtXqoMA" name="setCheckedOut_Message" messageSort="asynchCall" receiveEvent="_udl3kXpAEeSXTMmqtXqoMA" sendEvent="_udl3kHpAEeSXTMmqtXqoMA">
-      <signature xmi:type="uml:Operation" href="HotelCore.uml#_p4zcYHoBEeSJYOaXazdB-A"/>
-    </message>
+    <message xmi:type="uml:Message" xmi:id="_udlQgHpAEeSXTMmqtXqoMA" name="setCheckedOut_Message" messageSort="asynchCall" receiveEvent="_udl3kXpAEeSXTMmqtXqoMA" sendEvent="_udl3kHpAEeSXTMmqtXqoMA"/>
     <message xmi:type="uml:Message" xmi:id="_M1174H-FEeSLM4agWErSNA" name="checkOutReservation_Message" messageSort="asynchCall" receiveEvent="_M14_MX-FEeSLM4agWErSNA" sendEvent="_M14_MH-FEeSLM4agWErSNA">
       <signature xmi:type="uml:Operation" href="hotelService.uml#_ctXRoHoIEeShtIICY7OyLw"/>
     </message>

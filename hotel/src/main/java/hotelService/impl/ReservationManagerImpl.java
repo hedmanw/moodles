@@ -94,19 +94,24 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 		for (Booking b : bookings) {
 			for (Reservation r : b.getReservation()) {
 				if (r.getRoom().getRoomNumber() == room.getRoomNumber()) {
-					// Check if dates overlap
-					throw new IllegalArgumentException("Room is occupied");
+					if (datesOverlap(fromDate, toDate, r.getStartDay(), r.getEndDay())) {
+						throw new IllegalArgumentException("Room is occupied");
+					}
 				}
 			}
 		}
 
 		Reservation reservation = HotelCoreFactory.eINSTANCE.createReservation();
 		reservation.setCostCategory(costCategory);
-		reservation.setStartDay(fromDate.getTime());
-		reservation.setEndDay(toDate.getTime());
+		reservation.setStartDay(fromDate);
+		reservation.setEndDay(toDate);
 		reservation.setRoom(room);
 		booking.getReservation().add(reservation);
 		return reservation;
+	}
+
+	private boolean datesOverlap(Date fromDate, Date toDate, Date baseStart, Date baseEnd) {
+		return !(baseEnd.before(fromDate) || baseStart.after(toDate));
 	}
 
 	/**

@@ -54,9 +54,9 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
     def "make two non-overlapping reservations for the same room"() {
         when:
         def booking1 = bookingManager.createBooking()
-        def res1 = reservationManager.createReservation(booking1, today, tomorrow, one, a)
+        def res1 = reservationManager.createReservation(booking1, baseStart, baseEnd, one, a)
         def booking2 = bookingManager.createBooking()
-        def res2 = reservationManager.createReservation(booking2, tomorrow+1, tomorrow+3, one, a)
+        def res2 = reservationManager.createReservation(booking2, secondStart, secondEnd, one, a)
 
         then:
         booking1.getReservation().size() == 1
@@ -64,6 +64,12 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
         booking2.getReservation().size() == 1
         booking2.getReservation().get(0) == res2
         bookingManager.allBookings.size() == 2
+
+        where:
+        baseStart << [today, today, tomorrow]
+        baseEnd << [tomorrow, tomorrow+1, tomorrow+1]
+        secondStart << [tomorrow+1, today-2, today-1]
+        secondEnd << [tomorrow+2, today-1, today]
     }
 
     def "make the same reservation twice"() {

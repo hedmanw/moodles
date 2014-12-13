@@ -224,19 +224,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Reservation> getReservations() {
+	public void addReservation(Reservation reservation) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void addReservation(Reservation reservation) {
-
 	}
 
 	/**
@@ -361,8 +352,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case HotelCorePackage.BOOKING___GET_RESERVATIONS:
-				return getReservations();
 			case HotelCorePackage.BOOKING___ADD_RESERVATION__RESERVATION:
 				addReservation((Reservation)arguments.get(0));
 				return null;

@@ -98,6 +98,10 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 		return matching;
 	}
 
+	private boolean datesOverlap(Date fromDate, Date toDate, Date baseStart, Date baseEnd) {
+		return !(baseEnd.before(fromDate) || baseStart.after(toDate));
+	}
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

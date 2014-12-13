@@ -1141,85 +1141,13 @@ public interface HotelCorePackage extends EPackage {
 	int RESERVATION_FEATURE_COUNT = 11;
 
 	/**
-	 * The operation id for the '<em>Get Checked In</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_CHECKED_IN = 0;
-
-	/**
-	 * The operation id for the '<em>Set Checked In</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___SET_CHECKED_IN__LONG = 1;
-
-	/**
-	 * The operation id for the '<em>Get Checked Out</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_CHECKED_OUT = 2;
-
-	/**
-	 * The operation id for the '<em>Set Checked Out</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___SET_CHECKED_OUT__LONG = 3;
-
-	/**
-	 * The operation id for the '<em>Set Start Day</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___SET_START_DAY__LONG = 4;
-
-	/**
-	 * The operation id for the '<em>Get Start Day</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_START_DAY = 5;
-
-	/**
-	 * The operation id for the '<em>Set End Day</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___SET_END_DAY__LONG = 6;
-
-	/**
-	 * The operation id for the '<em>Get End Day</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_END_DAY = 7;
-
-	/**
 	 * The operation id for the '<em>Get Responsible</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___GET_RESPONSIBLE = 8;
+	int RESERVATION___GET_RESPONSIBLE = 0;
 
 	/**
 	 * The operation id for the '<em>Set Responsible</em>' operation.
@@ -1228,7 +1156,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___SET_RESPONSIBLE__STRING = 9;
+	int RESERVATION___SET_RESPONSIBLE__STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Get Number Of Guests</em>' operation.
@@ -1237,7 +1165,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___GET_NUMBER_OF_GUESTS = 10;
+	int RESERVATION___GET_NUMBER_OF_GUESTS = 2;
 
 	/**
 	 * The operation id for the '<em>Set Number Of Guests</em>' operation.
@@ -1246,7 +1174,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___SET_NUMBER_OF_GUESTS__INT = 11;
+	int RESERVATION___SET_NUMBER_OF_GUESTS__INT = 3;
 
 	/**
 	 * The operation id for the '<em>Get Room</em>' operation.
@@ -1255,7 +1183,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___GET_ROOM = 12;
+	int RESERVATION___GET_ROOM = 4;
 
 	/**
 	 * The operation id for the '<em>Set Room</em>' operation.
@@ -1264,7 +1192,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___SET_ROOM__ROOM = 13;
+	int RESERVATION___SET_ROOM__ROOM = 5;
 
 	/**
 	 * The operation id for the '<em>Get Cost Category</em>' operation.
@@ -1273,7 +1201,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___GET_COST_CATEGORY = 14;
+	int RESERVATION___GET_COST_CATEGORY = 6;
 
 	/**
 	 * The operation id for the '<em>Add Cost Category</em>' operation.
@@ -1282,7 +1210,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___ADD_COST_CATEGORY__ROOMTYPE = 15;
+	int RESERVATION___ADD_COST_CATEGORY__ROOMTYPE = 7;
 
 	/**
 	 * The operation id for the '<em>Get Events</em>' operation.
@@ -1291,7 +1219,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___GET_EVENTS = 16;
+	int RESERVATION___GET_EVENTS = 8;
 
 	/**
 	 * The operation id for the '<em>Remove All Events</em>' operation.
@@ -1300,7 +1228,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___REMOVE_ALL_EVENTS = 17;
+	int RESERVATION___REMOVE_ALL_EVENTS = 9;
 
 	/**
 	 * The operation id for the '<em>Get Key Cards</em>' operation.
@@ -1309,7 +1237,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___GET_KEY_CARDS = 18;
+	int RESERVATION___GET_KEY_CARDS = 10;
 
 	/**
 	 * The operation id for the '<em>Add Key Card</em>' operation.
@@ -1318,7 +1246,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___ADD_KEY_CARD__KEYCARD = 19;
+	int RESERVATION___ADD_KEY_CARD__KEYCARD = 11;
 
 	/**
 	 * The operation id for the '<em>Remove Key Card</em>' operation.
@@ -1327,7 +1255,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___REMOVE_KEY_CARD__KEYCARD = 20;
+	int RESERVATION___REMOVE_KEY_CARD__KEYCARD = 12;
 
 	/**
 	 * The operation id for the '<em>Remove Cost Category</em>' operation.
@@ -1336,7 +1264,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___REMOVE_COST_CATEGORY__ROOMTYPE = 21;
+	int RESERVATION___REMOVE_COST_CATEGORY__ROOMTYPE = 13;
 
 	/**
 	 * The operation id for the '<em>Get Tab</em>' operation.
@@ -1345,7 +1273,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___GET_TAB = 22;
+	int RESERVATION___GET_TAB = 14;
 
 	/**
 	 * The number of operations of the '<em>Reservation</em>' class.
@@ -1354,7 +1282,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_OPERATION_COUNT = 23;
+	int RESERVATION_OPERATION_COUNT = 15;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.BookingImpl <em>Booking</em>}' class.
@@ -1421,22 +1349,13 @@ public interface HotelCorePackage extends EPackage {
 	int BOOKING___GET_BOOKING_NBR = 0;
 
 	/**
-	 * The operation id for the '<em>Get Reservations</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___GET_RESERVATIONS = 1;
-
-	/**
 	 * The operation id for the '<em>Add Reservation</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___ADD_RESERVATION__RESERVATION = 2;
+	int BOOKING___ADD_RESERVATION__RESERVATION = 1;
 
 	/**
 	 * The operation id for the '<em>Remove Reservation</em>' operation.
@@ -1445,7 +1364,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___REMOVE_RESERVATION__RESERVATION = 3;
+	int BOOKING___REMOVE_RESERVATION__RESERVATION = 2;
 
 	/**
 	 * The operation id for the '<em>Get Customer</em>' operation.
@@ -1454,7 +1373,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GET_CUSTOMER = 4;
+	int BOOKING___GET_CUSTOMER = 3;
 
 	/**
 	 * The operation id for the '<em>Change Customer</em>' operation.
@@ -1463,7 +1382,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___CHANGE_CUSTOMER__CUSTOMER = 5;
+	int BOOKING___CHANGE_CUSTOMER__CUSTOMER = 4;
 
 	/**
 	 * The operation id for the '<em>Get Bill</em>' operation.
@@ -1472,7 +1391,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GET_BILL = 6;
+	int BOOKING___GET_BILL = 5;
 
 	/**
 	 * The operation id for the '<em>Set Customer</em>' operation.
@@ -1481,7 +1400,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___SET_CUSTOMER__CUSTOMER = 7;
+	int BOOKING___SET_CUSTOMER__CUSTOMER = 6;
 
 	/**
 	 * The number of operations of the '<em>Booking</em>' class.
@@ -1490,7 +1409,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 8;
+	int BOOKING_OPERATION_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.ConferenceRoomImpl <em>Conference Room</em>}' class.
@@ -2530,86 +2449,6 @@ public interface HotelCorePackage extends EPackage {
 	EAttribute getReservation_NumberOfGuests();
 
 	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#getCheckedIn() <em>Get Checked In</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Checked In</em>' operation.
-	 * @see hotelCore.Reservation#getCheckedIn()
-	 * @generated
-	 */
-	EOperation getReservation__GetCheckedIn();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#setCheckedIn(long) <em>Set Checked In</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Checked In</em>' operation.
-	 * @see hotelCore.Reservation#setCheckedIn(long)
-	 * @generated
-	 */
-	EOperation getReservation__SetCheckedIn__long();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#getCheckedOut() <em>Get Checked Out</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Checked Out</em>' operation.
-	 * @see hotelCore.Reservation#getCheckedOut()
-	 * @generated
-	 */
-	EOperation getReservation__GetCheckedOut();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#setCheckedOut(long) <em>Set Checked Out</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Checked Out</em>' operation.
-	 * @see hotelCore.Reservation#setCheckedOut(long)
-	 * @generated
-	 */
-	EOperation getReservation__SetCheckedOut__long();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#setStartDay(long) <em>Set Start Day</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Start Day</em>' operation.
-	 * @see hotelCore.Reservation#setStartDay(long)
-	 * @generated
-	 */
-	EOperation getReservation__SetStartDay__long();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#getStartDay() <em>Get Start Day</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Start Day</em>' operation.
-	 * @see hotelCore.Reservation#getStartDay()
-	 * @generated
-	 */
-	EOperation getReservation__GetStartDay();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#setEndDay(long) <em>Set End Day</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set End Day</em>' operation.
-	 * @see hotelCore.Reservation#setEndDay(long)
-	 * @generated
-	 */
-	EOperation getReservation__SetEndDay__long();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#getEndDay() <em>Get End Day</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get End Day</em>' operation.
-	 * @see hotelCore.Reservation#getEndDay()
-	 * @generated
-	 */
-	EOperation getReservation__GetEndDay();
-
-	/**
 	 * Returns the meta object for the '{@link hotelCore.Reservation#getResponsible() <em>Get Responsible</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2822,16 +2661,6 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBooking__GetBookingNbr();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Booking#getReservations() <em>Get Reservations</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Reservations</em>' operation.
-	 * @see hotelCore.Booking#getReservations()
-	 * @generated
-	 */
-	EOperation getBooking__GetReservations();
 
 	/**
 	 * Returns the meta object for the '{@link hotelCore.Booking#addReservation(hotelCore.Reservation) <em>Add Reservation</em>}' operation.
@@ -3708,70 +3537,6 @@ public interface HotelCorePackage extends EPackage {
 		EAttribute RESERVATION__NUMBER_OF_GUESTS = eINSTANCE.getReservation_NumberOfGuests();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Checked In</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_CHECKED_IN = eINSTANCE.getReservation__GetCheckedIn();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Checked In</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___SET_CHECKED_IN__LONG = eINSTANCE.getReservation__SetCheckedIn__long();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Checked Out</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_CHECKED_OUT = eINSTANCE.getReservation__GetCheckedOut();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Checked Out</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___SET_CHECKED_OUT__LONG = eINSTANCE.getReservation__SetCheckedOut__long();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Start Day</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___SET_START_DAY__LONG = eINSTANCE.getReservation__SetStartDay__long();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Start Day</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_START_DAY = eINSTANCE.getReservation__GetStartDay();
-
-		/**
-		 * The meta object literal for the '<em><b>Set End Day</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___SET_END_DAY__LONG = eINSTANCE.getReservation__SetEndDay__long();
-
-		/**
-		 * The meta object literal for the '<em><b>Get End Day</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_END_DAY = eINSTANCE.getReservation__GetEndDay();
-
-		/**
 		 * The meta object literal for the '<em><b>Get Responsible</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3940,14 +3705,6 @@ public interface HotelCorePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING___GET_BOOKING_NBR = eINSTANCE.getBooking__GetBookingNbr();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Reservations</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___GET_RESERVATIONS = eINSTANCE.getBooking__GetReservations();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Reservation</b></em>' operation.
