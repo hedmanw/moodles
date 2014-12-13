@@ -224,7 +224,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="room" ordered="false" lowerBound="1"
         eType="#//Room"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="costCategory" ordered="false"
-        lowerBound="1" upperBound="-1" eType="#//RoomType"/>
+        lowerBound="1" eType="#//RoomType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkedIn" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkedOut" ordered="false"

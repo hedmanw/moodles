@@ -23,8 +23,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link BillImpl#getPaid <em>Paid</em>}</li>
- *   <li>{@link BillImpl#getGrandTotal <em>Grand Total</em>}</li>
+ *   <li>{@link hotelCore.impl.BillImpl#getPaid <em>Paid</em>}</li>
+ *   <li>{@link hotelCore.impl.BillImpl#getGrandTotal <em>Grand Total</em>}</li>
  * </ul>
  * </p>
  *

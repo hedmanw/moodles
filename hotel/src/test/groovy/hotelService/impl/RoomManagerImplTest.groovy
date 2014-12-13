@@ -1,4 +1,4 @@
-package se.chalmers.mdsd1415.group11.model.HotelService.impl
+package hotelService.impl
 
 import datastructs.EArrayList
 import hotelCore.Room
@@ -45,7 +45,7 @@ class RoomManagerImplTest extends HotelBaseSpecification {
     def "filters on date"() {
         setup:
         def booking = bookingManager.createBooking()
-//        reservationManager.createReservation(booking, today, tomorrow, )
+        reservationManager.createReservation(booking, today, tomorrow, one, a)
 
         when:
         def results = roomManager.getAvailableRooms(today, tomorrow, searchCriteria)

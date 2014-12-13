@@ -91,14 +91,14 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	protected Room room;
 
 	/**
-	 * The cached value of the '{@link #getCostCategory() <em>Cost Category</em>}' reference list.
+	 * The cached value of the '{@link #getCostCategory() <em>Cost Category</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCostCategory()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RoomType> costCategory;
+	protected RoomType costCategory;
 
 	/**
 	 * The default value of the '{@link #getCheckedIn() <em>Checked In</em>}' attribute.
@@ -370,11 +370,37 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<RoomType> getCostCategory() {
-		if (costCategory == null) {
-			costCategory = new EObjectResolvingEList<RoomType>(RoomType.class, this, HotelCorePackage.RESERVATION__COST_CATEGORY);
+	public RoomType getCostCategory() {
+		if (costCategory != null && costCategory.eIsProxy()) {
+			InternalEObject oldCostCategory = (InternalEObject)costCategory;
+			costCategory = (RoomType)eResolveProxy(oldCostCategory);
+			if (costCategory != oldCostCategory) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelCorePackage.RESERVATION__COST_CATEGORY, oldCostCategory, costCategory));
+			}
 		}
 		return costCategory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomType basicGetCostCategory() {
+		return costCategory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCostCategory(RoomType newCostCategory) {
+		RoomType oldCostCategory = costCategory;
+		costCategory = newCostCategory;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelCorePackage.RESERVATION__COST_CATEGORY, oldCostCategory, costCategory));
 	}
 
 	/**
@@ -600,7 +626,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 				if (resolve) return getRoom();
 				return basicGetRoom();
 			case HotelCorePackage.RESERVATION__COST_CATEGORY:
-				return getCostCategory();
+				if (resolve) return getCostCategory();
+				return basicGetCostCategory();
 			case HotelCorePackage.RESERVATION__CHECKED_IN:
 				return getCheckedIn();
 			case HotelCorePackage.RESERVATION__CHECKED_OUT:
@@ -640,8 +667,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 				setRoom((Room)newValue);
 				return;
 			case HotelCorePackage.RESERVATION__COST_CATEGORY:
-				getCostCategory().clear();
-				getCostCategory().addAll((Collection<? extends RoomType>)newValue);
+				setCostCategory((RoomType)newValue);
 				return;
 			case HotelCorePackage.RESERVATION__CHECKED_IN:
 				setCheckedIn((Long)newValue);
@@ -686,7 +712,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 				setRoom((Room)null);
 				return;
 			case HotelCorePackage.RESERVATION__COST_CATEGORY:
-				getCostCategory().clear();
+				setCostCategory((RoomType)null);
 				return;
 			case HotelCorePackage.RESERVATION__CHECKED_IN:
 				setCheckedIn(CHECKED_IN_EDEFAULT);
@@ -727,7 +753,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 			case HotelCorePackage.RESERVATION__ROOM:
 				return room != null;
 			case HotelCorePackage.RESERVATION__COST_CATEGORY:
-				return costCategory != null && !costCategory.isEmpty();
+				return costCategory != null;
 			case HotelCorePackage.RESERVATION__CHECKED_IN:
 				return checkedIn != CHECKED_IN_EDEFAULT;
 			case HotelCorePackage.RESERVATION__CHECKED_OUT:

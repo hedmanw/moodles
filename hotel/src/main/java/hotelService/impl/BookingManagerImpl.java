@@ -2,6 +2,10 @@
  */
 package hotelService.impl;
 
+import hotelCore.Bill;
+import hotelCore.Booking;
+import hotelCore.Customer;
+import hotelCore.Reservation;
 import hotelCore.*;
 
 import hotelService.BookingManager;
@@ -80,7 +84,10 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public Booking createBooking() {
-		return HotelCoreFactory.eINSTANCE.createBooking();
+		Booking booking = HotelCoreFactory.eINSTANCE.createBooking();
+		booking.setBookingNbr(getAllBookings().size()+1);
+		getAllBookings().add(booking);
+		return booking;
 	}
 
 	/**

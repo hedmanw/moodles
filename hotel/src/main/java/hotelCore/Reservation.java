@@ -128,20 +128,30 @@ public interface Reservation extends EObject {
 	void setRoom(Room value);
 
 	/**
-	 * Returns the value of the '<em><b>Cost Category</b></em>' reference list.
-	 * The list contents are of type {@link hotelCore.RoomType}.
+	 * Returns the value of the '<em><b>Cost Category</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cost Category</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cost Category</em>' reference list.
+	 * @return the value of the '<em>Cost Category</em>' reference.
+	 * @see #setCostCategory(RoomType)
 	 * @see hotelCore.HotelCorePackage#getReservation_CostCategory()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	EList<RoomType> getCostCategory();
+	RoomType getCostCategory();
+
+	/**
+	 * Sets the value of the '{@link hotelCore.Reservation#getCostCategory <em>Cost Category</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cost Category</em>' reference.
+	 * @see #getCostCategory()
+	 * @generated
+	 */
+	void setCostCategory(RoomType value);
 
 	/**
 	 * Returns the value of the '<em><b>Checked In</b></em>' attribute.

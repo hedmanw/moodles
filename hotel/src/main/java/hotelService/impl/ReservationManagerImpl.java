@@ -6,6 +6,7 @@ import hotelCore.Booking;
 import hotelCore.Reservation;
 import hotelCore.Room;
 import hotelCore.RoomType;
+import hotelCore.*;
 
 import hotelService.HotelServicePackage;
 import hotelService.ReservationManager;
@@ -81,12 +82,16 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Reservation createReservation(Booking booking, Date fromDate, Date toDate, Room room, RoomType costCategory) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Reservation reservation = HotelCoreFactory.eINSTANCE.createReservation();
+		reservation.setCostCategory(costCategory);
+		reservation.setStartDay(fromDate.getTime());
+		reservation.setEndDay(toDate.getTime());
+		reservation.setRoom(room);
+		booking.getReservation().add(reservation);
+		return reservation;
 	}
 
 	/**

@@ -2,6 +2,10 @@
  */
 package org.eclipse.uml2.types.impl;
 
+import hotelCore.HotelCorePackage;
+import hotelCore.impl.HotelCorePackageImpl;
+import hotelService.HotelServicePackage;
+import hotelService.impl.HotelServicePackageImpl;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -97,8 +101,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		hotelCore.impl.HotelCorePackageImpl theHotelCorePackage = (hotelCore.impl.HotelCorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(hotelCore.HotelCorePackage.eNS_URI) instanceof hotelCore.impl.HotelCorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(hotelCore.HotelCorePackage.eNS_URI) : hotelCore.HotelCorePackage.eINSTANCE);
-		hotelService.impl.HotelServicePackageImpl theHotelServicePackage = (hotelService.impl.HotelServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(hotelService.HotelServicePackage.eNS_URI) instanceof hotelService.impl.HotelServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(hotelService.HotelServicePackage.eNS_URI) : hotelService.HotelServicePackage.eINSTANCE);
+		HotelCorePackageImpl theHotelCorePackage = (HotelCorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI) instanceof HotelCorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI) : HotelCorePackage.eINSTANCE);
+		HotelServicePackageImpl theHotelServicePackage = (HotelServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) instanceof HotelServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) : HotelServicePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theTypesPackage.createPackageContents();

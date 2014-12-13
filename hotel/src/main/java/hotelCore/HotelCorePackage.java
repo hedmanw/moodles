@@ -1069,7 +1069,7 @@ public interface HotelCorePackage extends EPackage {
 	int RESERVATION__ROOM = 3;
 
 	/**
-	 * The feature id for the '<em><b>Cost Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Cost Category</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2453,10 +2453,10 @@ public interface HotelCorePackage extends EPackage {
 	EReference getReservation_Room();
 
 	/**
-	 * Returns the meta object for the reference list '{@link hotelCore.Reservation#getCostCategory <em>Cost Category</em>}'.
+	 * Returns the meta object for the reference '{@link hotelCore.Reservation#getCostCategory <em>Cost Category</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Cost Category</em>'.
+	 * @return the meta object for the reference '<em>Cost Category</em>'.
 	 * @see hotelCore.Reservation#getCostCategory()
 	 * @see #getReservation()
 	 * @generated
@@ -3652,7 +3652,7 @@ public interface HotelCorePackage extends EPackage {
 		EReference RESERVATION__ROOM = eINSTANCE.getReservation_Room();
 
 		/**
-		 * The meta object literal for the '<em><b>Cost Category</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Cost Category</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
