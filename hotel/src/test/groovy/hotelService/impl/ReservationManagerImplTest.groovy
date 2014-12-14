@@ -3,16 +3,11 @@ package hotelService.impl
 import hotelCore.Room
 import hotelCore.RoomType
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
-import spock.lang.Shared
 
 /**
  * Created by wilhelm 2014-12-12.
  */
 class ReservationManagerImplTest extends HotelBaseSpecification {
-    @Shared
-    Date today = new Date()
-    @Shared
-    Date tomorrow = new Date()+1
     RoomType a
     RoomType b
     Room one
@@ -23,8 +18,6 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
         b = roomTypeManager.createRoomType("B", 20)
         one = roomManager.createRoom(1, this.a)
         two = roomManager.createRoom(2, this.b)
-
-        bookingManager.allBookings.clear()
     }
 
     def "create a single reservation"() {

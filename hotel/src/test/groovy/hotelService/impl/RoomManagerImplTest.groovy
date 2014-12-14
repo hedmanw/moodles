@@ -3,14 +3,13 @@ package hotelService.impl
 import datastructs.EArrayList
 import hotelCore.Room
 import hotelCore.RoomType
+import org.eclipse.emf.common.util.EList
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
 /**
  * Created by wilhelm 2014-12-12.
  */
 class RoomManagerImplTest extends HotelBaseSpecification {
-    Date today = new Date()
-    Date tomorrow = new Date()+1
     RoomType a
     RoomType b
     Room one
@@ -45,17 +44,41 @@ class RoomManagerImplTest extends HotelBaseSpecification {
     def "filters on date"() {
         setup:
         def booking = bookingManager.createBooking()
-        reservationManager.createReservation(booking, today, tomorrow, one, a)
+        reservationManager.createReservation(booking, baseStart, baseEnd, one, a)
 
         when:
-        def results = roomManager.getAvailableRooms(today, tomorrow, searchCriteria)
+        def results = roomManager.getAvailableRooms(secondStart, secondEnd, searchCriteria)
 
         then:
         results.isEmpty()
+
+        where:
+        baseStart << [today, today, tomorrow]
+        baseEnd << [tomorrow, tomorrow+1, tomorrow+1]
+        secondStart << [today, tomorrow, today]
+        secondEnd << [tomorrow, tomorrow+1, tomorrow]
     }
 
     def "filters on multiple RoomType and date"() {
+        setup:
+        def booking = bookingManager.createBooking()
+        reservationManager.createReservation(booking, baseStart, baseEnd, one, a)
 
+        when:
+        EList<RoomType> twoRoomTypes = new EArrayList<>()
+        twoRoomTypes.add(a)
+        twoRoomTypes.add(b)
+        def results = roomManager.getAvailableRooms(secondStart, secondEnd, twoRoomTypes)
+
+        then:
+        results.size() == 1
+        results.get(0) == two
+
+        where:
+        baseStart << [today, today, tomorrow]
+        baseEnd << [tomorrow, tomorrow+1, tomorrow+1]
+        secondStart << [today, tomorrow, today]
+        secondEnd << [tomorrow, tomorrow+1, tomorrow]
     }
 
     def "silly dates throw"() {

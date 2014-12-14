@@ -18,7 +18,7 @@ class ReserveARoomTest extends HotelBaseSpecification {
         when:
         def searchCriteria = new EArrayList<RoomType>()
         searchCriteria.add(roomType)
-        def availableRooms = roomManager.getAvailableRooms(new Date(), new Date()+1, searchCriteria)
+        def availableRooms = roomManager.getAvailableRooms(today, tomorrow, searchCriteria)
 
         then:
         availableRooms.size() == 1

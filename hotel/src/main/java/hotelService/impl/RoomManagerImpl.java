@@ -3,11 +3,10 @@
 package hotelService.impl;
 
 import datastructs.EArrayList;
-import hotelCore.HotelCoreFactory;
-import hotelCore.Room;
-import hotelCore.RoomType;
+import hotelCore.*;
 
 import hotelService.HotelServicePackage;
+import hotelService.ManagerSingleton;
 import hotelService.RoomManager;
 
 import java.lang.reflect.InvocationTargetException;
@@ -90,9 +89,19 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 		}
 
 		EList<Room> matching = new EArrayList<>();
+		EList<Booking> bookings = ManagerSingleton.getInstance().BOOKING_MANAGER.getAllBookings();
 		for (Room room : getAllRooms()) {
 			if (roomTypes.contains(room.getRoomType())) {
 				matching.add(room);
+				for (Booking booking : bookings) {
+					for (Reservation reservation : booking.getReservation()) {
+						if (reservation.getRoom().getRoomNumber() == room.getRoomNumber()) {
+							if (datesOverlap(fromDate, toDate, reservation.getStartDay(), reservation.getEndDay())) {
+								matching.remove(room);
+							}
+						}
+					}
+				}
 			}
 		}
 		return matching;
