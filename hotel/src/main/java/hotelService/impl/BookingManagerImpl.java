@@ -95,7 +95,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Booking getBookingByNumber(long bookingId) {
+	public Booking getBookingByBookingNumber(int bookingNumber) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -117,7 +117,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList getBookingsByCustomer(Customer customer) {
+	public EList<Booking> getBookingsByCustomer(Customer customer) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -237,8 +237,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		switch (operationID) {
 			case HotelServicePackage.BOOKING_MANAGER___CREATE_BOOKING:
 				return createBooking();
-			case HotelServicePackage.BOOKING_MANAGER___GET_BOOKING_BY_NUMBER__LONG:
-				return getBookingByNumber((Long)arguments.get(0));
+			case HotelServicePackage.BOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__INT:
+				return getBookingByBookingNumber((Integer)arguments.get(0));
 			case HotelServicePackage.BOOKING_MANAGER___DELETE_BOOKING__BOOKING:
 				deleteBooking((Booking)arguments.get(0));
 				return null;

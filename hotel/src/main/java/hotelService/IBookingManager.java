@@ -33,10 +33,10 @@ public interface IBookingManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" bookingIdRequired="true" bookingIdOrdered="false"
+	 * @model required="true" ordered="false" bookingNumberRequired="true" bookingNumberOrdered="false"
 	 * @generated
 	 */
-	Booking getBookingByNumber(long bookingId);
+	Booking getBookingByBookingNumber(int bookingNumber);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -49,10 +49,10 @@ public interface IBookingManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" many="false" ordered="false" customerRequired="true" customerOrdered="false"
+	 * @model ordered="false" customerRequired="true" customerOrdered="false"
 	 * @generated
 	 */
-	EList getBookingsByCustomer(Customer customer);
+	EList<Booking> getBookingsByCustomer(Customer customer);
 
 	/**
 	 * <!-- begin-user-doc -->

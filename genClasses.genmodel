@@ -324,8 +324,8 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="hotelService.ecore#//IBookingManager">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IBookingManager/createBooking"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IBookingManager/getBookingByNumber">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IBookingManager/getBookingByNumber/bookingId"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IBookingManager/getBookingByBookingNumber">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IBookingManager/getBookingByBookingNumber/bookingNumber"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IBookingManager/deleteBooking">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IBookingManager/deleteBooking/booking"/>

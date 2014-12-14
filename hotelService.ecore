@@ -69,13 +69,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IBookingManager" abstract="true" interface="true">
     <eOperations name="createBooking" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Booking"/>
-    <eOperations name="getBookingByNumber" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Booking">
-      <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eOperations name="getBookingByBookingNumber" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Booking">
+      <eParameters name="bookingNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eOperations>
     <eOperations name="deleteBooking" ordered="false" lowerBound="1">
       <eParameters name="booking" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Booking"/>
     </eOperations>
-    <eOperations name="getBookingsByCustomer" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+    <eOperations name="getBookingsByCustomer" ordered="false" upperBound="-1" eType="ecore:EClass hotelCore.ecore#//Booking">
       <eParameters name="customer" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Customer"/>
     </eOperations>
     <eOperations name="setBookingCustomer" ordered="false" lowerBound="1">

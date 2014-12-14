@@ -3,6 +3,8 @@
 package hotelService.impl;
 
 import datastructs.EArrayList;
+import hotelCore.Room;
+import hotelCore.RoomType;
 import hotelCore.*;
 
 import hotelService.HotelServicePackage;

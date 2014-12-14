@@ -618,13 +618,13 @@ public interface HotelServicePackage extends EPackage {
 	int IBOOKING_MANAGER___CREATE_BOOKING = 0;
 
 	/**
-	 * The operation id for the '<em>Get Booking By Number</em>' operation.
+	 * The operation id for the '<em>Get Booking By Booking Number</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER___GET_BOOKING_BY_NUMBER__LONG = 1;
+	int IBOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__INT = 1;
 
 	/**
 	 * The operation id for the '<em>Delete Booking</em>' operation.
@@ -727,13 +727,13 @@ public interface HotelServicePackage extends EPackage {
 	int BOOKING_MANAGER___CREATE_BOOKING = IBOOKING_MANAGER___CREATE_BOOKING;
 
 	/**
-	 * The operation id for the '<em>Get Booking By Number</em>' operation.
+	 * The operation id for the '<em>Get Booking By Booking Number</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER___GET_BOOKING_BY_NUMBER__LONG = IBOOKING_MANAGER___GET_BOOKING_BY_NUMBER__LONG;
+	int BOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__INT = IBOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__INT;
 
 	/**
 	 * The operation id for the '<em>Delete Booking</em>' operation.
@@ -1246,14 +1246,14 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIBookingManager__CreateBooking();
 
 	/**
-	 * Returns the meta object for the '{@link hotelService.IBookingManager#getBookingByNumber(long) <em>Get Booking By Number</em>}' operation.
+	 * Returns the meta object for the '{@link hotelService.IBookingManager#getBookingByBookingNumber(int) <em>Get Booking By Booking Number</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Booking By Number</em>' operation.
-	 * @see hotelService.IBookingManager#getBookingByNumber(long)
+	 * @return the meta object for the '<em>Get Booking By Booking Number</em>' operation.
+	 * @see hotelService.IBookingManager#getBookingByBookingNumber(int)
 	 * @generated
 	 */
-	EOperation getIBookingManager__GetBookingByNumber__long();
+	EOperation getIBookingManager__GetBookingByBookingNumber__int();
 
 	/**
 	 * Returns the meta object for the '{@link hotelService.IBookingManager#deleteBooking(hotelCore.Booking) <em>Delete Booking</em>}' operation.
@@ -1691,12 +1691,12 @@ public interface HotelServicePackage extends EPackage {
 		EOperation IBOOKING_MANAGER___CREATE_BOOKING = eINSTANCE.getIBookingManager__CreateBooking();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Booking By Number</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Booking By Booking Number</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_MANAGER___GET_BOOKING_BY_NUMBER__LONG = eINSTANCE.getIBookingManager__GetBookingByNumber__long();
+		EOperation IBOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__INT = eINSTANCE.getIBookingManager__GetBookingByBookingNumber__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Delete Booking</b></em>' operation.

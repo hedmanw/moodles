@@ -464,7 +464,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingManager__GetBookingByNumber__long() {
+	public EOperation getIBookingManager__GetBookingByBookingNumber__int() {
 		return iBookingManagerEClass.getEOperations().get(1);
 	}
 
@@ -687,7 +687,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 
 		iBookingManagerEClass = createEClass(IBOOKING_MANAGER);
 		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___CREATE_BOOKING);
-		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___GET_BOOKING_BY_NUMBER__LONG);
+		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__INT);
 		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___DELETE_BOOKING__BOOKING);
 		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___GET_BOOKINGS_BY_CUSTOMER__CUSTOMER);
 		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___SET_BOOKING_CUSTOMER__BOOKING_CUSTOMER);
@@ -819,13 +819,13 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 
 		initEOperation(getIBookingManager__CreateBooking(), theHotelCorePackage.getBooking(), "createBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingManager__GetBookingByNumber__long(), theHotelCorePackage.getBooking(), "getBookingByNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getELong(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookingManager__GetBookingByBookingNumber__int(), theHotelCorePackage.getBooking(), "getBookingByBookingNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIBookingManager__DeleteBooking__Booking(), null, "deleteBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theHotelCorePackage.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingManager__GetBookingsByCustomer__Customer(), ecorePackage.getEEList(), "getBookingsByCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookingManager__GetBookingsByCustomer__Customer(), theHotelCorePackage.getBooking(), "getBookingsByCustomer", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theHotelCorePackage.getCustomer(), "customer", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIBookingManager__SetBookingCustomer__Booking_Customer(), null, "setBookingCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
