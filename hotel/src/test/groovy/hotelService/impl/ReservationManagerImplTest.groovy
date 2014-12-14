@@ -1,5 +1,7 @@
 package hotelService.impl
 
+import hotelCore.Booking
+import hotelCore.Reservation
 import hotelCore.Room
 import hotelCore.RoomType
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
@@ -111,5 +113,38 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
 
         then:
         thrown(IllegalArgumentException)
+    }
+
+    def "getCurrentReservation throws when none match"() {
+        when:
+        reservationManager.getCurrentReservationByRoomNumber(1337)
+
+        then:
+        thrown(IllegalArgumentException)
+    }
+
+    def "getCurrentReservation returns correct reservation"() {
+        setup:
+        Booking past = bookingManager.createBooking()
+        Booking current = bookingManager.createBooking()
+        Booking future = bookingManager.createBooking()
+
+        reservationManager.createReservation(future, tomorrow+3, tomorrow+5, one, a)
+
+        def p1 = reservationManager.createReservation(past, today-5, today-3, one, a)
+        p1.setCheckedIn(today-5)
+        p1.setCheckedOut(today-3)
+
+        def p2 = reservationManager.createReservation(past, today-5, today-3, two, b)
+        p2.setCheckedIn(today-5)
+
+        def reservation = reservationManager.createReservation(current, today-1, tomorrow+1, one, a)
+        reservation.setCheckedIn(today-1)
+
+        def c2 = reservationManager.createReservation(current, today-1, tomorrow+1, two, b)
+        c2.setCheckedIn(today-1)
+
+        expect:
+        reservationManager.getCurrentReservationByRoomNumber(1) == reservation
     }
 }

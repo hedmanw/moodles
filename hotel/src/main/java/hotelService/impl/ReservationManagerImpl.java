@@ -16,6 +16,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -161,12 +162,29 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Reservation getCurrentReservationByRoomNumber(int roomNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		List<Booking> bookings = ManagerSingleton.getInstance().BOOKING_MANAGER.getAllBookings();
+		for (Booking booking : bookings) {
+			for (Reservation reservation : booking.getReservation()) {
+				if (reservation.getRoom().getRoomNumber() == roomNumber && isCurrentlyStaying(reservation)) {
+					return reservation;
+				}
+			}
+		}
+
+		throw new IllegalArgumentException("None found");
+	}
+
+	private boolean isCurrentlyStaying(Reservation reservation) {
+		Date now = new Date();
+		if (reservation.getCheckedIn() != null && reservation.getCheckedOut() == null) {
+			if (reservation.getStartDay().before(now)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
