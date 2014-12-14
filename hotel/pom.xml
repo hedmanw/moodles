@@ -1,12 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>se.chalmers.mdsd1415.group11</groupId>
+    <groupId>se.chalmers.cse.mdsd1415.group11</groupId>
     <artifactId>hotel-system</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>Best hotel system!</name>
-    <url>https://github.com/hedmanw/moodles</url>
+    <name>Las Vegas Hotel System</name>
 
     <build>
         <!-- Mandatory plugins for using Spock -->
@@ -54,6 +53,41 @@
                     </dependency>
                 </dependencies>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>installCustomerRequires</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>se.chalmers.cse.mdsd1415.banking</groupId>
+                            <artifactId>customerRequires</artifactId>
+                            <version>1.0</version>
+                            <packaging>jar</packaging>
+                            <file>${basedir}/lib/customerRequires.jar</file>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>installAdminRequires</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>se.chalmers.cse.mdsd1415.banking</groupId>
+                            <artifactId>administratorRequires</artifactId>
+                            <version>1.0</version>
+                            <packaging>jar</packaging>
+                            <file>${basedir}/lib/administratorRequires.jar</file>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <dependencies>
@@ -72,6 +106,16 @@
             <groupId>org.eclipse.emf</groupId>
             <artifactId>org.eclipse.emf.ecore</artifactId>
             <version>2.10.1</version>
+        </dependency>
+        <dependency>
+            <groupId>se.chalmers.cse.mdsd1415.banking</groupId>
+            <artifactId>administratorRequires</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>se.chalmers.cse.mdsd1415.banking</groupId>
+            <artifactId>customerRequires</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
     <repositories>
