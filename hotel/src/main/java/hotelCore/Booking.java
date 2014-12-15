@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link hotelCore.Booking#getBill <em>Bill</em>}</li>
  *   <li>{@link hotelCore.Booking#getCustomer <em>Customer</em>}</li>
  *   <li>{@link hotelCore.Booking#getReservations <em>Reservations</em>}</li>
- *   <li>{@link hotelCore.Booking#getBookingNbr <em>Booking Nbr</em>}</li>
+ *   <li>{@link hotelCore.Booking#getBookingUUID <em>Booking UUID</em>}</li>
  * </ul>
  * </p>
  *
@@ -95,30 +95,30 @@ public interface Booking extends EObject {
 	EList<Reservation> getReservations();
 
 	/**
-	 * Returns the value of the '<em><b>Booking Nbr</b></em>' attribute.
+	 * Returns the value of the '<em><b>Booking UUID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Booking Nbr</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Booking UUID</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Booking Nbr</em>' attribute.
-	 * @see #setBookingNbr(int)
-	 * @see hotelCore.HotelCorePackage#getBooking_BookingNbr()
+	 * @return the value of the '<em>Booking UUID</em>' attribute.
+	 * @see #setBookingUUID(String)
+	 * @see hotelCore.HotelCorePackage#getBooking_BookingUUID()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	int getBookingNbr();
+	String getBookingUUID();
 
 	/**
-	 * Sets the value of the '{@link hotelCore.Booking#getBookingNbr <em>Booking Nbr</em>}' attribute.
+	 * Sets the value of the '{@link hotelCore.Booking#getBookingUUID <em>Booking UUID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Booking Nbr</em>' attribute.
-	 * @see #getBookingNbr()
+	 * @param value the new value of the '<em>Booking UUID</em>' attribute.
+	 * @see #getBookingUUID()
 	 * @generated
 	 */
-	void setBookingNbr(int value);
+	void setBookingUUID(String value);
 
 	/**
 	 * <!-- begin-user-doc -->

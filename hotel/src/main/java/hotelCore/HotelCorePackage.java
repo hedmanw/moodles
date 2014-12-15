@@ -1322,13 +1322,13 @@ public interface HotelCorePackage extends EPackage {
 	int BOOKING__RESERVATIONS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Booking Nbr</b></em>' attribute.
+	 * The feature id for the '<em><b>Booking UUID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__BOOKING_NBR = 3;
+	int BOOKING__BOOKING_UUID = 3;
 
 	/**
 	 * The number of structural features of the '<em>Booking</em>' class.
@@ -1340,22 +1340,13 @@ public interface HotelCorePackage extends EPackage {
 	int BOOKING_FEATURE_COUNT = 4;
 
 	/**
-	 * The operation id for the '<em>Get Booking Nbr</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___GET_BOOKING_NBR = 0;
-
-	/**
 	 * The operation id for the '<em>Add Reservation</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___ADD_RESERVATION__RESERVATION = 1;
+	int BOOKING___ADD_RESERVATION__RESERVATION = 0;
 
 	/**
 	 * The operation id for the '<em>Remove Reservation</em>' operation.
@@ -1364,7 +1355,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___REMOVE_RESERVATION__RESERVATION = 2;
+	int BOOKING___REMOVE_RESERVATION__RESERVATION = 1;
 
 	/**
 	 * The operation id for the '<em>Get Customer</em>' operation.
@@ -1373,7 +1364,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GET_CUSTOMER = 3;
+	int BOOKING___GET_CUSTOMER = 2;
 
 	/**
 	 * The operation id for the '<em>Change Customer</em>' operation.
@@ -1382,7 +1373,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___CHANGE_CUSTOMER__CUSTOMER = 4;
+	int BOOKING___CHANGE_CUSTOMER__CUSTOMER = 3;
 
 	/**
 	 * The operation id for the '<em>Get Bill</em>' operation.
@@ -1391,7 +1382,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GET_BILL = 5;
+	int BOOKING___GET_BILL = 4;
 
 	/**
 	 * The operation id for the '<em>Set Customer</em>' operation.
@@ -1400,7 +1391,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___SET_CUSTOMER__CUSTOMER = 6;
+	int BOOKING___SET_CUSTOMER__CUSTOMER = 5;
 
 	/**
 	 * The number of operations of the '<em>Booking</em>' class.
@@ -1409,7 +1400,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 7;
+	int BOOKING_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.ConferenceRoomImpl <em>Conference Room</em>}' class.
@@ -2642,25 +2633,15 @@ public interface HotelCorePackage extends EPackage {
 	EReference getBooking_Reservations();
 
 	/**
-	 * Returns the meta object for the attribute '{@link hotelCore.Booking#getBookingNbr <em>Booking Nbr</em>}'.
+	 * Returns the meta object for the attribute '{@link hotelCore.Booking#getBookingUUID <em>Booking UUID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Booking Nbr</em>'.
-	 * @see hotelCore.Booking#getBookingNbr()
+	 * @return the meta object for the attribute '<em>Booking UUID</em>'.
+	 * @see hotelCore.Booking#getBookingUUID()
 	 * @see #getBooking()
 	 * @generated
 	 */
-	EAttribute getBooking_BookingNbr();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Booking#getBookingNbr() <em>Get Booking Nbr</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Booking Nbr</em>' operation.
-	 * @see hotelCore.Booking#getBookingNbr()
-	 * @generated
-	 */
-	EOperation getBooking__GetBookingNbr();
+	EAttribute getBooking_BookingUUID();
 
 	/**
 	 * Returns the meta object for the '{@link hotelCore.Booking#addReservation(hotelCore.Reservation) <em>Add Reservation</em>}' operation.
@@ -3691,20 +3672,12 @@ public interface HotelCorePackage extends EPackage {
 		EReference BOOKING__RESERVATIONS = eINSTANCE.getBooking_Reservations();
 
 		/**
-		 * The meta object literal for the '<em><b>Booking Nbr</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Booking UUID</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BOOKING__BOOKING_NBR = eINSTANCE.getBooking_BookingNbr();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Booking Nbr</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___GET_BOOKING_NBR = eINSTANCE.getBooking__GetBookingNbr();
+		EAttribute BOOKING__BOOKING_UUID = eINSTANCE.getBooking_BookingUUID();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Reservation</b></em>' operation.
