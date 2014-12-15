@@ -1618,7 +1618,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MZqY1Ho4EeSXTMmqtXqoMA"/>
       </children>
       <element xmi:type="uml:Interaction" href="model.uml#_LA4A8Ho4EeSXTMmqtXqoMA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MZqY1Xo4EeSXTMmqtXqoMA" x="4" y="40" width="1412" height="674"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MZqY1Xo4EeSXTMmqtXqoMA" x="4" y="40" width="1412" height="682"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_MZqY1no4EeSXTMmqtXqoMA" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_MZqY13o4EeSXTMmqtXqoMA"/>
@@ -1775,21 +1775,6 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__vgKA4RhEeS5mMjnZSMSOw" points="[1, 2, -389, 1]$[390, -14, 0, -15]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__vsXQIRhEeS5mMjnZSMSOw" id="(1.0,0.48135593220338985)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__vsXQYRhEeS5mMjnZSMSOw" id="(1.0,0.4866220735785953){R}"/>
-    </edges>
-    <edges xmi:type="notation:Edge" xmi:id="_xLApAIRlEeSGq4utU8sdOQ" type="4004" source="_O3-O4H-JEeSLM4agWErSNA" target="_QbmA8H-NEeSLM4agWErSNA">
-      <children xmi:type="notation:DecorationNode" xmi:id="_xLApBIRlEeSGq4utU8sdOQ" type="6002">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_xLApBYRlEeSGq4utU8sdOQ" x="1" y="-13"/>
-      </children>
-      <children xmi:type="notation:DecorationNode" xmi:id="_xLApBoRlEeSGq4utU8sdOQ" type="6009">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_xLApB4RlEeSGq4utU8sdOQ" x="1" y="-33"/>
-      </children>
-      <styles xmi:type="notation:RoutingStyle" xmi:id="_xLApAYRlEeSGq4utU8sdOQ"/>
-      <styles xmi:type="notation:FontStyle" xmi:id="_xLApAoRlEeSGq4utU8sdOQ"/>
-      <styles xmi:type="notation:LineStyle" xmi:id="_xLApCIRlEeSGq4utU8sdOQ"/>
-      <element xmi:type="uml:Message" href="model.uml#_xJDhMIRlEeSGq4utU8sdOQ"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xLApA4RlEeSGq4utU8sdOQ" points="[1, 2, -193, 0]$[194, -134, 0, -136]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xLdU8IRlEeSGq4utU8sdOQ" id="(1.0,0.9118165784832452)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xLdU8YRlEeSGq4utU8sdOQ" id="(1.0,0.9206349206349206){R}"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_I2WpIHpDEeSXTMmqtXqoMA" type="PapyrusUMLSequenceDiagram" name="SeqDiagramRoomOccupancy" measurementUnit="Pixel">
