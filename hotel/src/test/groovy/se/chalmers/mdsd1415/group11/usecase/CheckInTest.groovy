@@ -7,15 +7,18 @@ import se.chalmers.mdsd1415.group11.HotelBaseSpecification
  * Created by elin on 2014-12-15.
  */
 class CheckInTest extends HotelBaseSpecification{
-    private roomType = roomTypeManager.createRoomType("Double room", 1000)
-    private room = roomManager.createRoom(501, this.roomType)
-    def booking = bookingManager.createBooking()
-    private reservation = reservationManager.createReservation(booking, today, today+4, room, roomType)
+    def roomType
+    def room
+    def booking
+    def reservation
 
     def setup() {
+        roomType = roomTypeManager.createRoomType("Double room", 1000)
+        room = roomManager.createRoom(501, roomType)
+        booking = bookingManager.createBooking()
+        reservation = reservationManager.createReservation(booking, today, today + 4, room, roomType)
         def customer = customerManager.createCustomer("123", "Mona")
         booking.setCustomer(customer)
-        ((SleepRoom)room).setNbrOfBeds(2)
 
     }
 

@@ -94,7 +94,7 @@ public class RoomTypeManagerImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public RoomType createRoomType(String name, double costPerNight) {
 		for (RoomType roomType : allRoomTypes) {
-			if (roomType.getName() == name) {
+			if (roomType.getName().equals(name)) {
 				throw new IllegalArgumentException("Room type name already exists");
 			}
 		}
