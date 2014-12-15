@@ -8,7 +8,6 @@ import se.chalmers.mdsd1415.group11.HotelBaseSpecification
  */
 class CheckOutTest extends HotelBaseSpecification {
     def setup() {
-        def bookingManager = ManagerSingleton.instance.BOOKING_MANAGER
         def roomType = roomTypeManager.createRoomType("Double room", 1000)
         def room = roomManager.createRoom(501, roomType)
         def booking = bookingManager.createBooking()
