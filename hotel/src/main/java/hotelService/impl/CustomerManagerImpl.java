@@ -3,6 +3,7 @@
 package hotelService.impl;
 
 import hotelCore.Customer;
+import hotelCore.HotelCoreFactory;
 import hotelCore.PaymentDetails;
 
 import hotelService.CustomerManager;
@@ -78,12 +79,15 @@ public class CustomerManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Customer getCustomerByIdNumber(String idNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (Customer allCustomer : allCustomers) {
+			if (allCustomer.getId().equals(idNumber)) {
+				return allCustomer;
+			}
+		}
+		return null;
 	}
 
 	/**
@@ -111,12 +115,14 @@ public class CustomerManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Customer createCustomer(String idNumber, String name) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Customer customer = HotelCoreFactory.eINSTANCE.createCustomer();
+		customer.setName(name);
+		customer.setId(idNumber);
+		getAllCustomers().add(customer);
+		return customer;
 	}
 
 	/**
