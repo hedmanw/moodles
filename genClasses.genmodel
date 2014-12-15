@@ -375,7 +375,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//ICustomerManager/createCustomer/name"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//ICustomerManager/setPaymentDetailsForCustomer">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//ICustomerManager/setPaymentDetailsForCustomer/customerId"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//ICustomerManager/setPaymentDetailsForCustomer/customer"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//ICustomerManager/setPaymentDetailsForCustomer/firstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//ICustomerManager/setPaymentDetailsForCustomer/lastName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//ICustomerManager/setPaymentDetailsForCustomer/ccNumber"/>

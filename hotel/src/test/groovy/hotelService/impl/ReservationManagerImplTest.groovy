@@ -75,7 +75,6 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
         thrown(IllegalArgumentException)
         booking.getReservations().size() == 1
         booking.getReservations().get(0) == res
-        bookingManager.allBookings.size() == 1
     }
 
     def "room is blocked regardless of cost category"() {

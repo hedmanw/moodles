@@ -280,7 +280,7 @@
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_-4Y_QHoCEeShtIICY7OyLw" name="setPaymentDetailsForCustomer">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_CaAr4HoDEeShtIICY7OyLw" name="customerId">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_CaAr4HoDEeShtIICY7OyLw" name="customer">
         <type xmi:type="uml:Class" href="HotelCore.uml#_J3LAQHlvEeSJYOaXazdB-A"/>
       </ownedParameter>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_D9XVAHoDEeShtIICY7OyLw" name="firstName">
@@ -301,8 +301,8 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_MSQjYHoDEeShtIICY7OyLw" name="expireYear">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_WBWe4HoDEeShtIICY7OyLw" name="paymentDetailsId" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_WBWe4HoDEeShtIICY7OyLw" name="paymentDetails" direction="return">
+        <type xmi:type="uml:Class" href="HotelCore.uml#_obLVIHlvEeSJYOaXazdB-A"/>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_YBiN8HoDEeShtIICY7OyLw" name="getPaymentDetailsByCustomer">

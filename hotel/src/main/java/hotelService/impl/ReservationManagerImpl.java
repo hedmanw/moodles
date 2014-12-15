@@ -2,6 +2,7 @@
  */
 package hotelService.impl;
 
+import datastructs.EArrayList;
 import hotelCore.Booking;
 import hotelCore.Reservation;
 import hotelCore.Room;
@@ -92,7 +93,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 			throw new IllegalArgumentException("Illegal date range");
 		}
 
-		EList<Booking> bookings = ManagerSingleton.getInstance().BOOKING_MANAGER.getAllBookings();
+		EList<Booking> bookings = new EArrayList<>(ManagerSingleton.getInstance().BOOKING_MANAGER.getAllBookings());
 		bookings.add(booking);
 		for (Booking b : bookings) {
 			for (Reservation r : b.getReservations()) {

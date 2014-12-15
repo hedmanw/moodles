@@ -119,8 +119,8 @@
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="setPaymentDetailsForCustomer" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
-      <eParameters name="customerId" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Customer"/>
+        eType="ecore:EClass hotelCore.ecore#//PaymentDetails">
+      <eParameters name="customer" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Customer"/>
       <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>

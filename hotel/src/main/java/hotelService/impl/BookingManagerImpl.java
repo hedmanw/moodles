@@ -184,6 +184,11 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public boolean confirmBooking(Booking booking) {
+		for (Booking existingBooking : allBookings) {
+			if (existingBooking.getBookingUUID().equals(booking.getBookingUUID())) {
+				throw new RuntimeException("Tried to confirm duplicate booking number.");
+			}
+		}
 		Customer customer = booking.getCustomer();
 		if (customer != null) {
 			PaymentDetails p = customer.getPaymentDetails();
