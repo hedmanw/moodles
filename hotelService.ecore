@@ -88,9 +88,8 @@
     <eOperations name="getBill" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Bill">
       <eParameters name="booking" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Booking"/>
     </eOperations>
-    <eOperations name="getBookingByReservation" ordered="false" lowerBound="1">
+    <eOperations name="getBookingByReservation" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Booking">
       <eParameters name="reservation" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Reservation"/>
-      <eParameters name="booking" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Booking"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingManager" eSuperTypes="#//IBookingManager">

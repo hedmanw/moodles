@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link hotelCore.Booking#getBill <em>Bill</em>}</li>
  *   <li>{@link hotelCore.Booking#getCustomer <em>Customer</em>}</li>
- *   <li>{@link hotelCore.Booking#getReservation <em>Reservation</em>}</li>
- *   <li>{@link hotelCore.Booking#getBookingUUID <em>Booking UUID</em>}</li>
+ *   <li>{@link hotelCore.Booking#getReservations <em>Reservations</em>}</li>
+ *   <li>{@link hotelCore.Booking#getBookingNbr <em>Booking Nbr</em>}</li>
  * </ul>
  * </p>
  *
@@ -79,46 +79,46 @@ public interface Booking extends EObject {
 	void setCustomer(Customer value);
 
 	/**
-	 * Returns the value of the '<em><b>Reservation</b></em>' reference list.
+	 * Returns the value of the '<em><b>Reservations</b></em>' reference list.
 	 * The list contents are of type {@link hotelCore.Reservation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Reservation</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Reservations</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reservation</em>' reference list.
-	 * @see hotelCore.HotelCorePackage#getBooking_Reservation()
+	 * @return the value of the '<em>Reservations</em>' reference list.
+	 * @see hotelCore.HotelCorePackage#getBooking_Reservations()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	EList<Reservation> getReservation();
+	EList<Reservation> getReservations();
 
 	/**
-	 * Returns the value of the '<em><b>Booking UUID</b></em>' attribute.
+	 * Returns the value of the '<em><b>Booking Nbr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Booking UUID</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Booking Nbr</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Booking UUID</em>' attribute.
-	 * @see #setBookingUUID(String)
-	 * @see hotelCore.HotelCorePackage#getBooking_BookingUUID()
+	 * @return the value of the '<em>Booking Nbr</em>' attribute.
+	 * @see #setBookingNbr(int)
+	 * @see hotelCore.HotelCorePackage#getBooking_BookingNbr()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	String getBookingUUID();
+	int getBookingNbr();
 
 	/**
-	 * Sets the value of the '{@link hotelCore.Booking#getBookingUUID <em>Booking UUID</em>}' attribute.
+	 * Sets the value of the '{@link hotelCore.Booking#getBookingNbr <em>Booking Nbr</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Booking UUID</em>' attribute.
-	 * @see #getBookingUUID()
+	 * @param value the new value of the '<em>Booking Nbr</em>' attribute.
+	 * @see #getBookingNbr()
 	 * @generated
 	 */
-	void setBookingUUID(String value);
+	void setBookingNbr(int value);
 
 	/**
 	 * <!-- begin-user-doc -->

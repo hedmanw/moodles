@@ -96,7 +96,7 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 			if (roomTypes.contains(room.getRoomType())) {
 				matching.add(room);
 				for (Booking booking : bookings) {
-					for (Reservation reservation : booking.getReservation()) {
+					for (Reservation reservation : booking.getReservations()) {
 						if (reservation.getRoom().getRoomNumber() == room.getRoomNumber()) {
 							if (datesOverlap(fromDate, toDate, reservation.getStartDay(), reservation.getEndDay())) {
 								matching.remove(room);

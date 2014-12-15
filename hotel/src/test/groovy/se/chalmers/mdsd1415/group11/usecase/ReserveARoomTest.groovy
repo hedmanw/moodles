@@ -35,7 +35,7 @@ class ReserveARoomTest extends HotelBaseSpecification {
         reservation.getEndDay()  == tomorrow
         reservation.getRoom() == room
         reservation.getRoom().getRoomType() == roomType
-        booking.getReservation().size() == 1
-        booking.getReservation().get(0) == reservation
+        booking.getReservations().size() == 1
+        booking.getReservations().get(0) == reservation
     }
 }

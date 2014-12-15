@@ -160,7 +160,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBookingByReservation(Reservation reservation, Booking booking) {
+	public Booking getBookingByReservation(Reservation reservation) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -250,9 +250,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				return isBillPaidInFull((Booking)arguments.get(0));
 			case HotelServicePackage.BOOKING_MANAGER___GET_BILL__BOOKING:
 				return getBill((Booking)arguments.get(0));
-			case HotelServicePackage.BOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION_BOOKING:
-				getBookingByReservation((Reservation)arguments.get(0), (Booking)arguments.get(1));
-				return null;
+			case HotelServicePackage.BOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION:
+				return getBookingByReservation((Reservation)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

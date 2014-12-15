@@ -419,7 +419,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8A-TMXlzEeSJYOaXazdB-A" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8A-TMnlzEeSJYOaXazdB-A" value="1"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_TuMWcHl0EeSJYOaXazdB-A" name="reservation" visibility="private" type="_eUmw8HlzEeSJYOaXazdB-A" association="_TuM9gHl0EeSJYOaXazdB-A">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TuMWcHl0EeSJYOaXazdB-A" name="reservations" visibility="private" type="_eUmw8HlzEeSJYOaXazdB-A" association="_TuM9gHl0EeSJYOaXazdB-A">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TuMWcXl0EeSJYOaXazdB-A" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TuMWcnl0EeSJYOaXazdB-A" value="*"/>
     </ownedAttribute>

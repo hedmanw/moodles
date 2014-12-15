@@ -81,9 +81,9 @@ public interface IBookingManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model reservationRequired="true" reservationOrdered="false" bookingRequired="true" bookingOrdered="false"
+	 * @model required="true" ordered="false" reservationRequired="true" reservationOrdered="false"
 	 * @generated
 	 */
-	void getBookingByReservation(Reservation reservation, Booking booking);
+	Booking getBookingByReservation(Reservation reservation);
 
 } // IBookingManager

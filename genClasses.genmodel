@@ -234,7 +234,7 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference hotelCore.ecore#//Booking/customer"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference hotelCore.ecore#//Booking/reservation"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference hotelCore.ecore#//Booking/reservations"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//Booking/bookingNbr"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Booking/getBookingNbr"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Booking/addReservation">
@@ -345,7 +345,6 @@
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IBookingManager/getBookingByReservation">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IBookingManager/getBookingByReservation/reservation"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IBookingManager/getBookingByReservation/booking"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="hotelService.ecore#//BookingManager">

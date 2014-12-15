@@ -212,7 +212,7 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_N95W0H-KEeSLM4agWErSNA" name="reservation">
         <type xmi:type="uml:Class" href="HotelCore.uml#_eUmw8HlzEeSJYOaXazdB-A"/>
       </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_SztPMH-KEeSLM4agWErSNA" name="booking">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_SztPMH-KEeSLM4agWErSNA" name="booking" direction="return">
         <type xmi:type="uml:Class" href="HotelCore.uml#_qdnKIHlzEeSJYOaXazdB-A"/>
       </ownedParameter>
     </ownedOperation>

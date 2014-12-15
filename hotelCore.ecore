@@ -242,7 +242,7 @@
         eType="#//Bill"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="customer" ordered="false"
         lowerBound="1" eType="#//Customer"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reservation" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reservations" ordered="false"
         lowerBound="1" upperBound="-1" eType="#//Reservation"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookingNbr" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

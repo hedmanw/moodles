@@ -678,7 +678,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION_BOOKING = 7;
+	int IBOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION = 7;
 
 	/**
 	 * The number of operations of the '<em>IBooking Manager</em>' class.
@@ -787,7 +787,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION_BOOKING = IBOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION_BOOKING;
+	int BOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION = IBOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION;
 
 	/**
 	 * The number of operations of the '<em>Booking Manager</em>' class.
@@ -1306,14 +1306,14 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIBookingManager__GetBill__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link hotelService.IBookingManager#getBookingByReservation(hotelCore.Reservation, hotelCore.Booking) <em>Get Booking By Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link hotelService.IBookingManager#getBookingByReservation(hotelCore.Reservation) <em>Get Booking By Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Booking By Reservation</em>' operation.
-	 * @see hotelService.IBookingManager#getBookingByReservation(hotelCore.Reservation, hotelCore.Booking)
+	 * @see hotelService.IBookingManager#getBookingByReservation(hotelCore.Reservation)
 	 * @generated
 	 */
-	EOperation getIBookingManager__GetBookingByReservation__Reservation_Booking();
+	EOperation getIBookingManager__GetBookingByReservation__Reservation();
 
 	/**
 	 * Returns the meta object for class '{@link hotelService.BookingManager <em>Booking Manager</em>}'.
@@ -1744,7 +1744,7 @@ public interface HotelServicePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION_BOOKING = eINSTANCE.getIBookingManager__GetBookingByReservation__Reservation_Booking();
+		EOperation IBOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION = eINSTANCE.getIBookingManager__GetBookingByReservation__Reservation();
 
 		/**
 		 * The meta object literal for the '{@link hotelService.impl.BookingManagerImpl <em>Booking Manager</em>}' class.

@@ -28,8 +28,8 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
         def reservation = reservationManager.createReservation(booking, today, tomorrow, one, a)
 
         then:
-        booking.getReservation().size() == 1
-        booking.getReservation().get(0) == reservation
+        booking.getReservations().size() == 1
+        booking.getReservations().get(0) == reservation
         bookingManager.allBookings.size() == 1
     }
 
@@ -40,9 +40,9 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
         def res2 = reservationManager.createReservation(booking, today, tomorrow, two, b)
 
         then:
-        booking.getReservation().size() == 2
-        booking.getReservation().get(0) == res1
-        booking.getReservation().get(1) == res2
+        booking.getReservations().size() == 2
+        booking.getReservations().get(0) == res1
+        booking.getReservations().get(1) == res2
         bookingManager.allBookings.size() == 1
     }
 
@@ -54,10 +54,10 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
         def res2 = reservationManager.createReservation(booking2, secondStart, secondEnd, one, a)
 
         then:
-        booking1.getReservation().size() == 1
-        booking1.getReservation().get(0) == res1
-        booking2.getReservation().size() == 1
-        booking2.getReservation().get(0) == res2
+        booking1.getReservations().size() == 1
+        booking1.getReservations().get(0) == res1
+        booking2.getReservations().size() == 1
+        booking2.getReservations().get(0) == res2
         bookingManager.allBookings.size() == 2
 
         where:
@@ -75,8 +75,8 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
 
         then:
         thrown(IllegalArgumentException)
-        booking.getReservation().size() == 1
-        booking.getReservation().get(0) == res
+        booking.getReservations().size() == 1
+        booking.getReservations().get(0) == res
         bookingManager.allBookings.size() == 1
     }
 

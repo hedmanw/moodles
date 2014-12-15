@@ -93,7 +93,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 
 		EList<Booking> bookings = ManagerSingleton.getInstance().BOOKING_MANAGER.getAllBookings();
 		for (Booking b : bookings) {
-			for (Reservation r : b.getReservation()) {
+			for (Reservation r : b.getReservations()) {
 				if (r.getRoom().getRoomNumber() == room.getRoomNumber()) {
 					if (datesOverlap(fromDate, toDate, r.getStartDay(), r.getEndDay())) {
 						throw new IllegalArgumentException("Room is occupied");
@@ -107,7 +107,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 		reservation.setStartDay(fromDate);
 		reservation.setEndDay(toDate);
 		reservation.setRoom(room);
-		booking.getReservation().add(reservation);
+		booking.getReservations().add(reservation);
 		return reservation;
 	}
 
@@ -167,7 +167,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	public Reservation getCurrentReservationByRoomNumber(int roomNumber) {
 		List<Booking> bookings = ManagerSingleton.getInstance().BOOKING_MANAGER.getAllBookings();
 		for (Booking booking : bookings) {
-			for (Reservation reservation : booking.getReservation()) {
+			for (Reservation reservation : booking.getReservations()) {
 				if (reservation.getRoom().getRoomNumber() == roomNumber && isCurrentlyStaying(reservation)) {
 					return reservation;
 				}
