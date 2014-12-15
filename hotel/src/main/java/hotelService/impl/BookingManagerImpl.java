@@ -171,6 +171,17 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void makePaymentIfAllReservationsCheckedOut(Booking booking) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -252,6 +263,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				return getBill((Booking)arguments.get(0));
 			case HotelServicePackage.BOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION:
 				return getBookingByReservation((Reservation)arguments.get(0));
+			case HotelServicePackage.BOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING:
+				makePaymentIfAllReservationsCheckedOut((Booking)arguments.get(0));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

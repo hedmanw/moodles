@@ -86,4 +86,12 @@ public interface IBookingManager extends EObject {
 	 */
 	Booking getBookingByReservation(Reservation reservation);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model bookingRequired="true" bookingOrdered="false"
+	 * @generated
+	 */
+	void makePaymentIfAllReservationsCheckedOut(Booking booking);
+
 } // IBookingManager

@@ -60,7 +60,6 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	protected ReservationManagerImpl() {
 		super();
-		bookingManager = new BookingManagerImpl();
 	}
 
 	/**
@@ -160,13 +159,12 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean checkOutReservation(Reservation reservation) {
+	public void checkOutReservation(Reservation reservation) {
 		returnKeyCard(reservation);
 		Booking booking = bookingManager.getBookingByReservation(reservation);
 		for (Reservation r : booking.getReservations()) {
 			
 		}
-
 	}
 
 	private void returnKeyCard(Reservation reservation) {
@@ -277,7 +275,8 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 			case HotelServicePackage.RESERVATION_MANAGER___CHECK_IN_RESERVATION__LONG:
 				return checkInReservation((Long)arguments.get(0));
 			case HotelServicePackage.RESERVATION_MANAGER___CHECK_OUT_RESERVATION__RESERVATION:
-				return checkOutReservation((Reservation)arguments.get(0));
+				checkOutReservation((Reservation)arguments.get(0));
+				return null;
 			case HotelServicePackage.RESERVATION_MANAGER___GET_CURRENT_RESERVATION_BY_ROOM_NUMBER__INT:
 				return getCurrentReservationByRoomNumber((Integer)arguments.get(0));
 		}
