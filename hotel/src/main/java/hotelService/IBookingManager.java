@@ -11,6 +11,8 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
+import java.rmi.NoSuchObjectException;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>IBooking Manager</b></em>'.

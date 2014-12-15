@@ -51,12 +51,10 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	protected EList<Reservation> allReservations;
 
-	private BookingManager bookingManager;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected ReservationManagerImpl() {
 		super();
@@ -113,7 +111,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 		booking.getReservations().add(reservation);
 
 		int nights = (int) ((toDate.getTime() - fromDate.getTime()) / (24*60*60*1000));
-		booking.getBill().addToBill(costCategory.getCostPerNight()* nights);
+		booking.getBill().addToBill(costCategory.getCostPerNight() * nights);
 		return reservation;
 	}
 
@@ -161,10 +159,10 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public void checkOutReservation(Reservation reservation) {
 		returnKeyCard(reservation);
+		reservation.setCheckedOut(new Date());
+		BookingManager bookingManager = ManagerSingleton.getInstance().BOOKING_MANAGER;
 		Booking booking = bookingManager.getBookingByReservation(reservation);
-		for (Reservation r : booking.getReservations()) {
-			
-		}
+		bookingManager.makePaymentIfAllReservationsCheckedOut(booking);
 	}
 
 	private void returnKeyCard(Reservation reservation) {

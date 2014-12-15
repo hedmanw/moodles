@@ -2,6 +2,7 @@
  */
 package hotelService.impl;
 
+import datastructs.EArrayList;
 import hotelCore.Bill;
 import hotelCore.Booking;
 import hotelCore.Customer;
@@ -22,6 +23,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
+
+import javax.xml.soap.SOAPException;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,6 +51,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	protected EList<Booking> allBookings;
 
+	private CustomerRequires banking = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -54,6 +60,12 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	protected BookingManagerImpl() {
 		super();
+		try {
+			banking = CustomerRequires.instance();
+		} catch (SOAPException e) {
+			e.printStackTrace();
+		}
+		allBookings = new EArrayList<>();
 	}
 
 	/**
@@ -158,12 +170,17 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Booking getBookingByReservation(Reservation reservation) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (Booking b : allBookings) {
+			for (Reservation r : b.getReservations()) {
+				if (r.equals(reservation)) {
+					return b;
+				}
+			}
+		}
+		throw new IllegalArgumentException("The reservation is not associated with any booking.");
 	}
 
 	/**
@@ -172,9 +189,33 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public void makePaymentIfAllReservationsCheckedOut(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (allReservationsCheckedOut(booking)) {
+			// TODO - fix this
+			//makePayment(booking);
+		}
+	}
+
+	private void makePayment(Booking booking) {
+		Bill bill = booking.getBill();
+		Customer c = booking.getCustomer();
+		c.addLoyaltyPoints((int) bill.getGrandTotal());
+
+		PaymentDetails pd = c.getPaymentDetails();
+		try {
+			banking.makePayment(pd.getCcNumber(), pd.getCcv(), pd.getExpiryMonth(),
+					pd.getExpiryYear(), pd.getFirstName(), pd.getLastName(), bill.getGrandTotal());
+		} catch (SOAPException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private boolean allReservationsCheckedOut(Booking booking) {
+		for (Reservation r : booking.getReservations()) {
+			if (r.getCheckedOut() == null) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	/**
@@ -260,11 +301,11 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			case HotelServicePackage.BOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING:
 				return isBillPaidInFull((Booking)arguments.get(0));
 			case HotelServicePackage.BOOKING_MANAGER___GET_BILL__BOOKING:
-				return getBill((Booking)arguments.get(0));
+				return getBill((Booking) arguments.get(0));
 			case HotelServicePackage.BOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION:
-				return getBookingByReservation((Reservation)arguments.get(0));
+				return getBookingByReservation((Reservation) arguments.get(0));
 			case HotelServicePackage.BOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING:
-				makePaymentIfAllReservationsCheckedOut((Booking)arguments.get(0));
+				makePaymentIfAllReservationsCheckedOut((Booking) arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

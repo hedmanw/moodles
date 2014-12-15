@@ -1,5 +1,6 @@
 package se.chalmers.mdsd1415.group11
 
+import hotelCore.Customer
 import hotelService.BookingManager
 import hotelService.CustomerManager
 import hotelService.ManagerSingleton
@@ -28,6 +29,7 @@ class HotelBaseSpecification extends Specification {
         roomTypeManager = ManagerSingleton.instance.ROOM_TYPE_MANAGER
         reservationManager = ManagerSingleton.instance.RESERVATION_MANAGER
         bookingManager = ManagerSingleton.instance.BOOKING_MANAGER
+        customerManager = ManagerSingleton.instance.CUSTOMER_MANAGER
 
         bookingManager.allBookings.clear()
         roomTypeManager.allRoomTypes.clear()
