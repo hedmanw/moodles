@@ -247,7 +247,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		switch (operationID) {
 			case HotelServicePackage.BOOKING_MANAGER___CREATE_BOOKING:
 				return createBooking();
-			case HotelServicePackage.BOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__INT:
+			case HotelServicePackage.BOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__STRING:
 				return getBookingByBookingNumber((String)arguments.get(0));
 			case HotelServicePackage.BOOKING_MANAGER___DELETE_BOOKING__BOOKING:
 				deleteBooking((Booking)arguments.get(0));
