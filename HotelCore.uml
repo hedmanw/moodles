@@ -423,14 +423,9 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TuMWcXl0EeSJYOaXazdB-A" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TuMWcnl0EeSJYOaXazdB-A" value="*"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_FKJK0Hn7EeSJYOaXazdB-A" name="bookingNbr" visibility="private">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_FKJK0Hn7EeSJYOaXazdB-A" name="bookingUUID" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_P0emkHn7EeSJYOaXazdB-A" name="getBookingNbr">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_X1l9UHn7EeSJYOaXazdB-A" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-      </ownedParameter>
-    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ru5DAHn7EeSJYOaXazdB-A" name="addReservation">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_0vKJoHn7EeSJYOaXazdB-A" name="reservation" type="_eUmw8HlzEeSJYOaXazdB-A"/>
     </ownedOperation>

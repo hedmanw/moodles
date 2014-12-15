@@ -235,8 +235,7 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference hotelCore.ecore#//Booking/customer"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference hotelCore.ecore#//Booking/reservations"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//Booking/bookingNbr"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Booking/getBookingNbr"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//Booking/bookingUUID"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Booking/addReservation">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelCore.ecore#//Booking/addReservation/reservation"/>
       </genOperations>

@@ -1618,7 +1618,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MZqY1Ho4EeSXTMmqtXqoMA"/>
       </children>
       <element xmi:type="uml:Interaction" href="model.uml#_LA4A8Ho4EeSXTMmqtXqoMA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MZqY1Xo4EeSXTMmqtXqoMA" x="4" y="40" width="1412" height="674"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MZqY1Xo4EeSXTMmqtXqoMA" x="4" y="40" width="1412" height="682"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_MZqY1no4EeSXTMmqtXqoMA" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_MZqY13o4EeSXTMmqtXqoMA"/>
