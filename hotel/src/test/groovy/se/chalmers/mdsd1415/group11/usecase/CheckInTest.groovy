@@ -22,21 +22,18 @@ class CheckInTest extends HotelBaseSpecification{
         def customers = customerManager.getCustomersByName("Mona")
         def theBooking = bookingManager.getBookingsByCustomer(customers.get(0)).get(0)
         def theReservation = theBooking.getReservations().get(0)
-        theReservation.setResponsible("Kim")
-        theReservation.setNumberOfGuests(2)
-        theReservation.setCheckedIn(today)
+        reservationManager.checkInReservation(theReservation, "Kim", 2)
 
         then:
         reservation == theReservation
         reservation.getResponsible() == "Kim"
         reservation.getNumberOfGuests() == 2
         reservation.getCheckedIn() == today
-
     }
 
     def "find by bookingNumber"() {
         when:
-        def theBooking = bookingManager.getBookingByBookingNumber(booking.getBookingNbr())
+        def theBooking = bookingManager.getBookingByBookingNumber(booking.getBookingUUID())
 
         then:
         theBooking == booking
