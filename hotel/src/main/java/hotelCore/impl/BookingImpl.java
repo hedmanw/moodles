@@ -114,16 +114,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Bill getBill() {
-		if (bill != null && bill.eIsProxy()) {
-			InternalEObject oldBill = (InternalEObject)bill;
-			bill = (Bill)eResolveProxy(oldBill);
-			if (bill != oldBill) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelCorePackage.BOOKING__BILL, oldBill, bill));
-			}
+		if (bill == null) {
+			bill = HotelCoreFactoryImpl.eINSTANCE.createBill();
 		}
 		return bill;
 	}

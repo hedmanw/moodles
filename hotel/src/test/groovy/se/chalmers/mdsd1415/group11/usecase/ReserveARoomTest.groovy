@@ -37,5 +37,6 @@ class ReserveARoomTest extends HotelBaseSpecification {
         reservation.getRoom().getRoomType() == roomType
         booking.getReservations().size() == 1
         booking.getReservations().get(0) == reservation
+        booking.getBill().getGrandTotal() == 1000
     }
 }

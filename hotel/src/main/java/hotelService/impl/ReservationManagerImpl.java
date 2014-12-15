@@ -108,6 +108,9 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 		reservation.setEndDay(toDate);
 		reservation.setRoom(room);
 		booking.getReservations().add(reservation);
+
+		int nights = (int) ((toDate.getTime() - fromDate.getTime()) / (24*60*60*1000));
+		booking.getBill().addToBill(costCategory.getCostPerNight()* nights);
 		return reservation;
 	}
 
