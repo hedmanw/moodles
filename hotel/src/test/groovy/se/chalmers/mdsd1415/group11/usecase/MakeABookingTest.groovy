@@ -23,6 +23,7 @@ class MakeABookingTest extends HotelBaseSpecification {
         Room room = roomManager.createRoom(1, roomType)
         Room room2 = roomManager.createRoom(2, roomType)
         Customer bookingOwner = customerManager.createCustomer("1", "Robert C. Martin")
+        customerManager.setPaymentDetailsForCustomer(bookingOwner, "Robert Cecil", "Martin", "123", "123", 1, 2016)
 
         when:
         def booking = bookingManager.createBooking()
@@ -42,7 +43,9 @@ class MakeABookingTest extends HotelBaseSpecification {
         booking.setCustomer(customer)
 
         then:
-        bank.isCreditCardValid("123", "123", 1, 2016, "Robert Cecil", "Martin")
         booking.getBill().getGrandTotal() == 2000
+
+        expect:
+        bookingManager.confirmBooking(booking)
     }
 }

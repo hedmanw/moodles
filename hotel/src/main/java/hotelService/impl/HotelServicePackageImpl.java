@@ -897,8 +897,8 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		addEParameter(op, theTypesPackage.getString(), "idNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getICustomerManager__SetPaymentDetailsForCustomer__Customer_String_String_String_String_int_int(), ecorePackage.getELong(), "setPaymentDetailsForCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theHotelCorePackage.getCustomer(), "customerId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomerManager__SetPaymentDetailsForCustomer__Customer_String_String_String_String_int_int(), theHotelCorePackage.getPaymentDetails(), "setPaymentDetailsForCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theHotelCorePackage.getCustomer(), "customer", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);

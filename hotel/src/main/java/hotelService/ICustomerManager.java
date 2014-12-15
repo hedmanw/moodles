@@ -55,10 +55,10 @@ public interface ICustomerManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" customerIdRequired="true" customerIdOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvNumberDataType="org.eclipse.uml2.types.String" ccvNumberRequired="true" ccvNumberOrdered="false" expireMonthRequired="true" expireMonthOrdered="false" expireYearRequired="true" expireYearOrdered="false"
+	 * @model required="true" ordered="false" customerRequired="true" customerOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvNumberDataType="org.eclipse.uml2.types.String" ccvNumberRequired="true" ccvNumberOrdered="false" expireMonthRequired="true" expireMonthOrdered="false" expireYearRequired="true" expireYearOrdered="false"
 	 * @generated
 	 */
-	long setPaymentDetailsForCustomer(Customer customerId, String firstName, String lastName, String ccNumber, String ccvNumber, int expireMonth, int expireYear);
+	PaymentDetails setPaymentDetailsForCustomer(Customer customer, String firstName, String lastName, String ccNumber, String ccvNumber, int expireMonth, int expireYear);
 
 	/**
 	 * <!-- begin-user-doc -->
