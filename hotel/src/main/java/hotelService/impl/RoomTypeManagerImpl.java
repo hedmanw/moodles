@@ -93,6 +93,11 @@ public class RoomTypeManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public RoomType createRoomType(String name, double costPerNight) {
+		for (RoomType roomType : allRoomTypes) {
+			if (roomType.getName() == name) {
+				throw new IllegalArgumentException("Room type name already exists");
+			}
+		}
 		SleepRoom sleepRoom = HotelCoreFactory.eINSTANCE.createSleepRoom();
 		sleepRoom.setNbrOfBeds(2);
 		sleepRoom.setName(name);

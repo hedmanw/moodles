@@ -1264,11 +1264,11 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIBookingManager__CreateBooking();
 
 	/**
-	 * Returns the meta object for the '{@link hotelService.IBookingManager#getBookingByBookingNumber(int) <em>Get Booking By Booking Number</em>}' operation.
+	 * Returns the meta object for the '{@link hotelService.IBookingManager#getBookingByBookingNumber(java.lang.String) <em>Get Booking By Booking Number</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Booking By Booking Number</em>' operation.
-	 * @see hotelService.IBookingManager#getBookingByBookingNumber(int)
+	 * @see hotelService.IBookingManager#getBookingByBookingNumber(java.lang.String)
 	 * @generated
 	 */
 	EOperation getIBookingManager__GetBookingByBookingNumber__int();

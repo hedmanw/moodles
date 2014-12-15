@@ -36,7 +36,7 @@ public interface IBookingManager extends EObject {
 	 * @model required="true" ordered="false" bookingNumberRequired="true" bookingNumberOrdered="false"
 	 * @generated
 	 */
-	Booking getBookingByBookingNumber(int bookingNumber);
+	Booking getBookingByBookingNumber(String bookingNumber);
 
 	/**
 	 * <!-- begin-user-doc -->

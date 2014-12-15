@@ -830,7 +830,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		initEOperation(getIBookingManager__CreateBooking(), theHotelCorePackage.getBooking(), "createBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIBookingManager__GetBookingByBookingNumber__int(), theHotelCorePackage.getBooking(), "getBookingByBookingNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "bookingNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "bookingNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIBookingManager__DeleteBooking__Booking(), null, "deleteBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theHotelCorePackage.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
