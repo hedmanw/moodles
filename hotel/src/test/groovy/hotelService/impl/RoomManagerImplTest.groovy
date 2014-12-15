@@ -88,4 +88,13 @@ class RoomManagerImplTest extends HotelBaseSpecification {
         then:
         thrown(IllegalArgumentException)
     }
+
+    def "room can not be duplicate" () {
+        when:
+        Room room = roomManager.createRoom(1, this.a)
+
+        then:
+        thrown(IllegalArgumentException)
+
+    }
 }
