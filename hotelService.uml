@@ -123,11 +123,17 @@
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_FR8wEHoIEeShtIICY7OyLw" name="checkInReservation">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_HmovgHoIEeShtIICY7OyLw" name="reservationId">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_HmovgHoIEeShtIICY7OyLw" name="reservation">
+        <type xmi:type="uml:Class" href="HotelCore.uml#_eUmw8HlzEeSJYOaXazdB-A"/>
       </ownedParameter>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_KlPOoHoIEeShtIICY7OyLw" name="success" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_O2MqEIRnEeSGDN4_COfLhA" name="responsible">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_R9vCwIRnEeSGDN4_COfLhA" name="numberOfGuests">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ctXRoHoIEeShtIICY7OyLw" name="checkOutReservation">

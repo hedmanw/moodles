@@ -51,10 +51,10 @@ public interface IReservationManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" reservationIdRequired="true" reservationIdOrdered="false"
+	 * @model required="true" ordered="false" reservationRequired="true" reservationOrdered="false" responsibleRequired="true" responsibleOrdered="false" numberOfGuestsRequired="true" numberOfGuestsOrdered="false"
 	 * @generated
 	 */
-	boolean checkInReservation(long reservationId);
+	boolean checkInReservation(Reservation reservation, String responsible, int numberOfGuests);
 
 	/**
 	 * <!-- begin-user-doc -->
