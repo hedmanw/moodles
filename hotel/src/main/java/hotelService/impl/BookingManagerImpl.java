@@ -2,6 +2,7 @@
  */
 package hotelService.impl;
 
+import bankingService.CustomerProvides;
 import hotelCore.*;
 import hotelService.BookingManager;
 import hotelService.HotelServicePackage;
@@ -11,7 +12,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
 import javax.xml.soap.SOAPException;
 
 /**
@@ -38,7 +38,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	protected EList<Booking> allBookings;
 
-	private CustomerRequires banking = null;
+	private CustomerProvides banking = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -181,12 +181,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		c.addLoyaltyPoints((int) bill.getGrandTotal());
 
 		PaymentDetails pd = c.getPaymentDetails();
-		try {
-			banking.makePayment(pd.getCcNumber(), pd.getCcv(), pd.getExpiryMonth(),
-					pd.getExpiryYear(), pd.getFirstName(), pd.getLastName(), bill.getGrandTotal());
-		} catch (SOAPException e) {
-			e.printStackTrace();
-		}
+		banking.makePayment(pd.getCcNumber(), pd.getCcv(), pd.getExpiryMonth(),
+				pd.getExpiryYear(), pd.getFirstName(), pd.getLastName(), bill.getGrandTotal());
 	}
 
 	private boolean allReservationsCheckedOut(Booking booking) {

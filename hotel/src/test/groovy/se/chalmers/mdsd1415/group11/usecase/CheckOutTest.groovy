@@ -1,6 +1,5 @@
 package se.chalmers.mdsd1415.group11.usecase
 
-import hotelService.CustomerManager
 import hotelService.ManagerSingleton
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
