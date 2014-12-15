@@ -94,7 +94,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Booking getBookingByBookingNumber(int bookingNumber) {
+	public Booking getBookingByBookingNumber(String bookingNumber) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -248,7 +248,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			case HotelServicePackage.BOOKING_MANAGER___CREATE_BOOKING:
 				return createBooking();
 			case HotelServicePackage.BOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__INT:
-				return getBookingByBookingNumber((Integer)arguments.get(0));
+				return getBookingByBookingNumber((String)arguments.get(0));
 			case HotelServicePackage.BOOKING_MANAGER___DELETE_BOOKING__BOOKING:
 				deleteBooking((Booking)arguments.get(0));
 				return null;

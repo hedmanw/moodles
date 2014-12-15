@@ -346,6 +346,9 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IBookingManager/getBookingByReservation">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IBookingManager/getBookingByReservation/reservation"/>
       </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IBookingManager/makePaymentIfAllReservationsCheckedOut">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IBookingManager/makePaymentIfAllReservationsCheckedOut/booking"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="hotelService.ecore#//BookingManager">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
