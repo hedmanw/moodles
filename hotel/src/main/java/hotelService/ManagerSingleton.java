@@ -1,7 +1,5 @@
 package hotelService;
 
-import com.sun.deploy.uitoolkit.impl.fx.HostServicesFactory;
-
 /**
  * Created by wilhelm 2014-12-12.
  */
