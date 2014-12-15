@@ -1,5 +1,6 @@
 package se.chalmers.mdsd1415.group11.usecase
 
+import hotelCore.SleepRoom
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
 /**
@@ -14,6 +15,7 @@ class CheckInTest extends HotelBaseSpecification{
     def setup() {
         def customer = customerManager.createCustomer("123", "Mona")
         booking.setCustomer(customer)
+        ((SleepRoom)room).setNbrOfBeds(2)
 
     }
 
@@ -23,11 +25,13 @@ class CheckInTest extends HotelBaseSpecification{
         def theBooking = bookingManager.getBookingsByCustomer(customers.get(0)).get(0)
         def theReservation = theBooking.getReservations().get(0)
         reservationManager.checkInReservation(theReservation, "Kim", 2)
+        //TODO key cards
 
         then:
         reservation == theReservation
         reservation.getResponsible() == "Kim"
         reservation.getNumberOfGuests() == 2
+        ((SleepRoom)theReservation.getRoom()).getNbrOfBeds() >= reservation.getNumberOfGuests()
         reservation.getCheckedIn() == today
     }
 
@@ -37,6 +41,39 @@ class CheckInTest extends HotelBaseSpecification{
 
         then:
         theBooking == booking
+    }
+
+    def "several customers found"() {
+        setup:
+        def customer2 = customerManager.createCustomer("125", "Mona")
+        booking.setCustomer(customer2)
+
+        expect:
+        customerManager.getCustomersByName("Mona").size() == 2
+    }
+
+    def "no customer found"() {
+        expect:
+        customerManager.getCustomersByName("Mon").isEmpty()
+
+    }
+
+    def "no booking number found"() {
+        expect:
+        bookingManager.getBookingByBookingNumber("hihi") == null
+
+    }
+
+    def "no booking found"() {
+        setup:
+        def customer = customerManager.createCustomer("124", "Cecilia")
+
+        expect:
+        bookingManager.getBookingsByCustomer(customer).get(0) == null
+    }
+
+    def "more guests than beds"() {
+        //TODO guests and beds
     }
 
 }
