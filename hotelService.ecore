@@ -53,7 +53,9 @@
       <eParameters name="booking" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Booking"/>
     </eOperations>
     <eOperations name="checkInReservation" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eParameters name="reservationId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      <eParameters name="reservation" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Reservation"/>
+      <eParameters name="responsible" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="numberOfGuests" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eOperations>
     <eOperations name="checkOutReservation" ordered="false" lowerBound="1">
       <eParameters name="reservation" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Reservation"/>

@@ -469,7 +469,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___CHECK_IN_RESERVATION__LONG = 3;
+	int IRESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT = 3;
 
 	/**
 	 * The operation id for the '<em>Check Out Reservation</em>' operation.
@@ -560,7 +560,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_MANAGER___CHECK_IN_RESERVATION__LONG = IRESERVATION_MANAGER___CHECK_IN_RESERVATION__LONG;
+	int RESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT = IRESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT;
 
 	/**
 	 * The operation id for the '<em>Check Out Reservation</em>' operation.
@@ -624,7 +624,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__INT = 1;
+	int IBOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Delete Booking</em>' operation.
@@ -742,7 +742,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__INT = IBOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__INT;
+	int BOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__STRING = IBOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__STRING;
 
 	/**
 	 * The operation id for the '<em>Delete Booking</em>' operation.
@@ -1193,14 +1193,14 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIReservationManager__GetNonCheckedInReservation__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link hotelService.IReservationManager#checkInReservation(long) <em>Check In Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link hotelService.IReservationManager#checkInReservation(hotelCore.Reservation, java.lang.String, int) <em>Check In Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In Reservation</em>' operation.
-	 * @see hotelService.IReservationManager#checkInReservation(long)
+	 * @see hotelService.IReservationManager#checkInReservation(hotelCore.Reservation, java.lang.String, int)
 	 * @generated
 	 */
-	EOperation getIReservationManager__CheckInReservation__long();
+	EOperation getIReservationManager__CheckInReservation__Reservation_String_int();
 
 	/**
 	 * Returns the meta object for the '{@link hotelService.IReservationManager#checkOutReservation(hotelCore.Reservation) <em>Check Out Reservation</em>}' operation.
@@ -1271,7 +1271,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @see hotelService.IBookingManager#getBookingByBookingNumber(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookingManager__GetBookingByBookingNumber__int();
+	EOperation getIBookingManager__GetBookingByBookingNumber__String();
 
 	/**
 	 * Returns the meta object for the '{@link hotelService.IBookingManager#deleteBooking(hotelCore.Booking) <em>Delete Booking</em>}' operation.
@@ -1664,7 +1664,7 @@ public interface HotelServicePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IRESERVATION_MANAGER___CHECK_IN_RESERVATION__LONG = eINSTANCE.getIReservationManager__CheckInReservation__long();
+		EOperation IRESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT = eINSTANCE.getIReservationManager__CheckInReservation__Reservation_String_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Out Reservation</b></em>' operation.
@@ -1724,7 +1724,7 @@ public interface HotelServicePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__INT = eINSTANCE.getIBookingManager__GetBookingByBookingNumber__int();
+		EOperation IBOOKING_MANAGER___GET_BOOKING_BY_BOOKING_NUMBER__STRING = eINSTANCE.getIBookingManager__GetBookingByBookingNumber__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Delete Booking</b></em>' operation.

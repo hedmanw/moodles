@@ -148,7 +148,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkInReservation(long reservationId) {
+	public boolean checkInReservation(Reservation reservation, String responsible, int numberOfGuests) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -272,8 +272,8 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 				return getReservation((Long)arguments.get(0));
 			case HotelServicePackage.RESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING:
 				return getNonCheckedInReservation((Booking)arguments.get(0));
-			case HotelServicePackage.RESERVATION_MANAGER___CHECK_IN_RESERVATION__LONG:
-				return checkInReservation((Long)arguments.get(0));
+			case HotelServicePackage.RESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT:
+				return checkInReservation((Reservation)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 			case HotelServicePackage.RESERVATION_MANAGER___CHECK_OUT_RESERVATION__RESERVATION:
 				checkOutReservation((Reservation)arguments.get(0));
 				return null;

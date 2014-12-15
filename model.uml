@@ -89,11 +89,13 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_x0Fg0HyGEeSzd-4yXNUKkQ" name="b">
       <type xmi:type="uml:Class" href="HotelCore.uml#_qdnKIHlzEeSJYOaXazdB-A"/>
     </ownedAttribute>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_lnCxoHyFEeSzd-4yXNUKkQ" name="actor" represents="_pjjDcHyFEeSzd-4yXNUKkQ" coveredBy="_ZJ77QHyGEeSzd-4yXNUKkQ _UAlw8HyIEeSzd-4yXNUKkQ _ddAoEHyIEeSzd-4yXNUKkQ _ngzoQHyIEeSzd-4yXNUKkQ _uZcUAHyIEeSzd-4yXNUKkQ _33JkkHyIEeSzd-4yXNUKkQ __p_10HyIEeSzd-4yXNUKkQ _oAsucH7nEeSyZvvyd5lTNA _oAw_4H7nEeSyZvvyd5lTNA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_lnCxoHyFEeSzd-4yXNUKkQ" name="actor" represents="_pjjDcHyFEeSzd-4yXNUKkQ" coveredBy="_ZJ77QHyGEeSzd-4yXNUKkQ _UAlw8HyIEeSzd-4yXNUKkQ _oAsucH7nEeSyZvvyd5lTNA _oAw_4H7nEeSyZvvyd5lTNA _J4DfoIRoEeSzIolRy83OMQ"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_4rsuUHyFEeSzd-4yXNUKkQ" name="reservation" represents="_lvknQHovEeSyq9V5IfgrHg" coveredBy="_ddBPIHyIEeSzd-4yXNUKkQ _ngzoQXyIEeSzd-4yXNUKkQ _33KysHyIEeSzd-4yXNUKkQ __p_10XyIEeSzd-4yXNUKkQ"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_8yQ7EHyFEeSzd-4yXNUKkQ" name="booking" represents="_D4G8YHyGEeSzd-4yXNUKkQ" coveredBy="_ZJ9JYHyGEeSzd-4yXNUKkQ _oAsucH7nEeSyZvvyd5lTNA _oAw_4H7nEeSyZvvyd5lTNA"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_SM53sHyGEeSzd-4yXNUKkQ" name="keycardsys" represents="_rluiUHovEeSyq9V5IfgrHg" coveredBy="_uZc7EHyIEeSzd-4yXNUKkQ"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_pe7MsHyGEeSzd-4yXNUKkQ" name="b" represents="_x0Fg0HyGEeSzd-4yXNUKkQ" coveredBy="_UAmYAHyIEeSzd-4yXNUKkQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_bOCJcIRnEeSzIolRy83OMQ" name="Lifeline" represents="_eri_IHyFEeSgHNlcR1u9fg" coveredBy="_ddAoEHyIEeSzd-4yXNUKkQ _ngzoQHyIEeSzd-4yXNUKkQ _uZcUAHyIEeSzd-4yXNUKkQ _33JkkHyIEeSzd-4yXNUKkQ __p_10HyIEeSzd-4yXNUKkQ _J4EGsIRoEeSzIolRy83OMQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_J4EGsIRoEeSzIolRy83OMQ" name="checkInReservation_MessageRecv" covered="_bOCJcIRnEeSzIolRy83OMQ" message="_J4AcUIRoEeSzIolRy83OMQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ZJ77QHyGEeSzd-4yXNUKkQ" name="getBookingsByCustomer_MessageSend" covered="_lnCxoHyFEeSzd-4yXNUKkQ" message="_ZJZvwHyGEeSzd-4yXNUKkQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ZJ9JYHyGEeSzd-4yXNUKkQ" name="getBookingsByCustomer_MessageRecv" covered="_8yQ7EHyFEeSzd-4yXNUKkQ" message="_ZJZvwHyGEeSzd-4yXNUKkQ"/>
     <fragment xmi:type="uml:CombinedFragment" xmi:id="_oAsucH7nEeSyZvvyd5lTNA" name="CombinedFragment" covered="_8yQ7EHyFEeSzd-4yXNUKkQ _lnCxoHyFEeSzd-4yXNUKkQ" interactionOperator="alt">
@@ -109,15 +111,16 @@
     </fragment>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UAlw8HyIEeSzd-4yXNUKkQ" name="getReservations_MessageSend" covered="_lnCxoHyFEeSzd-4yXNUKkQ" message="_UAj7wHyIEeSzd-4yXNUKkQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UAmYAHyIEeSzd-4yXNUKkQ" name="getReservations_MessageRecv" covered="_pe7MsHyGEeSzd-4yXNUKkQ" message="_UAj7wHyIEeSzd-4yXNUKkQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ddAoEHyIEeSzd-4yXNUKkQ" name="setResponsible_MessageSend" covered="_lnCxoHyFEeSzd-4yXNUKkQ" message="_dc_Z8HyIEeSzd-4yXNUKkQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_J4DfoIRoEeSzIolRy83OMQ" name="checkInReservation_MessageSend" covered="_lnCxoHyFEeSzd-4yXNUKkQ" message="_J4AcUIRoEeSzIolRy83OMQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ddAoEHyIEeSzd-4yXNUKkQ" name="setResponsible_MessageSend" covered="_bOCJcIRnEeSzIolRy83OMQ" message="_dc_Z8HyIEeSzd-4yXNUKkQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ddBPIHyIEeSzd-4yXNUKkQ" name="setResponsible_MessageRecv" covered="_4rsuUHyFEeSzd-4yXNUKkQ" message="_dc_Z8HyIEeSzd-4yXNUKkQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ngzoQHyIEeSzd-4yXNUKkQ" name="setNbrOfGuests_MessageSend" covered="_lnCxoHyFEeSzd-4yXNUKkQ" message="_ngzBMHyIEeSzd-4yXNUKkQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ngzoQHyIEeSzd-4yXNUKkQ" name="setNbrOfGuests_MessageSend" covered="_bOCJcIRnEeSzIolRy83OMQ" message="_ngzBMHyIEeSzd-4yXNUKkQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ngzoQXyIEeSzd-4yXNUKkQ" name="setNbrOfGuests_MessageRecv" covered="_4rsuUHyFEeSzd-4yXNUKkQ" message="_ngzBMHyIEeSzd-4yXNUKkQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_uZcUAHyIEeSzd-4yXNUKkQ" name="assignCardsToReservation_MessageSend" covered="_lnCxoHyFEeSzd-4yXNUKkQ" message="_uZbs8HyIEeSzd-4yXNUKkQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_uZcUAHyIEeSzd-4yXNUKkQ" name="assignCardsToReservation_MessageSend" covered="_bOCJcIRnEeSzIolRy83OMQ" message="_uZbs8HyIEeSzd-4yXNUKkQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_uZc7EHyIEeSzd-4yXNUKkQ" name="assignCardsToReservation_MessageRecv" covered="_SM53sHyGEeSzd-4yXNUKkQ" message="_uZbs8HyIEeSzd-4yXNUKkQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_33JkkHyIEeSzd-4yXNUKkQ" name="addKeyCard_MessageSend" covered="_lnCxoHyFEeSzd-4yXNUKkQ" message="_33HvYHyIEeSzd-4yXNUKkQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_33JkkHyIEeSzd-4yXNUKkQ" name="addKeyCard_MessageSend" covered="_bOCJcIRnEeSzIolRy83OMQ" message="_33HvYHyIEeSzd-4yXNUKkQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_33KysHyIEeSzd-4yXNUKkQ" name="addKeyCard_MessageRecv" covered="_4rsuUHyFEeSzd-4yXNUKkQ" message="_33HvYHyIEeSzd-4yXNUKkQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="__p_10HyIEeSzd-4yXNUKkQ" name="setCheckedIn_MessageSend" covered="_lnCxoHyFEeSzd-4yXNUKkQ" message="__p-nsHyIEeSzd-4yXNUKkQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="__p_10HyIEeSzd-4yXNUKkQ" name="setCheckedIn_MessageSend" covered="_bOCJcIRnEeSzIolRy83OMQ" message="__p-nsHyIEeSzd-4yXNUKkQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="__p_10XyIEeSzd-4yXNUKkQ" name="setCheckedIn_MessageRecv" covered="_4rsuUHyFEeSzd-4yXNUKkQ" message="__p-nsHyIEeSzd-4yXNUKkQ"/>
     <message xmi:type="uml:Message" xmi:id="_ZJZvwHyGEeSzd-4yXNUKkQ" name="getBookingsByCustomer_Message" messageSort="asynchCall" receiveEvent="_ZJ9JYHyGEeSzd-4yXNUKkQ" sendEvent="_ZJ77QHyGEeSzd-4yXNUKkQ">
       <signature xmi:type="uml:Operation" href="hotelService.uml#_py4lIHoCEeShtIICY7OyLw"/>
@@ -139,6 +142,9 @@
       <signature xmi:type="uml:Operation" href="HotelCore.uml#_YjtxIHoHEeSJYOaXazdB-A"/>
     </message>
     <message xmi:type="uml:Message" xmi:id="__p-nsHyIEeSzd-4yXNUKkQ" name="setCheckedIn_Message" messageSort="asynchCall" receiveEvent="__p_10XyIEeSzd-4yXNUKkQ" sendEvent="__p_10HyIEeSzd-4yXNUKkQ"/>
+    <message xmi:type="uml:Message" xmi:id="_J4AcUIRoEeSzIolRy83OMQ" name="checkInReservation_Message" messageSort="asynchCall" receiveEvent="_J4EGsIRoEeSzIolRy83OMQ" sendEvent="_J4DfoIRoEeSzIolRy83OMQ">
+      <signature xmi:type="uml:Operation" href="hotelService.uml#_FR8wEHoIEeShtIICY7OyLw"/>
+    </message>
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_BRP0kHolEeSXTMmqtXqoMA" name="reserveARoom">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_vUCSAHotEeSXTMmqtXqoMA" name="r">
@@ -153,7 +159,7 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_8bgdYHyEEeSgHNlcR1u9fg" name="roomManager">
       <type xmi:type="uml:Interface" href="hotelService.uml#_DyqAMHx8EeSyZvvyd5lTNA"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_eri_IHyFEeSgHNlcR1u9fg" name="reservationManager">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_eri_IHyFEeSgHNlcR1u9fg" name="rm">
       <type xmi:type="uml:Interface" href="hotelService.uml#_VffOUHx8EeSyZvvyd5lTNA"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_6b1ZwHyGEeSgHNlcR1u9fg" name="bookingManager">
