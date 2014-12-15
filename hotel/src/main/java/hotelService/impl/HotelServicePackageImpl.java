@@ -546,6 +546,15 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getIBookingManager__ConfirmBooking__Booking() {
+		return iBookingManagerEClass.getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBookingManager() {
 		return bookingManagerEClass;
 	}
@@ -714,6 +723,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___GET_BILL__BOOKING);
 		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION);
 		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING);
+		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___CONFIRM_BOOKING__BOOKING);
 
 		bookingManagerEClass = createEClass(BOOKING_MANAGER);
 		createEReference(bookingManagerEClass, BOOKING_MANAGER__ALL_BOOKINGS);
@@ -864,6 +874,9 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		addEParameter(op, theHotelCorePackage.getReservation(), "reservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIBookingManager__MakePaymentIfAllReservationsCheckedOut__Booking(), null, "makePaymentIfAllReservationsCheckedOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theHotelCorePackage.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookingManager__ConfirmBooking__Booking(), ecorePackage.getEBoolean(), "confirmBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theHotelCorePackage.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookingManagerEClass, BookingManager.class, "BookingManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

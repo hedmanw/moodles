@@ -2,7 +2,12 @@
  */
 package hotelService.impl;
 
+import bankingService.BankingSingleton;
 import bankingService.CustomerProvides;
+import hotelCore.Bill;
+import hotelCore.Booking;
+import hotelCore.Customer;
+import hotelCore.Reservation;
 import hotelCore.*;
 import hotelService.BookingManager;
 import hotelService.HotelServicePackage;
@@ -12,7 +17,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import javax.xml.soap.SOAPException;
 
 /**
  * <!-- begin-user-doc -->
@@ -78,7 +82,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public Booking createBooking() {
 		Booking booking = HotelCoreFactory.eINSTANCE.createBooking();
-		getAllBookings().add(booking);
 		return booking;
 	}
 
@@ -173,6 +176,24 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean confirmBooking(Booking booking) {
+		Customer customer = booking.getCustomer();
+		if (customer != null) {
+			PaymentDetails p = customer.getPaymentDetails();
+			if (BankingSingleton.getInstance().CUSTOMER_PROVIDES.isCreditCardValid(p.getCcNumber(), p.getCcv(),
+					p.getExpiryMonth(), p.getExpiryYear(), p.getFirstName(), p.getLastName())) {
+                getAllBookings().add(booking);
+                return true;
+            }
+		}
+		return false;
 	}
 
 	private void makePayment(Booking booking) {
@@ -283,6 +304,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			case HotelServicePackage.BOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING:
 				makePaymentIfAllReservationsCheckedOut((Booking)arguments.get(0));
 				return null;
+			case HotelServicePackage.BOOKING_MANAGER___CONFIRM_BOOKING__BOOKING:
+				return confirmBooking((Booking)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

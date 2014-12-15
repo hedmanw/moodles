@@ -93,6 +93,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 		}
 
 		EList<Booking> bookings = ManagerSingleton.getInstance().BOOKING_MANAGER.getAllBookings();
+		bookings.add(booking);
 		for (Booking b : bookings) {
 			for (Reservation r : b.getReservations()) {
 				if (r.getRoom().getRoomNumber() == room.getRoomNumber()) {

@@ -224,6 +224,14 @@
         <type xmi:type="uml:Class" href="HotelCore.uml#_qdnKIHlzEeSJYOaXazdB-A"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_kR3_IISAEeS7qbyBpgeb2Q" name="confirmBooking">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_rsmEQISAEeS7qbyBpgeb2Q" name="booking">
+        <type xmi:type="uml:Class" href="HotelCore.uml#_qdnKIHlzEeSJYOaXazdB-A"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-nF_YISAEeS7qbyBpgeb2Q" name="valid" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_uGG3YHx_EeSzd-4yXNUKkQ" name="BookingManager">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_eowEYIIYEeStbpNcMqf5hQ" name="allBookings" association="_eowrcIIYEeStbpNcMqf5hQ">

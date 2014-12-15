@@ -92,4 +92,12 @@ public interface IBookingManager extends EObject {
 	 */
 	void makePaymentIfAllReservationsCheckedOut(Booking booking);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" bookingRequired="true" bookingOrdered="false"
+	 * @generated
+	 */
+	boolean confirmBooking(Booking booking);
+
 } // IBookingManager
