@@ -85,7 +85,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public Booking createBooking() {
 		Booking booking = HotelCoreFactory.eINSTANCE.createBooking();
-		booking.setBookingNbr(getAllBookings().size()+1);
 		getAllBookings().add(booking);
 		return booking;
 	}

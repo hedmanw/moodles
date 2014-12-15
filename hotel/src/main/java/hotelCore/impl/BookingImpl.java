@@ -11,6 +11,7 @@ import hotelCore.Reservation;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
+import java.util.UUID;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -34,7 +35,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link hotelCore.impl.BookingImpl#getBill <em>Bill</em>}</li>
  *   <li>{@link hotelCore.impl.BookingImpl#getCustomer <em>Customer</em>}</li>
  *   <li>{@link hotelCore.impl.BookingImpl#getReservation <em>Reservation</em>}</li>
- *   <li>{@link hotelCore.impl.BookingImpl#getBookingNbr <em>Booking Nbr</em>}</li>
+ *   <li>{@link hotelCore.impl.BookingImpl#getBookingUUID <em>Booking UUID</em>}</li>
  * </ul>
  * </p>
  *
@@ -72,24 +73,24 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected EList<Reservation> reservation;
 
 	/**
-	 * The default value of the '{@link #getBookingNbr() <em>Booking Nbr</em>}' attribute.
+	 * The default value of the '{@link #getBookingUUID() <em>Booking UUID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBookingNbr()
+	 * @see #getBookingUUID()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int BOOKING_NBR_EDEFAULT = 0;
+	protected static final String BOOKING_UUID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getBookingNbr() <em>Booking Nbr</em>}' attribute.
+	 * The cached value of the '{@link #getBookingUUID() <em>Booking UUID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBookingNbr()
+	 * @see #getBookingUUID()
 	 * @generated
 	 * @ordered
 	 */
-	protected int bookingNbr = BOOKING_NBR_EDEFAULT;
+	protected String bookingUUID = BOOKING_UUID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -98,6 +99,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	protected BookingImpl() {
 		super();
+		setBookingUUID(UUID.randomUUID().toString());
 	}
 
 	/**
@@ -203,8 +205,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getBookingNbr() {
-		return bookingNbr;
+	public String getBookingUUID() {
+		return bookingUUID;
 	}
 
 	/**
@@ -212,11 +214,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBookingNbr(int newBookingNbr) {
-		int oldBookingNbr = bookingNbr;
-		bookingNbr = newBookingNbr;
+	public void setBookingUUID(String newBookingUUID) {
+		String oldBookingUUID = bookingUUID;
+		bookingUUID = newBookingUUID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelCorePackage.BOOKING__BOOKING_NBR, oldBookingNbr, bookingNbr));
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelCorePackage.BOOKING__BOOKING_UUID, oldBookingUUID, bookingUUID));
 	}
 
 	/**
@@ -268,8 +270,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return basicGetCustomer();
 			case HotelCorePackage.BOOKING__RESERVATION:
 				return getReservation();
-			case HotelCorePackage.BOOKING__BOOKING_NBR:
-				return getBookingNbr();
+			case HotelCorePackage.BOOKING__BOOKING_UUID:
+				return getBookingUUID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -293,8 +295,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				getReservation().clear();
 				getReservation().addAll((Collection<? extends Reservation>)newValue);
 				return;
-			case HotelCorePackage.BOOKING__BOOKING_NBR:
-				setBookingNbr((Integer)newValue);
+			case HotelCorePackage.BOOKING__BOOKING_UUID:
+				setBookingUUID((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -317,8 +319,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelCorePackage.BOOKING__RESERVATION:
 				getReservation().clear();
 				return;
-			case HotelCorePackage.BOOKING__BOOKING_NBR:
-				setBookingNbr(BOOKING_NBR_EDEFAULT);
+			case HotelCorePackage.BOOKING__BOOKING_UUID:
+				setBookingUUID(BOOKING_UUID_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -338,8 +340,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return customer != null;
 			case HotelCorePackage.BOOKING__RESERVATION:
 				return reservation != null && !reservation.isEmpty();
-			case HotelCorePackage.BOOKING__BOOKING_NBR:
-				return bookingNbr != BOOKING_NBR_EDEFAULT;
+			case HotelCorePackage.BOOKING__BOOKING_UUID:
+				return BOOKING_UUID_EDEFAULT == null ? bookingUUID != null : !BOOKING_UUID_EDEFAULT.equals(bookingUUID);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -375,8 +377,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (bookingNbr: ");
-		result.append(bookingNbr);
+		result.append(" (bookingUUID: ");
+		result.append(bookingUUID);
 		result.append(')');
 		return result.toString();
 	}
