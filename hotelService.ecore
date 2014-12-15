@@ -102,7 +102,7 @@
         upperBound="-1" eType="ecore:EClass hotelCore.ecore#//Booking"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ICustomerManager" abstract="true" interface="true">
-    <eOperations name="getCustomerByIdNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
+    <eOperations name="getCustomerByIdNumber" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Customer">
       <eParameters name="idNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="getCustomersByName" ordered="false" upperBound="-1" eType="ecore:EClass hotelCore.ecore#//Customer">

@@ -80,7 +80,7 @@ public class CustomerManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long getCustomerByIdNumber(String idNumber) {
+	public Customer getCustomerByIdNumber(String idNumber) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

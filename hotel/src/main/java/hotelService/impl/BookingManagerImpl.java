@@ -60,12 +60,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	protected BookingManagerImpl() {
 		super();
-		try {
-			banking = CustomerRequires.instance();
-		} catch (SOAPException e) {
-			e.printStackTrace();
-		}
-		allBookings = new EArrayList<>();
 	}
 
 	/**
@@ -189,10 +183,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public void makePaymentIfAllReservationsCheckedOut(Booking booking) {
-		if (allReservationsCheckedOut(booking)) {
-			// TODO - fix this
-			//makePayment(booking);
-		}
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	private void makePayment(Booking booking) {
@@ -301,11 +294,11 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			case HotelServicePackage.BOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING:
 				return isBillPaidInFull((Booking)arguments.get(0));
 			case HotelServicePackage.BOOKING_MANAGER___GET_BILL__BOOKING:
-				return getBill((Booking) arguments.get(0));
+				return getBill((Booking)arguments.get(0));
 			case HotelServicePackage.BOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION:
-				return getBookingByReservation((Reservation) arguments.get(0));
+				return getBookingByReservation((Reservation)arguments.get(0));
 			case HotelServicePackage.BOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING:
-				makePaymentIfAllReservationsCheckedOut((Booking) arguments.get(0));
+				makePaymentIfAllReservationsCheckedOut((Booking)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

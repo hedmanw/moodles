@@ -6,12 +6,8 @@ import hotelCore.Bill;
 import hotelCore.Booking;
 import hotelCore.Customer;
 import hotelCore.Reservation;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
-
-import java.rmi.NoSuchObjectException;
 
 /**
  * <!-- begin-user-doc -->

@@ -861,7 +861,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 
 		initEClass(iCustomerManagerEClass, ICustomerManager.class, "ICustomerManager", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getICustomerManager__GetCustomerByIdNumber__String(), ecorePackage.getELong(), "getCustomerByIdNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomerManager__GetCustomerByIdNumber__String(), theHotelCorePackage.getCustomer(), "getCustomerByIdNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "idNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getICustomerManager__GetCustomersByName__String(), theHotelCorePackage.getCustomer(), "getCustomersByName", 0, -1, IS_UNIQUE, !IS_ORDERED);

@@ -26,7 +26,7 @@ public interface ICustomerManager extends EObject {
 	 * @model required="true" ordered="false" idNumberDataType="org.eclipse.uml2.types.String" idNumberRequired="true" idNumberOrdered="false"
 	 * @generated
 	 */
-	long getCustomerByIdNumber(String idNumber);
+	Customer getCustomerByIdNumber(String idNumber);
 
 	/**
 	 * <!-- begin-user-doc -->
