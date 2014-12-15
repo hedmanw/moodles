@@ -131,6 +131,11 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 	 */
 	public Room createRoom(int roomNumber, RoomType roomType) {
 		Room room = HotelCoreFactory.eINSTANCE.createRoom();
+		for (Room hotelRoom : allRooms) {
+			if (hotelRoom.getRoomNumber() == roomNumber) {
+				throw new IllegalArgumentException("Room already exists");
+			}
+		}
 		room.setRoomNumber(roomNumber);
 		room.setRoomType(roomType);
 		getAllRooms().add(room);
