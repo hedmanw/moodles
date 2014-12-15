@@ -1,6 +1,7 @@
 package se.chalmers.mdsd1415.group11
 
 import hotelService.BookingManager
+import hotelService.CustomerManager
 import hotelService.ManagerSingleton
 import hotelService.ReservationManager
 import hotelService.RoomManager
@@ -16,6 +17,7 @@ class HotelBaseSpecification extends Specification {
     RoomTypeManager roomTypeManager
     ReservationManager reservationManager
     BookingManager bookingManager
+    CustomerManager customerManager
     @Shared
     Date today = new Date()
     @Shared
