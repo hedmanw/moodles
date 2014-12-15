@@ -2,6 +2,8 @@
  */
 package hotelCore.impl;
 
+import bankingService.BankingServicePackage;
+import bankingService.impl.BankingServicePackageImpl;
 import hotelCore.Bill;
 import hotelCore.Booking;
 import hotelCore.ConferenceRoom;
@@ -23,6 +25,8 @@ import hotelService.HotelServicePackage;
 
 import hotelService.impl.HotelServicePackageImpl;
 
+import keyCardService.KeyCardServicePackage;
+import keyCardService.impl.KeyCardServicePackageImpl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
@@ -189,16 +193,22 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 		// Obtain or create and register interdependencies
 		HotelServicePackageImpl theHotelServicePackage = (HotelServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) instanceof HotelServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelServicePackage.eNS_URI) : HotelServicePackage.eINSTANCE);
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
+		KeyCardServicePackageImpl theKeyCardServicePackage = (KeyCardServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI) instanceof KeyCardServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI) : KeyCardServicePackage.eINSTANCE);
+		BankingServicePackageImpl theBankingServicePackage = (BankingServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) instanceof BankingServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) : BankingServicePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theHotelCorePackage.createPackageContents();
 		theHotelServicePackage.createPackageContents();
 		theTypesPackage.createPackageContents();
+		theKeyCardServicePackage.createPackageContents();
+		theBankingServicePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theHotelCorePackage.initializePackageContents();
 		theHotelServicePackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();
+		theKeyCardServicePackage.initializePackageContents();
+		theBankingServicePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theHotelCorePackage.freeze();

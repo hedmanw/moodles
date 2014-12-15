@@ -2,29 +2,16 @@
  */
 package hotelService.impl;
 
-import datastructs.EArrayList;
-import hotelCore.Bill;
-import hotelCore.Booking;
-import hotelCore.Customer;
-import hotelCore.Reservation;
 import hotelCore.*;
-
 import hotelService.BookingManager;
 import hotelService.HotelServicePackage;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
-
 import javax.xml.soap.SOAPException;
 
 /**
