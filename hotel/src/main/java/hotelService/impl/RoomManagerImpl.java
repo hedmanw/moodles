@@ -93,7 +93,7 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 		EList<Room> matching = new EArrayList<>();
 		EList<Booking> bookings = ManagerSingleton.getInstance().BOOKING_MANAGER.getAllBookings();
 		for (Room room : getAllRooms()) {
-			if (roomTypes.contains(room.getRoomType())) {
+			if (roomTypes.contains(room.getRoomType()) || roomTypes.isEmpty()) {
 				matching.add(room);
 				for (Booking booking : bookings) {
 					for (Reservation reservation : booking.getReservations()) {
