@@ -10,7 +10,7 @@ class CheckOutTest extends HotelBaseSpecification {
         def roomType = roomTypeManager.createRoomType("Double room", 1000)
         def room = roomManager.createRoom(501, roomType)
         def booking = bookingManager.createBooking()
-        def reservation = reservationManager.createReservation(booking, today-3, today, room, roomType)
+        def reservation = reservationManager.createReservation(booking, today-3, today+1, room, roomType)
         reservation.setCheckedIn(today-3)
     }
 
@@ -20,5 +20,9 @@ class CheckOutTest extends HotelBaseSpecification {
 
         then:
         reservation.getRoom().getRoomNumber() == 501
+
+        expect:
+        reservationManager.checkOutReservation(reservation)
+
     }
 }

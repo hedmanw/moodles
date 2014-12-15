@@ -8,6 +8,7 @@ import hotelCore.Room;
 import hotelCore.RoomType;
 import hotelCore.*;
 
+import hotelService.BookingManager;
 import hotelService.HotelServicePackage;
 import hotelService.ManagerSingleton;
 import hotelService.ReservationManager;
@@ -50,6 +51,8 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	protected EList<Reservation> allReservations;
 
+	private BookingManager bookingManager;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -57,6 +60,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	protected ReservationManagerImpl() {
 		super();
+		bookingManager = new BookingManagerImpl();
 	}
 
 	/**
@@ -154,12 +158,18 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean checkOutReservation(Reservation reservation) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		returnKeyCard(reservation);
+		Booking booking = bookingManager.getBookingByReservation(reservation);
+		for (Reservation r : booking.getReservations()) {
+			
+		}
+
+	}
+
+	private void returnKeyCard(Reservation reservation) {
 	}
 
 	/**
