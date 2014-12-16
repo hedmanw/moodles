@@ -231,9 +231,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	 * @generated
 	 */
 	public void addLoyaltyPoints(int points) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		loyaltyPoints += points;
 	}
 
 	/**

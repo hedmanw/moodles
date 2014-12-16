@@ -13,6 +13,8 @@ import hotelService.BookingManager;
 import hotelService.HotelServicePackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+
+import hotelService.ManagerSingleton;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -170,12 +172,12 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void makePaymentIfAllReservationsCheckedOut(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (allReservationsCheckedOut(booking)) {
+			makePayment(booking);
+		}
 	}
 
 	/**
@@ -206,6 +208,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		Customer c = booking.getCustomer();
 		c.addLoyaltyPoints((int) bill.getGrandTotal());
 
+		banking = BankingSingleton.getInstance().CUSTOMER_PROVIDES;
 		PaymentDetails pd = c.getPaymentDetails();
 		banking.makePayment(pd.getCcNumber(), pd.getCcv(), pd.getExpiryMonth(),
 				pd.getExpiryYear(), pd.getFirstName(), pd.getLastName(), bill.getGrandTotal());
