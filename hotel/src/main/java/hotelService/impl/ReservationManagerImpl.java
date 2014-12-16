@@ -2,6 +2,7 @@
  */
 package hotelService.impl;
 
+import datastructs.EArrayList;
 import hotelCore.Booking;
 import hotelCore.Reservation;
 import hotelCore.Room;
@@ -92,7 +93,8 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 			throw new IllegalArgumentException("Illegal date range");
 		}
 
-		EList<Booking> bookings = ManagerSingleton.getInstance().BOOKING_MANAGER.getAllBookings();
+		EList<Booking> bookings = new EArrayList<>(ManagerSingleton.getInstance().BOOKING_MANAGER.getAllBookings());
+		bookings.add(booking);
 		for (Booking b : bookings) {
 			for (Reservation r : b.getReservations()) {
 				if (r.getRoom().getRoomNumber() == room.getRoomNumber()) {
@@ -144,12 +146,14 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean checkInReservation(Reservation reservation, String responsible, int numberOfGuests) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		reservation.setResponsible(responsible);
+		reservation.setNumberOfGuests(numberOfGuests);
+		reservation.setCheckedIn(new Date());
+		// TODO - should check that there are an acceptable number of guests
+		return true;
 	}
 
 	/**

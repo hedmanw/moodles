@@ -30,7 +30,7 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
         then:
         booking.getReservations().size() == 1
         booking.getReservations().get(0) == reservation
-        bookingManager.allBookings.size() == 1
+        booking.getReservations().size() == 1
     }
 
     def "make two reservations on a booking"() {
@@ -43,7 +43,6 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
         booking.getReservations().size() == 2
         booking.getReservations().get(0) == res1
         booking.getReservations().get(1) == res2
-        bookingManager.allBookings.size() == 1
     }
 
     def "make two non-overlapping reservations for the same room"() {
@@ -58,7 +57,6 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
         booking1.getReservations().get(0) == res1
         booking2.getReservations().size() == 1
         booking2.getReservations().get(0) == res2
-        bookingManager.allBookings.size() == 2
 
         where:
         baseStart << [today, today, tomorrow]
@@ -77,7 +75,6 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
         thrown(IllegalArgumentException)
         booking.getReservations().size() == 1
         booking.getReservations().get(0) == res
-        bookingManager.allBookings.size() == 1
     }
 
     def "room is blocked regardless of cost category"() {
@@ -126,8 +123,11 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
     def "getCurrentReservation returns correct reservation"() {
         setup:
         Booking past = bookingManager.createBooking()
+        bookingManager.allBookings.add(past)
         Booking current = bookingManager.createBooking()
+        bookingManager.allBookings.add(current)
         Booking future = bookingManager.createBooking()
+        bookingManager.allBookings.add(future)
 
         reservationManager.createReservation(future, tomorrow+3, tomorrow+5, one, a)
 

@@ -690,13 +690,22 @@ public interface HotelServicePackage extends EPackage {
 	int IBOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING = 8;
 
 	/**
+	 * The operation id for the '<em>Confirm Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_MANAGER___CONFIRM_BOOKING__BOOKING = 9;
+
+	/**
 	 * The number of operations of the '<em>IBooking Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER_OPERATION_COUNT = 9;
+	int IBOOKING_MANAGER_OPERATION_COUNT = 10;
 
 	/**
 	 * The meta object id for the '{@link hotelService.impl.BookingManagerImpl <em>Booking Manager</em>}' class.
@@ -806,6 +815,15 @@ public interface HotelServicePackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING = IBOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING;
+
+	/**
+	 * The operation id for the '<em>Confirm Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___CONFIRM_BOOKING__BOOKING = IBOOKING_MANAGER___CONFIRM_BOOKING__BOOKING;
 
 	/**
 	 * The number of operations of the '<em>Booking Manager</em>' class.
@@ -1344,6 +1362,16 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIBookingManager__MakePaymentIfAllReservationsCheckedOut__Booking();
 
 	/**
+	 * Returns the meta object for the '{@link hotelService.IBookingManager#confirmBooking(hotelCore.Booking) <em>Confirm Booking</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Confirm Booking</em>' operation.
+	 * @see hotelService.IBookingManager#confirmBooking(hotelCore.Booking)
+	 * @generated
+	 */
+	EOperation getIBookingManager__ConfirmBooking__Booking();
+
+	/**
 	 * Returns the meta object for class '{@link hotelService.BookingManager <em>Booking Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1781,6 +1809,14 @@ public interface HotelServicePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IBOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING = eINSTANCE.getIBookingManager__MakePaymentIfAllReservationsCheckedOut__Booking();
+
+		/**
+		 * The meta object literal for the '<em><b>Confirm Booking</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKING_MANAGER___CONFIRM_BOOKING__BOOKING = eINSTANCE.getIBookingManager__ConfirmBooking__Booking();
 
 		/**
 		 * The meta object literal for the '{@link hotelService.impl.BookingManagerImpl <em>Booking Manager</em>}' class.

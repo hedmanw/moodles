@@ -1,19 +1,25 @@
 package se.chalmers.mdsd1415.group11.usecase
 
-import hotelService.CustomerManager
-import hotelService.ManagerSingleton
+import bankingService.BankingSingleton
+import bankingService.CustomerProvides
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
 /**
  * Created by Oskar on 14-12-12.
  */
 class CheckOutTest extends HotelBaseSpecification {
+    def bank = Mock(CustomerProvides)
+
     def setup() {
-        def bookingManager = ManagerSingleton.instance.BOOKING_MANAGER
         def roomType = roomTypeManager.createRoomType("Double room", 1000)
         def room = roomManager.createRoom(501, roomType)
         def booking = bookingManager.createBooking()
+        BankingSingleton.instance.CUSTOMER_PROVIDES = bank
+        def customer = customerManager.createCustomer("123456789", "herp derp")
+        customerManager.setPaymentDetailsForCustomer(customer, "herp", "derp", "0987123498762345", "345", 12, 15)
+        booking.setCustomer(customer)
         def reservation = reservationManager.createReservation(booking, today-3, today+1, room, roomType)
+        bookingManager.allBookings.add(booking)
         reservation.setCheckedIn(today-3)
     }
 

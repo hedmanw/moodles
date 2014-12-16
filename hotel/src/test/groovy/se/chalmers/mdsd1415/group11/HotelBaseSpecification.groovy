@@ -35,6 +35,7 @@ class HotelBaseSpecification extends Specification {
         roomTypeManager.allRoomTypes.clear()
         roomManager.allRooms.clear()
         reservationManager.allReservations.clear()
+        customerManager.allCustomers.clear()
     }
 
     def "this method has to be here..."() {

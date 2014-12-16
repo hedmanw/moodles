@@ -2,6 +2,8 @@
  */
 package hotelService.impl;
 
+import bankingService.BankingServicePackage;
+import bankingService.impl.BankingServicePackageImpl;
 import hotelCore.HotelCorePackage;
 
 import hotelCore.impl.HotelCorePackageImpl;
@@ -24,6 +26,8 @@ import hotelService.RoomManager;
 import hotelService.RoomTypeManager;
 import hotelService.SystemUser;
 
+import keyCardService.KeyCardServicePackage;
+import keyCardService.impl.KeyCardServicePackageImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -196,16 +200,22 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		// Obtain or create and register interdependencies
 		HotelCorePackageImpl theHotelCorePackage = (HotelCorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI) instanceof HotelCorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI) : HotelCorePackage.eINSTANCE);
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
+		KeyCardServicePackageImpl theKeyCardServicePackage = (KeyCardServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI) instanceof KeyCardServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(KeyCardServicePackage.eNS_URI) : KeyCardServicePackage.eINSTANCE);
+		BankingServicePackageImpl theBankingServicePackage = (BankingServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) instanceof BankingServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankingServicePackage.eNS_URI) : BankingServicePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theHotelServicePackage.createPackageContents();
 		theHotelCorePackage.createPackageContents();
 		theTypesPackage.createPackageContents();
+		theKeyCardServicePackage.createPackageContents();
+		theBankingServicePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theHotelServicePackage.initializePackageContents();
 		theHotelCorePackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();
+		theKeyCardServicePackage.initializePackageContents();
+		theBankingServicePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theHotelServicePackage.freeze();
@@ -536,6 +546,15 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getIBookingManager__ConfirmBooking__Booking() {
+		return iBookingManagerEClass.getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBookingManager() {
 		return bookingManagerEClass;
 	}
@@ -704,6 +723,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___GET_BILL__BOOKING);
 		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION);
 		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING);
+		createEOperation(iBookingManagerEClass, IBOOKING_MANAGER___CONFIRM_BOOKING__BOOKING);
 
 		bookingManagerEClass = createEClass(BOOKING_MANAGER);
 		createEReference(bookingManagerEClass, BOOKING_MANAGER__ALL_BOOKINGS);
@@ -856,6 +876,9 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		op = initEOperation(getIBookingManager__MakePaymentIfAllReservationsCheckedOut__Booking(), null, "makePaymentIfAllReservationsCheckedOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theHotelCorePackage.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getIBookingManager__ConfirmBooking__Booking(), ecorePackage.getEBoolean(), "confirmBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theHotelCorePackage.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(bookingManagerEClass, BookingManager.class, "BookingManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBookingManager_AllBookings(), theHotelCorePackage.getBooking(), null, "allBookings", null, 0, -1, BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -874,8 +897,8 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		addEParameter(op, theTypesPackage.getString(), "idNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getICustomerManager__SetPaymentDetailsForCustomer__Customer_String_String_String_String_int_int(), ecorePackage.getELong(), "setPaymentDetailsForCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theHotelCorePackage.getCustomer(), "customerId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomerManager__SetPaymentDetailsForCustomer__Customer_String_String_String_String_int_int(), theHotelCorePackage.getPaymentDetails(), "setPaymentDetailsForCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theHotelCorePackage.getCustomer(), "customer", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);

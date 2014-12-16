@@ -54,6 +54,7 @@ class ReserveARoomTest extends HotelBaseSpecification {
         searchCriteria.add(roomType)
         def availableRooms = roomManager.getAvailableRooms(today, tomorrow, searchCriteria)
         Reservation reservation = reservationManager.createReservation(booking, today, tomorrow, availableRooms.get(0), roomType)
+        bookingManager.allBookings.add(booking)
 
         expect:
         roomManager.getAvailableRooms(today, tomorrow, searchCriteria).isEmpty()
@@ -69,6 +70,7 @@ class ReserveARoomTest extends HotelBaseSpecification {
         searchCriteria.add(roomType)
         def availableRooms = roomManager.getAvailableRooms(today, tomorrow, searchCriteria)
         Reservation reservation = reservationManager.createReservation(booking, today, tomorrow, availableRooms.get(0), roomType)
+        bookingManager.allBookings.add(booking)
         roomManager.createRoom(2, roomTypeManager.createRoomType("Suite", 10000))
 
         expect:

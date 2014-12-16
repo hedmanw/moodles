@@ -45,6 +45,7 @@ class RoomManagerImplTest extends HotelBaseSpecification {
         setup:
         def booking = bookingManager.createBooking()
         reservationManager.createReservation(booking, baseStart, baseEnd, one, a)
+        bookingManager.allBookings.add(booking)
 
         when:
         def results = roomManager.getAvailableRooms(secondStart, secondEnd, searchCriteria)
@@ -63,6 +64,7 @@ class RoomManagerImplTest extends HotelBaseSpecification {
         setup:
         def booking = bookingManager.createBooking()
         reservationManager.createReservation(booking, baseStart, baseEnd, one, a)
+        bookingManager.allBookings.add(booking)
 
         when:
         EList<RoomType> twoRoomTypes = new EArrayList<>()

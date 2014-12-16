@@ -2,30 +2,24 @@
  */
 package hotelService.impl;
 
+import bankingService.BankingSingleton;
+import bankingService.CustomerProvides;
 import datastructs.EArrayList;
 import hotelCore.Bill;
 import hotelCore.Booking;
 import hotelCore.Customer;
 import hotelCore.Reservation;
 import hotelCore.*;
-
 import hotelService.BookingManager;
 import hotelService.HotelServicePackage;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 
+import hotelService.ManagerSingleton;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
-
-import javax.xml.soap.SOAPException;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,7 +45,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	protected EList<Booking> allBookings;
 
-	private CustomerRequires banking = null;
+	private CustomerProvides banking = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,7 +85,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public Booking createBooking() {
 		Booking booking = HotelCoreFactory.eINSTANCE.createBooking();
-		getAllBookings().add(booking);
 		return booking;
 	}
 
@@ -101,9 +94,12 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public Booking getBookingByBookingNumber(String bookingNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (Booking b : getAllBookings()) {
+			if (b.getBookingUUID().equals(bookingNumber)) {
+				return b;
+			}
+		}
+		return null;
 	}
 
 	/**
@@ -123,20 +119,22 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public EList<Booking> getBookingsByCustomer(Customer customer) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList<Booking> bs = new EArrayList<>();
+		for (Booking b : getAllBookings()) {
+			if (b.getCustomer().equals(customer)) {
+				bs.add(b);
+			}
+		}
+		return bs;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setBookingCustomer(Booking booking, Customer customer) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		booking.setCustomer(customer);
 	}
 
 	/**
@@ -180,12 +178,35 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void makePaymentIfAllReservationsCheckedOut(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (allReservationsCheckedOut(booking)) {
+			makePayment(booking);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean confirmBooking(Booking booking) {
+		for (Booking existingBooking : allBookings) {
+			if (existingBooking.getBookingUUID().equals(booking.getBookingUUID())) {
+				throw new RuntimeException("Tried to confirm duplicate booking number.");
+			}
+		}
+		Customer customer = booking.getCustomer();
+		if (customer != null) {
+			PaymentDetails p = customer.getPaymentDetails();
+			if (BankingSingleton.getInstance().CUSTOMER_PROVIDES.isCreditCardValid(p.getCcNumber(), p.getCcv(),
+					p.getExpiryMonth(), p.getExpiryYear(), p.getFirstName(), p.getLastName())) {
+                getAllBookings().add(booking);
+                return true;
+            }
+		}
+		return false;
 	}
 
 	private void makePayment(Booking booking) {
@@ -193,13 +214,10 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		Customer c = booking.getCustomer();
 		c.addLoyaltyPoints((int) bill.getGrandTotal());
 
+		banking = BankingSingleton.getInstance().CUSTOMER_PROVIDES;
 		PaymentDetails pd = c.getPaymentDetails();
-		try {
-			banking.makePayment(pd.getCcNumber(), pd.getCcv(), pd.getExpiryMonth(),
-					pd.getExpiryYear(), pd.getFirstName(), pd.getLastName(), bill.getGrandTotal());
-		} catch (SOAPException e) {
-			e.printStackTrace();
-		}
+		banking.makePayment(pd.getCcNumber(), pd.getCcv(), pd.getExpiryMonth(),
+				pd.getExpiryYear(), pd.getFirstName(), pd.getLastName(), bill.getGrandTotal());
 	}
 
 	private boolean allReservationsCheckedOut(Booking booking) {
@@ -300,6 +318,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			case HotelServicePackage.BOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING:
 				makePaymentIfAllReservationsCheckedOut((Booking)arguments.get(0));
 				return null;
+			case HotelServicePackage.BOOKING_MANAGER___CONFIRM_BOOKING__BOOKING:
+				return confirmBooking((Booking)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
