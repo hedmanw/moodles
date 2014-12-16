@@ -228,7 +228,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addLoyaltyPoints(int points) {
 		loyaltyPoints += points;
@@ -237,12 +237,10 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removeLoyaltyPoints(int points) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		loyaltyPoints -= points;
 	}
 
 	/**

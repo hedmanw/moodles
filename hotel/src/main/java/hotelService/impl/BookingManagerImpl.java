@@ -123,12 +123,10 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setBookingCustomer(Booking booking, Customer customer) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		booking.setCustomer(customer);
 	}
 
 	/**
