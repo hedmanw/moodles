@@ -25,27 +25,23 @@ class MakeABookingTest extends HotelBaseSpecification {
         Customer bookingOwner = customerManager.createCustomer("1", "Robert C. Martin")
         customerManager.setPaymentDetailsForCustomer(bookingOwner, "Robert Cecil", "Martin", "123", "123", 1, 2016)
 
-        when:
+        when: "Reservations are made for the booking..."
         def booking = bookingManager.createBooking()
         reservationManager.createReservation(booking, today, tomorrow, room, roomType)
         reservationManager.createReservation(booking, today, tomorrow, room2, roomType)
 
-        then:
+        then: "...the preliminary bill is correct"
         booking.getBill().getGrandTotal() == 2000
 
-        when:
+        when: "The customer is searched by ID and added to the booking..."
         def customer = customerManager.getCustomerByIdNumber("1")
-
-        then:
-        customer == bookingOwner
-
-        when:
         booking.setCustomer(customer)
 
-        then:
+        then: "...the bill is still correct"
+        customer == bookingOwner
         booking.getBill().getGrandTotal() == 2000
 
-        expect:
+        expect: "Booking UUID unique, rooms valid, payment valid"
         bookingManager.confirmBooking(booking)
     }
 }
