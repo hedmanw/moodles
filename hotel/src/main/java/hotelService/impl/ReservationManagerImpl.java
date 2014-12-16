@@ -146,12 +146,14 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean checkInReservation(Reservation reservation, String responsible, int numberOfGuests) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		reservation.setResponsible(responsible);
+		reservation.setNumberOfGuests(numberOfGuests);
+		reservation.setCheckedIn(new Date());
+		// TODO - should check that there are an acceptable number of guests
+		return true;
 	}
 
 	/**

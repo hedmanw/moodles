@@ -2,6 +2,7 @@
  */
 package hotelService.impl;
 
+import datastructs.EArrayList;
 import hotelCore.Customer;
 import hotelCore.HotelCoreFactory;
 import hotelCore.PaymentDetails;
@@ -93,12 +94,16 @@ public class CustomerManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<Customer> getCustomersByName(String name) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList<Customer> cs = new EArrayList<>();
+		for (Customer c : getAllCustomers()) {
+			if (c.getName().equals(name)) {
+				cs.add(c);
+			}
+		}
+		return cs;
 	}
 
 	/**

@@ -19,7 +19,7 @@ class CheckInTest extends HotelBaseSpecification{
         reservation = reservationManager.createReservation(booking, today, today + 4, room, roomType)
         def customer = customerManager.createCustomer("123", "Mona")
         booking.setCustomer(customer)
-
+        bookingManager.getAllBookings().add(booking)
     }
 
     def "find by customer"() {
@@ -34,8 +34,7 @@ class CheckInTest extends HotelBaseSpecification{
         reservation == theReservation
         reservation.getResponsible() == "Kim"
         reservation.getNumberOfGuests() == 2
-        ((SleepRoom)theReservation.getRoom()).getNbrOfBeds() >= reservation.getNumberOfGuests()
-        reservation.getCheckedIn() == today
+        reservation.getCheckedIn() != 0
     }
 
     def "find by bookingNumber"() {
@@ -72,7 +71,7 @@ class CheckInTest extends HotelBaseSpecification{
         def customer = customerManager.createCustomer("124", "Cecilia")
 
         expect:
-        bookingManager.getBookingsByCustomer(customer).get(0) == null
+        bookingManager.getBookingsByCustomer(customer).isEmpty()
     }
 
     def "more guests than beds"() {

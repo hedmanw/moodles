@@ -4,6 +4,7 @@ package hotelService.impl;
 
 import bankingService.BankingSingleton;
 import bankingService.CustomerProvides;
+import datastructs.EArrayList;
 import hotelCore.Bill;
 import hotelCore.Booking;
 import hotelCore.Customer;
@@ -93,9 +94,12 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public Booking getBookingByBookingNumber(String bookingNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (Booking b : getAllBookings()) {
+			if (b.getBookingUUID().equals(bookingNumber)) {
+				return b;
+			}
+		}
+		return null;
 	}
 
 	/**
@@ -115,9 +119,13 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public EList<Booking> getBookingsByCustomer(Customer customer) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList<Booking> bs = new EArrayList<>();
+		for (Booking b : getAllBookings()) {
+			if (b.getCustomer().equals(customer)) {
+				bs.add(b);
+			}
+		}
+		return bs;
 	}
 
 	/**
