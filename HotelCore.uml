@@ -76,7 +76,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dXRZgXjEEeSDBKbFcXcsYQ" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dXRZgnjEEeSDBKbFcXcsYQ" value="1"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_ylpFYHlsEeSJYOaXazdB-A" name="cleaned" visibility="private">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ylpFYHlsEeSJYOaXazdB-A" name="housekept" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_Pmk_gH_EEeSbJeGPS5kPQg" name="equipment" visibility="private" type="_vJ1eEHVUEeSsEN78lnEQdg" association="_PmmNoH_EEeSbJeGPS5kPQg">
@@ -434,9 +434,6 @@
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_XFUhgHn8EeSJYOaXazdB-A" name="getCustomer">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDwtAHn8EeSJYOaXazdB-A" type="_J3LAQHlvEeSJYOaXazdB-A" direction="return"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_e7dXUHn8EeSJYOaXazdB-A" name="changeCustomer">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iOFlsHn8EeSJYOaXazdB-A" name="newCustomer" type="_J3LAQHlvEeSJYOaXazdB-A"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_n8sHQHn8EeSJYOaXazdB-A" name="getBill">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_WYxvIHn9EeSJYOaXazdB-A" type="_ygK24HlpEeSJYOaXazdB-A" direction="return"/>
