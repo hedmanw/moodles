@@ -104,14 +104,6 @@
         <type xmi:type="uml:Class" href="HotelCore.uml#_1MohkHjDEeSDBKbFcXcsYQ"/>
       </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_EhNeYHoCEeShtIICY7OyLw" name="getReservation">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Hd_YkHoCEeShtIICY7OyLw" name="reservationId">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_MyvPsHoCEeShtIICY7OyLw" name="reservation" direction="return">
-        <type xmi:type="uml:Class" href="HotelCore.uml#_eUmw8HlzEeSJYOaXazdB-A"/>
-      </ownedParameter>
-    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_wXfsMHoDEeShtIICY7OyLw" name="getNonCheckedInReservation">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_3VyUAHoDEeShtIICY7OyLw" name="booking">
         <type xmi:type="uml:Class" href="HotelCore.uml#_qdnKIHlzEeSJYOaXazdB-A"/>
@@ -203,14 +195,6 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
       </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_zGblYHoIEeShtIICY7OyLw" name="getBill">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_21kwoHoIEeShtIICY7OyLw" name="booking">
-        <type xmi:type="uml:Class" href="HotelCore.uml#_qdnKIHlzEeSJYOaXazdB-A"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7kdhoHoIEeShtIICY7OyLw" name="bill" direction="return">
-        <type xmi:type="uml:Class" href="HotelCore.uml#_ygK24HlpEeSJYOaXazdB-A"/>
-      </ownedParameter>
-    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_7o5VcH-JEeSLM4agWErSNA" name="getBookingByReservation">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_N95W0H-KEeSLM4agWErSNA" name="reservation">
         <type xmi:type="uml:Class" href="HotelCore.uml#_eUmw8HlzEeSJYOaXazdB-A"/>
@@ -250,14 +234,6 @@
         <type xmi:type="uml:Class" href="HotelCore.uml#_J3LAQHlvEeSJYOaXazdB-A"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SjIlIIISEeStbpNcMqf5hQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SjJMMIISEeStbpNcMqf5hQ" value="*"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_uxAsAHoCEeShtIICY7OyLw" name="getCustomer">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_yIb60HoCEeShtIICY7OyLw" name="customerId">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_0EBdwHoCEeShtIICY7OyLw" name="customer" direction="return">
-        <type xmi:type="uml:Class" href="HotelCore.uml#_J3LAQHlvEeSJYOaXazdB-A"/>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_1GBtUHoCEeShtIICY7OyLw" name="createCustomer">
