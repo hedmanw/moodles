@@ -6,6 +6,24 @@
         <children>
           <emfPageIdentifier href="HotelCore.notation#_G67G8HVQEeSFlMIer3mkJA"/>
         </children>
+        <children>
+          <emfPageIdentifier href="model.notation#_aaRGgHlsEeSNP_QJ-oV69w"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="model.notation#_pq3DAHotEeSyq9V5IfgrHg"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="model.notation#_CcWVwHolEeSXTMmqtXqoMA"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="model.notation#__3_PsHoxEeSXTMmqtXqoMA"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="model.notation#_MZqY0Ho4EeSXTMmqtXqoMA"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="model.notation#_I2WpIHpDEeSXTMmqtXqoMA"/>
+        </children>
       </children>
     </windows>
   </sashModel>
