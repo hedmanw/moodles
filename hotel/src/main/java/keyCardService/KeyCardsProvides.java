@@ -2,6 +2,7 @@
  */
 package keyCardService;
 
+import hotelCore.Reservation;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -28,9 +29,9 @@ public interface KeyCardsProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" many="false" ordered="false" reservationRequired="true" reservationOrdered="false" numberOfCardsRequired="true" numberOfCardsOrdered="false"
+	 * @model ordered="false" reservationRequired="true" reservationOrdered="false" numberOfCardsRequired="true" numberOfCardsOrdered="false"
 	 * @generated
 	 */
-	EList assignCardsToReservation(long reservation, int numberOfCards);
+	EList<Integer> assignCardsToReservation(Reservation reservation, int numberOfCards);
 
 } // KeyCardsProvides

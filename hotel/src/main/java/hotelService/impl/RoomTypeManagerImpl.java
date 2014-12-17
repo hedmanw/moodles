@@ -2,6 +2,7 @@
  */
 package hotelService.impl;
 
+import hotelCore.ConferenceRoom;
 import hotelCore.HotelCoreFactory;
 import hotelCore.RoomType;
 
@@ -92,19 +93,40 @@ public class RoomTypeManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public RoomType createRoomType(String name, double costPerNight) {
+	public RoomType createSleepRoom(String name, double costPerNight, int numberOfBeds) {
 		for (RoomType roomType : allRoomTypes) {
 			if (roomType.getName().equals(name)) {
 				throw new IllegalArgumentException("Room type name already exists");
 			}
 		}
 		SleepRoom sleepRoom = HotelCoreFactory.eINSTANCE.createSleepRoom();
-		sleepRoom.setNbrOfBeds(2);
+		sleepRoom.setNbrOfBeds(numberOfBeds);
 		sleepRoom.setName(name);
 		sleepRoom.setCostPerNight(costPerNight);
 		getAllRoomTypes().add(sleepRoom);
 		return sleepRoom;
+
 	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public RoomType createConferenceRoom(String name, int maxPeople, double cost) {
+		for (RoomType roomType : allRoomTypes) {
+			if (roomType.getName().equals(name)) {
+				throw new IllegalArgumentException("Room type name already exists");
+			}
+		}
+		ConferenceRoom conferenceRoom = HotelCoreFactory.eINSTANCE.createConferenceRoom();
+		conferenceRoom.setMaxNbrOfPeople(maxPeople);
+		conferenceRoom.setCostPerNight(cost);
+		getAllRoomTypes().add(conferenceRoom);
+		return conferenceRoom;
+	}
+
+	
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -176,8 +198,10 @@ public class RoomTypeManagerImpl extends MinimalEObjectImpl.Container implements
 		switch (operationID) {
 			case HotelServicePackage.ROOM_TYPE_MANAGER___GET_ROOM_TYPES:
 				return getRoomTypes();
-			case HotelServicePackage.ROOM_TYPE_MANAGER___CREATE_ROOM_TYPE__STRING_DOUBLE:
-				return createRoomType((String)arguments.get(0), (Double)arguments.get(1));
+			case HotelServicePackage.ROOM_TYPE_MANAGER___CREATE_SLEEP_ROOM__STRING_DOUBLE_INT:
+				return createSleepRoom((String) arguments.get(0), (Double) arguments.get(1), (Integer) arguments.get(2));
+			case HotelServicePackage.ROOM_TYPE_MANAGER___CREATE_CONFERENCE_ROOM__STRING_INT_DOUBLE:
+				return createConferenceRoom((String) arguments.get(0), (Integer) arguments.get(1), (Double) arguments.get(2));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

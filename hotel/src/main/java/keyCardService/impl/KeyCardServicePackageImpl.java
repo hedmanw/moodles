@@ -157,7 +157,7 @@ public class KeyCardServicePackageImpl extends EPackageImpl implements KeyCardSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getKeyCardsProvides__AssignCardsToReservation__long_int() {
+	public EOperation getKeyCardsProvides__AssignCardsToReservation__Reservation_int() {
 		return keyCardsProvidesEClass.getEOperations().get(1);
 	}
 
@@ -193,7 +193,7 @@ public class KeyCardServicePackageImpl extends EPackageImpl implements KeyCardSe
 
 		keyCardsProvidesEClass = createEClass(KEY_CARDS_PROVIDES);
 		createEOperation(keyCardsProvidesEClass, KEY_CARDS_PROVIDES___RETURNED_CARDS__LONG);
-		createEOperation(keyCardsProvidesEClass, KEY_CARDS_PROVIDES___ASSIGN_CARDS_TO_RESERVATION__LONG_INT);
+		createEOperation(keyCardsProvidesEClass, KEY_CARDS_PROVIDES___ASSIGN_CARDS_TO_RESERVATION__RESERVATION_INT);
 	}
 
 	/**
@@ -219,6 +219,9 @@ public class KeyCardServicePackageImpl extends EPackageImpl implements KeyCardSe
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		HotelCorePackage theHotelCorePackage = (HotelCorePackage)EPackage.Registry.INSTANCE.getEPackage(HotelCorePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -233,8 +236,8 @@ public class KeyCardServicePackageImpl extends EPackageImpl implements KeyCardSe
 		EOperation op = initEOperation(getKeyCardsProvides__ReturnedCards__long(), ecorePackage.getEInt(), "returnedCards", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getELong(), "reservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getKeyCardsProvides__AssignCardsToReservation__long_int(), ecorePackage.getEEList(), "assignCardsToReservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getELong(), "reservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getKeyCardsProvides__AssignCardsToReservation__Reservation_int(), ecorePackage.getEInt(), "assignCardsToReservation", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theHotelCorePackage.getReservation(), "reservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "numberOfCards", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource

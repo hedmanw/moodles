@@ -2,7 +2,6 @@
  */
 package hotelService;
 
-import hotelCore.Bill;
 import hotelCore.Booking;
 import hotelCore.Customer;
 import hotelCore.Reservation;
@@ -67,14 +66,6 @@ public interface IBookingManager extends EObject {
 	 * @generated
 	 */
 	boolean isBillPaidInFull(Booking booking);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" bookingRequired="true" bookingOrdered="false"
-	 * @generated
-	 */
-	Bill getBill(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -352,13 +352,13 @@ public interface HotelCorePackage extends EPackage {
 	int ROOM__ROOM_TYPE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Cleaned</b></em>' attribute.
+	 * The feature id for the '<em><b>Housekept</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM__CLEANED = 2;
+	int ROOM__HOUSEKEPT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Equipment</b></em>' reference list.
@@ -1367,22 +1367,13 @@ public interface HotelCorePackage extends EPackage {
 	int BOOKING___GET_CUSTOMER = 2;
 
 	/**
-	 * The operation id for the '<em>Change Customer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___CHANGE_CUSTOMER__CUSTOMER = 3;
-
-	/**
 	 * The operation id for the '<em>Get Bill</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GET_BILL = 4;
+	int BOOKING___GET_BILL = 3;
 
 	/**
 	 * The operation id for the '<em>Set Customer</em>' operation.
@@ -1391,7 +1382,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___SET_CUSTOMER__CUSTOMER = 5;
+	int BOOKING___SET_CUSTOMER__CUSTOMER = 4;
 
 	/**
 	 * The number of operations of the '<em>Booking</em>' class.
@@ -1400,7 +1391,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 6;
+	int BOOKING_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.ConferenceRoomImpl <em>Conference Room</em>}' class.
@@ -1713,15 +1704,15 @@ public interface HotelCorePackage extends EPackage {
 	EReference getRoom_RoomType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link hotelCore.Room#isCleaned <em>Cleaned</em>}'.
+	 * Returns the meta object for the attribute '{@link hotelCore.Room#isHousekept <em>Housekept</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cleaned</em>'.
-	 * @see hotelCore.Room#isCleaned()
+	 * @return the meta object for the attribute '<em>Housekept</em>'.
+	 * @see hotelCore.Room#isHousekept()
 	 * @see #getRoom()
 	 * @generated
 	 */
-	EAttribute getRoom_Cleaned();
+	EAttribute getRoom_Housekept();
 
 	/**
 	 * Returns the meta object for the reference list '{@link hotelCore.Room#getEquipment <em>Equipment</em>}'.
@@ -2674,16 +2665,6 @@ public interface HotelCorePackage extends EPackage {
 	EOperation getBooking__GetCustomer();
 
 	/**
-	 * Returns the meta object for the '{@link hotelCore.Booking#changeCustomer(hotelCore.Customer) <em>Change Customer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Change Customer</em>' operation.
-	 * @see hotelCore.Booking#changeCustomer(hotelCore.Customer)
-	 * @generated
-	 */
-	EOperation getBooking__ChangeCustomer__Customer();
-
-	/**
 	 * Returns the meta object for the '{@link hotelCore.Booking#getBill() <em>Get Bill</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2946,12 +2927,12 @@ public interface HotelCorePackage extends EPackage {
 		EReference ROOM__ROOM_TYPE = eINSTANCE.getRoom_RoomType();
 
 		/**
-		 * The meta object literal for the '<em><b>Cleaned</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Housekept</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROOM__CLEANED = eINSTANCE.getRoom_Cleaned();
+		EAttribute ROOM__HOUSEKEPT = eINSTANCE.getRoom_Housekept();
 
 		/**
 		 * The meta object literal for the '<em><b>Equipment</b></em>' reference list feature.
@@ -3702,14 +3683,6 @@ public interface HotelCorePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING___GET_CUSTOMER = eINSTANCE.getBooking__GetCustomer();
-
-		/**
-		 * The meta object literal for the '<em><b>Change Customer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___CHANGE_CUSTOMER__CUSTOMER = eINSTANCE.getBooking__ChangeCustomer__Customer();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Bill</b></em>' operation.

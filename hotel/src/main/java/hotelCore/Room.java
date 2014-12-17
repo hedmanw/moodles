@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link hotelCore.Room#getRoomNumber <em>Room Number</em>}</li>
  *   <li>{@link hotelCore.Room#getRoomType <em>Room Type</em>}</li>
- *   <li>{@link hotelCore.Room#isCleaned <em>Cleaned</em>}</li>
+ *   <li>{@link hotelCore.Room#isHousekept <em>Housekept</em>}</li>
  *   <li>{@link hotelCore.Room#getEquipment <em>Equipment</em>}</li>
  * </ul>
  * </p>
@@ -79,30 +79,30 @@ public interface Room extends EObject {
 	void setRoomType(RoomType value);
 
 	/**
-	 * Returns the value of the '<em><b>Cleaned</b></em>' attribute.
+	 * Returns the value of the '<em><b>Housekept</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Cleaned</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Housekept</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cleaned</em>' attribute.
-	 * @see #setCleaned(boolean)
-	 * @see hotelCore.HotelCorePackage#getRoom_Cleaned()
+	 * @return the value of the '<em>Housekept</em>' attribute.
+	 * @see #setHousekept(boolean)
+	 * @see hotelCore.HotelCorePackage#getRoom_Housekept()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	boolean isCleaned();
+	boolean isHousekept();
 
 	/**
-	 * Sets the value of the '{@link hotelCore.Room#isCleaned <em>Cleaned</em>}' attribute.
+	 * Sets the value of the '{@link hotelCore.Room#isHousekept <em>Housekept</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cleaned</em>' attribute.
-	 * @see #isCleaned()
+	 * @param value the new value of the '<em>Housekept</em>' attribute.
+	 * @see #isHousekept()
 	 * @generated
 	 */
-	void setCleaned(boolean value);
+	void setHousekept(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Equipment</b></em>' reference list.

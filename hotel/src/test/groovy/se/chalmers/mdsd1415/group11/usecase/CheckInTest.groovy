@@ -13,7 +13,7 @@ class CheckInTest extends HotelBaseSpecification{
     def reservation
 
     def setup() {
-        roomType = roomTypeManager.createRoomType("Double room", 1000)
+        roomType = roomTypeManager.createSleepRoom("Double room", 1000, 2)
         room = roomManager.createRoom(501, roomType)
         booking = bookingManager.createBooking()
         reservation = reservationManager.createReservation(booking, today, today + 4, room, roomType)

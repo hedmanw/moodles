@@ -35,14 +35,6 @@ public interface IReservationManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" reservationIdRequired="true" reservationIdOrdered="false"
-	 * @generated
-	 */
-	Reservation getReservation(long reservationId);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model ordered="false" bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
@@ -51,10 +43,10 @@ public interface IReservationManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" reservationRequired="true" reservationOrdered="false" responsibleRequired="true" responsibleOrdered="false" numberOfGuestsRequired="true" numberOfGuestsOrdered="false"
+	 * @model required="true" ordered="false" reservationRequired="true" reservationOrdered="false" responsibleRequired="true" responsibleOrdered="false" numberOfGuestsRequired="true" numberOfGuestsOrdered="false" numberOfKeyCardsRequired="true" numberOfKeyCardsOrdered="false"
 	 * @generated
 	 */
-	boolean checkInReservation(Reservation reservation, String responsible, int numberOfGuests);
+	boolean checkInReservation(Reservation reservation, String responsible, int numberOfGuests, int numberOfKeyCards);
 
 	/**
 	 * <!-- begin-user-doc -->

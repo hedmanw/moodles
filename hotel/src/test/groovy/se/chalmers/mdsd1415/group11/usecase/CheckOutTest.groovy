@@ -11,7 +11,7 @@ class CheckOutTest extends HotelBaseSpecification {
     def bank = Mock(CustomerProvides)
 
     def setup() {
-        def roomType = roomTypeManager.createRoomType("Double room", 1000)
+        def roomType = roomTypeManager.createSleepRoom("Double room", 1000, 2)
         def room = roomManager.createRoom(501, roomType)
         def booking = bookingManager.createBooking()
         BankingSingleton.instance.CUSTOMER_PROVIDES = bank

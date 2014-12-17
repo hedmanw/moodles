@@ -422,7 +422,7 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoom_Cleaned() {
+	public EAttribute getRoom_Housekept() {
 		return (EAttribute)roomEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1259,7 +1259,7 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__ChangeCustomer__Customer() {
+	public EOperation getBooking__GetBill() {
 		return bookingEClass.getEOperations().get(3);
 	}
 
@@ -1268,17 +1268,8 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__GetBill() {
-		return bookingEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getBooking__SetCustomer__Customer() {
-		return bookingEClass.getEOperations().get(5);
+		return bookingEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1363,7 +1354,7 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 		roomEClass = createEClass(ROOM);
 		createEAttribute(roomEClass, ROOM__ROOM_NUMBER);
 		createEReference(roomEClass, ROOM__ROOM_TYPE);
-		createEAttribute(roomEClass, ROOM__CLEANED);
+		createEAttribute(roomEClass, ROOM__HOUSEKEPT);
 		createEReference(roomEClass, ROOM__EQUIPMENT);
 		createEOperation(roomEClass, ROOM___GET_ROOM_TYPE);
 		createEOperation(roomEClass, ROOM___ADD_ROOM_TYPE__ROOMTYPE);
@@ -1463,7 +1454,6 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 		createEOperation(bookingEClass, BOOKING___ADD_RESERVATION__RESERVATION);
 		createEOperation(bookingEClass, BOOKING___REMOVE_RESERVATION__RESERVATION);
 		createEOperation(bookingEClass, BOOKING___GET_CUSTOMER);
-		createEOperation(bookingEClass, BOOKING___CHANGE_CUSTOMER__CUSTOMER);
 		createEOperation(bookingEClass, BOOKING___GET_BILL);
 		createEOperation(bookingEClass, BOOKING___SET_CUSTOMER__CUSTOMER);
 
@@ -1545,7 +1535,7 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoom_RoomNumber(), ecorePackage.getEInt(), "roomNumber", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoom_RoomType(), this.getRoomType(), null, "roomType", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getRoom_Cleaned(), ecorePackage.getEBoolean(), "cleaned", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoom_Housekept(), ecorePackage.getEBoolean(), "housekept", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoom_Equipment(), this.getEquipment(), null, "equipment", null, 0, -1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEOperation(getRoom__GetRoomType(), this.getRoomType(), "getRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1733,9 +1723,6 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 		addEParameter(op, this.getReservation(), "reservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getBooking__GetCustomer(), this.getCustomer(), "getCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getBooking__ChangeCustomer__Customer(), null, "changeCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getCustomer(), "newCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getBooking__GetBill(), this.getBill(), "getBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

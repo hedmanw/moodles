@@ -243,17 +243,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeCustomer(Customer newCustomer) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -354,9 +343,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return null;
 			case HotelCorePackage.BOOKING___REMOVE_RESERVATION__RESERVATION:
 				removeReservation((Reservation)arguments.get(0));
-				return null;
-			case HotelCorePackage.BOOKING___CHANGE_CUSTOMER__CUSTOMER:
-				changeCustomer((Customer)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

@@ -27,9 +27,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IRoomTypeManager" abstract="true" interface="true">
     <eOperations name="getRoomTypes" ordered="false" upperBound="-1" eType="ecore:EClass hotelCore.ecore#//RoomType"/>
-    <eOperations name="createRoomType" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//RoomType">
+    <eOperations name="createSleepRoom" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//RoomType">
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="costPerNight" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="numberOfBeds" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="createConferenceRoom" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//RoomType">
+      <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="maxPeople" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="cost" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoomTypeManager" eSuperTypes="#//IRoomTypeManager">
@@ -45,9 +51,6 @@
       <eParameters name="room" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Room"/>
       <eParameters name="costCategory" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//RoomType"/>
     </eOperations>
-    <eOperations name="getReservation" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Reservation">
-      <eParameters name="reservationId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
-    </eOperations>
     <eOperations name="getNonCheckedInReservation" ordered="false" upperBound="-1"
         eType="ecore:EClass hotelCore.ecore#//Reservation">
       <eParameters name="booking" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Booking"/>
@@ -56,6 +59,7 @@
       <eParameters name="reservation" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Reservation"/>
       <eParameters name="responsible" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="numberOfGuests" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="numberOfKeyCards" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eOperations>
     <eOperations name="checkOutReservation" ordered="false" lowerBound="1">
       <eParameters name="reservation" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Reservation"/>
@@ -87,9 +91,6 @@
     <eOperations name="isBillPaidInFull" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eParameters name="booking" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Booking"/>
     </eOperations>
-    <eOperations name="getBill" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Bill">
-      <eParameters name="booking" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Booking"/>
-    </eOperations>
     <eOperations name="getBookingByReservation" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Booking">
       <eParameters name="reservation" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Reservation"/>
     </eOperations>
@@ -110,9 +111,6 @@
     </eOperations>
     <eOperations name="getCustomersByName" ordered="false" upperBound="-1" eType="ecore:EClass hotelCore.ecore#//Customer">
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-    </eOperations>
-    <eOperations name="getCustomer" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Customer">
-      <eParameters name="customerId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     </eOperations>
     <eOperations name="createCustomer" ordered="false" lowerBound="1" eType="ecore:EClass hotelCore.ecore#//Customer">
       <eParameters name="idNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>

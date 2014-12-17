@@ -4,6 +4,8 @@ import hotelCore.Booking
 import hotelCore.Reservation
 import hotelCore.Room
 import hotelCore.RoomType
+import hotelService.RoomManager
+import hotelService.RoomTypeManager
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 import datastructs.EArrayList
 
@@ -18,7 +20,7 @@ class ReserveARoomTest extends HotelBaseSpecification {
 
 
     def  setup() {
-        roomType = roomTypeManager.createRoomType("Double room", 1000)
+        roomType = roomTypeManager.createSleepRoom("Double room", 1000, 2)
         room = roomManager.createRoom(1, roomType)
         booking = bookingManager.createBooking()
     }
@@ -61,7 +63,26 @@ class ReserveARoomTest extends HotelBaseSpecification {
     }
 
     def "conference room"() {
-        //TODO
+        setup:
+        RoomType roomType2 = roomTypeManager.createConferenceRoom("room 1", 50, 1000)
+        Room room2 = roomManager.createRoom(4, roomType2)
+        Booking booking2 = bookingManager.createBooking()
+        def searchCriteria2 = new EArrayList<RoomType>()
+        searchCriteria2.add(roomType2)
+        def availableRooms = roomManager.getAvailableRooms(today, tomorrow, searchCriteria2)
+        bookingManager.allBookings.add(booking2)
+
+        when:
+        Reservation reservation2 = reservationManager.createReservation(booking2, today, tomorrow, availableRooms.get(0), roomType2)
+
+        then:
+        reservation2.getStartDay() == today
+        reservation2.getEndDay()  == tomorrow
+        reservation2.getRoom() == room2
+        reservation2.getRoom().getRoomType() == roomType2
+        booking2.getReservations().size() == 1
+        booking2.getReservations().get(0) == reservation2
+        booking2.getBill().getGrandTotal() == 1000
     }
 
     def "no room with desired room type"() {
@@ -71,7 +92,7 @@ class ReserveARoomTest extends HotelBaseSpecification {
         def availableRooms = roomManager.getAvailableRooms(today, tomorrow, searchCriteria)
         Reservation reservation = reservationManager.createReservation(booking, today, tomorrow, availableRooms.get(0), roomType)
         bookingManager.allBookings.add(booking)
-        roomManager.createRoom(2, roomTypeManager.createRoomType("Suite", 10000))
+        roomManager.createRoom(2, roomTypeManager.createSleepRoom("Suite", 10000, 2))
 
         expect:
         roomManager.getAvailableRooms(today, tomorrow, new EArrayList<RoomType>()).size() == 1
