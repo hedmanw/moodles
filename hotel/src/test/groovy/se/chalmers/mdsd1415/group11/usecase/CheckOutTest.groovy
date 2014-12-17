@@ -2,6 +2,7 @@ package se.chalmers.mdsd1415.group11.usecase
 
 import bankingService.BankingSingleton
 import bankingService.CustomerProvides
+import hotelCore.impl.TabImpl
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
 /**
@@ -36,5 +37,27 @@ class CheckOutTest extends HotelBaseSpecification {
         then:
         reservation.checkedOut != null
 
+    }
+
+    def "no reservation exists"() {
+        when:
+        def reservation = reservationManager.getCurrentReservationByRoomNumber(500)
+
+        then:
+        final IllegalArgumentException exception = thrown()
+    }
+
+    def "check out is too late"() {
+        setup:
+        def reservation = reservationManager.getCurrentReservationByRoomNumber(501)
+        reservation.endDay = today-1
+        reservation.tab = new TabImpl()
+        def currentCost = reservation.getTab().getTotalCost()
+
+        when:
+        reservationManager.checkOutReservation(reservation)
+
+        then:
+        currentCost < reservation.getTab().getTotalCost()
     }
 }

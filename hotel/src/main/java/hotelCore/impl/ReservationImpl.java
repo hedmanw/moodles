@@ -444,6 +444,11 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 		checkedOut = newCheckedOut;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HotelCorePackage.RESERVATION__CHECKED_OUT, oldCheckedOut, checkedOut));
+
+		if (checkedOut.after(endDay)) {
+			int overdueDays = (int) Math.ceil((checkedOut.getTime() - endDay.getTime()) / (1000 * 60 * 60 * 24));
+			tab.addItemToTab("Overdue check out", overdueDays * room.getRoomType().getCostPerNight());
+		}
 	}
 
 	/**

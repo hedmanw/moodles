@@ -7,6 +7,7 @@ import hotelCore.Tab;
 
 import java.lang.reflect.InvocationTargetException;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -40,15 +41,16 @@ public class TabImpl extends MinimalEObjectImpl.Container implements Tab {
 	 * @generated
 	 * @ordered
 	 */
-	protected Map tabItems;
+	protected Map<String, Double> tabItems;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected TabImpl() {
 		super();
+		tabItems = new HashMap<>();
 	}
 
 	/**
@@ -85,34 +87,32 @@ public class TabImpl extends MinimalEObjectImpl.Container implements Tab {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addItemToTab(String item, double cost) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		tabItems.put(item, cost);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public double getTotalCost() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		double total = 0;
+		for (double c : tabItems.values()) {
+			total += c;
+		}
+		return total;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removeTabItem(String itemName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		tabItems.remove(itemName);
 	}
 
 	/**
