@@ -14,6 +14,7 @@ import hotelService.BookingManager;
 import hotelService.HotelServicePackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+import java.util.Date;
 
 import hotelService.ManagerSingleton;
 import org.eclipse.emf.common.util.EList;
@@ -197,6 +198,17 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				throw new RuntimeException("Tried to confirm duplicate booking number.");
 			}
 		}
+		for(Reservation r : booking.getReservations()){
+			for (Booking b : allBookings) {
+				for (Reservation r2 : b.getReservations()) {
+					if(r.getRoom().getRoomNumber() == r2.getRoom().getRoomNumber()) {
+						if (datesOverlap(r.getStartDay(), r.getEndDay(), r2.getStartDay(), r2.getEndDay())) {
+							throw new RuntimeException("Tried to reserve an already reserved room");
+						}
+					}
+				}
+			}
+		}
 		Customer customer = booking.getCustomer();
 		if (customer != null) {
 			PaymentDetails p = customer.getPaymentDetails();
@@ -207,6 +219,10 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
             }
 		}
 		return false;
+	}
+
+	private boolean datesOverlap(Date fromDate, Date toDate, Date baseStart, Date baseEnd) {
+		return !(baseEnd.before(fromDate) || baseStart.after(toDate));
 	}
 
 	private void makePayment(Booking booking) {
