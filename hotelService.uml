@@ -13,7 +13,7 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_RxCH8Hn9EeShtIICY7OyLw" name="toDate">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
       </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_UpbRYHn9EeShtIICY7OyLw" name="roomTypeIds">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_UpbRYHn9EeShtIICY7OyLw" name="roomTypes">
         <type xmi:type="uml:Class" href="HotelCore.uml#_1MohkHjDEeSDBKbFcXcsYQ"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5aklQIIREeStbpNcMqf5hQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5alMUIIREeStbpNcMqf5hQ" value="*"/>

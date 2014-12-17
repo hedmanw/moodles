@@ -266,7 +266,7 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IRoomManager/getAvailableRooms">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IRoomManager/getAvailableRooms/fromDate"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IRoomManager/getAvailableRooms/toDate"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IRoomManager/getAvailableRooms/roomTypeIds"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IRoomManager/getAvailableRooms/roomTypes"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IRoomManager/getRoomOccupancy">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IRoomManager/getRoomOccupancy/fromDate"/>

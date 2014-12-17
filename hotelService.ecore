@@ -10,7 +10,7 @@
     <eOperations name="getAvailableRooms" ordered="false" upperBound="-1" eType="ecore:EClass hotelCore.ecore#//Room">
       <eParameters name="fromDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       <eParameters name="toDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      <eParameters name="roomTypeIds" ordered="false" upperBound="-1" eType="ecore:EClass hotelCore.ecore#//RoomType"/>
+      <eParameters name="roomTypes" ordered="false" upperBound="-1" eType="ecore:EClass hotelCore.ecore#//RoomType"/>
     </eOperations>
     <eOperations name="getRoomOccupancy" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
       <eParameters name="fromDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>

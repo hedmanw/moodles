@@ -26,10 +26,10 @@ public interface IRoomManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model ordered="false" fromDateRequired="true" fromDateOrdered="false" toDateRequired="true" toDateOrdered="false" roomTypeIdsMany="true" roomTypeIdsOrdered="false"
+	 * @model ordered="false" fromDateRequired="true" fromDateOrdered="false" toDateRequired="true" toDateOrdered="false" roomTypesMany="true" roomTypesOrdered="false"
 	 * @generated
 	 */
-	EList<Room> getAvailableRooms(Date fromDate, Date toDate, EList<RoomType> roomTypeIds);
+	EList<Room> getAvailableRooms(Date fromDate, Date toDate, EList<RoomType> roomTypes);
 
 	/**
 	 * <!-- begin-user-doc -->

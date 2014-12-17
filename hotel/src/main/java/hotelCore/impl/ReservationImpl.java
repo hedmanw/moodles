@@ -437,7 +437,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setCheckedOut(Date newCheckedOut) {
 		Date oldCheckedOut = checkedOut;

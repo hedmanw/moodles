@@ -774,7 +774,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		EOperation op = initEOperation(getIRoomManager__GetAvailableRooms__Date_Date_EList(), theHotelCorePackage.getRoom(), "getAvailableRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "fromDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "toDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theHotelCorePackage.getRoomType(), "roomTypeIds", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theHotelCorePackage.getRoomType(), "roomTypes", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIRoomManager__GetRoomOccupancy__Date_Date(), ecorePackage.getEMap(), "getRoomOccupancy", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "fromDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
