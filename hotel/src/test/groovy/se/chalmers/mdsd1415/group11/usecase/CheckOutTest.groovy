@@ -50,14 +50,17 @@ class CheckOutTest extends HotelBaseSpecification {
     def "check out is too late"() {
         setup:
         def reservation = reservationManager.getCurrentReservationByRoomNumber(501)
-        reservation.endDay = today-1
-        reservation.tab = new TabImpl()
-        def currentCost = reservation.getTab().getTotalCost()
 
         when:
+        reservation.endDay = day
+        reservation.tab = new TabImpl()
+        def currentCost = reservation.getTab().getTotalCost()
         reservationManager.checkOutReservation(reservation)
 
         then:
         currentCost < reservation.getTab().getTotalCost()
+
+        where:
+        day << [today-1, today-2]
     }
 }
