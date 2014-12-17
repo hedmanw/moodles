@@ -344,13 +344,22 @@ public interface HotelServicePackage extends EPackage {
 	int IROOM_TYPE_MANAGER___GET_ROOM_TYPES = 0;
 
 	/**
-	 * The operation id for the '<em>Create Room Type</em>' operation.
+	 * The operation id for the '<em>Create Sleep Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_TYPE_MANAGER___CREATE_ROOM_TYPE__STRING_DOUBLE = 1;
+	int IROOM_TYPE_MANAGER___CREATE_SLEEP_ROOM__STRING_DOUBLE_INT = 1;
+
+	/**
+	 * The operation id for the '<em>Create Conference Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM_TYPE_MANAGER___CREATE_CONFERENCE_ROOM__STRING_INT_DOUBLE = 2;
 
 	/**
 	 * The number of operations of the '<em>IRoom Type Manager</em>' class.
@@ -359,7 +368,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_TYPE_MANAGER_OPERATION_COUNT = 2;
+	int IROOM_TYPE_MANAGER_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link hotelService.impl.RoomTypeManagerImpl <em>Room Type Manager</em>}' class.
@@ -399,13 +408,22 @@ public interface HotelServicePackage extends EPackage {
 	int ROOM_TYPE_MANAGER___GET_ROOM_TYPES = IROOM_TYPE_MANAGER___GET_ROOM_TYPES;
 
 	/**
-	 * The operation id for the '<em>Create Room Type</em>' operation.
+	 * The operation id for the '<em>Create Sleep Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_MANAGER___CREATE_ROOM_TYPE__STRING_DOUBLE = IROOM_TYPE_MANAGER___CREATE_ROOM_TYPE__STRING_DOUBLE;
+	int ROOM_TYPE_MANAGER___CREATE_SLEEP_ROOM__STRING_DOUBLE_INT = IROOM_TYPE_MANAGER___CREATE_SLEEP_ROOM__STRING_DOUBLE_INT;
+
+	/**
+	 * The operation id for the '<em>Create Conference Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_MANAGER___CREATE_CONFERENCE_ROOM__STRING_INT_DOUBLE = IROOM_TYPE_MANAGER___CREATE_CONFERENCE_ROOM__STRING_INT_DOUBLE;
 
 	/**
 	 * The number of operations of the '<em>Room Type Manager</em>' class.
@@ -445,22 +463,13 @@ public interface HotelServicePackage extends EPackage {
 	int IRESERVATION_MANAGER___CREATE_RESERVATION__BOOKING_DATE_DATE_ROOM_ROOMTYPE = 0;
 
 	/**
-	 * The operation id for the '<em>Get Reservation</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IRESERVATION_MANAGER___GET_RESERVATION__LONG = 1;
-
-	/**
 	 * The operation id for the '<em>Get Non Checked In Reservation</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING = 2;
+	int IRESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING = 1;
 
 	/**
 	 * The operation id for the '<em>Check In Reservation</em>' operation.
@@ -469,7 +478,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT = 3;
+	int IRESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT = 2;
 
 	/**
 	 * The operation id for the '<em>Check Out Reservation</em>' operation.
@@ -478,7 +487,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___CHECK_OUT_RESERVATION__RESERVATION = 4;
+	int IRESERVATION_MANAGER___CHECK_OUT_RESERVATION__RESERVATION = 3;
 
 	/**
 	 * The operation id for the '<em>Get Current Reservation By Room Number</em>' operation.
@@ -487,7 +496,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___GET_CURRENT_RESERVATION_BY_ROOM_NUMBER__INT = 5;
+	int IRESERVATION_MANAGER___GET_CURRENT_RESERVATION_BY_ROOM_NUMBER__INT = 4;
 
 	/**
 	 * The number of operations of the '<em>IReservation Manager</em>' class.
@@ -496,7 +505,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER_OPERATION_COUNT = 6;
+	int IRESERVATION_MANAGER_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link hotelService.impl.ReservationManagerImpl <em>Reservation Manager</em>}' class.
@@ -534,15 +543,6 @@ public interface HotelServicePackage extends EPackage {
 	 * @ordered
 	 */
 	int RESERVATION_MANAGER___CREATE_RESERVATION__BOOKING_DATE_DATE_ROOM_ROOMTYPE = IRESERVATION_MANAGER___CREATE_RESERVATION__BOOKING_DATE_DATE_ROOM_ROOMTYPE;
-
-	/**
-	 * The operation id for the '<em>Get Reservation</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION_MANAGER___GET_RESERVATION__LONG = IRESERVATION_MANAGER___GET_RESERVATION__LONG;
 
 	/**
 	 * The operation id for the '<em>Get Non Checked In Reservation</em>' operation.
@@ -663,22 +663,13 @@ public interface HotelServicePackage extends EPackage {
 	int IBOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING = 5;
 
 	/**
-	 * The operation id for the '<em>Get Bill</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING_MANAGER___GET_BILL__BOOKING = 6;
-
-	/**
 	 * The operation id for the '<em>Get Booking By Reservation</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION = 7;
+	int IBOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION = 6;
 
 	/**
 	 * The operation id for the '<em>Make Payment If All Reservations Checked Out</em>' operation.
@@ -687,7 +678,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING = 8;
+	int IBOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING = 7;
 
 	/**
 	 * The operation id for the '<em>Confirm Booking</em>' operation.
@@ -696,7 +687,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER___CONFIRM_BOOKING__BOOKING = 9;
+	int IBOOKING_MANAGER___CONFIRM_BOOKING__BOOKING = 8;
 
 	/**
 	 * The number of operations of the '<em>IBooking Manager</em>' class.
@@ -705,7 +696,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_MANAGER_OPERATION_COUNT = 10;
+	int IBOOKING_MANAGER_OPERATION_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link hotelService.impl.BookingManagerImpl <em>Booking Manager</em>}' class.
@@ -790,15 +781,6 @@ public interface HotelServicePackage extends EPackage {
 	int BOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING = IBOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING;
 
 	/**
-	 * The operation id for the '<em>Get Bill</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_MANAGER___GET_BILL__BOOKING = IBOOKING_MANAGER___GET_BILL__BOOKING;
-
-	/**
 	 * The operation id for the '<em>Get Booking By Reservation</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -872,22 +854,13 @@ public interface HotelServicePackage extends EPackage {
 	int ICUSTOMER_MANAGER___GET_CUSTOMERS_BY_NAME__STRING = 1;
 
 	/**
-	 * The operation id for the '<em>Get Customer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ICUSTOMER_MANAGER___GET_CUSTOMER__LONG = 2;
-
-	/**
 	 * The operation id for the '<em>Create Customer</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMER_MANAGER___CREATE_CUSTOMER__STRING_STRING = 3;
+	int ICUSTOMER_MANAGER___CREATE_CUSTOMER__STRING_STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Set Payment Details For Customer</em>' operation.
@@ -896,7 +869,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__CUSTOMER_STRING_STRING_STRING_STRING_INT_INT = 4;
+	int ICUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__CUSTOMER_STRING_STRING_STRING_STRING_INT_INT = 3;
 
 	/**
 	 * The operation id for the '<em>Get Payment Details By Customer</em>' operation.
@@ -905,7 +878,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__CUSTOMER = 5;
+	int ICUSTOMER_MANAGER___GET_PAYMENT_DETAILS_BY_CUSTOMER__CUSTOMER = 4;
 
 	/**
 	 * The number of operations of the '<em>ICustomer Manager</em>' class.
@@ -914,7 +887,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMER_MANAGER_OPERATION_COUNT = 6;
+	int ICUSTOMER_MANAGER_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link hotelService.impl.CustomerManagerImpl <em>Customer Manager</em>}' class.
@@ -961,15 +934,6 @@ public interface HotelServicePackage extends EPackage {
 	 * @ordered
 	 */
 	int CUSTOMER_MANAGER___GET_CUSTOMERS_BY_NAME__STRING = ICUSTOMER_MANAGER___GET_CUSTOMERS_BY_NAME__STRING;
-
-	/**
-	 * The operation id for the '<em>Get Customer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_MANAGER___GET_CUSTOMER__LONG = ICUSTOMER_MANAGER___GET_CUSTOMER__LONG;
 
 	/**
 	 * The operation id for the '<em>Create Customer</em>' operation.
@@ -1140,14 +1104,24 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIRoomTypeManager__GetRoomTypes();
 
 	/**
-	 * Returns the meta object for the '{@link hotelService.IRoomTypeManager#createRoomType(java.lang.String, double) <em>Create Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link hotelService.IRoomTypeManager#createSleepRoom(java.lang.String, double, int) <em>Create Sleep Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Room Type</em>' operation.
-	 * @see hotelService.IRoomTypeManager#createRoomType(java.lang.String, double)
+	 * @return the meta object for the '<em>Create Sleep Room</em>' operation.
+	 * @see hotelService.IRoomTypeManager#createSleepRoom(java.lang.String, double, int)
 	 * @generated
 	 */
-	EOperation getIRoomTypeManager__CreateRoomType__String_double();
+	EOperation getIRoomTypeManager__CreateSleepRoom__String_double_int();
+
+	/**
+	 * Returns the meta object for the '{@link hotelService.IRoomTypeManager#createConferenceRoom(java.lang.String, int, double) <em>Create Conference Room</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Conference Room</em>' operation.
+	 * @see hotelService.IRoomTypeManager#createConferenceRoom(java.lang.String, int, double)
+	 * @generated
+	 */
+	EOperation getIRoomTypeManager__CreateConferenceRoom__String_int_double();
 
 	/**
 	 * Returns the meta object for class '{@link hotelService.RoomTypeManager <em>Room Type Manager</em>}'.
@@ -1189,16 +1163,6 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIReservationManager__CreateReservation__Booking_Date_Date_Room_RoomType();
-
-	/**
-	 * Returns the meta object for the '{@link hotelService.IReservationManager#getReservation(long) <em>Get Reservation</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Reservation</em>' operation.
-	 * @see hotelService.IReservationManager#getReservation(long)
-	 * @generated
-	 */
-	EOperation getIReservationManager__GetReservation__long();
 
 	/**
 	 * Returns the meta object for the '{@link hotelService.IReservationManager#getNonCheckedInReservation(hotelCore.Booking) <em>Get Non Checked In Reservation</em>}' operation.
@@ -1332,16 +1296,6 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIBookingManager__IsBillPaidInFull__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link hotelService.IBookingManager#getBill(hotelCore.Booking) <em>Get Bill</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Bill</em>' operation.
-	 * @see hotelService.IBookingManager#getBill(hotelCore.Booking)
-	 * @generated
-	 */
-	EOperation getIBookingManager__GetBill__Booking();
-
-	/**
 	 * Returns the meta object for the '{@link hotelService.IBookingManager#getBookingByReservation(hotelCore.Reservation) <em>Get Booking By Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1421,16 +1375,6 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getICustomerManager__GetCustomersByName__String();
-
-	/**
-	 * Returns the meta object for the '{@link hotelService.ICustomerManager#getCustomer(long) <em>Get Customer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Customer</em>' operation.
-	 * @see hotelService.ICustomerManager#getCustomer(long)
-	 * @generated
-	 */
-	EOperation getICustomerManager__GetCustomer__long();
 
 	/**
 	 * Returns the meta object for the '{@link hotelService.ICustomerManager#createCustomer(java.lang.String, java.lang.String) <em>Create Customer</em>}' operation.
@@ -1627,12 +1571,20 @@ public interface HotelServicePackage extends EPackage {
 		EOperation IROOM_TYPE_MANAGER___GET_ROOM_TYPES = eINSTANCE.getIRoomTypeManager__GetRoomTypes();
 
 		/**
-		 * The meta object literal for the '<em><b>Create Room Type</b></em>' operation.
+		 * The meta object literal for the '<em><b>Create Sleep Room</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IROOM_TYPE_MANAGER___CREATE_ROOM_TYPE__STRING_DOUBLE = eINSTANCE.getIRoomTypeManager__CreateRoomType__String_double();
+		EOperation IROOM_TYPE_MANAGER___CREATE_SLEEP_ROOM__STRING_DOUBLE_INT = eINSTANCE.getIRoomTypeManager__CreateSleepRoom__String_double_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Conference Room</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_TYPE_MANAGER___CREATE_CONFERENCE_ROOM__STRING_INT_DOUBLE = eINSTANCE.getIRoomTypeManager__CreateConferenceRoom__String_int_double();
 
 		/**
 		 * The meta object literal for the '{@link hotelService.impl.RoomTypeManagerImpl <em>Room Type Manager</em>}' class.
@@ -1669,14 +1621,6 @@ public interface HotelServicePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IRESERVATION_MANAGER___CREATE_RESERVATION__BOOKING_DATE_DATE_ROOM_ROOMTYPE = eINSTANCE.getIReservationManager__CreateReservation__Booking_Date_Date_Room_RoomType();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Reservation</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IRESERVATION_MANAGER___GET_RESERVATION__LONG = eINSTANCE.getIReservationManager__GetReservation__long();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Non Checked In Reservation</b></em>' operation.
@@ -1787,14 +1731,6 @@ public interface HotelServicePackage extends EPackage {
 		EOperation IBOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING = eINSTANCE.getIBookingManager__IsBillPaidInFull__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Bill</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKING_MANAGER___GET_BILL__BOOKING = eINSTANCE.getIBookingManager__GetBill__Booking();
-
-		/**
 		 * The meta object literal for the '<em><b>Get Booking By Reservation</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1861,14 +1797,6 @@ public interface HotelServicePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ICUSTOMER_MANAGER___GET_CUSTOMERS_BY_NAME__STRING = eINSTANCE.getICustomerManager__GetCustomersByName__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Customer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ICUSTOMER_MANAGER___GET_CUSTOMER__LONG = eINSTANCE.getICustomerManager__GetCustomer__long();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Customer</b></em>' operation.

@@ -39,14 +39,6 @@ public interface ICustomerManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" customerIdRequired="true" customerIdOrdered="false"
-	 * @generated
-	 */
-	Customer getCustomer(long customerId);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model required="true" ordered="false" idNumberDataType="org.eclipse.uml2.types.String" idNumberRequired="true" idNumberOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */

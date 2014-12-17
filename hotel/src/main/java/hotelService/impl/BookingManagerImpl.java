@@ -91,7 +91,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Booking getBookingByBookingNumber(String bookingNumber) {
 		for (Booking b : getAllBookings()) {
@@ -116,7 +116,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<Booking> getBookingsByCustomer(Customer customer) {
 		EList<Booking> bs = new EArrayList<>();
@@ -143,17 +143,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public boolean isBillPaidInFull(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Bill getBill(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -311,8 +300,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				return null;
 			case HotelServicePackage.BOOKING_MANAGER___IS_BILL_PAID_IN_FULL__BOOKING:
 				return isBillPaidInFull((Booking)arguments.get(0));
-			case HotelServicePackage.BOOKING_MANAGER___GET_BILL__BOOKING:
-				return getBill((Booking)arguments.get(0));
 			case HotelServicePackage.BOOKING_MANAGER___GET_BOOKING_BY_RESERVATION__RESERVATION:
 				return getBookingByReservation((Reservation)arguments.get(0));
 			case HotelServicePackage.BOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING:

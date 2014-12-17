@@ -109,17 +109,6 @@ public class CustomerManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Customer getCustomer(long customerId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public Customer createCustomer(String idNumber, String name) {
@@ -230,8 +219,6 @@ public class CustomerManagerImpl extends MinimalEObjectImpl.Container implements
 				return getCustomerByIdNumber((String)arguments.get(0));
 			case HotelServicePackage.CUSTOMER_MANAGER___GET_CUSTOMERS_BY_NAME__STRING:
 				return getCustomersByName((String)arguments.get(0));
-			case HotelServicePackage.CUSTOMER_MANAGER___GET_CUSTOMER__LONG:
-				return getCustomer((Long)arguments.get(0));
 			case HotelServicePackage.CUSTOMER_MANAGER___CREATE_CUSTOMER__STRING_STRING:
 				return createCustomer((String)arguments.get(0), (String)arguments.get(1));
 			case HotelServicePackage.CUSTOMER_MANAGER___SET_PAYMENT_DETAILS_FOR_CUSTOMER__CUSTOMER_STRING_STRING_STRING_STRING_INT_INT:

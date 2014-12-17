@@ -136,12 +136,4 @@ public interface Booking extends EObject {
 	 */
 	void removeReservation(Reservation reservation);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model newCustomerRequired="true" newCustomerOrdered="false"
-	 * @generated
-	 */
-	void changeCustomer(Customer newCustomer);
-
 } // Booking

@@ -30,9 +30,17 @@ public interface IRoomTypeManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" nameRequired="true" nameOrdered="false" costPerNightRequired="true" costPerNightOrdered="false"
+	 * @model required="true" ordered="false" nameRequired="true" nameOrdered="false" costPerNightRequired="true" costPerNightOrdered="false" numberOfBedsRequired="true" numberOfBedsOrdered="false"
 	 * @generated
 	 */
-	RoomType createRoomType(String name, double costPerNight);
+	RoomType createSleepRoom(String name, double costPerNight, int numberOfBeds);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" nameRequired="true" nameOrdered="false" maxPeopleRequired="true" maxPeopleOrdered="false" costRequired="true" costOrdered="false"
+	 * @generated
+	 */
+	RoomType createConferenceRoom(String name, int maxPeople, double cost);
 
 } // IRoomTypeManager

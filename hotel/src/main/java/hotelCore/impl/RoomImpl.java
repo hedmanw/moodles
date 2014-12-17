@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link hotelCore.impl.RoomImpl#getRoomNumber <em>Room Number</em>}</li>
  *   <li>{@link hotelCore.impl.RoomImpl#getRoomType <em>Room Type</em>}</li>
- *   <li>{@link hotelCore.impl.RoomImpl#isCleaned <em>Cleaned</em>}</li>
+ *   <li>{@link hotelCore.impl.RoomImpl#isHousekept <em>Housekept</em>}</li>
  *   <li>{@link hotelCore.impl.RoomImpl#getEquipment <em>Equipment</em>}</li>
  * </ul>
  * </p>
@@ -71,24 +71,24 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	protected RoomType roomType;
 
 	/**
-	 * The default value of the '{@link #isCleaned() <em>Cleaned</em>}' attribute.
+	 * The default value of the '{@link #isHousekept() <em>Housekept</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isCleaned()
+	 * @see #isHousekept()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean CLEANED_EDEFAULT = false;
+	protected static final boolean HOUSEKEPT_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isCleaned() <em>Cleaned</em>}' attribute.
+	 * The cached value of the '{@link #isHousekept() <em>Housekept</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isCleaned()
+	 * @see #isHousekept()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean cleaned = CLEANED_EDEFAULT;
+	protected boolean housekept = HOUSEKEPT_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getEquipment() <em>Equipment</em>}' reference list.
@@ -183,8 +183,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isCleaned() {
-		return cleaned;
+	public boolean isHousekept() {
+		return housekept;
 	}
 
 	/**
@@ -192,11 +192,11 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCleaned(boolean newCleaned) {
-		boolean oldCleaned = cleaned;
-		cleaned = newCleaned;
+	public void setHousekept(boolean newHousekept) {
+		boolean oldHousekept = housekept;
+		housekept = newHousekept;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelCorePackage.ROOM__CLEANED, oldCleaned, cleaned));
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelCorePackage.ROOM__HOUSEKEPT, oldHousekept, housekept));
 	}
 
 	/**
@@ -268,8 +268,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case HotelCorePackage.ROOM__ROOM_TYPE:
 				if (resolve) return getRoomType();
 				return basicGetRoomType();
-			case HotelCorePackage.ROOM__CLEANED:
-				return isCleaned();
+			case HotelCorePackage.ROOM__HOUSEKEPT:
+				return isHousekept();
 			case HotelCorePackage.ROOM__EQUIPMENT:
 				return getEquipment();
 		}
@@ -291,8 +291,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case HotelCorePackage.ROOM__ROOM_TYPE:
 				setRoomType((RoomType)newValue);
 				return;
-			case HotelCorePackage.ROOM__CLEANED:
-				setCleaned((Boolean)newValue);
+			case HotelCorePackage.ROOM__HOUSEKEPT:
+				setHousekept((Boolean)newValue);
 				return;
 			case HotelCorePackage.ROOM__EQUIPMENT:
 				getEquipment().clear();
@@ -316,8 +316,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case HotelCorePackage.ROOM__ROOM_TYPE:
 				setRoomType((RoomType)null);
 				return;
-			case HotelCorePackage.ROOM__CLEANED:
-				setCleaned(CLEANED_EDEFAULT);
+			case HotelCorePackage.ROOM__HOUSEKEPT:
+				setHousekept(HOUSEKEPT_EDEFAULT);
 				return;
 			case HotelCorePackage.ROOM__EQUIPMENT:
 				getEquipment().clear();
@@ -338,8 +338,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 				return roomNumber != ROOM_NUMBER_EDEFAULT;
 			case HotelCorePackage.ROOM__ROOM_TYPE:
 				return roomType != null;
-			case HotelCorePackage.ROOM__CLEANED:
-				return cleaned != CLEANED_EDEFAULT;
+			case HotelCorePackage.ROOM__HOUSEKEPT:
+				return housekept != HOUSEKEPT_EDEFAULT;
 			case HotelCorePackage.ROOM__EQUIPMENT:
 				return equipment != null && !equipment.isEmpty();
 		}
@@ -382,8 +382,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (roomNumber: ");
 		result.append(roomNumber);
-		result.append(", cleaned: ");
-		result.append(cleaned);
+		result.append(", housekept: ");
+		result.append(housekept);
 		result.append(')');
 		return result.toString();
 	}

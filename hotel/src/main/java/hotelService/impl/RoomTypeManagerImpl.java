@@ -90,6 +90,28 @@ public class RoomTypeManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomType createSleepRoom(String name, double costPerNight, int numberOfBeds) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomType createConferenceRoom(String name, int maxPeople, double cost) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public RoomType createRoomType(String name, double costPerNight) {
@@ -176,8 +198,10 @@ public class RoomTypeManagerImpl extends MinimalEObjectImpl.Container implements
 		switch (operationID) {
 			case HotelServicePackage.ROOM_TYPE_MANAGER___GET_ROOM_TYPES:
 				return getRoomTypes();
-			case HotelServicePackage.ROOM_TYPE_MANAGER___CREATE_ROOM_TYPE__STRING_DOUBLE:
-				return createRoomType((String)arguments.get(0), (Double)arguments.get(1));
+			case HotelServicePackage.ROOM_TYPE_MANAGER___CREATE_SLEEP_ROOM__STRING_DOUBLE_INT:
+				return createSleepRoom((String)arguments.get(0), (Double)arguments.get(1), (Integer)arguments.get(2));
+			case HotelServicePackage.ROOM_TYPE_MANAGER___CREATE_CONFERENCE_ROOM__STRING_INT_DOUBLE:
+				return createConferenceRoom((String)arguments.get(0), (Integer)arguments.get(1), (Double)arguments.get(2));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
