@@ -18,7 +18,7 @@ class ReserveARoomTest extends HotelBaseSpecification {
 
 
     def  setup() {
-        roomType = roomTypeManager.createRoomType("Double room", 1000)
+        roomType = roomTypeManager.createSleepRoom("Double room", 1000, 2)
         room = roomManager.createRoom(1, roomType)
         booking = bookingManager.createBooking()
     }
@@ -71,7 +71,7 @@ class ReserveARoomTest extends HotelBaseSpecification {
         def availableRooms = roomManager.getAvailableRooms(today, tomorrow, searchCriteria)
         Reservation reservation = reservationManager.createReservation(booking, today, tomorrow, availableRooms.get(0), roomType)
         bookingManager.allBookings.add(booking)
-        roomManager.createRoom(2, roomTypeManager.createRoomType("Suite", 10000))
+        roomManager.createRoom(2, roomTypeManager.createSleepRoom("Suite", 10000, 2))
 
         expect:
         roomManager.getAvailableRooms(today, tomorrow, new EArrayList<RoomType>()).size() == 1

@@ -17,8 +17,8 @@ class RoomManagerImplTest extends HotelBaseSpecification {
     def searchCriteria = new EArrayList<RoomType>()
 
     def setup() {
-        a = roomTypeManager.createRoomType("A", 10)
-        b = roomTypeManager.createRoomType("B", 20)
+        a = roomTypeManager.createSleepRoom("A", 10, 2)
+        b = roomTypeManager.createSleepRoom("B", 20, 2)
         one = roomManager.createRoom(1, this.a)
         two = roomManager.createRoom(2, this.b)
         searchCriteria.add(a)

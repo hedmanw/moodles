@@ -2,6 +2,7 @@
  */
 package hotelService.impl;
 
+import hotelCore.ConferenceRoom;
 import hotelCore.HotelCoreFactory;
 import hotelCore.RoomType;
 
@@ -90,23 +91,21 @@ public class RoomTypeManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public RoomType createSleepRoom(String name, double costPerNight, int numberOfBeds) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+		for (RoomType roomType : allRoomTypes) {
+			if (roomType.getName().equals(name)) {
+				throw new IllegalArgumentException("Room type name already exists");
+			}
+		}
+		SleepRoom sleepRoom = HotelCoreFactory.eINSTANCE.createSleepRoom();
+		sleepRoom.setNbrOfBeds(numberOfBeds);
+		sleepRoom.setName(name);
+		sleepRoom.setCostPerNight(costPerNight);
+		getAllRoomTypes().add(sleepRoom);
+		return sleepRoom;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoomType createConferenceRoom(String name, int maxPeople, double cost) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -114,19 +113,20 @@ public class RoomTypeManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public RoomType createRoomType(String name, double costPerNight) {
+	public RoomType createConferenceRoom(String name, int maxPeople, double cost) {
 		for (RoomType roomType : allRoomTypes) {
 			if (roomType.getName().equals(name)) {
 				throw new IllegalArgumentException("Room type name already exists");
 			}
 		}
-		SleepRoom sleepRoom = HotelCoreFactory.eINSTANCE.createSleepRoom();
-		sleepRoom.setNbrOfBeds(2);
-		sleepRoom.setName(name);
-		sleepRoom.setCostPerNight(costPerNight);
-		getAllRoomTypes().add(sleepRoom);
-		return sleepRoom;
+		ConferenceRoom conferenceRoom = HotelCoreFactory.eINSTANCE.createConferenceRoom();
+		conferenceRoom.setMaxNbrOfPeople(maxPeople);
+		conferenceRoom.setCostPerNight(cost);
+		getAllRoomTypes().add(conferenceRoom);
+		return conferenceRoom;
 	}
+
+	
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -199,9 +199,9 @@ public class RoomTypeManagerImpl extends MinimalEObjectImpl.Container implements
 			case HotelServicePackage.ROOM_TYPE_MANAGER___GET_ROOM_TYPES:
 				return getRoomTypes();
 			case HotelServicePackage.ROOM_TYPE_MANAGER___CREATE_SLEEP_ROOM__STRING_DOUBLE_INT:
-				return createSleepRoom((String)arguments.get(0), (Double)arguments.get(1), (Integer)arguments.get(2));
+				return createSleepRoom((String) arguments.get(0), (Double) arguments.get(1), (Integer) arguments.get(2));
 			case HotelServicePackage.ROOM_TYPE_MANAGER___CREATE_CONFERENCE_ROOM__STRING_INT_DOUBLE:
-				return createConferenceRoom((String)arguments.get(0), (Integer)arguments.get(1), (Double)arguments.get(2));
+				return createConferenceRoom((String) arguments.get(0), (Integer) arguments.get(1), (Double) arguments.get(2));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
