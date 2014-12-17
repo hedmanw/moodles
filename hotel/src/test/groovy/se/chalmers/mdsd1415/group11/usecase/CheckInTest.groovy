@@ -1,6 +1,10 @@
 package se.chalmers.mdsd1415.group11.usecase
 
+import datastructs.EArrayList
 import hotelCore.SleepRoom
+import keyCardService.KeyCardSingleton
+import keyCardService.KeyCardsProvides
+import org.eclipse.emf.common.util.EList
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
 /**
@@ -11,6 +15,7 @@ class CheckInTest extends HotelBaseSpecification{
     def room
     def booking
     def reservation
+    def keyCards = Mock(KeyCardsProvides)
 
     def setup() {
         roomType = roomTypeManager.createSleepRoom("Double room", 1000, 2)
@@ -20,20 +25,27 @@ class CheckInTest extends HotelBaseSpecification{
         def customer = customerManager.createCustomer("123", "Mona")
         booking.setCustomer(customer)
         bookingManager.getAllBookings().add(booking)
+        KeyCardSingleton.instance.KEY_CARDS_PROVIDES = keyCards
     }
 
     def "find by customer"() {
+        setup:
+        EList<Integer> keyCardIDs = new EArrayList<>()
+        keyCardIDs.addAll([1,2])
+        keyCards.assignCardsToReservation(reservation, 2) >> keyCardIDs
+
         when:
         def customers = customerManager.getCustomersByName("Mona")
         def theBooking = bookingManager.getBookingsByCustomer(customers.get(0)).get(0)
         def theReservation = theBooking.getReservations().get(0)
-        reservationManager.checkInReservation(theReservation, "Kim", 2)
-        //TODO key cards
+        reservationManager.checkInReservation(theReservation, "Kim", 2, 2)
+
 
         then:
         reservation == theReservation
         reservation.getResponsible() == "Kim"
         reservation.getNumberOfGuests() == 2
+        ((SleepRoom)theReservation.getRoom().getRoomType()).getNbrOfBeds() >= theReservation.getNumberOfGuests()
         reservation.getCheckedIn() != 0
     }
 
@@ -75,7 +87,13 @@ class CheckInTest extends HotelBaseSpecification{
     }
 
     def "more guests than beds"() {
-        //TODO guests and beds
+        setup:
+        EList<Integer> keyCardIDs = new EArrayList<>()
+        keyCardIDs.addAll([1,2])
+        keyCards.assignCardsToReservation(reservation, 2) >> keyCardIDs
+
+        expect:
+        !reservationManager.checkInReservation(reservation, "My", 3, 2)
     }
 
 }

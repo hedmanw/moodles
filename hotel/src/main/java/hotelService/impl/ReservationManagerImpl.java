@@ -9,6 +9,7 @@ import hotelCore.Room;
 import hotelCore.RoomType;
 import hotelCore.*;
 
+import hotelCore.impl.KeyCardImpl;
 import hotelService.BookingManager;
 import hotelService.HotelServicePackage;
 import hotelService.ManagerSingleton;
@@ -20,6 +21,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
+import keyCardService.KeyCardSingleton;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -135,25 +137,25 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean checkInReservation(Reservation reservation, String responsible, int numberOfGuests, int numberOfKeyCards) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean checkInReservation(Reservation reservation, String responsible, int numberOfGuests) {
-		reservation.setResponsible(responsible);
-		reservation.setNumberOfGuests(numberOfGuests);
-		reservation.setCheckedIn(new Date());
-		// TODO - should check that there are an acceptable number of guests
-		return true;
+	public boolean checkInReservation(Reservation reservation, String responsible, int numberOfGuests, int numberOfKeyCards) {
+
+		if (numberOfGuests <= ((SleepRoom)reservation.getRoom().getRoomType()).getNbrOfBeds()) {
+			reservation.setResponsible(responsible);
+			reservation.setNumberOfGuests(numberOfGuests);
+			reservation.setCheckedIn(new Date());
+			EList<Integer> keyCardIDs = KeyCardSingleton.getInstance().KEY_CARDS_PROVIDES.assignCardsToReservation(reservation, numberOfKeyCards);
+			for (Integer keyCardID : keyCardIDs) {
+                KeyCard keyCard = HotelCoreFactory.eINSTANCE.createKeyCard();
+                keyCard.setKeyCardID(keyCardID);
+                reservation.addKeyCard(keyCard);
+            }
+			return true;
+		} else {
+			return false;
+		}
+
 	}
 
 	/**
@@ -269,7 +271,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case HotelServicePackage.RESERVATION_MANAGER___CREATE_RESERVATION__BOOKING_DATE_DATE_ROOM_ROOMTYPE:
-				return createReservation((Booking)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (Room)arguments.get(3), (RoomType)arguments.get(4));
+				return createReservation((Booking) arguments.get(0), (Date) arguments.get(1), (Date) arguments.get(2), (Room) arguments.get(3), (RoomType) arguments.get(4));
 			case HotelServicePackage.RESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING:
 				return getNonCheckedInReservation((Booking)arguments.get(0));
 			case HotelServicePackage.RESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT_INT:
