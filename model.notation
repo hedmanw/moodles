@@ -1116,7 +1116,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pq3DBHotEeSyq9V5IfgrHg"/>
       </children>
       <element xmi:type="uml:Interaction" href="model.uml#_lb4hIHotEeSyq9V5IfgrHg"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pq3DBXotEeSyq9V5IfgrHg" x="230" y="343" width="1040"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pq3DBXotEeSyq9V5IfgrHg" x="230" y="343" width="1041"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_pq3DBnotEeSyq9V5IfgrHg" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_pq3DB3otEeSyq9V5IfgrHg"/>

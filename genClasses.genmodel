@@ -313,6 +313,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IReservationManager/checkInReservation/reservation"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IReservationManager/checkInReservation/responsible"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IReservationManager/checkInReservation/numberOfGuests"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IReservationManager/checkInReservation/numberOfKeyCards"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IReservationManager/checkOutReservation">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IReservationManager/checkOutReservation/reservation"/>

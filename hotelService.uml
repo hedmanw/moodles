@@ -144,6 +144,9 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_R9vCwIRnEeSGDN4_COfLhA" name="numberOfGuests">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_83gLYIXQEeSvGM_HtiIAdg" name="numberOfKeyCards">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ctXRoHoIEeShtIICY7OyLw" name="checkOutReservation">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_uMyV4HoIEeShtIICY7OyLw" name="reservation">

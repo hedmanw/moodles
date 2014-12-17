@@ -12,13 +12,15 @@
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_rGKCwHlxEeSNP_QJ-oV69w" name="assignCardsToReservation" visibility="public">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_WxjEoHlyEeSNP_QJ-oV69w" name="reservation">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        <type xmi:type="uml:Class" href="HotelCore.uml#_eUmw8HlzEeSJYOaXazdB-A"/>
       </ownedParameter>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_aI7QIHlyEeSNP_QJ-oV69w" name="numberOfCards">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
       </ownedParameter>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_ltGd8HlyEeSNP_QJ-oV69w" name="cards" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v_qWQIXQEeSvGM_HtiIAdg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v_sygIXQEeSvGM_HtiIAdg" value="*"/>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
