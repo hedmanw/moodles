@@ -56,7 +56,7 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="roomType" ordered="false"
         lowerBound="1" eType="#//RoomType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cleaned" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="housekept" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="equipment" ordered="false"
         upperBound="-1" eType="#//Equipment"/>
@@ -230,9 +230,6 @@
       <eParameters name="reservation" ordered="false" lowerBound="1" eType="#//Reservation"/>
     </eOperations>
     <eOperations name="getCustomer" ordered="false" lowerBound="1" eType="#//Customer"/>
-    <eOperations name="changeCustomer" ordered="false" lowerBound="1">
-      <eParameters name="newCustomer" ordered="false" lowerBound="1" eType="#//Customer"/>
-    </eOperations>
     <eOperations name="getBill" ordered="false" lowerBound="1" eType="#//Bill"/>
     <eOperations name="setCustomer" ordered="false" lowerBound="1">
       <eParameters name="customer" ordered="false" lowerBound="1" eType="#//Customer"/>

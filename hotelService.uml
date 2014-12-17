@@ -63,7 +63,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2vSDsYIREeStbpNcMqf5hQ" value="*"/>
       </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_EEndYIIjEeStbpNcMqf5hQ" name="createRoomType">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_EEndYIIjEeStbpNcMqf5hQ" name="createSleepRoom">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_RZqL4IIjEeStbpNcMqf5hQ" name="name">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedParameter>
@@ -71,6 +71,23 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
       </ownedParameter>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_h1azsIIjEeStbpNcMqf5hQ" name="createdRoomType" direction="return">
+        <type xmi:type="uml:Class" href="HotelCore.uml#_1MohkHjDEeSDBKbFcXcsYQ"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_NzxcEIXNEeSvGM_HtiIAdg" name="numberOfBeds">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_VXFcgIXNEeSvGM_HtiIAdg" name="createConferenceRoom" visibility="public">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZqqKgIXNEeSvGM_HtiIAdg" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_dRIh8IXNEeSvGM_HtiIAdg" name="maxPeople">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_j75w0IXNEeSvGM_HtiIAdg" name="cost">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mCtFQIXNEeSvGM_HtiIAdg" name="roomType" direction="return">
         <type xmi:type="uml:Class" href="HotelCore.uml#_1MohkHjDEeSDBKbFcXcsYQ"/>
       </ownedParameter>
     </ownedOperation>
