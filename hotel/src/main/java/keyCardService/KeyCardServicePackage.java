@@ -118,7 +118,7 @@ public interface KeyCardServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_CARDS_PROVIDES___ASSIGN_CARDS_TO_RESERVATION__LONG_INT = 1;
+	int KEY_CARDS_PROVIDES___ASSIGN_CARDS_TO_RESERVATION__RESERVATION_INT = 1;
 
 	/**
 	 * The number of operations of the '<em>Key Cards Provides</em>' class.
@@ -161,14 +161,14 @@ public interface KeyCardServicePackage extends EPackage {
 	EOperation getKeyCardsProvides__ReturnedCards__long();
 
 	/**
-	 * Returns the meta object for the '{@link keyCardService.KeyCardsProvides#assignCardsToReservation(long, int) <em>Assign Cards To Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link keyCardService.KeyCardsProvides#assignCardsToReservation(hotelCore.Reservation, int) <em>Assign Cards To Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Assign Cards To Reservation</em>' operation.
-	 * @see keyCardService.KeyCardsProvides#assignCardsToReservation(long, int)
+	 * @see keyCardService.KeyCardsProvides#assignCardsToReservation(hotelCore.Reservation, int)
 	 * @generated
 	 */
-	EOperation getKeyCardsProvides__AssignCardsToReservation__long_int();
+	EOperation getKeyCardsProvides__AssignCardsToReservation__Reservation_int();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -227,7 +227,7 @@ public interface KeyCardServicePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation KEY_CARDS_PROVIDES___ASSIGN_CARDS_TO_RESERVATION__LONG_INT = eINSTANCE.getKeyCardsProvides__AssignCardsToReservation__long_int();
+		EOperation KEY_CARDS_PROVIDES___ASSIGN_CARDS_TO_RESERVATION__RESERVATION_INT = eINSTANCE.getKeyCardsProvides__AssignCardsToReservation__Reservation_int();
 
 	}
 

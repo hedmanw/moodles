@@ -411,7 +411,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIReservationManager__CheckInReservation__Reservation_String_int() {
+	public EOperation getIReservationManager__CheckInReservation__Reservation_String_int_int() {
 		return iReservationManagerEClass.getEOperations().get(2);
 	}
 
@@ -688,7 +688,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		iReservationManagerEClass = createEClass(IRESERVATION_MANAGER);
 		createEOperation(iReservationManagerEClass, IRESERVATION_MANAGER___CREATE_RESERVATION__BOOKING_DATE_DATE_ROOM_ROOMTYPE);
 		createEOperation(iReservationManagerEClass, IRESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING);
-		createEOperation(iReservationManagerEClass, IRESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT);
+		createEOperation(iReservationManagerEClass, IRESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT_INT);
 		createEOperation(iReservationManagerEClass, IRESERVATION_MANAGER___CHECK_OUT_RESERVATION__RESERVATION);
 		createEOperation(iReservationManagerEClass, IRESERVATION_MANAGER___GET_CURRENT_RESERVATION_BY_ROOM_NUMBER__INT);
 
@@ -816,10 +816,11 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		op = initEOperation(getIReservationManager__GetNonCheckedInReservation__Booking(), theHotelCorePackage.getReservation(), "getNonCheckedInReservation", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theHotelCorePackage.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIReservationManager__CheckInReservation__Reservation_String_int(), ecorePackage.getEBoolean(), "checkInReservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIReservationManager__CheckInReservation__Reservation_String_int_int(), ecorePackage.getEBoolean(), "checkInReservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theHotelCorePackage.getReservation(), "reservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "responsible", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "numberOfGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "numberOfKeyCards", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIReservationManager__CheckOutReservation__Reservation(), null, "checkOutReservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theHotelCorePackage.getReservation(), "reservation", 1, 1, IS_UNIQUE, !IS_ORDERED);

@@ -478,7 +478,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IRESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT = 2;
+	int IRESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT_INT = 2;
 
 	/**
 	 * The operation id for the '<em>Check Out Reservation</em>' operation.
@@ -560,7 +560,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT = IRESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT;
+	int RESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT_INT = IRESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT_INT;
 
 	/**
 	 * The operation id for the '<em>Check Out Reservation</em>' operation.
@@ -1175,14 +1175,14 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIReservationManager__GetNonCheckedInReservation__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link hotelService.IReservationManager#checkInReservation(hotelCore.Reservation, java.lang.String, int) <em>Check In Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link hotelService.IReservationManager#checkInReservation(hotelCore.Reservation, java.lang.String, int, int) <em>Check In Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In Reservation</em>' operation.
-	 * @see hotelService.IReservationManager#checkInReservation(hotelCore.Reservation, java.lang.String, int)
+	 * @see hotelService.IReservationManager#checkInReservation(hotelCore.Reservation, java.lang.String, int, int)
 	 * @generated
 	 */
-	EOperation getIReservationManager__CheckInReservation__Reservation_String_int();
+	EOperation getIReservationManager__CheckInReservation__Reservation_String_int_int();
 
 	/**
 	 * Returns the meta object for the '{@link hotelService.IReservationManager#checkOutReservation(hotelCore.Reservation) <em>Check Out Reservation</em>}' operation.
@@ -1636,7 +1636,7 @@ public interface HotelServicePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IRESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT = eINSTANCE.getIReservationManager__CheckInReservation__Reservation_String_int();
+		EOperation IRESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT_INT = eINSTANCE.getIReservationManager__CheckInReservation__Reservation_String_int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Out Reservation</b></em>' operation.

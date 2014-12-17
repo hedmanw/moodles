@@ -135,6 +135,17 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean checkInReservation(Reservation reservation, String responsible, int numberOfGuests, int numberOfKeyCards) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public boolean checkInReservation(Reservation reservation, String responsible, int numberOfGuests) {
@@ -261,8 +272,8 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 				return createReservation((Booking)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (Room)arguments.get(3), (RoomType)arguments.get(4));
 			case HotelServicePackage.RESERVATION_MANAGER___GET_NON_CHECKED_IN_RESERVATION__BOOKING:
 				return getNonCheckedInReservation((Booking)arguments.get(0));
-			case HotelServicePackage.RESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT:
-				return checkInReservation((Reservation)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
+			case HotelServicePackage.RESERVATION_MANAGER___CHECK_IN_RESERVATION__RESERVATION_STRING_INT_INT:
+				return checkInReservation((Reservation)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3));
 			case HotelServicePackage.RESERVATION_MANAGER___CHECK_OUT_RESERVATION__RESERVATION:
 				checkOutReservation((Reservation)arguments.get(0));
 				return null;
