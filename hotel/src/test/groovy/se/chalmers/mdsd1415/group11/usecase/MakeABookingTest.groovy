@@ -49,7 +49,7 @@ class MakeABookingTest extends HotelBaseSpecification {
         setup:
         bank.isCreditCardValid("123", "123", 1, 2016, "Robert Cecil", "Martin") >> true
         bank.isCreditCardValid("124", "124", 1, 2016, "Karl", "Hern") >> true
-        def roomType = roomTypeManager.createRoomType("double room", 1000)
+        def roomType = roomTypeManager.createSleepRoom("double room", 1000, 2)
         Room room = roomManager.createRoom(1, roomType)
         Room room2 = roomManager.createRoom(2, roomType)
         Customer bookingOwner = customerManager.createCustomer("1", "Robert C. Martin")
