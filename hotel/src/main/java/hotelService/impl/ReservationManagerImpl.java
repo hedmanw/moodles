@@ -168,7 +168,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 		reservation.setCheckedOut(new Date());
 		BookingManager bookingManager = ManagerSingleton.getInstance().BOOKING_MANAGER;
 		Booking booking = bookingManager.getBookingByReservation(reservation);
-		bookingManager.makePaymentIfAllReservationsCheckedOut(booking);
+        bookingManager.makePaymentIfAllReservationsCheckedOut(booking);
 	}
 
 	private void returnKeyCard(Reservation reservation) {

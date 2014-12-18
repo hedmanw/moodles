@@ -172,7 +172,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public void makePaymentIfAllReservationsCheckedOut(Booking booking) {
 		if (allReservationsCheckedOut(booking)) {
-			makePayment(booking);
+            makePayment(booking);
 		}
 	}
 
@@ -214,15 +214,20 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		return !(baseEnd.before(fromDate) || baseStart.after(toDate));
 	}
 
-	private void makePayment(Booking booking) {
+	private boolean makePayment(Booking booking) {
 		Bill bill = booking.getBill();
 		Customer c = booking.getCustomer();
-		c.addLoyaltyPoints((int) bill.getGrandTotal());
+		int total = (int) bill.getGrandTotal();
+		c.addLoyaltyPoints(total);
 
 		banking = BankingSingleton.getInstance().CUSTOMER_PROVIDES;
 		PaymentDetails pd = c.getPaymentDetails();
-		banking.makePayment(pd.getCcNumber(), pd.getCcv(), pd.getExpiryMonth(),
-				pd.getExpiryYear(), pd.getFirstName(), pd.getLastName(), bill.getGrandTotal());
+		boolean success = banking.makePayment(pd.getCcNumber(), pd.getCcv(), pd.getExpiryMonth(),
+							pd.getExpiryYear(), pd.getFirstName(), pd.getLastName(), total);
+		if (success) {
+			bill.pay(total);
+		}
+		return success;
 	}
 
 	private boolean allReservationsCheckedOut(Booking booking) {
