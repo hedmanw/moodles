@@ -37,16 +37,13 @@
       ecorePackage="hotelCore.ecore#/">
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="hotelCore.ecore#//Hotel"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="hotelCore.ecore#//Tab">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//Tab/tabItems"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Tab/addItemToTab">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelCore.ecore#//Tab/addItemToTab/item"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelCore.ecore#//Tab/addItemToTab/cost"/>
-      </genOperations>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference hotelCore.ecore#//Tab/tabItems"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Tab/getTotalCost"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Tab/removeTabItem">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelCore.ecore#//Tab/removeTabItem/itemName"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//Tab/getAll"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="hotelCore.ecore#//TabItem">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//TabItem/key"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//TabItem/value"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="hotelCore.ecore#//KeyCard">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//KeyCard/keyCardID"/>

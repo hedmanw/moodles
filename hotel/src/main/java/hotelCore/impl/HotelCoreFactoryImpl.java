@@ -4,6 +4,7 @@ package hotelCore.impl;
 
 import hotelCore.*;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -58,6 +59,7 @@ public class HotelCoreFactoryImpl extends EFactoryImpl implements HotelCoreFacto
 		switch (eClass.getClassifierID()) {
 			case HotelCorePackage.HOTEL: return createHotel();
 			case HotelCorePackage.TAB: return createTab();
+			case HotelCorePackage.TAB_ITEM: return (EObject)createTabItem();
 			case HotelCorePackage.KEY_CARD: return createKeyCard();
 			case HotelCorePackage.EQUIPMENT: return createEquipment();
 			case HotelCorePackage.ROOM_TYPE: return createRoomType();
@@ -93,6 +95,16 @@ public class HotelCoreFactoryImpl extends EFactoryImpl implements HotelCoreFacto
 	public Tab createTab() {
 		TabImpl tab = new TabImpl();
 		return tab;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map.Entry<String, Double> createTabItem() {
+		TabItemImpl tabItem = new TabItemImpl();
+		return tabItem;
 	}
 
 	/**

@@ -96,7 +96,7 @@ public interface HotelCorePackage extends EPackage {
 	int TAB = 1;
 
 	/**
-	 * The feature id for the '<em><b>Tab Items</b></em>' attribute.
+	 * The feature id for the '<em><b>Tab Items</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -114,40 +114,13 @@ public interface HotelCorePackage extends EPackage {
 	int TAB_FEATURE_COUNT = 1;
 
 	/**
-	 * The operation id for the '<em>Add Item To Tab</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAB___ADD_ITEM_TO_TAB__STRING_DOUBLE = 0;
-
-	/**
 	 * The operation id for the '<em>Get Total Cost</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TAB___GET_TOTAL_COST = 1;
-
-	/**
-	 * The operation id for the '<em>Remove Tab Item</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAB___REMOVE_TAB_ITEM__STRING = 2;
-
-	/**
-	 * The operation id for the '<em>Get All</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAB___GET_ALL = 3;
+	int TAB___GET_TOTAL_COST = 0;
 
 	/**
 	 * The number of operations of the '<em>Tab</em>' class.
@@ -156,7 +129,53 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TAB_OPERATION_COUNT = 4;
+	int TAB_OPERATION_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link hotelCore.impl.TabItemImpl <em>Tab Item</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see hotelCore.impl.TabItemImpl
+	 * @see hotelCore.impl.HotelCorePackageImpl#getTabItem()
+	 * @generated
+	 */
+	int TAB_ITEM = 2;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAB_ITEM__KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAB_ITEM__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Tab Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAB_ITEM_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Tab Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAB_ITEM_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.KeyCardImpl <em>Key Card</em>}' class.
@@ -166,7 +185,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @see hotelCore.impl.HotelCorePackageImpl#getKeyCard()
 	 * @generated
 	 */
-	int KEY_CARD = 2;
+	int KEY_CARD = 3;
 
 	/**
 	 * The feature id for the '<em><b>Key Card ID</b></em>' attribute.
@@ -221,7 +240,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @see hotelCore.impl.HotelCorePackageImpl#getEquipment()
 	 * @generated
 	 */
-	int EQUIPMENT = 3;
+	int EQUIPMENT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -267,7 +286,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @see hotelCore.impl.HotelCorePackageImpl#getRoomType()
 	 * @generated
 	 */
-	int ROOM_TYPE = 4;
+	int ROOM_TYPE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Cost Per Night</b></em>' attribute.
@@ -331,7 +350,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @see hotelCore.impl.HotelCorePackageImpl#getRoom()
 	 * @generated
 	 */
-	int ROOM = 5;
+	int ROOM = 6;
 
 	/**
 	 * The feature id for the '<em><b>Room Number</b></em>' attribute.
@@ -440,7 +459,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @see hotelCore.impl.HotelCorePackageImpl#getScheduledEvents()
 	 * @generated
 	 */
-	int SCHEDULED_EVENTS = 6;
+	int SCHEDULED_EVENTS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Events</b></em>' attribute.
@@ -513,7 +532,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @see hotelCore.impl.HotelCorePackageImpl#getBill()
 	 * @generated
 	 */
-	int BILL = 7;
+	int BILL = 8;
 
 	/**
 	 * The feature id for the '<em><b>Paid</b></em>' attribute.
@@ -604,7 +623,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @see hotelCore.impl.HotelCorePackageImpl#getSleepRoom()
 	 * @generated
 	 */
-	int SLEEP_ROOM = 8;
+	int SLEEP_ROOM = 9;
 
 	/**
 	 * The feature id for the '<em><b>Cost Per Night</b></em>' attribute.
@@ -695,7 +714,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @see hotelCore.impl.HotelCorePackageImpl#getCustomer()
 	 * @generated
 	 */
-	int CUSTOMER = 9;
+	int CUSTOMER = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -840,7 +859,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @see hotelCore.impl.HotelCorePackageImpl#getPaymentDetails()
 	 * @generated
 	 */
-	int PAYMENT_DETAILS = 10;
+	int PAYMENT_DETAILS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Cc Number</b></em>' attribute.
@@ -1030,7 +1049,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @see hotelCore.impl.HotelCorePackageImpl#getReservation()
 	 * @generated
 	 */
-	int RESERVATION = 11;
+	int RESERVATION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Tab</b></em>' reference.
@@ -1292,7 +1311,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @see hotelCore.impl.HotelCorePackageImpl#getBooking()
 	 * @generated
 	 */
-	int BOOKING = 12;
+	int BOOKING = 13;
 
 	/**
 	 * The feature id for the '<em><b>Bill</b></em>' reference.
@@ -1401,7 +1420,7 @@ public interface HotelCorePackage extends EPackage {
 	 * @see hotelCore.impl.HotelCorePackageImpl#getConferenceRoom()
 	 * @generated
 	 */
-	int CONFERENCE_ROOM = 13;
+	int CONFERENCE_ROOM = 14;
 
 	/**
 	 * The feature id for the '<em><b>Cost Per Night</b></em>' attribute.
@@ -1497,25 +1516,15 @@ public interface HotelCorePackage extends EPackage {
 	EClass getTab();
 
 	/**
-	 * Returns the meta object for the attribute '{@link hotelCore.Tab#getTabItems <em>Tab Items</em>}'.
+	 * Returns the meta object for the map '{@link hotelCore.Tab#getTabItems <em>Tab Items</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tab Items</em>'.
+	 * @return the meta object for the map '<em>Tab Items</em>'.
 	 * @see hotelCore.Tab#getTabItems()
 	 * @see #getTab()
 	 * @generated
 	 */
-	EAttribute getTab_TabItems();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Tab#addItemToTab(java.lang.String, double) <em>Add Item To Tab</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Item To Tab</em>' operation.
-	 * @see hotelCore.Tab#addItemToTab(java.lang.String, double)
-	 * @generated
-	 */
-	EOperation getTab__AddItemToTab__String_double();
+	EReference getTab_TabItems();
 
 	/**
 	 * Returns the meta object for the '{@link hotelCore.Tab#getTotalCost() <em>Get Total Cost</em>}' operation.
@@ -1528,24 +1537,38 @@ public interface HotelCorePackage extends EPackage {
 	EOperation getTab__GetTotalCost();
 
 	/**
-	 * Returns the meta object for the '{@link hotelCore.Tab#removeTabItem(java.lang.String) <em>Remove Tab Item</em>}' operation.
+	 * Returns the meta object for class '{@link java.util.Map.Entry <em>Tab Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Tab Item</em>' operation.
-	 * @see hotelCore.Tab#removeTabItem(java.lang.String)
+	 * @return the meta object for class '<em>Tab Item</em>'.
+	 * @see java.util.Map.Entry
+	 * @model keyDataType="org.eclipse.emf.ecore.EString" keyRequired="true" keyOrdered="false"
+	 *        valueDataType="org.eclipse.emf.ecore.EDoubleObject" valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */
-	EOperation getTab__RemoveTabItem__String();
+	EClass getTabItem();
 
 	/**
-	 * Returns the meta object for the '{@link hotelCore.Tab#getAll() <em>Get All</em>}' operation.
+	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Key</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get All</em>' operation.
-	 * @see hotelCore.Tab#getAll()
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getTabItem()
 	 * @generated
 	 */
-	EOperation getTab__GetAll();
+	EAttribute getTabItem_Key();
+
+	/**
+	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getTabItem()
+	 * @generated
+	 */
+	EAttribute getTabItem_Value();
 
 	/**
 	 * Returns the meta object for class '{@link hotelCore.KeyCard <em>Key Card</em>}'.
@@ -2759,20 +2782,12 @@ public interface HotelCorePackage extends EPackage {
 		EClass TAB = eINSTANCE.getTab();
 
 		/**
-		 * The meta object literal for the '<em><b>Tab Items</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Tab Items</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TAB__TAB_ITEMS = eINSTANCE.getTab_TabItems();
-
-		/**
-		 * The meta object literal for the '<em><b>Add Item To Tab</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TAB___ADD_ITEM_TO_TAB__STRING_DOUBLE = eINSTANCE.getTab__AddItemToTab__String_double();
+		EReference TAB__TAB_ITEMS = eINSTANCE.getTab_TabItems();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Total Cost</b></em>' operation.
@@ -2783,20 +2798,30 @@ public interface HotelCorePackage extends EPackage {
 		EOperation TAB___GET_TOTAL_COST = eINSTANCE.getTab__GetTotalCost();
 
 		/**
-		 * The meta object literal for the '<em><b>Remove Tab Item</b></em>' operation.
+		 * The meta object literal for the '{@link hotelCore.impl.TabItemImpl <em>Tab Item</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see hotelCore.impl.TabItemImpl
+		 * @see hotelCore.impl.HotelCorePackageImpl#getTabItem()
 		 * @generated
 		 */
-		EOperation TAB___REMOVE_TAB_ITEM__STRING = eINSTANCE.getTab__RemoveTabItem__String();
+		EClass TAB_ITEM = eINSTANCE.getTabItem();
 
 		/**
-		 * The meta object literal for the '<em><b>Get All</b></em>' operation.
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TAB___GET_ALL = eINSTANCE.getTab__GetAll();
+		EAttribute TAB_ITEM__KEY = eINSTANCE.getTabItem_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TAB_ITEM__VALUE = eINSTANCE.getTabItem_Value();
 
 		/**
 		 * The meta object literal for the '{@link hotelCore.impl.KeyCardImpl <em>Key Card</em>}' class.

@@ -8,26 +8,18 @@ import hotelCore.Reservation;
 import hotelCore.Room;
 import hotelCore.RoomType;
 import hotelCore.*;
-
-import hotelCore.impl.KeyCardImpl;
 import hotelService.BookingManager;
 import hotelService.HotelServicePackage;
 import hotelService.ManagerSingleton;
 import hotelService.ReservationManager;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
-
 import keyCardService.KeyCardSingleton;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**

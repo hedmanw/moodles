@@ -4,6 +4,7 @@ package hotelCore.util;
 
 import hotelCore.*;
 
+import java.util.Map;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -74,6 +75,10 @@ public class HotelCoreAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTab(Tab object) {
 				return createTabAdapter();
+			}
+			@Override
+			public Adapter caseTabItem(Map.Entry<String, Double> object) {
+				return createTabItemAdapter();
 			}
 			@Override
 			public Adapter caseKeyCard(KeyCard object) {
@@ -168,6 +173,20 @@ public class HotelCoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTabAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Tab Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createTabItemAdapter() {
 		return null;
 	}
 

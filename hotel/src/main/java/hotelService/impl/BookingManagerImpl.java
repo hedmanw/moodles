@@ -5,7 +5,6 @@ package hotelService.impl;
 import bankingService.BankingSingleton;
 import bankingService.CustomerProvides;
 import datastructs.EArrayList;
-import hotelCore.Bill;
 import hotelCore.Booking;
 import hotelCore.Customer;
 import hotelCore.Reservation;
@@ -15,8 +14,6 @@ import hotelService.HotelServicePackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
-
-import hotelService.ManagerSingleton;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;

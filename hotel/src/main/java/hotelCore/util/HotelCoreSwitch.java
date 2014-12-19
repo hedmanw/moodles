@@ -4,6 +4,7 @@ package hotelCore.util;
 
 import hotelCore.*;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -75,6 +76,12 @@ public class HotelCoreSwitch<T> extends Switch<T> {
 			case HotelCorePackage.TAB: {
 				Tab tab = (Tab)theEObject;
 				T result = caseTab(tab);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case HotelCorePackage.TAB_ITEM: {
+				@SuppressWarnings("unchecked") Map.Entry<String, Double> tabItem = (Map.Entry<String, Double>)theEObject;
+				T result = caseTabItem(tabItem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -183,6 +190,21 @@ public class HotelCoreSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTab(Tab object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tab Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tab Item</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTabItem(Map.Entry<String, Double> object) {
 		return null;
 	}
 

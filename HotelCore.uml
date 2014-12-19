@@ -2,28 +2,15 @@
 <uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Tu3wAHVPEeSFlMIer3mkJA" name="hotelCore">
   <packagedElement xmi:type="uml:Component" xmi:id="_dqC1MHlsEeSNP_QJ-oV69w" name="Hotel"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_fnSvgHVPEeSFlMIer3mkJA" name="Tab">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_dmVu8HVQEeSFlMIer3mkJA" name="tabItems" visibility="private">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2bceEIdpEeShgOvZoj3j3w" name="tabItems" visibility="private" type="_opkCkIdpEeShgOvZoj3j3w" aggregation="composite" association="_2bdFIIdpEeShgOvZoj3j3w">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2bceEYdpEeShgOvZoj3j3w"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2bceEodpEeShgOvZoj3j3w" value="*"/>
     </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_SO5gIHVREeSFlMIer3mkJA" name="addItemToTab">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-H1OwHVREeSFlMIer3mkJA" name="item">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_AixAIHVSEeSFlMIer3mkJA" name="cost">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
-      </ownedParameter>
-    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_iEnboHVREeSFlMIer3mkJA" name="getTotalCost">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_u9MQkHVREeSFlMIer3mkJA" name="value" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
       </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Kd4lcHVSEeSFlMIer3mkJA" name="removeTabItem">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_PSwCoHVSEeSFlMIer3mkJA" name="itemName">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_RLXxIHVSEeSFlMIer3mkJA" name="getAll"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_Uh9AgHVUEeSK0eOwuSpt4Q" name="KeyCard">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_5_IMoHVUEeSK0eOwuSpt4Q" name="keyCardID" visibility="private">
@@ -453,6 +440,14 @@
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_opkCkIdpEeShgOvZoj3j3w" name="TabItem">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_s-kT8IdpEeShgOvZoj3j3w" name="key" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_vyLEAIdpEeShgOvZoj3j3w" name="value" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDoubleObject"/>
+    </ownedAttribute>
+  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_dXSAkHjEEeSDBKbFcXcsYQ" memberEnd="_dXSAkXjEEeSDBKbFcXcsYQ _dXRZgHjEEeSDBKbFcXcsYQ">
     <ownedEnd xmi:type="uml:Property" xmi:id="_dXSAkXjEEeSDBKbFcXcsYQ" name="room" type="_8xwx0HjBEeSDBKbFcXcsYQ" association="_dXSAkHjEEeSDBKbFcXcsYQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dXSAknjEEeSDBKbFcXcsYQ"/>
@@ -553,5 +548,11 @@
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_u2qLgIIaEeStbpNcMqf5hQ" name="Realization6" client="_dqC1MHlsEeSNP_QJ-oV69w">
     <supplier xmi:type="uml:Interface" href="hotelService.uml#_VffOUHx8EeSyZvvyd5lTNA"/>
     <contract xmi:type="uml:Interface" href="hotelService.uml#_VffOUHx8EeSyZvvyd5lTNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2bdFIIdpEeShgOvZoj3j3w" memberEnd="_2bdFIYdpEeShgOvZoj3j3w _2bceEIdpEeShgOvZoj3j3w">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_2bdFIYdpEeShgOvZoj3j3w" name="tab" type="_fnSvgHVPEeSFlMIer3mkJA" association="_2bdFIIdpEeShgOvZoj3j3w">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2bdFIodpEeShgOvZoj3j3w" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2bdFI4dpEeShgOvZoj3j3w" value="1"/>
+    </ownedEnd>
   </packagedElement>
 </uml:Package>

@@ -2,8 +2,7 @@
  */
 package hotelCore;
 
-import java.util.Map;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -24,38 +23,21 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Tab extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Tab Items</b></em>' attribute.
+	 * Returns the value of the '<em><b>Tab Items</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link java.lang.Double},
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Tab Items</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Tab Items</em>' map isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tab Items</em>' attribute.
-	 * @see #setTabItems(Map)
+	 * @return the value of the '<em>Tab Items</em>' map.
 	 * @see hotelCore.HotelCorePackage#getTab_TabItems()
-	 * @model required="true" ordered="false"
+	 * @model mapType="hotelCore.TabItem<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EDoubleObject>" ordered="false"
 	 * @generated
 	 */
-	Map getTabItems();
-
-	/**
-	 * Sets the value of the '{@link hotelCore.Tab#getTabItems <em>Tab Items</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tab Items</em>' attribute.
-	 * @see #getTabItems()
-	 * @generated
-	 */
-	void setTabItems(Map value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model itemRequired="true" itemOrdered="false" costRequired="true" costOrdered="false"
-	 * @generated
-	 */
-	void addItemToTab(String item, double cost);
+	EMap<String, Double> getTabItems();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -64,21 +46,5 @@ public interface Tab extends EObject {
 	 * @generated
 	 */
 	double getTotalCost();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model itemNameRequired="true" itemNameOrdered="false"
-	 * @generated
-	 */
-	void removeTabItem(String itemName);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	void getAll();
 
 } // Tab

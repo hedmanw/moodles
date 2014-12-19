@@ -4,20 +4,16 @@ package hotelCore.impl;
 
 import hotelCore.HotelCorePackage;
 import hotelCore.Tab;
-
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,23 +30,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class TabImpl extends MinimalEObjectImpl.Container implements Tab {
 	/**
-	 * The cached value of the '{@link #getTabItems() <em>Tab Items</em>}' attribute.
+	 * The cached value of the '{@link #getTabItems() <em>Tab Items</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTabItems()
 	 * @generated
 	 * @ordered
 	 */
-	protected Map<String, Double> tabItems;
-
+	protected EMap<String, Double> tabItems;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	protected TabImpl() {
 		super();
-		tabItems = new HashMap<>();
 	}
 
 	/**
@@ -68,20 +62,11 @@ public class TabImpl extends MinimalEObjectImpl.Container implements Tab {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map getTabItems() {
+	public EMap<String, Double> getTabItems() {
+		if (tabItems == null) {
+			tabItems = new EcoreEMap<String,Double>(HotelCorePackage.Literals.TAB_ITEM, TabItemImpl.class, this, HotelCorePackage.TAB__TAB_ITEMS);
+		}
 		return tabItems;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTabItems(Map newTabItems) {
-		Map oldTabItems = tabItems;
-		tabItems = newTabItems;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelCorePackage.TAB__TAB_ITEMS, oldTabItems, tabItems));
 	}
 
 	/**
@@ -100,7 +85,7 @@ public class TabImpl extends MinimalEObjectImpl.Container implements Tab {
 	 */
 	public double getTotalCost() {
 		double total = 0;
-		for (double c : tabItems.values()) {
+		for (double c : getTabItems().values()) {
 			total += c;
 		}
 		return total;
@@ -109,21 +94,15 @@ public class TabImpl extends MinimalEObjectImpl.Container implements Tab {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void removeTabItem(String itemName) {
-		tabItems.remove(itemName);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAll() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case HotelCorePackage.TAB__TAB_ITEMS:
+				return ((InternalEList<?>)getTabItems()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -135,7 +114,8 @@ public class TabImpl extends MinimalEObjectImpl.Container implements Tab {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case HotelCorePackage.TAB__TAB_ITEMS:
-				return getTabItems();
+				if (coreType) return getTabItems();
+				else return getTabItems().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -149,7 +129,7 @@ public class TabImpl extends MinimalEObjectImpl.Container implements Tab {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HotelCorePackage.TAB__TAB_ITEMS:
-				setTabItems((Map)newValue);
+				((EStructuralFeature.Setting)getTabItems()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -164,7 +144,7 @@ public class TabImpl extends MinimalEObjectImpl.Container implements Tab {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HotelCorePackage.TAB__TAB_ITEMS:
-				setTabItems((Map)null);
+				getTabItems().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -179,7 +159,7 @@ public class TabImpl extends MinimalEObjectImpl.Container implements Tab {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HotelCorePackage.TAB__TAB_ITEMS:
-				return tabItems != null;
+				return tabItems != null && !tabItems.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -192,35 +172,10 @@ public class TabImpl extends MinimalEObjectImpl.Container implements Tab {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case HotelCorePackage.TAB___ADD_ITEM_TO_TAB__STRING_DOUBLE:
-				addItemToTab((String)arguments.get(0), (Double)arguments.get(1));
-				return null;
 			case HotelCorePackage.TAB___GET_TOTAL_COST:
 				return getTotalCost();
-			case HotelCorePackage.TAB___REMOVE_TAB_ITEM__STRING:
-				removeTabItem((String)arguments.get(0));
-				return null;
-			case HotelCorePackage.TAB___GET_ALL:
-				getAll();
-				return null;
 		}
 		return super.eInvoke(operationID, arguments);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (tabItems: ");
-		result.append(tabItems);
-		result.append(')');
-		return result.toString();
 	}
 
 } //TabImpl

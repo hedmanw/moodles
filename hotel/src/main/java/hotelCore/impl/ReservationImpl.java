@@ -447,7 +447,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 
 		if (checkedOut.after(endDay)) {
 			int overdueDays = (int) Math.ceil((checkedOut.getTime() - endDay.getTime()) / (1000 * 60 * 60 * 24));
-			tab.addItemToTab("Overdue check out", overdueDays * room.getRoomType().getCostPerNight());
+			getTab().getTabItems().put("Overdue check out", overdueDays * room.getRoomType().getCostPerNight());
 		}
 	}
 

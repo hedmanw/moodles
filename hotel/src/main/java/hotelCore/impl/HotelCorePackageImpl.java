@@ -25,6 +25,7 @@ import hotelService.HotelServicePackage;
 
 import hotelService.impl.HotelServicePackageImpl;
 
+import java.util.Map;
 import keyCardService.KeyCardServicePackage;
 import keyCardService.impl.KeyCardServicePackageImpl;
 import org.eclipse.emf.ecore.EAttribute;
@@ -59,6 +60,13 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 	 * @generated
 	 */
 	private EClass tabEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tabItemEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -242,17 +250,8 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTab_TabItems() {
-		return (EAttribute)tabEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getTab__AddItemToTab__String_double() {
-		return tabEClass.getEOperations().get(0);
+	public EReference getTab_TabItems() {
+		return (EReference)tabEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -261,7 +260,7 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 	 * @generated
 	 */
 	public EOperation getTab__GetTotalCost() {
-		return tabEClass.getEOperations().get(1);
+		return tabEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -269,8 +268,8 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTab__RemoveTabItem__String() {
-		return tabEClass.getEOperations().get(2);
+	public EClass getTabItem() {
+		return tabItemEClass;
 	}
 
 	/**
@@ -278,8 +277,17 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTab__GetAll() {
-		return tabEClass.getEOperations().get(3);
+	public EAttribute getTabItem_Key() {
+		return (EAttribute)tabItemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTabItem_Value() {
+		return (EAttribute)tabItemEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1330,11 +1338,12 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 		hotelEClass = createEClass(HOTEL);
 
 		tabEClass = createEClass(TAB);
-		createEAttribute(tabEClass, TAB__TAB_ITEMS);
-		createEOperation(tabEClass, TAB___ADD_ITEM_TO_TAB__STRING_DOUBLE);
+		createEReference(tabEClass, TAB__TAB_ITEMS);
 		createEOperation(tabEClass, TAB___GET_TOTAL_COST);
-		createEOperation(tabEClass, TAB___REMOVE_TAB_ITEM__STRING);
-		createEOperation(tabEClass, TAB___GET_ALL);
+
+		tabItemEClass = createEClass(TAB_ITEM);
+		createEAttribute(tabItemEClass, TAB_ITEM__KEY);
+		createEAttribute(tabItemEClass, TAB_ITEM__VALUE);
 
 		keyCardEClass = createEClass(KEY_CARD);
 		createEAttribute(keyCardEClass, KEY_CARD__KEY_CARD_ID);
@@ -1497,25 +1506,20 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 		initEClass(hotelEClass, Hotel.class, "Hotel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tabEClass, Tab.class, "Tab", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTab_TabItems(), ecorePackage.getEMap(), "tabItems", null, 1, 1, Tab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		EOperation op = initEOperation(getTab__AddItemToTab__String_double(), null, "addItemToTab", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "item", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "cost", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEReference(getTab_TabItems(), this.getTabItem(), null, "tabItems", null, 0, -1, Tab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEOperation(getTab__GetTotalCost(), ecorePackage.getEDouble(), "getTotalCost", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getTab__RemoveTabItem__String(), null, "removeTabItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "itemName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getTab__GetAll(), null, "getAll", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEClass(tabItemEClass, Map.Entry.class, "TabItem", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTabItem_Key(), ecorePackage.getEString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTabItem_Value(), ecorePackage.getEDoubleObject(), "value", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(keyCardEClass, KeyCard.class, "KeyCard", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKeyCard_KeyCardID(), ecorePackage.getEInt(), "keyCardID", null, 1, 1, KeyCard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEOperation(getKeyCard__GetID(), ecorePackage.getEInt(), "getID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getKeyCard__SetID__int(), null, "setID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getKeyCard__SetID__int(), null, "setID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "keyCardID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(equipmentEClass, Equipment.class, "Equipment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
