@@ -65,25 +65,29 @@ class MakeABookingRequestTest extends HotelBaseSpecification{
         customerManager.setPaymentDetailsForCustomer(bookingOwner2, "Karl", "Hern", "124", "124", 1, 2016)
 
 
-        when: "Reservations are made for two bookings and are asserted"
-        def booking = bookingManager.createBooking()
+        when: "When two bookings are made simultaneously, it's first come first serve"
         def searchCriteria = new EArrayList<RoomType>()
         searchCriteria.add(roomType)
+
+        def booking = bookingManager.createBooking()
         def availableRooms = roomManager.getAvailableRooms(today, tomorrow, searchCriteria)
         reservationManager.createReservation(booking, today, tomorrow, availableRooms.get(0), roomType)
         reservationManager.createReservation(booking, today, tomorrow, availableRooms.get(1), roomType)
         def customer = customerManager.getCustomerByIdNumber("1")
         booking.setCustomer(customer)
+
         def booking2 = bookingManager.createBooking()
         reservationManager.createReservation(booking2, today, tomorrow, availableRooms.get(0), roomType)
         def customer2 = customerManager.getCustomerByIdNumber("2")
         booking2.setCustomer(customer2)
-        boolean bookingStatus = bookingManager.confirmBooking(booking)
+
+        boolean bookingSuccessStatus = bookingManager.confirmBooking(booking)
         boolean bookingFailedStatus = bookingManager.confirmBooking(booking2)
 
         then:
         thrown(RuntimeException)
-        bookingStatus
+        bookingSuccessStatus
+        !bookingFailedStatus
     }
 
 }
