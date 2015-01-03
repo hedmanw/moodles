@@ -120,36 +120,4 @@ public interface Room extends EObject {
 	 */
 	EList<Equipment> getEquipment();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model roomTypeRequired="true" roomTypeOrdered="false"
-	 * @generated
-	 */
-	void addRoomType(RoomType roomType);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model roomTypeRequired="true" roomTypeOrdered="false"
-	 * @generated
-	 */
-	void removeRoomType(RoomType roomType);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model itemRequired="true" itemOrdered="false"
-	 * @generated
-	 */
-	void addEquipmentToRoom(String item);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model itemNameRequired="true" itemNameOrdered="false"
-	 * @generated
-	 */
-	void removeEquipmentItem(String itemName);
-
 } // Room

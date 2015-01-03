@@ -46,12 +46,4 @@ public interface ConferenceRoom extends RoomType {
 	 */
 	void setMaxNbrOfPeople(int value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" ordered="false"
-	 * @generated
-	 */
-	int getNbrOfPeople();
-
 } // ConferenceRoom

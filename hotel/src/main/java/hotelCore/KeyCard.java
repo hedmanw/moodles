@@ -47,20 +47,4 @@ public interface KeyCard extends EObject {
 	 */
 	void setKeyCardID(int value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" ordered="false"
-	 * @generated
-	 */
-	int getID();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model keyCardIDRequired="true" keyCardIDOrdered="false"
-	 * @generated
-	 */
-	void setID(int keyCardID);
-
 } // KeyCard

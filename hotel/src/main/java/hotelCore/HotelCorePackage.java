@@ -206,31 +206,13 @@ public interface HotelCorePackage extends EPackage {
 	int KEY_CARD_FEATURE_COUNT = 1;
 
 	/**
-	 * The operation id for the '<em>Get ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KEY_CARD___GET_ID = 0;
-
-	/**
-	 * The operation id for the '<em>Set ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KEY_CARD___SET_ID__INT = 1;
-
-	/**
 	 * The number of operations of the '<em>Key Card</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_CARD_OPERATION_COUNT = 2;
+	int KEY_CARD_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.EquipmentImpl <em>Equipment</em>}' class.
@@ -261,22 +243,13 @@ public interface HotelCorePackage extends EPackage {
 	int EQUIPMENT_FEATURE_COUNT = 1;
 
 	/**
-	 * The operation id for the '<em>Get Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EQUIPMENT___GET_NAME = 0;
-
-	/**
 	 * The number of operations of the '<em>Equipment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EQUIPMENT_OPERATION_COUNT = 1;
+	int EQUIPMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.RoomTypeImpl <em>Room Type</em>}' class.
@@ -316,31 +289,13 @@ public interface HotelCorePackage extends EPackage {
 	int ROOM_TYPE_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>Get Cost Per Night</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_TYPE___GET_COST_PER_NIGHT = 0;
-
-	/**
-	 * The operation id for the '<em>Set Cost Per Night</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_TYPE___SET_COST_PER_NIGHT__DOUBLE = 1;
-
-	/**
 	 * The number of operations of the '<em>Room Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_OPERATION_COUNT = 2;
+	int ROOM_TYPE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.RoomImpl <em>Room</em>}' class.
@@ -398,58 +353,13 @@ public interface HotelCorePackage extends EPackage {
 	int ROOM_FEATURE_COUNT = 4;
 
 	/**
-	 * The operation id for the '<em>Get Room Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM___GET_ROOM_TYPE = 0;
-
-	/**
-	 * The operation id for the '<em>Add Room Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM___ADD_ROOM_TYPE__ROOMTYPE = 1;
-
-	/**
-	 * The operation id for the '<em>Remove Room Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM___REMOVE_ROOM_TYPE__ROOMTYPE = 2;
-
-	/**
-	 * The operation id for the '<em>Add Equipment To Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM___ADD_EQUIPMENT_TO_ROOM__STRING = 3;
-
-	/**
-	 * The operation id for the '<em>Remove Equipment Item</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM___REMOVE_EQUIPMENT_ITEM__STRING = 4;
-
-	/**
 	 * The number of operations of the '<em>Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_OPERATION_COUNT = 5;
+	int ROOM_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.ScheduledEventsImpl <em>Scheduled Events</em>}' class.
@@ -662,49 +572,13 @@ public interface HotelCorePackage extends EPackage {
 	int SLEEP_ROOM_FEATURE_COUNT = ROOM_TYPE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Cost Per Night</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLEEP_ROOM___GET_COST_PER_NIGHT = ROOM_TYPE___GET_COST_PER_NIGHT;
-
-	/**
-	 * The operation id for the '<em>Set Cost Per Night</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLEEP_ROOM___SET_COST_PER_NIGHT__DOUBLE = ROOM_TYPE___SET_COST_PER_NIGHT__DOUBLE;
-
-	/**
-	 * The operation id for the '<em>Get Nbr Of Beds</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLEEP_ROOM___GET_NBR_OF_BEDS = ROOM_TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Set Nbr Of Beds</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLEEP_ROOM___SET_NBR_OF_BEDS__INT = ROOM_TYPE_OPERATION_COUNT + 1;
-
-	/**
 	 * The number of operations of the '<em>Sleep Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLEEP_ROOM_OPERATION_COUNT = ROOM_TYPE_OPERATION_COUNT + 2;
+	int SLEEP_ROOM_OPERATION_COUNT = ROOM_TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.CustomerImpl <em>Customer</em>}' class.
@@ -762,94 +636,13 @@ public interface HotelCorePackage extends EPackage {
 	int CUSTOMER_FEATURE_COUNT = 4;
 
 	/**
-	 * The operation id for the '<em>Get Id</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___GET_ID = 0;
-
-	/**
-	 * The operation id for the '<em>Set Id</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___SET_ID__STRING = 1;
-
-	/**
-	 * The operation id for the '<em>Get Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___GET_NAME = 2;
-
-	/**
-	 * The operation id for the '<em>Set Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___SET_NAME__STRING = 3;
-
-	/**
-	 * The operation id for the '<em>Get Loyalty Points</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___GET_LOYALTY_POINTS = 4;
-
-	/**
-	 * The operation id for the '<em>Add Loyalty Points</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___ADD_LOYALTY_POINTS__INT = 5;
-
-	/**
-	 * The operation id for the '<em>Remove Loyalty Points</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___REMOVE_LOYALTY_POINTS__INT = 6;
-
-	/**
-	 * The operation id for the '<em>Get Payment Details</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___GET_PAYMENT_DETAILS = 7;
-
-	/**
-	 * The operation id for the '<em>Set Payment Details</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___SET_PAYMENT_DETAILS__PAYMENTDETAILS = 8;
-
-	/**
 	 * The number of operations of the '<em>Customer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_OPERATION_COUNT = 9;
+	int CUSTOMER_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.PaymentDetailsImpl <em>Payment Details</em>}' class.
@@ -925,121 +718,13 @@ public interface HotelCorePackage extends EPackage {
 	int PAYMENT_DETAILS_FEATURE_COUNT = 6;
 
 	/**
-	 * The operation id for the '<em>Get Cc Number</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_DETAILS___GET_CC_NUMBER = 0;
-
-	/**
-	 * The operation id for the '<em>Set Cc Number</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_DETAILS___SET_CC_NUMBER__STRING = 1;
-
-	/**
-	 * The operation id for the '<em>Get Cc V</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_DETAILS___GET_CC_V = 2;
-
-	/**
-	 * The operation id for the '<em>Set Ccv</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_DETAILS___SET_CCV__STRING = 3;
-
-	/**
-	 * The operation id for the '<em>Get Expiry Month</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_DETAILS___GET_EXPIRY_MONTH = 4;
-
-	/**
-	 * The operation id for the '<em>Set Expiry Month</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_DETAILS___SET_EXPIRY_MONTH__INT = 5;
-
-	/**
-	 * The operation id for the '<em>Set Expiry Year</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_DETAILS___SET_EXPIRY_YEAR__INT = 6;
-
-	/**
-	 * The operation id for the '<em>Get Expiry Year</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_DETAILS___GET_EXPIRY_YEAR = 7;
-
-	/**
-	 * The operation id for the '<em>Get First Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_DETAILS___GET_FIRST_NAME = 8;
-
-	/**
-	 * The operation id for the '<em>Set First Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_DETAILS___SET_FIRST_NAME__STRING = 9;
-
-	/**
-	 * The operation id for the '<em>Set Last Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_DETAILS___SET_LAST_NAME__STRING = 10;
-
-	/**
-	 * The operation id for the '<em>Get Last Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_DETAILS___GET_LAST_NAME = 11;
-
-	/**
 	 * The number of operations of the '<em>Payment Details</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_DETAILS_OPERATION_COUNT = 12;
+	int PAYMENT_DETAILS_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.ReservationImpl <em>Reservation</em>}' class.
@@ -1061,13 +746,13 @@ public interface HotelCorePackage extends EPackage {
 	int RESERVATION__TAB = 0;
 
 	/**
-	 * The feature id for the '<em><b>Key Card</b></em>' reference list.
+	 * The feature id for the '<em><b>Key Cards</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION__KEY_CARD = 1;
+	int RESERVATION__KEY_CARDS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Scheduled Events</b></em>' reference.
@@ -1160,148 +845,13 @@ public interface HotelCorePackage extends EPackage {
 	int RESERVATION_FEATURE_COUNT = 11;
 
 	/**
-	 * The operation id for the '<em>Get Responsible</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_RESPONSIBLE = 0;
-
-	/**
-	 * The operation id for the '<em>Set Responsible</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___SET_RESPONSIBLE__STRING = 1;
-
-	/**
-	 * The operation id for the '<em>Get Number Of Guests</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_NUMBER_OF_GUESTS = 2;
-
-	/**
-	 * The operation id for the '<em>Set Number Of Guests</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___SET_NUMBER_OF_GUESTS__INT = 3;
-
-	/**
-	 * The operation id for the '<em>Get Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_ROOM = 4;
-
-	/**
-	 * The operation id for the '<em>Set Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___SET_ROOM__ROOM = 5;
-
-	/**
-	 * The operation id for the '<em>Get Cost Category</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_COST_CATEGORY = 6;
-
-	/**
-	 * The operation id for the '<em>Add Cost Category</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___ADD_COST_CATEGORY__ROOMTYPE = 7;
-
-	/**
-	 * The operation id for the '<em>Get Events</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_EVENTS = 8;
-
-	/**
-	 * The operation id for the '<em>Remove All Events</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___REMOVE_ALL_EVENTS = 9;
-
-	/**
-	 * The operation id for the '<em>Get Key Cards</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_KEY_CARDS = 10;
-
-	/**
-	 * The operation id for the '<em>Add Key Card</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___ADD_KEY_CARD__KEYCARD = 11;
-
-	/**
-	 * The operation id for the '<em>Remove Key Card</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___REMOVE_KEY_CARD__KEYCARD = 12;
-
-	/**
-	 * The operation id for the '<em>Remove Cost Category</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___REMOVE_COST_CATEGORY__ROOMTYPE = 13;
-
-	/**
-	 * The operation id for the '<em>Get Tab</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_TAB = 14;
-
-	/**
 	 * The number of operations of the '<em>Reservation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_OPERATION_COUNT = 15;
+	int RESERVATION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.BookingImpl <em>Booking</em>}' class.
@@ -1359,58 +909,13 @@ public interface HotelCorePackage extends EPackage {
 	int BOOKING_FEATURE_COUNT = 4;
 
 	/**
-	 * The operation id for the '<em>Add Reservation</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___ADD_RESERVATION__RESERVATION = 0;
-
-	/**
-	 * The operation id for the '<em>Remove Reservation</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___REMOVE_RESERVATION__RESERVATION = 1;
-
-	/**
-	 * The operation id for the '<em>Get Customer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___GET_CUSTOMER = 2;
-
-	/**
-	 * The operation id for the '<em>Get Bill</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___GET_BILL = 3;
-
-	/**
-	 * The operation id for the '<em>Set Customer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___SET_CUSTOMER__CUSTOMER = 4;
-
-	/**
 	 * The number of operations of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 5;
+	int BOOKING_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.ConferenceRoomImpl <em>Conference Room</em>}' class.
@@ -1459,40 +964,13 @@ public interface HotelCorePackage extends EPackage {
 	int CONFERENCE_ROOM_FEATURE_COUNT = ROOM_TYPE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Cost Per Night</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFERENCE_ROOM___GET_COST_PER_NIGHT = ROOM_TYPE___GET_COST_PER_NIGHT;
-
-	/**
-	 * The operation id for the '<em>Set Cost Per Night</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFERENCE_ROOM___SET_COST_PER_NIGHT__DOUBLE = ROOM_TYPE___SET_COST_PER_NIGHT__DOUBLE;
-
-	/**
-	 * The operation id for the '<em>Get Nbr Of People</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFERENCE_ROOM___GET_NBR_OF_PEOPLE = ROOM_TYPE_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Conference Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONFERENCE_ROOM_OPERATION_COUNT = ROOM_TYPE_OPERATION_COUNT + 1;
+	int CONFERENCE_ROOM_OPERATION_COUNT = ROOM_TYPE_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1592,26 +1070,6 @@ public interface HotelCorePackage extends EPackage {
 	EAttribute getKeyCard_KeyCardID();
 
 	/**
-	 * Returns the meta object for the '{@link hotelCore.KeyCard#getID() <em>Get ID</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get ID</em>' operation.
-	 * @see hotelCore.KeyCard#getID()
-	 * @generated
-	 */
-	EOperation getKeyCard__GetID();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.KeyCard#setID(int) <em>Set ID</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set ID</em>' operation.
-	 * @see hotelCore.KeyCard#setID(int)
-	 * @generated
-	 */
-	EOperation getKeyCard__SetID__int();
-
-	/**
 	 * Returns the meta object for class '{@link hotelCore.Equipment <em>Equipment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1631,16 +1089,6 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEquipment_Name();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Equipment#getName() <em>Get Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Name</em>' operation.
-	 * @see hotelCore.Equipment#getName()
-	 * @generated
-	 */
-	EOperation getEquipment__GetName();
 
 	/**
 	 * Returns the meta object for class '{@link hotelCore.RoomType <em>Room Type</em>}'.
@@ -1673,26 +1121,6 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRoomType_Name();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.RoomType#getCostPerNight() <em>Get Cost Per Night</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Cost Per Night</em>' operation.
-	 * @see hotelCore.RoomType#getCostPerNight()
-	 * @generated
-	 */
-	EOperation getRoomType__GetCostPerNight();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.RoomType#setCostPerNight(double) <em>Set Cost Per Night</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Cost Per Night</em>' operation.
-	 * @see hotelCore.RoomType#setCostPerNight(double)
-	 * @generated
-	 */
-	EOperation getRoomType__SetCostPerNight__double();
 
 	/**
 	 * Returns the meta object for class '{@link hotelCore.Room <em>Room</em>}'.
@@ -1747,56 +1175,6 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRoom_Equipment();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Room#getRoomType() <em>Get Room Type</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Room Type</em>' operation.
-	 * @see hotelCore.Room#getRoomType()
-	 * @generated
-	 */
-	EOperation getRoom__GetRoomType();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Room#addRoomType(hotelCore.RoomType) <em>Add Room Type</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Room Type</em>' operation.
-	 * @see hotelCore.Room#addRoomType(hotelCore.RoomType)
-	 * @generated
-	 */
-	EOperation getRoom__AddRoomType__RoomType();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Room#removeRoomType(hotelCore.RoomType) <em>Remove Room Type</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Room Type</em>' operation.
-	 * @see hotelCore.Room#removeRoomType(hotelCore.RoomType)
-	 * @generated
-	 */
-	EOperation getRoom__RemoveRoomType__RoomType();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Room#addEquipmentToRoom(java.lang.String) <em>Add Equipment To Room</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Equipment To Room</em>' operation.
-	 * @see hotelCore.Room#addEquipmentToRoom(java.lang.String)
-	 * @generated
-	 */
-	EOperation getRoom__AddEquipmentToRoom__String();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Room#removeEquipmentItem(java.lang.String) <em>Remove Equipment Item</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Equipment Item</em>' operation.
-	 * @see hotelCore.Room#removeEquipmentItem(java.lang.String)
-	 * @generated
-	 */
-	EOperation getRoom__RemoveEquipmentItem__String();
 
 	/**
 	 * Returns the meta object for class '{@link hotelCore.ScheduledEvents <em>Scheduled Events</em>}'.
@@ -1963,26 +1341,6 @@ public interface HotelCorePackage extends EPackage {
 	EAttribute getSleepRoom_NbrOfBeds();
 
 	/**
-	 * Returns the meta object for the '{@link hotelCore.SleepRoom#getNbrOfBeds() <em>Get Nbr Of Beds</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Nbr Of Beds</em>' operation.
-	 * @see hotelCore.SleepRoom#getNbrOfBeds()
-	 * @generated
-	 */
-	EOperation getSleepRoom__GetNbrOfBeds();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.SleepRoom#setNbrOfBeds(int) <em>Set Nbr Of Beds</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Nbr Of Beds</em>' operation.
-	 * @see hotelCore.SleepRoom#setNbrOfBeds(int)
-	 * @generated
-	 */
-	EOperation getSleepRoom__SetNbrOfBeds__int();
-
-	/**
 	 * Returns the meta object for class '{@link hotelCore.Customer <em>Customer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2035,96 +1393,6 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCustomer_LoyaltyPoints();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Customer#getId() <em>Get Id</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Id</em>' operation.
-	 * @see hotelCore.Customer#getId()
-	 * @generated
-	 */
-	EOperation getCustomer__GetId();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Customer#setId(java.lang.String) <em>Set Id</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Id</em>' operation.
-	 * @see hotelCore.Customer#setId(java.lang.String)
-	 * @generated
-	 */
-	EOperation getCustomer__SetId__String();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Customer#getName() <em>Get Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Name</em>' operation.
-	 * @see hotelCore.Customer#getName()
-	 * @generated
-	 */
-	EOperation getCustomer__GetName();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Customer#setName(java.lang.String) <em>Set Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Name</em>' operation.
-	 * @see hotelCore.Customer#setName(java.lang.String)
-	 * @generated
-	 */
-	EOperation getCustomer__SetName__String();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Customer#getLoyaltyPoints() <em>Get Loyalty Points</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Loyalty Points</em>' operation.
-	 * @see hotelCore.Customer#getLoyaltyPoints()
-	 * @generated
-	 */
-	EOperation getCustomer__GetLoyaltyPoints();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Customer#addLoyaltyPoints(int) <em>Add Loyalty Points</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Loyalty Points</em>' operation.
-	 * @see hotelCore.Customer#addLoyaltyPoints(int)
-	 * @generated
-	 */
-	EOperation getCustomer__AddLoyaltyPoints__int();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Customer#removeLoyaltyPoints(int) <em>Remove Loyalty Points</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Loyalty Points</em>' operation.
-	 * @see hotelCore.Customer#removeLoyaltyPoints(int)
-	 * @generated
-	 */
-	EOperation getCustomer__RemoveLoyaltyPoints__int();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Customer#getPaymentDetails() <em>Get Payment Details</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Payment Details</em>' operation.
-	 * @see hotelCore.Customer#getPaymentDetails()
-	 * @generated
-	 */
-	EOperation getCustomer__GetPaymentDetails();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Customer#setPaymentDetails(hotelCore.PaymentDetails) <em>Set Payment Details</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Payment Details</em>' operation.
-	 * @see hotelCore.Customer#setPaymentDetails(hotelCore.PaymentDetails)
-	 * @generated
-	 */
-	EOperation getCustomer__SetPaymentDetails__PaymentDetails();
 
 	/**
 	 * Returns the meta object for class '{@link hotelCore.PaymentDetails <em>Payment Details</em>}'.
@@ -2203,126 +1471,6 @@ public interface HotelCorePackage extends EPackage {
 	EAttribute getPaymentDetails_LastName();
 
 	/**
-	 * Returns the meta object for the '{@link hotelCore.PaymentDetails#getCcNumber() <em>Get Cc Number</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Cc Number</em>' operation.
-	 * @see hotelCore.PaymentDetails#getCcNumber()
-	 * @generated
-	 */
-	EOperation getPaymentDetails__GetCcNumber();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.PaymentDetails#setCcNumber(java.lang.String) <em>Set Cc Number</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Cc Number</em>' operation.
-	 * @see hotelCore.PaymentDetails#setCcNumber(java.lang.String)
-	 * @generated
-	 */
-	EOperation getPaymentDetails__SetCcNumber__String();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.PaymentDetails#getCcV() <em>Get Cc V</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Cc V</em>' operation.
-	 * @see hotelCore.PaymentDetails#getCcV()
-	 * @generated
-	 */
-	EOperation getPaymentDetails__GetCcV();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.PaymentDetails#setCcv(java.lang.String) <em>Set Ccv</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Ccv</em>' operation.
-	 * @see hotelCore.PaymentDetails#setCcv(java.lang.String)
-	 * @generated
-	 */
-	EOperation getPaymentDetails__SetCcv__String();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.PaymentDetails#getExpiryMonth() <em>Get Expiry Month</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Expiry Month</em>' operation.
-	 * @see hotelCore.PaymentDetails#getExpiryMonth()
-	 * @generated
-	 */
-	EOperation getPaymentDetails__GetExpiryMonth();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.PaymentDetails#setExpiryMonth(int) <em>Set Expiry Month</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Expiry Month</em>' operation.
-	 * @see hotelCore.PaymentDetails#setExpiryMonth(int)
-	 * @generated
-	 */
-	EOperation getPaymentDetails__SetExpiryMonth__int();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.PaymentDetails#setExpiryYear(int) <em>Set Expiry Year</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Expiry Year</em>' operation.
-	 * @see hotelCore.PaymentDetails#setExpiryYear(int)
-	 * @generated
-	 */
-	EOperation getPaymentDetails__SetExpiryYear__int();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.PaymentDetails#getExpiryYear() <em>Get Expiry Year</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Expiry Year</em>' operation.
-	 * @see hotelCore.PaymentDetails#getExpiryYear()
-	 * @generated
-	 */
-	EOperation getPaymentDetails__GetExpiryYear();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.PaymentDetails#getFirstName() <em>Get First Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get First Name</em>' operation.
-	 * @see hotelCore.PaymentDetails#getFirstName()
-	 * @generated
-	 */
-	EOperation getPaymentDetails__GetFirstName();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.PaymentDetails#setFirstName(java.lang.String) <em>Set First Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set First Name</em>' operation.
-	 * @see hotelCore.PaymentDetails#setFirstName(java.lang.String)
-	 * @generated
-	 */
-	EOperation getPaymentDetails__SetFirstName__String();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.PaymentDetails#setLastName(java.lang.String) <em>Set Last Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Last Name</em>' operation.
-	 * @see hotelCore.PaymentDetails#setLastName(java.lang.String)
-	 * @generated
-	 */
-	EOperation getPaymentDetails__SetLastName__String();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.PaymentDetails#getLastName() <em>Get Last Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Last Name</em>' operation.
-	 * @see hotelCore.PaymentDetails#getLastName()
-	 * @generated
-	 */
-	EOperation getPaymentDetails__GetLastName();
-
-	/**
 	 * Returns the meta object for class '{@link hotelCore.Reservation <em>Reservation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2344,15 +1492,15 @@ public interface HotelCorePackage extends EPackage {
 	EReference getReservation_Tab();
 
 	/**
-	 * Returns the meta object for the reference list '{@link hotelCore.Reservation#getKeyCard <em>Key Card</em>}'.
+	 * Returns the meta object for the reference list '{@link hotelCore.Reservation#getKeyCards <em>Key Cards</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Key Card</em>'.
-	 * @see hotelCore.Reservation#getKeyCard()
+	 * @return the meta object for the reference list '<em>Key Cards</em>'.
+	 * @see hotelCore.Reservation#getKeyCards()
 	 * @see #getReservation()
 	 * @generated
 	 */
-	EReference getReservation_KeyCard();
+	EReference getReservation_KeyCards();
 
 	/**
 	 * Returns the meta object for the reference '{@link hotelCore.Reservation#getScheduledEvents <em>Scheduled Events</em>}'.
@@ -2454,156 +1602,6 @@ public interface HotelCorePackage extends EPackage {
 	EAttribute getReservation_NumberOfGuests();
 
 	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#getResponsible() <em>Get Responsible</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Responsible</em>' operation.
-	 * @see hotelCore.Reservation#getResponsible()
-	 * @generated
-	 */
-	EOperation getReservation__GetResponsible();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#setResponsible(java.lang.String) <em>Set Responsible</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Responsible</em>' operation.
-	 * @see hotelCore.Reservation#setResponsible(java.lang.String)
-	 * @generated
-	 */
-	EOperation getReservation__SetResponsible__String();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#getNumberOfGuests() <em>Get Number Of Guests</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Number Of Guests</em>' operation.
-	 * @see hotelCore.Reservation#getNumberOfGuests()
-	 * @generated
-	 */
-	EOperation getReservation__GetNumberOfGuests();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#setNumberOfGuests(int) <em>Set Number Of Guests</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Number Of Guests</em>' operation.
-	 * @see hotelCore.Reservation#setNumberOfGuests(int)
-	 * @generated
-	 */
-	EOperation getReservation__SetNumberOfGuests__int();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#getRoom() <em>Get Room</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Room</em>' operation.
-	 * @see hotelCore.Reservation#getRoom()
-	 * @generated
-	 */
-	EOperation getReservation__GetRoom();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#setRoom(hotelCore.Room) <em>Set Room</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Room</em>' operation.
-	 * @see hotelCore.Reservation#setRoom(hotelCore.Room)
-	 * @generated
-	 */
-	EOperation getReservation__SetRoom__Room();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#getCostCategory() <em>Get Cost Category</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Cost Category</em>' operation.
-	 * @see hotelCore.Reservation#getCostCategory()
-	 * @generated
-	 */
-	EOperation getReservation__GetCostCategory();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#addCostCategory(hotelCore.RoomType) <em>Add Cost Category</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Cost Category</em>' operation.
-	 * @see hotelCore.Reservation#addCostCategory(hotelCore.RoomType)
-	 * @generated
-	 */
-	EOperation getReservation__AddCostCategory__RoomType();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#getEvents() <em>Get Events</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Events</em>' operation.
-	 * @see hotelCore.Reservation#getEvents()
-	 * @generated
-	 */
-	EOperation getReservation__GetEvents();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#removeAllEvents() <em>Remove All Events</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove All Events</em>' operation.
-	 * @see hotelCore.Reservation#removeAllEvents()
-	 * @generated
-	 */
-	EOperation getReservation__RemoveAllEvents();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#getKeyCards() <em>Get Key Cards</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Key Cards</em>' operation.
-	 * @see hotelCore.Reservation#getKeyCards()
-	 * @generated
-	 */
-	EOperation getReservation__GetKeyCards();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#addKeyCard(hotelCore.KeyCard) <em>Add Key Card</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Key Card</em>' operation.
-	 * @see hotelCore.Reservation#addKeyCard(hotelCore.KeyCard)
-	 * @generated
-	 */
-	EOperation getReservation__AddKeyCard__KeyCard();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#removeKeyCard(hotelCore.KeyCard) <em>Remove Key Card</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Key Card</em>' operation.
-	 * @see hotelCore.Reservation#removeKeyCard(hotelCore.KeyCard)
-	 * @generated
-	 */
-	EOperation getReservation__RemoveKeyCard__KeyCard();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#removeCostCategory(hotelCore.RoomType) <em>Remove Cost Category</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Cost Category</em>' operation.
-	 * @see hotelCore.Reservation#removeCostCategory(hotelCore.RoomType)
-	 * @generated
-	 */
-	EOperation getReservation__RemoveCostCategory__RoomType();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Reservation#getTab() <em>Get Tab</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Tab</em>' operation.
-	 * @see hotelCore.Reservation#getTab()
-	 * @generated
-	 */
-	EOperation getReservation__GetTab();
-
-	/**
 	 * Returns the meta object for class '{@link hotelCore.Booking <em>Booking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2658,56 +1656,6 @@ public interface HotelCorePackage extends EPackage {
 	EAttribute getBooking_BookingUUID();
 
 	/**
-	 * Returns the meta object for the '{@link hotelCore.Booking#addReservation(hotelCore.Reservation) <em>Add Reservation</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Reservation</em>' operation.
-	 * @see hotelCore.Booking#addReservation(hotelCore.Reservation)
-	 * @generated
-	 */
-	EOperation getBooking__AddReservation__Reservation();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Booking#removeReservation(hotelCore.Reservation) <em>Remove Reservation</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Reservation</em>' operation.
-	 * @see hotelCore.Booking#removeReservation(hotelCore.Reservation)
-	 * @generated
-	 */
-	EOperation getBooking__RemoveReservation__Reservation();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Booking#getCustomer() <em>Get Customer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Customer</em>' operation.
-	 * @see hotelCore.Booking#getCustomer()
-	 * @generated
-	 */
-	EOperation getBooking__GetCustomer();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Booking#getBill() <em>Get Bill</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Bill</em>' operation.
-	 * @see hotelCore.Booking#getBill()
-	 * @generated
-	 */
-	EOperation getBooking__GetBill();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.Booking#setCustomer(hotelCore.Customer) <em>Set Customer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Customer</em>' operation.
-	 * @see hotelCore.Booking#setCustomer(hotelCore.Customer)
-	 * @generated
-	 */
-	EOperation getBooking__SetCustomer__Customer();
-
-	/**
 	 * Returns the meta object for class '{@link hotelCore.ConferenceRoom <em>Conference Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2727,16 +1675,6 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getConferenceRoom_MaxNbrOfPeople();
-
-	/**
-	 * Returns the meta object for the '{@link hotelCore.ConferenceRoom#getNbrOfPeople() <em>Get Nbr Of People</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Nbr Of People</em>' operation.
-	 * @see hotelCore.ConferenceRoom#getNbrOfPeople()
-	 * @generated
-	 */
-	EOperation getConferenceRoom__GetNbrOfPeople();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2842,22 +1780,6 @@ public interface HotelCorePackage extends EPackage {
 		EAttribute KEY_CARD__KEY_CARD_ID = eINSTANCE.getKeyCard_KeyCardID();
 
 		/**
-		 * The meta object literal for the '<em><b>Get ID</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation KEY_CARD___GET_ID = eINSTANCE.getKeyCard__GetID();
-
-		/**
-		 * The meta object literal for the '<em><b>Set ID</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation KEY_CARD___SET_ID__INT = eINSTANCE.getKeyCard__SetID__int();
-
-		/**
 		 * The meta object literal for the '{@link hotelCore.impl.EquipmentImpl <em>Equipment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2874,14 +1796,6 @@ public interface HotelCorePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EQUIPMENT__NAME = eINSTANCE.getEquipment_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EQUIPMENT___GET_NAME = eINSTANCE.getEquipment__GetName();
 
 		/**
 		 * The meta object literal for the '{@link hotelCore.impl.RoomTypeImpl <em>Room Type</em>}' class.
@@ -2908,22 +1822,6 @@ public interface HotelCorePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROOM_TYPE__NAME = eINSTANCE.getRoomType_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Cost Per Night</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_TYPE___GET_COST_PER_NIGHT = eINSTANCE.getRoomType__GetCostPerNight();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Cost Per Night</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_TYPE___SET_COST_PER_NIGHT__DOUBLE = eINSTANCE.getRoomType__SetCostPerNight__double();
 
 		/**
 		 * The meta object literal for the '{@link hotelCore.impl.RoomImpl <em>Room</em>}' class.
@@ -2966,46 +1864,6 @@ public interface HotelCorePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROOM__EQUIPMENT = eINSTANCE.getRoom_Equipment();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Room Type</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM___GET_ROOM_TYPE = eINSTANCE.getRoom__GetRoomType();
-
-		/**
-		 * The meta object literal for the '<em><b>Add Room Type</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM___ADD_ROOM_TYPE__ROOMTYPE = eINSTANCE.getRoom__AddRoomType__RoomType();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Room Type</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM___REMOVE_ROOM_TYPE__ROOMTYPE = eINSTANCE.getRoom__RemoveRoomType__RoomType();
-
-		/**
-		 * The meta object literal for the '<em><b>Add Equipment To Room</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM___ADD_EQUIPMENT_TO_ROOM__STRING = eINSTANCE.getRoom__AddEquipmentToRoom__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Equipment Item</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM___REMOVE_EQUIPMENT_ITEM__STRING = eINSTANCE.getRoom__RemoveEquipmentItem__String();
 
 		/**
 		 * The meta object literal for the '{@link hotelCore.impl.ScheduledEventsImpl <em>Scheduled Events</em>}' class.
@@ -3142,22 +2000,6 @@ public interface HotelCorePackage extends EPackage {
 		EAttribute SLEEP_ROOM__NBR_OF_BEDS = eINSTANCE.getSleepRoom_NbrOfBeds();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Nbr Of Beds</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SLEEP_ROOM___GET_NBR_OF_BEDS = eINSTANCE.getSleepRoom__GetNbrOfBeds();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Nbr Of Beds</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SLEEP_ROOM___SET_NBR_OF_BEDS__INT = eINSTANCE.getSleepRoom__SetNbrOfBeds__int();
-
-		/**
 		 * The meta object literal for the '{@link hotelCore.impl.CustomerImpl <em>Customer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3198,78 +2040,6 @@ public interface HotelCorePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CUSTOMER__LOYALTY_POINTS = eINSTANCE.getCustomer_LoyaltyPoints();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Id</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___GET_ID = eINSTANCE.getCustomer__GetId();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Id</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___SET_ID__STRING = eINSTANCE.getCustomer__SetId__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___GET_NAME = eINSTANCE.getCustomer__GetName();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___SET_NAME__STRING = eINSTANCE.getCustomer__SetName__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Loyalty Points</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___GET_LOYALTY_POINTS = eINSTANCE.getCustomer__GetLoyaltyPoints();
-
-		/**
-		 * The meta object literal for the '<em><b>Add Loyalty Points</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___ADD_LOYALTY_POINTS__INT = eINSTANCE.getCustomer__AddLoyaltyPoints__int();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Loyalty Points</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___REMOVE_LOYALTY_POINTS__INT = eINSTANCE.getCustomer__RemoveLoyaltyPoints__int();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Payment Details</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___GET_PAYMENT_DETAILS = eINSTANCE.getCustomer__GetPaymentDetails();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Payment Details</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___SET_PAYMENT_DETAILS__PAYMENTDETAILS = eINSTANCE.getCustomer__SetPaymentDetails__PaymentDetails();
 
 		/**
 		 * The meta object literal for the '{@link hotelCore.impl.PaymentDetailsImpl <em>Payment Details</em>}' class.
@@ -3330,102 +2100,6 @@ public interface HotelCorePackage extends EPackage {
 		EAttribute PAYMENT_DETAILS__LAST_NAME = eINSTANCE.getPaymentDetails_LastName();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Cc Number</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_DETAILS___GET_CC_NUMBER = eINSTANCE.getPaymentDetails__GetCcNumber();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Cc Number</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_DETAILS___SET_CC_NUMBER__STRING = eINSTANCE.getPaymentDetails__SetCcNumber__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Cc V</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_DETAILS___GET_CC_V = eINSTANCE.getPaymentDetails__GetCcV();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Ccv</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_DETAILS___SET_CCV__STRING = eINSTANCE.getPaymentDetails__SetCcv__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Expiry Month</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_DETAILS___GET_EXPIRY_MONTH = eINSTANCE.getPaymentDetails__GetExpiryMonth();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Expiry Month</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_DETAILS___SET_EXPIRY_MONTH__INT = eINSTANCE.getPaymentDetails__SetExpiryMonth__int();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Expiry Year</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_DETAILS___SET_EXPIRY_YEAR__INT = eINSTANCE.getPaymentDetails__SetExpiryYear__int();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Expiry Year</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_DETAILS___GET_EXPIRY_YEAR = eINSTANCE.getPaymentDetails__GetExpiryYear();
-
-		/**
-		 * The meta object literal for the '<em><b>Get First Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_DETAILS___GET_FIRST_NAME = eINSTANCE.getPaymentDetails__GetFirstName();
-
-		/**
-		 * The meta object literal for the '<em><b>Set First Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_DETAILS___SET_FIRST_NAME__STRING = eINSTANCE.getPaymentDetails__SetFirstName__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Last Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_DETAILS___SET_LAST_NAME__STRING = eINSTANCE.getPaymentDetails__SetLastName__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Last Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_DETAILS___GET_LAST_NAME = eINSTANCE.getPaymentDetails__GetLastName();
-
-		/**
 		 * The meta object literal for the '{@link hotelCore.impl.ReservationImpl <em>Reservation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3444,12 +2118,12 @@ public interface HotelCorePackage extends EPackage {
 		EReference RESERVATION__TAB = eINSTANCE.getReservation_Tab();
 
 		/**
-		 * The meta object literal for the '<em><b>Key Card</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Key Cards</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESERVATION__KEY_CARD = eINSTANCE.getReservation_KeyCard();
+		EReference RESERVATION__KEY_CARDS = eINSTANCE.getReservation_KeyCards();
 
 		/**
 		 * The meta object literal for the '<em><b>Scheduled Events</b></em>' reference feature.
@@ -3524,126 +2198,6 @@ public interface HotelCorePackage extends EPackage {
 		EAttribute RESERVATION__NUMBER_OF_GUESTS = eINSTANCE.getReservation_NumberOfGuests();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Responsible</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_RESPONSIBLE = eINSTANCE.getReservation__GetResponsible();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Responsible</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___SET_RESPONSIBLE__STRING = eINSTANCE.getReservation__SetResponsible__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Number Of Guests</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_NUMBER_OF_GUESTS = eINSTANCE.getReservation__GetNumberOfGuests();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Number Of Guests</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___SET_NUMBER_OF_GUESTS__INT = eINSTANCE.getReservation__SetNumberOfGuests__int();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Room</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_ROOM = eINSTANCE.getReservation__GetRoom();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Room</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___SET_ROOM__ROOM = eINSTANCE.getReservation__SetRoom__Room();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Cost Category</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_COST_CATEGORY = eINSTANCE.getReservation__GetCostCategory();
-
-		/**
-		 * The meta object literal for the '<em><b>Add Cost Category</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___ADD_COST_CATEGORY__ROOMTYPE = eINSTANCE.getReservation__AddCostCategory__RoomType();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Events</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_EVENTS = eINSTANCE.getReservation__GetEvents();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove All Events</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___REMOVE_ALL_EVENTS = eINSTANCE.getReservation__RemoveAllEvents();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Key Cards</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_KEY_CARDS = eINSTANCE.getReservation__GetKeyCards();
-
-		/**
-		 * The meta object literal for the '<em><b>Add Key Card</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___ADD_KEY_CARD__KEYCARD = eINSTANCE.getReservation__AddKeyCard__KeyCard();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Key Card</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___REMOVE_KEY_CARD__KEYCARD = eINSTANCE.getReservation__RemoveKeyCard__KeyCard();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Cost Category</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___REMOVE_COST_CATEGORY__ROOMTYPE = eINSTANCE.getReservation__RemoveCostCategory__RoomType();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Tab</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_TAB = eINSTANCE.getReservation__GetTab();
-
-		/**
 		 * The meta object literal for the '{@link hotelCore.impl.BookingImpl <em>Booking</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3686,46 +2240,6 @@ public interface HotelCorePackage extends EPackage {
 		EAttribute BOOKING__BOOKING_UUID = eINSTANCE.getBooking_BookingUUID();
 
 		/**
-		 * The meta object literal for the '<em><b>Add Reservation</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___ADD_RESERVATION__RESERVATION = eINSTANCE.getBooking__AddReservation__Reservation();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Reservation</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___REMOVE_RESERVATION__RESERVATION = eINSTANCE.getBooking__RemoveReservation__Reservation();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Customer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___GET_CUSTOMER = eINSTANCE.getBooking__GetCustomer();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Bill</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___GET_BILL = eINSTANCE.getBooking__GetBill();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Customer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___SET_CUSTOMER__CUSTOMER = eINSTANCE.getBooking__SetCustomer__Customer();
-
-		/**
 		 * The meta object literal for the '{@link hotelCore.impl.ConferenceRoomImpl <em>Conference Room</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3742,14 +2256,6 @@ public interface HotelCorePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CONFERENCE_ROOM__MAX_NBR_OF_PEOPLE = eINSTANCE.getConferenceRoom_MaxNbrOfPeople();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Nbr Of People</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CONFERENCE_ROOM___GET_NBR_OF_PEOPLE = eINSTANCE.getConferenceRoom__GetNbrOfPeople();
 
 	}
 

@@ -4,15 +4,8 @@ package hotelCore.impl;
 
 import hotelCore.ConferenceRoom;
 import hotelCore.HotelCorePackage;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -94,17 +87,6 @@ public class ConferenceRoomImpl extends RoomTypeImpl implements ConferenceRoom {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNbrOfPeople() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -156,20 +138,6 @@ public class ConferenceRoomImpl extends RoomTypeImpl implements ConferenceRoom {
 				return maxNbrOfPeople != MAX_NBR_OF_PEOPLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case HotelCorePackage.CONFERENCE_ROOM___GET_NBR_OF_PEOPLE:
-				return getNbrOfPeople();
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

@@ -120,20 +120,4 @@ public interface Booking extends EObject {
 	 */
 	void setBookingUUID(String value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model reservationRequired="true" reservationOrdered="false"
-	 * @generated
-	 */
-	void addReservation(Reservation reservation);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model reservationRequired="true" reservationOrdered="false"
-	 * @generated
-	 */
-	void removeReservation(Reservation reservation);
-
 } // Booking

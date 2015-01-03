@@ -213,16 +213,16 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 
 	private boolean makePayment(Booking booking) {
 		Bill bill = booking.getBill();
-		Customer c = booking.getCustomer();
-		int total = (int) bill.getGrandTotal();
-		c.addLoyaltyPoints(total);
+		Customer customer = booking.getCustomer();
+
+		customer.setLoyaltyPoints((int) (customer.getLoyaltyPoints() + bill.getGrandTotal()));
 
 		banking = BankingSingleton.getInstance().CUSTOMER_PROVIDES;
-		PaymentDetails pd = c.getPaymentDetails();
+		PaymentDetails pd = customer.getPaymentDetails();
 		boolean success = banking.makePayment(pd.getCcNumber(), pd.getCcv(), pd.getExpiryMonth(),
-							pd.getExpiryYear(), pd.getFirstName(), pd.getLastName(), total);
+							pd.getExpiryYear(), pd.getFirstName(), pd.getLastName(), bill.getGrandTotal());
 		if (success) {
-			bill.pay(total);
+			bill.pay(bill.getGrandTotal());
 		}
 		return success;
 	}

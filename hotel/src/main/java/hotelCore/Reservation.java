@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link hotelCore.Reservation#getTab <em>Tab</em>}</li>
- *   <li>{@link hotelCore.Reservation#getKeyCard <em>Key Card</em>}</li>
+ *   <li>{@link hotelCore.Reservation#getKeyCards <em>Key Cards</em>}</li>
  *   <li>{@link hotelCore.Reservation#getScheduledEvents <em>Scheduled Events</em>}</li>
  *   <li>{@link hotelCore.Reservation#getRoom <em>Room</em>}</li>
  *   <li>{@link hotelCore.Reservation#getCostCategory <em>Cost Category</em>}</li>
@@ -61,20 +61,20 @@ public interface Reservation extends EObject {
 	void setTab(Tab value);
 
 	/**
-	 * Returns the value of the '<em><b>Key Card</b></em>' reference list.
+	 * Returns the value of the '<em><b>Key Cards</b></em>' reference list.
 	 * The list contents are of type {@link hotelCore.KeyCard}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Key Card</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Key Cards</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Key Card</em>' reference list.
-	 * @see hotelCore.HotelCorePackage#getReservation_KeyCard()
+	 * @return the value of the '<em>Key Cards</em>' reference list.
+	 * @see hotelCore.HotelCorePackage#getReservation_KeyCards()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<KeyCard> getKeyCard();
+	EList<KeyCard> getKeyCards();
 
 	/**
 	 * Returns the value of the '<em><b>Scheduled Events</b></em>' reference.
@@ -309,61 +309,5 @@ public interface Reservation extends EObject {
 	 * @generated
 	 */
 	void setNumberOfGuests(int value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model costCategoryRequired="true" costCategoryOrdered="false"
-	 * @generated
-	 */
-	void addCostCategory(RoomType costCategory);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" ordered="false"
-	 * @generated
-	 */
-	ScheduledEvents getEvents();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void removeAllEvents();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" ordered="false"
-	 * @generated
-	 */
-	KeyCard getKeyCards();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model keyCardRequired="true" keyCardOrdered="false"
-	 * @generated
-	 */
-	void addKeyCard(KeyCard keyCard);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model keyCardRequired="true" keyCardOrdered="false"
-	 * @generated
-	 */
-	void removeKeyCard(KeyCard keyCard);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model costCategoryRequired="true" costCategoryOrdered="false"
-	 * @generated
-	 */
-	void removeCostCategory(RoomType costCategory);
 
 } // Reservation

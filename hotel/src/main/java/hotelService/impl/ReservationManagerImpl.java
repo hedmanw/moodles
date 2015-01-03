@@ -141,7 +141,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 			for (Integer keyCardID : keyCardIDs) {
                 KeyCard keyCard = HotelCoreFactory.eINSTANCE.createKeyCard();
                 keyCard.setKeyCardID(keyCardID);
-                reservation.addKeyCard(keyCard);
+                reservation.getKeyCards().add(keyCard);
             }
 			return true;
 		} else {

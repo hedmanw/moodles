@@ -4,15 +4,8 @@ package hotelCore.impl;
 
 import hotelCore.HotelCorePackage;
 import hotelCore.KeyCard;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -95,28 +88,6 @@ public class KeyCardImpl extends MinimalEObjectImpl.Container implements KeyCard
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getID() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setID(int keyCardID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -168,23 +139,6 @@ public class KeyCardImpl extends MinimalEObjectImpl.Container implements KeyCard
 				return keyCardID != KEY_CARD_ID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case HotelCorePackage.KEY_CARD___GET_ID:
-				return getID();
-			case HotelCorePackage.KEY_CARD___SET_ID__INT:
-				setID((Integer)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

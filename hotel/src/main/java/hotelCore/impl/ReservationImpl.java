@@ -9,22 +9,14 @@ import hotelCore.Room;
 import hotelCore.RoomType;
 import hotelCore.ScheduledEvents;
 import hotelCore.Tab;
-
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
-
 import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -35,7 +27,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link hotelCore.impl.ReservationImpl#getTab <em>Tab</em>}</li>
- *   <li>{@link hotelCore.impl.ReservationImpl#getKeyCard <em>Key Card</em>}</li>
+ *   <li>{@link hotelCore.impl.ReservationImpl#getKeyCards <em>Key Cards</em>}</li>
  *   <li>{@link hotelCore.impl.ReservationImpl#getScheduledEvents <em>Scheduled Events</em>}</li>
  *   <li>{@link hotelCore.impl.ReservationImpl#getRoom <em>Room</em>}</li>
  *   <li>{@link hotelCore.impl.ReservationImpl#getCostCategory <em>Cost Category</em>}</li>
@@ -62,14 +54,14 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	protected Tab tab;
 
 	/**
-	 * The cached value of the '{@link #getKeyCard() <em>Key Card</em>}' reference list.
+	 * The cached value of the '{@link #getKeyCards() <em>Key Cards</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKeyCard()
+	 * @see #getKeyCards()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<KeyCard> keyCard;
+	protected EList<KeyCard> keyCards;
 
 	/**
 	 * The cached value of the '{@link #getScheduledEvents() <em>Scheduled Events</em>}' reference.
@@ -283,11 +275,11 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<KeyCard> getKeyCard() {
-		if (keyCard == null) {
-			keyCard = new EObjectResolvingEList<KeyCard>(KeyCard.class, this, HotelCorePackage.RESERVATION__KEY_CARD);
+	public EList<KeyCard> getKeyCards() {
+		if (keyCards == null) {
+			keyCards = new EObjectResolvingEList<KeyCard>(KeyCard.class, this, HotelCorePackage.RESERVATION__KEY_CARDS);
 		}
-		return keyCard;
+		return keyCards;
 	}
 
 	/**
@@ -540,89 +532,14 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addCostCategory(RoomType costCategory) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ScheduledEvents getEvents() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeAllEvents() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public KeyCard getKeyCards() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void addKeyCard(KeyCard keyCard) {
-		getKeyCard().add(keyCard);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeKeyCard(KeyCard keyCard) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeCostCategory(RoomType costCategory) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case HotelCorePackage.RESERVATION__TAB:
 				if (resolve) return getTab();
 				return basicGetTab();
-			case HotelCorePackage.RESERVATION__KEY_CARD:
-				return getKeyCard();
+			case HotelCorePackage.RESERVATION__KEY_CARDS:
+				return getKeyCards();
 			case HotelCorePackage.RESERVATION__SCHEDULED_EVENTS:
 				if (resolve) return getScheduledEvents();
 				return basicGetScheduledEvents();
@@ -660,9 +577,9 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 			case HotelCorePackage.RESERVATION__TAB:
 				setTab((Tab)newValue);
 				return;
-			case HotelCorePackage.RESERVATION__KEY_CARD:
-				getKeyCard().clear();
-				getKeyCard().addAll((Collection<? extends KeyCard>)newValue);
+			case HotelCorePackage.RESERVATION__KEY_CARDS:
+				getKeyCards().clear();
+				getKeyCards().addAll((Collection<? extends KeyCard>)newValue);
 				return;
 			case HotelCorePackage.RESERVATION__SCHEDULED_EVENTS:
 				setScheduledEvents((ScheduledEvents)newValue);
@@ -706,8 +623,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 			case HotelCorePackage.RESERVATION__TAB:
 				setTab((Tab)null);
 				return;
-			case HotelCorePackage.RESERVATION__KEY_CARD:
-				getKeyCard().clear();
+			case HotelCorePackage.RESERVATION__KEY_CARDS:
+				getKeyCards().clear();
 				return;
 			case HotelCorePackage.RESERVATION__SCHEDULED_EVENTS:
 				setScheduledEvents((ScheduledEvents)null);
@@ -750,8 +667,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 		switch (featureID) {
 			case HotelCorePackage.RESERVATION__TAB:
 				return tab != null;
-			case HotelCorePackage.RESERVATION__KEY_CARD:
-				return keyCard != null && !keyCard.isEmpty();
+			case HotelCorePackage.RESERVATION__KEY_CARDS:
+				return keyCards != null && !keyCards.isEmpty();
 			case HotelCorePackage.RESERVATION__SCHEDULED_EVENTS:
 				return scheduledEvents != null;
 			case HotelCorePackage.RESERVATION__ROOM:
@@ -772,37 +689,6 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 				return numberOfGuests != NUMBER_OF_GUESTS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case HotelCorePackage.RESERVATION___ADD_COST_CATEGORY__ROOMTYPE:
-				addCostCategory((RoomType)arguments.get(0));
-				return null;
-			case HotelCorePackage.RESERVATION___GET_EVENTS:
-				return getEvents();
-			case HotelCorePackage.RESERVATION___REMOVE_ALL_EVENTS:
-				removeAllEvents();
-				return null;
-			case HotelCorePackage.RESERVATION___GET_KEY_CARDS:
-				return getKeyCards();
-			case HotelCorePackage.RESERVATION___ADD_KEY_CARD__KEYCARD:
-				addKeyCard((KeyCard)arguments.get(0));
-				return null;
-			case HotelCorePackage.RESERVATION___REMOVE_KEY_CARD__KEYCARD:
-				removeKeyCard((KeyCard)arguments.get(0));
-				return null;
-			case HotelCorePackage.RESERVATION___REMOVE_COST_CATEGORY__ROOMTYPE:
-				removeCostCategory((RoomType)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

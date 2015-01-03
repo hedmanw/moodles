@@ -7,22 +7,14 @@ import hotelCore.Booking;
 import hotelCore.Customer;
 import hotelCore.HotelCorePackage;
 import hotelCore.Reservation;
-
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 import java.util.UUID;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -221,28 +213,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addReservation(Reservation reservation) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeReservation(Reservation reservation) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -328,24 +298,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return BOOKING_UUID_EDEFAULT == null ? bookingUUID != null : !BOOKING_UUID_EDEFAULT.equals(bookingUUID);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case HotelCorePackage.BOOKING___ADD_RESERVATION__RESERVATION:
-				addReservation((Reservation)arguments.get(0));
-				return null;
-			case HotelCorePackage.BOOKING___REMOVE_RESERVATION__RESERVATION:
-				removeReservation((Reservation)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

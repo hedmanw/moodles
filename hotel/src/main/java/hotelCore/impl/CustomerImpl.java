@@ -5,16 +5,9 @@ package hotelCore.impl;
 import hotelCore.Customer;
 import hotelCore.HotelCorePackage;
 import hotelCore.PaymentDetails;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -330,24 +323,6 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 				return loyaltyPoints != LOYALTY_POINTS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case HotelCorePackage.CUSTOMER___ADD_LOYALTY_POINTS__INT:
-				addLoyaltyPoints((Integer)arguments.get(0));
-				return null;
-			case HotelCorePackage.CUSTOMER___REMOVE_LOYALTY_POINTS__INT:
-				removeLoyaltyPoints((Integer)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

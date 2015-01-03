@@ -182,12 +182,4 @@ public interface PaymentDetails extends EObject {
 	 */
 	void setLastName(String value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" ordered="false"
-	 * @generated
-	 */
-	String getCcV();
-
 } // PaymentDetails

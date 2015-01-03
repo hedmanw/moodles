@@ -128,20 +128,4 @@ public interface Customer extends EObject {
 	 */
 	void setLoyaltyPoints(int value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model pointsRequired="true" pointsOrdered="false"
-	 * @generated
-	 */
-	void addLoyaltyPoints(int points);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model pointsRequired="true" pointsOrdered="false"
-	 * @generated
-	 */
-	void removeLoyaltyPoints(int points);
-
 } // Customer
