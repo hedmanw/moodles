@@ -69,10 +69,10 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
         when:
         def booking = bookingManager.createBooking()
         def res = reservationManager.createReservation(booking, today, tomorrow, one, a)
-        reservationManager.createReservation(booking, today, tomorrow, one, a)
+        def duplicate = reservationManager.createReservation(booking, today, tomorrow, one, a)
 
         then:
-        thrown(IllegalArgumentException)
+        duplicate == null
         booking.getReservations().size() == 1
         booking.getReservations().get(0) == res
     }
@@ -80,21 +80,23 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
     def "room is blocked regardless of cost category"() {
         when:
         def booking = bookingManager.createBooking()
-        reservationManager.createReservation(booking, today, tomorrow, one, a)
-        reservationManager.createReservation(booking, today, tomorrow, one, b)
+        def res = reservationManager.createReservation(booking, today, tomorrow, one, a)
+        def duplicate = reservationManager.createReservation(booking, today, tomorrow, one, b)
 
         then:
-        thrown(IllegalArgumentException)
+        res != null
+        duplicate == null
     }
 
     def "make a reservation that overlaps with another reservation"() {
         when:
         def booking = bookingManager.createBooking()
-        reservationManager.createReservation(booking, baseStart, baseEnd, one, a)
-        reservationManager.createReservation(booking, secondStart, secondEnd, one, a)
+        def res = reservationManager.createReservation(booking, baseStart, baseEnd, one, a)
+        def duplicate = reservationManager.createReservation(booking, secondStart, secondEnd, one, a)
 
         then:
-        thrown(IllegalArgumentException)
+        res != null
+        duplicate == null
 
         where:
         baseStart << [today, today, tomorrow]
@@ -103,7 +105,7 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
         secondEnd << [tomorrow, tomorrow+1, tomorrow]
     }
 
-    def "silly dates thow"() {
+    def "silly dates throw"() {
         when:
         def booking = bookingManager.createBooking()
         reservationManager.createReservation(booking, tomorrow, today, one, a)
@@ -113,11 +115,12 @@ class ReservationManagerImplTest extends HotelBaseSpecification {
     }
 
     def "getCurrentReservation throws when none match"() {
-        when:
-        reservationManager.getCurrentReservationByRoomNumber(1337)
+        setup:
+        roomManager.createRoom(1337, roomTypeManager.getAllRoomTypes().get(0))
 
-        then:
-        thrown(IllegalArgumentException)
+        expect:
+        reservationManager.getCurrentReservationByRoomNumber(500) == null
+        reservationManager.getCurrentReservationByRoomNumber(1337) == null
     }
 
     def "getCurrentReservation returns correct reservation"() {

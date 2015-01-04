@@ -93,7 +93,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 			for (Reservation r : b.getReservations()) {
 				if (r.getRoom().getRoomNumber() == room.getRoomNumber()) {
 					if (datesOverlap(fromDate, toDate, r.getStartDay(), r.getEndDay())) {
-						throw new IllegalArgumentException("Room is occupied");
+						return null;
 					}
 				}
 			}
@@ -180,8 +180,7 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 				}
 			}
 		}
-
-		throw new IllegalArgumentException("None found");
+		return null;
 	}
 
 	private boolean isCurrentlyStaying(Reservation reservation) {

@@ -39,14 +39,6 @@ class CheckOutTest extends HotelBaseSpecification {
 
     }
 
-    def "no reservation exists"() {
-        when:
-        def reservation = reservationManager.getCurrentReservationByRoomNumber(500)
-
-        then:
-        final IllegalArgumentException exception = thrown()
-    }
-
     def "check out is too late"() {
         setup:
         def reservation = reservationManager.getCurrentReservationByRoomNumber(501)
