@@ -82,8 +82,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public Booking createBooking() {
-		Booking booking = HotelCoreFactory.eINSTANCE.createBooking();
-		return booking;
+		return HotelCoreFactory.eINSTANCE.createBooking();
 	}
 
 	/**
@@ -181,7 +180,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	public boolean confirmBooking(Booking booking) {
 		for (Booking existingBooking : allBookings) {
 			if (existingBooking.getBookingUUID().equals(booking.getBookingUUID())) {
-				throw new RuntimeException("Tried to confirm duplicate booking number.");
+				throw new IllegalArgumentException("Tried to confirm duplicate booking number.");
 			}
 		}
 		for(Reservation r : booking.getReservations()){
@@ -189,7 +188,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				for (Reservation r2 : b.getReservations()) {
 					if(r.getRoom().getRoomNumber() == r2.getRoom().getRoomNumber()) {
 						if (datesOverlap(r.getStartDay(), r.getEndDay(), r2.getStartDay(), r2.getEndDay())) {
-							throw new RuntimeException("Tried to reserve an already reserved room");
+							throw new IllegalArgumentException("Tried to reserve an already reserved room");
 						}
 					}
 				}
