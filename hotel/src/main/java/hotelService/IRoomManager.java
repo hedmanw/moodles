@@ -4,12 +4,8 @@ package hotelService;
 
 import hotelCore.Room;
 import hotelCore.RoomType;
-
 import java.util.Date;
-import java.util.Map;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -34,10 +30,10 @@ public interface IRoomManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" fromDateRequired="true" fromDateOrdered="false" toDateRequired="true" toDateOrdered="false"
+	 * @model ordered="false" fromDateRequired="true" fromDateOrdered="false" toDateRequired="true" toDateOrdered="false"
 	 * @generated
 	 */
-	Map getRoomOccupancy(Date fromDate, Date toDate);
+	EList<Room> getReservedRooms(Date fromDate, Date toDate);
 
 	/**
 	 * <!-- begin-user-doc -->

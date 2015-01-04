@@ -155,9 +155,9 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IRoomManager/getAvailableRooms/toDate"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IRoomManager/getAvailableRooms/roomTypes"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IRoomManager/getRoomOccupancy">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IRoomManager/getRoomOccupancy/fromDate"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IRoomManager/getRoomOccupancy/toDate"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IRoomManager/getReservedRooms">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IRoomManager/getReservedRooms/fromDate"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IRoomManager/getReservedRooms/toDate"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IRoomManager/createRoom">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IRoomManager/createRoom/roomNumber"/>

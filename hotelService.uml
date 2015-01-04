@@ -24,7 +24,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8jCLAYIREeStbpNcMqf5hQ" value="*"/>
       </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZUtLkHo7EeSvwbb0zOoNmg" name="getRoomOccupancy" visibility="public">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZUtLkHo7EeSvwbb0zOoNmg" name="getReservedRooms" visibility="public">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_h3u8kHo7EeSvwbb0zOoNmg" name="fromDate">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
       </ownedParameter>
@@ -32,7 +32,9 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
       </ownedParameter>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_r2OmAHo7EeSvwbb0zOoNmg" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
+        <type xmi:type="uml:Class" href="HotelCore.uml#_8xwx0HjBEeSDBKbFcXcsYQ"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lPRVsJONEeStvJmuny15lw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lPR8wJONEeStvJmuny15lw" value="*"/>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_pugaYIIkEeStbpNcMqf5hQ" name="createRoom">

@@ -225,13 +225,13 @@ public interface HotelServicePackage extends EPackage {
 	int IROOM_MANAGER___GET_AVAILABLE_ROOMS__DATE_DATE_ELIST = 0;
 
 	/**
-	 * The operation id for the '<em>Get Room Occupancy</em>' operation.
+	 * The operation id for the '<em>Get Reserved Rooms</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE = 1;
+	int IROOM_MANAGER___GET_RESERVED_ROOMS__DATE_DATE = 1;
 
 	/**
 	 * The operation id for the '<em>Create Room</em>' operation.
@@ -289,13 +289,13 @@ public interface HotelServicePackage extends EPackage {
 	int ROOM_MANAGER___GET_AVAILABLE_ROOMS__DATE_DATE_ELIST = IROOM_MANAGER___GET_AVAILABLE_ROOMS__DATE_DATE_ELIST;
 
 	/**
-	 * The operation id for the '<em>Get Room Occupancy</em>' operation.
+	 * The operation id for the '<em>Get Reserved Rooms</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE = IROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE;
+	int ROOM_MANAGER___GET_RESERVED_ROOMS__DATE_DATE = IROOM_MANAGER___GET_RESERVED_ROOMS__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Create Room</em>' operation.
@@ -1043,14 +1043,14 @@ public interface HotelServicePackage extends EPackage {
 	EOperation getIRoomManager__GetAvailableRooms__Date_Date_EList();
 
 	/**
-	 * Returns the meta object for the '{@link hotelService.IRoomManager#getRoomOccupancy(java.util.Date, java.util.Date) <em>Get Room Occupancy</em>}' operation.
+	 * Returns the meta object for the '{@link hotelService.IRoomManager#getReservedRooms(java.util.Date, java.util.Date) <em>Get Reserved Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Room Occupancy</em>' operation.
-	 * @see hotelService.IRoomManager#getRoomOccupancy(java.util.Date, java.util.Date)
+	 * @return the meta object for the '<em>Get Reserved Rooms</em>' operation.
+	 * @see hotelService.IRoomManager#getReservedRooms(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIRoomManager__GetRoomOccupancy__Date_Date();
+	EOperation getIRoomManager__GetReservedRooms__Date_Date();
 
 	/**
 	 * Returns the meta object for the '{@link hotelService.IRoomManager#createRoom(int, hotelCore.RoomType) <em>Create Room</em>}' operation.
@@ -1519,12 +1519,12 @@ public interface HotelServicePackage extends EPackage {
 		EOperation IROOM_MANAGER___GET_AVAILABLE_ROOMS__DATE_DATE_ELIST = eINSTANCE.getIRoomManager__GetAvailableRooms__Date_Date_EList();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Room Occupancy</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Reserved Rooms</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE = eINSTANCE.getIRoomManager__GetRoomOccupancy__Date_Date();
+		EOperation IROOM_MANAGER___GET_RESERVED_ROOMS__DATE_DATE = eINSTANCE.getIRoomManager__GetReservedRooms__Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Room</b></em>' operation.

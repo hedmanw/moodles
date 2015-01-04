@@ -294,7 +294,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRoomManager__GetRoomOccupancy__Date_Date() {
+	public EOperation getIRoomManager__GetReservedRooms__Date_Date() {
 		return iRoomManagerEClass.getEOperations().get(1);
 	}
 
@@ -671,7 +671,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 
 		iRoomManagerEClass = createEClass(IROOM_MANAGER);
 		createEOperation(iRoomManagerEClass, IROOM_MANAGER___GET_AVAILABLE_ROOMS__DATE_DATE_ELIST);
-		createEOperation(iRoomManagerEClass, IROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE);
+		createEOperation(iRoomManagerEClass, IROOM_MANAGER___GET_RESERVED_ROOMS__DATE_DATE);
 		createEOperation(iRoomManagerEClass, IROOM_MANAGER___CREATE_ROOM__INT_ROOMTYPE);
 
 		roomManagerEClass = createEClass(ROOM_MANAGER);
@@ -776,7 +776,7 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		addEParameter(op, ecorePackage.getEDate(), "toDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theHotelCorePackage.getRoomType(), "roomTypes", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIRoomManager__GetRoomOccupancy__Date_Date(), ecorePackage.getEMap(), "getRoomOccupancy", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRoomManager__GetReservedRooms__Date_Date(), theHotelCorePackage.getRoom(), "getReservedRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "fromDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "toDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

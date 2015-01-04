@@ -6,23 +6,16 @@ import datastructs.EArrayList;
 import hotelCore.Room;
 import hotelCore.RoomType;
 import hotelCore.*;
-
 import hotelService.HotelServicePackage;
 import hotelService.ManagerSingleton;
 import hotelService.RoomManager;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 import java.util.Date;
-import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -109,19 +102,21 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 		return matching;
 	}
 
-	private boolean datesOverlap(Date fromDate, Date toDate, Date baseStart, Date baseEnd) {
-		return !(baseEnd.before(fromDate) || baseStart.after(toDate));
-	}
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map getRoomOccupancy(Date fromDate, Date toDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public EList<Room> getReservedRooms(Date fromDate, Date toDate) {
+		EList<Room> availableRooms = getAvailableRooms(fromDate, toDate, new EArrayList<RoomType>());
+		EList<Room> allRooms = new EArrayList<>();
+		allRooms.addAll(getAllRooms());
+		allRooms.removeAll(availableRooms);
+		return allRooms;
+	}
+
+	private boolean datesOverlap(Date fromDate, Date toDate, Date baseStart, Date baseEnd) {
+		return !(baseEnd.before(fromDate) || baseStart.after(toDate));
 	}
 
 	/**
@@ -213,8 +208,8 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 		switch (operationID) {
 			case HotelServicePackage.ROOM_MANAGER___GET_AVAILABLE_ROOMS__DATE_DATE_ELIST:
 				return getAvailableRooms((Date)arguments.get(0), (Date)arguments.get(1), (EList<RoomType>)arguments.get(2));
-			case HotelServicePackage.ROOM_MANAGER___GET_ROOM_OCCUPANCY__DATE_DATE:
-				return getRoomOccupancy((Date)arguments.get(0), (Date)arguments.get(1));
+			case HotelServicePackage.ROOM_MANAGER___GET_RESERVED_ROOMS__DATE_DATE:
+				return getReservedRooms((Date) arguments.get(0), (Date) arguments.get(1));
 			case HotelServicePackage.ROOM_MANAGER___CREATE_ROOM__INT_ROOMTYPE:
 				return createRoom((Integer)arguments.get(0), (RoomType)arguments.get(1));
 		}
