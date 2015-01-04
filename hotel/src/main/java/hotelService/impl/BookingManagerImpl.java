@@ -5,9 +5,6 @@ package hotelService.impl;
 import bankingService.BankingSingleton;
 import bankingService.CustomerProvides;
 import datastructs.EArrayList;
-import hotelCore.Booking;
-import hotelCore.Customer;
-import hotelCore.Reservation;
 import hotelCore.*;
 import hotelService.BookingManager;
 import hotelService.HotelServicePackage;
@@ -42,8 +39,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<Booking> allBookings;
-
-	private CustomerProvides banking = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,7 +211,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 
 		customer.setLoyaltyPoints((int) (customer.getLoyaltyPoints() + bill.getGrandTotal()));
 
-		banking = BankingSingleton.getInstance().CUSTOMER_PROVIDES;
+		CustomerProvides banking = BankingSingleton.getInstance().CUSTOMER_PROVIDES;
 		PaymentDetails pd = customer.getPaymentDetails();
 		boolean success = banking.makePayment(pd.getCcNumber(), pd.getCcv(), pd.getExpiryMonth(),
 							pd.getExpiryYear(), pd.getFirstName(), pd.getLastName(), bill.getGrandTotal());

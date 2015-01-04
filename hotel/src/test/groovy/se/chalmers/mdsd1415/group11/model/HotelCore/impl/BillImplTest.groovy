@@ -36,7 +36,7 @@ class BillImplTest extends Specification {
         bill.getPaid() == cash
 
         where:
-        cash << [0, 1, 2, 899.5, 1000, 50000.5]
+        cash << [0d, 1d, 2d, 899.5d, 1000d, 50000.5d]
     }
 
     def "GetGrandTotal"() {

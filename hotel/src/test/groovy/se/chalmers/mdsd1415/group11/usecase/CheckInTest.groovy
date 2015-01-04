@@ -1,6 +1,8 @@
 package se.chalmers.mdsd1415.group11.usecase
 
 import datastructs.EArrayList
+import hotelCore.Booking
+import hotelCore.Reservation
 import hotelCore.SleepRoom
 import keyCardService.KeyCardSingleton
 import keyCardService.KeyCardsProvides
@@ -13,8 +15,8 @@ import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 class CheckInTest extends HotelBaseSpecification{
     def roomType
     def room
-    def booking
-    def reservation
+    Booking booking
+    Reservation reservation
     def keyCards = Mock(KeyCardsProvides)
 
     def setup() {

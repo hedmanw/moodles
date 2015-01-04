@@ -1,6 +1,5 @@
 package se.chalmers.mdsd1415.group11
 
-import hotelCore.Customer
 import hotelService.BookingManager
 import hotelService.CustomerManager
 import hotelService.ManagerSingleton
