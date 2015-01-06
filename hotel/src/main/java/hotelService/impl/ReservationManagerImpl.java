@@ -132,13 +132,14 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 		if (numberOfGuests <= ((SleepRoom)reservation.getRoom().getRoomType()).getNbrOfBeds()) {
 			reservation.setResponsible(responsible);
 			reservation.setNumberOfGuests(numberOfGuests);
-			reservation.setCheckedIn(new Date());
 			EList<Integer> keyCardIDs = KeyCardSingleton.getInstance().KEY_CARDS_PROVIDES.assignCardsToReservation(reservation, numberOfKeyCards);
 			for (Integer keyCardID : keyCardIDs) {
                 KeyCard keyCard = HotelCoreFactory.eINSTANCE.createKeyCard();
                 keyCard.setKeyCardID(keyCardID);
                 reservation.getKeyCards().add(keyCard);
             }
+			reservation.setCheckedIn(new Date());
+			
 			return true;
 		} else {
 			return false;
