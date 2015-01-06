@@ -35,11 +35,14 @@ class CheckInTest extends HotelBaseSpecification{
         EList<Integer> keyCardIDs = new EArrayList<>()
         keyCardIDs.addAll([1,2])
         keyCards.assignCardsToReservation(reservation, 2) >> keyCardIDs
+        reservation.getRoom().setHousekept(true)
 
         when:
         def customers = customerManager.getCustomersByName("Mona")
         def theBooking = bookingManager.getBookingsByCustomer(customers.get(0)).get(0)
         def theReservation = theBooking.getReservations().get(0)
+        theReservation.getRoom().isHousekept()
+        reservationManager.getCurrentReservationByRoomNumber(theReservation.getRoom().getRoomNumber()) == null
         reservationManager.checkInReservation(theReservation, "Kim", 2, 2)
 
 
@@ -48,6 +51,8 @@ class CheckInTest extends HotelBaseSpecification{
         reservation.getResponsible() == "Kim"
         reservation.getNumberOfGuests() == 2
         ((SleepRoom)theReservation.getRoom().getRoomType()).getNbrOfBeds() >= theReservation.getNumberOfGuests()
+        reservation.getKeyCards().get(0).getKeyCardID() == keyCardIDs.get(0)
+        reservation.getKeyCards().get(1).getKeyCardID() == keyCardIDs.get(1)
         reservation.getCheckedIn() != 0
     }
 
@@ -88,6 +93,27 @@ class CheckInTest extends HotelBaseSpecification{
         bookingManager.getBookingsByCustomer(customer).isEmpty()
     }
 
+    def "room not available"() {
+        setup:
+        def oldBooking = bookingManager.createBooking()
+        def oldReservation = reservationManager.createReservation(oldBooking, today-2, today-1, room, roomType)
+        def customer = customerManager.createCustomer("1234", "Rutger")
+        oldBooking.setCustomer(customer)
+        bookingManager.getAllBookings().add(oldBooking)
+        oldReservation.setCheckedIn(today-2)
+        
+        when:
+        def customers = customerManager.getCustomersByName("Mona")
+        def theBooking = bookingManager.getBookingsByCustomer(customers.get(0)).get(0)
+        def theReservation = theBooking.getReservations().get(0)
+        def housekept = theReservation.getRoom().isHousekept()
+        def currentReservation = reservationManager.getCurrentReservationByRoomNumber(theReservation.getRoom().getRoomNumber())
+        
+        then:
+        !housekept
+        currentReservation != null
+    }
+    
     def "more guests than beds"() {
         setup:
         EList<Integer> keyCardIDs = new EArrayList<>()
