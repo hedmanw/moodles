@@ -10,12 +10,8 @@ import hotelCore.impl.HotelCorePackageImpl;
 
 import hotelService.BookingManager;
 import hotelService.CustomerManager;
-import hotelService.ExternalUser;
-import hotelService.HotelManager;
-import hotelService.HotelReceptionist;
 import hotelService.HotelServiceFactory;
 import hotelService.HotelServicePackage;
-import hotelService.HotelStaff;
 import hotelService.IBookingManager;
 import hotelService.ICustomerManager;
 import hotelService.IReservationManager;
