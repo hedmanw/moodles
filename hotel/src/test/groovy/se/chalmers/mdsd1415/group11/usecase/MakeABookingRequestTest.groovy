@@ -1,11 +1,10 @@
 package se.chalmers.mdsd1415.group11.usecase
 
-
-import bankingService.CustomerProvides
 import datastructs.EArrayList
 import hotelCore.Customer
 import hotelCore.Room
 import hotelCore.RoomType
+import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
 
@@ -13,24 +12,21 @@ import se.chalmers.mdsd1415.group11.HotelBaseSpecification
  * Created by emmawestman on 14-12-17.
  */
 class MakeABookingRequestTest extends HotelBaseSpecification{
-
-    def bank = Mock(CustomerProvides)
-
     def setup() {
-        BankingSingleton.instance.CUSTOMER_PROVIDES = bank
+        AdministratorRequires.instance().addCreditCard("1187123498762344", "345", 12, 15, "herp", "derp")
+        AdministratorRequires.instance().makeDeposit("1187123498762344", "345", 12, 15, "herp", "derp", 10000)
     }
 
     def "success scenario"() {
         setup:
-        bank.isCreditCardValid("123", "123", 1, 2016, "Robert Cecil", "Martin") >> true
         def roomType = roomTypeManager.createSleepRoom("double room", 1000, 2)
         Room room = roomManager.createRoom(1, roomType)
         Room room2 = roomManager.createRoom(2, roomType)
         def searchCriteria = new EArrayList<RoomType>()
         searchCriteria.add(roomType)
         def availableRooms = roomManager.getAvailableRooms(today, tomorrow, searchCriteria)
-        Customer bookingOwner = customerManager.createCustomer("1", "Robert C. Martin")
-        customerManager.setPaymentDetailsForCustomer(bookingOwner, "Robert Cecil", "Martin", "123", "123", 1, 2016)
+        Customer bookingOwner = customerManager.createCustomer("1", "Arnold Terminator")
+        customerManager.setPaymentDetailsForCustomer(bookingOwner, "herp", "derp", "1187123498762344", "345", 12, 15)
 
         when: "Reservations are made for the booking..."
         def booking = bookingManager.createBooking()
@@ -54,16 +50,16 @@ class MakeABookingRequestTest extends HotelBaseSpecification{
 
     def "Multiple bookings fail"(){
         setup:
-        bank.isCreditCardValid("123", "123", 1, 2016, "Robert Cecil", "Martin") >> true
-        bank.isCreditCardValid("124", "124", 1, 2016, "Karl", "Hern") >> true
+        AdministratorRequires.instance().addCreditCard("1112312410239843", "231", 5, 2016, "Joeld", "Thorstensson")
+        AdministratorRequires.instance().makeDeposit("1112312410239843", "231", 5, 2016, "Joeld", "Thorstensson", 10000)
+
         def roomType = roomTypeManager.createSleepRoom("double room", 1000, 2)
         Room room = roomManager.createRoom(1, roomType)
         Room room2 = roomManager.createRoom(2, roomType)
         Customer bookingOwner = customerManager.createCustomer("1", "Robert C. Martin")
-        customerManager.setPaymentDetailsForCustomer(bookingOwner, "Robert Cecil", "Martin", "123", "123", 1, 2016)
-        Customer bookingOwner2 = customerManager.createCustomer("2", "Karl Hern")
-        customerManager.setPaymentDetailsForCustomer(bookingOwner2, "Karl", "Hern", "124", "124", 1, 2016)
-
+        customerManager.setPaymentDetailsForCustomer(bookingOwner, "herp", "derp", "1187123498762344", "345", 12, 15)
+        Customer bookingOwner2 = customerManager.createCustomer("2", "Joeld Thorstensson")
+        customerManager.setPaymentDetailsForCustomer(bookingOwner2, "Joeld", "Thorstensson", "1112312410239843", "231", 5, 2016)
 
         when: "When two bookings are made simultaneously, it's first come first serve"
         def searchCriteria = new EArrayList<RoomType>()
@@ -85,7 +81,7 @@ class MakeABookingRequestTest extends HotelBaseSpecification{
         boolean bookingFailedStatus = bookingManager.confirmBooking(booking2)
 
         then:
-        thrown(RuntimeException)
+        thrown(IllegalArgumentException)
         bookingSuccessStatus
         !bookingFailedStatus
     }
