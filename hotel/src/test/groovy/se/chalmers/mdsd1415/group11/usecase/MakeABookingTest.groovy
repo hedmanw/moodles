@@ -14,14 +14,17 @@ import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 class MakeABookingTest extends HotelBaseSpecification {
     def bank = Mock(CustomerProvides)
     RoomType roomType
+    Customer customer
 
     def setup() {
         BankingSingleton.instance.CUSTOMER_PROVIDES = bank
         roomType = roomTypeManager.createSleepRoom("double room", 1000, 2)
+        customer = customerManager.createCustomer("2", "Jonathan Hedman")
+        customerManager.setPaymentDetailsForCustomer(customer, "Jonathan", "Hedman", "456", "456", 1, 2016)
 
     }
 
-    def "success scenario"() {
+    def "success scenario with new customer"() {
         setup:
         bank.isCreditCardValid("123", "123", 1, 2016, "Robert Cecil", "Martin") >> true
         Room room = roomManager.createRoom(1, roomType)
@@ -43,6 +46,33 @@ class MakeABookingTest extends HotelBaseSpecification {
 
         then: "...the bill is still correct"
         customer == bookingOwner
+        booking.getBill().getGrandTotal() == 2000
+
+        expect: "Booking UUID unique, rooms valid, payment valid"
+        bookingManager.confirmBooking(booking)
+    }
+
+    def "success scenario with existing customer"() {
+        setup:
+        bank.isCreditCardValid(customer.paymentDetails.ccNumber, customer.paymentDetails.ccv, customer.paymentDetails.expiryMonth,
+            customer.paymentDetails.expiryYear, customer.paymentDetails.firstName, customer.paymentDetails.lastName) >> true
+        Room room = roomManager.createRoom(1, roomType)
+        Room room2 = roomManager.createRoom(2, roomType)
+
+        when: "Reservations are made for the booking..."
+        def booking = bookingManager.createBooking()
+        reservationManager.createReservation(booking, today, tomorrow, room, roomType)
+        reservationManager.createReservation(booking, today, tomorrow, room2, roomType)
+
+        then: "...the preliminary bill is correct"
+        booking.getBill().getGrandTotal() == 2000
+
+        when: "The customer is searched by ID and added to the booking..."
+        def customer2 = customerManager.getCustomerByIdNumber("2")
+        booking.setCustomer(customer2)
+
+        then: "...the bill is still correct"
+        customer2 ==  customer
         booking.getBill().getGrandTotal() == 2000
 
         expect: "Booking UUID unique, rooms valid, payment valid"
