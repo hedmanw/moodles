@@ -40,11 +40,12 @@ class ViewNonReservedRoomsTest  extends HotelBaseSpecification {
 
         when:
         Reservation reservation = reservationManager.createReservation(booking, today, tomorrow, availableRooms.get(0), roomType)
+        bookingManager.allBookings.add(booking)
         def availableRooms2 = roomManager.getAvailableRooms(today, tomorrow, new EArrayList<RoomType>())
 
         then:
-        availableRooms2.size() == 2
-        availableRooms2.get(0) == room
+        availableRooms2.size() == 1
+        availableRooms2.get(0) == room2
 
     }
 
