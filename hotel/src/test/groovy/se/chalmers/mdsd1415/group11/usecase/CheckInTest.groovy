@@ -37,7 +37,7 @@ class CheckInTest extends HotelBaseSpecification{
         keyCards.assignCardsToReservation(reservation, 2) >> keyCardIDs
         reservation.getRoom().setHousekept(true)
 
-        when:
+        when: "a reservation is found by customer and checked in"
         def customers = customerManager.getCustomersByName("Mona")
         def theBooking = bookingManager.getBookingsByCustomer(customers.get(0)).get(0)
         def theReservation = theBooking.getReservations().get(0)
@@ -46,7 +46,7 @@ class CheckInTest extends HotelBaseSpecification{
         reservationManager.checkInReservation(theReservation, "Kim", 2, 2)
 
 
-        then:
+        then: "...the reservation is checked in with values"
         reservation == theReservation
         reservation.getResponsible() == "Kim"
         reservation.getNumberOfGuests() == 2
@@ -57,10 +57,10 @@ class CheckInTest extends HotelBaseSpecification{
     }
 
     def "find by bookingNumber"() {
-        when:
+        when: "a booking is found by a booking number"
         def theBooking = bookingManager.getBookingByBookingNumber(booking.getBookingUUID())
 
-        then:
+        then: "...the correct booking is found"
         theBooking == booking
     }
 
@@ -69,18 +69,18 @@ class CheckInTest extends HotelBaseSpecification{
         def customer2 = customerManager.createCustomer("125", "Mona")
         booking.setCustomer(customer2)
 
-        expect:
+        expect: "customers to be more than one"
         customerManager.getCustomersByName("Mona").size() == 2
     }
 
     def "no customer found"() {
-        expect:
+        expect: "no customers to be found"
         customerManager.getCustomersByName("Mon").isEmpty()
 
     }
 
     def "no booking number found"() {
-        expect:
+        expect: "no booking number to be found"
         bookingManager.getBookingByBookingNumber("hihi") == null
 
     }
@@ -89,7 +89,7 @@ class CheckInTest extends HotelBaseSpecification{
         setup:
         def customer = customerManager.createCustomer("124", "Cecilia")
 
-        expect:
+        expect: "the customer to not have any bookings"
         bookingManager.getBookingsByCustomer(customer).isEmpty()
     }
 
@@ -102,14 +102,14 @@ class CheckInTest extends HotelBaseSpecification{
         bookingManager.getAllBookings().add(oldBooking)
         oldReservation.setCheckedIn(today-2)
         
-        when:
+        when: "a room is occupied by a previous reservation and not housekept"
         def customers = customerManager.getCustomersByName("Mona")
         def theBooking = bookingManager.getBookingsByCustomer(customers.get(0)).get(0)
         def theReservation = theBooking.getReservations().get(0)
         def housekept = theReservation.getRoom().isHousekept()
         def currentReservation = reservationManager.getCurrentReservationByRoomNumber(theReservation.getRoom().getRoomNumber())
         
-        then:
+        then: "...the room is not available for check in"
         !housekept
         currentReservation != null
     }
@@ -120,7 +120,7 @@ class CheckInTest extends HotelBaseSpecification{
         keyCardIDs.addAll([1,2])
         keyCards.assignCardsToReservation(reservation, 2) >> keyCardIDs
 
-        expect:
+        expect: "the reservation not to be checked in"
         !reservationManager.checkInReservation(reservation, "My", 3, 2)
     }
 
