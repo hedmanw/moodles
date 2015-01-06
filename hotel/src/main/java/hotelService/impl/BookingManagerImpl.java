@@ -12,6 +12,8 @@ import hotelService.HotelServicePackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
+
+import hotelService.RoomUnavailableException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -180,7 +182,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
      * <!-- end-user-doc -->
      * @generated NOT
      */
-    public boolean confirmBooking(Booking booking) {
+    public boolean confirmBooking(Booking booking) throws RoomUnavailableException {
         for (Booking existingBooking : allBookings) {
             if (existingBooking.getBookingUUID().equals(booking.getBookingUUID())) {
                 throw new IllegalArgumentException("Tried to confirm duplicate booking number.");
@@ -191,7 +193,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
                 for (Reservation r2 : b.getReservations()) {
                     if(r.getRoom().getRoomNumber() == r2.getRoom().getRoomNumber()) {
                         if (datesOverlap(r.getStartDay(), r.getEndDay(), r2.getStartDay(), r2.getEndDay())) {
-                            throw new IllegalArgumentException("Tried to reserve an already reserved room");
+                            throw new RoomUnavailableException();
                         }
                     }
                 }
@@ -333,8 +335,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
             case HotelServicePackage.BOOKING_MANAGER___MAKE_PAYMENT_IF_ALL_RESERVATIONS_CHECKED_OUT__BOOKING:
                 makePaymentIfAllReservationsCheckedOut((Booking)arguments.get(0));
                 return null;
-            case HotelServicePackage.BOOKING_MANAGER___CONFIRM_BOOKING__BOOKING:
-                return confirmBooking((Booking)arguments.get(0));
         }
         return super.eInvoke(operationID, arguments);
     }

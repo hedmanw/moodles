@@ -4,6 +4,7 @@ import datastructs.EArrayList
 import hotelCore.Customer
 import hotelCore.Room
 import hotelCore.RoomType
+import hotelService.RoomUnavailableException
 import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
@@ -81,7 +82,7 @@ class MakeABookingRequestTest extends HotelBaseSpecification{
         boolean bookingFailedStatus = bookingManager.confirmBooking(booking2)
 
         then:
-        thrown(IllegalArgumentException)
+        thrown(RoomUnavailableException)
         bookingSuccessStatus
         !bookingFailedStatus
     }

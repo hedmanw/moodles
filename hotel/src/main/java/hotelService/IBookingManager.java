@@ -87,8 +87,8 @@ public interface IBookingManager extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" ordered="false" bookingRequired="true" bookingOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	boolean confirmBooking(Booking booking);
+	boolean confirmBooking(Booking booking) throws RoomUnavailableException;
 
 } // IBookingManager
