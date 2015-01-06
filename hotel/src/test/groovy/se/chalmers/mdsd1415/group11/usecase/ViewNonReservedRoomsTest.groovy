@@ -3,43 +3,59 @@ package se.chalmers.mdsd1415.group11.usecase
 import bankingService.BankingSingleton
 import bankingService.CustomerProvides
 import datastructs.EArrayList
+import hotelCore.Booking
 import hotelCore.Customer
+import hotelCore.Reservation
 import hotelCore.Room
 import hotelCore.RoomType
 import org.eclipse.emf.common.util.EList
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
-/**
- * Created by Hanna on 14-12-17.
- */
 class ViewNonReservedRoomsTest  extends HotelBaseSpecification {
-    def bank = Mock(CustomerProvides)
+    Booking booking
+    Room room
+    RoomType roomType
+    Room room2
+    RoomType roomType2
+    Date yesterday
 
     def setup() {
-        BankingSingleton.instance.CUSTOMER_PROVIDES = bank
+        roomType = roomTypeManager.createSleepRoom("Double room", 1000, 2)
+        room = roomManager.createRoom(1, roomType)
+        roomType2 = roomTypeManager.createSleepRoom("Single room", 500, 1)
+        room2 = roomManager.createRoom(2, roomType2)
+        booking = bookingManager.createBooking()
+        yesterday = new Date()-1
     }
 
     def "success scenario"() {
-        setup:
-        bank.isCreditCardValid("123", "123", 1, 2016, "Robert Cecil", "Martin") >> true
-        def roomType = roomTypeManager.createSleepRoom("double room", 1000, 2)
-        Room room = roomManager.createRoom(1, roomType)
-        Room room2 = roomManager.createRoom(2, roomType)
-        Customer bookingOwner = customerManager.createCustomer("1", "Robert C. Martin")
-        customerManager.setPaymentDetailsForCustomer(bookingOwner, "Robert Cecil", "Martin", "123", "123", 1, 2016)
-
         when:
-        def booking = bookingManager.createBooking()
-        reservationManager.createReservation(booking, today, tomorrow, room, roomType)
-        def customer = customerManager.getCustomerByIdNumber("1")
-        booking.setCustomer(customer)
-        EList<RoomType> roomList = new EArrayList<>()
-        roomList.add(roomType)
+        def searchCriteria = new EArrayList<RoomType>()
+        searchCriteria.add(roomType)
+        def availableRooms = roomManager.getAvailableRooms(today, tomorrow, new EArrayList<RoomType>())
 
         then:
-        bookingManager.confirmBooking(booking)
-        roomManager.getAvailableRooms(today,tomorrow,roomList).size()==1
+        availableRooms.size() == 2
+        availableRooms.get(0) == room
 
+        when:
+        Reservation reservation = reservationManager.createReservation(booking, today, tomorrow, availableRooms.get(0), roomType)
+        def availableRooms2 = roomManager.getAvailableRooms(today, tomorrow, new EArrayList<RoomType>())
+
+        then:
+        availableRooms2.size() == 2
+        availableRooms2.get(0) == room
+
+    }
+
+    def "Invalid date range"(){
+        when:
+        def searchCriteria = new EArrayList<RoomType>()
+        searchCriteria.add(roomType)
+        def availableRooms = roomManager.getAvailableRooms(today, yesterday, new EArrayList<RoomType>())
+
+        then:
+        thrown(IllegalArgumentException)
 
     }
 
