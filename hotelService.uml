@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_zU4-sHymEeSemIR3Zeitew" name="hotelService">
   <packagedElement xmi:type="uml:Component" xmi:id="_jkbPEHyEEeS59rPATntwDA" name="SystemUser"/>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_U25QIIIVEeStbpNcMqf5hQ" name="ExternalUser"/>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_NImHsIIVEeStbpNcMqf5hQ" name="HotelStaff"/>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_CjACAIIVEeStbpNcMqf5hQ" name="HotelReceptionist"/>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_ESKSgIIVEeStbpNcMqf5hQ" name="HotelManager"/>
   <packagedElement xmi:type="uml:Interface" xmi:id="_DyqAMHx8EeSyZvvyd5lTNA" name="IRoomManager">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Cl6ooHn9EeShtIICY7OyLw" name="getAvailableRooms">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_PyCrsHn9EeShtIICY7OyLw" name="fromDate">
@@ -325,10 +321,10 @@
   <packagedElement xmi:type="uml:Usage" xmi:id="_OQyvAHyoEeSemIR3Zeitew" name="Usage4" client="_jkbPEHyEEeS59rPATntwDA" supplier="_l5AacHx8EeSyZvvyd5lTNA"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="_Oq7tUHyoEeSemIR3Zeitew" name="Usage5" client="_jkbPEHyEEeS59rPATntwDA" supplier="_uycgUHx8EeSyZvvyd5lTNA"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="_PJMWoHyoEeSemIR3Zeitew" name="Usage6" client="_jkbPEHyEEeS59rPATntwDA" supplier="_Qh5S8Hx8EeSyZvvyd5lTNA"/>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_HhgjYIIVEeStbpNcMqf5hQ" name="Realization0" client="_jkbPEHyEEeS59rPATntwDA" supplier="_CjACAIIVEeStbpNcMqf5hQ" contract="_CjACAIIVEeStbpNcMqf5hQ"/>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_H-c-EIIVEeStbpNcMqf5hQ" name="Realization1" client="_jkbPEHyEEeS59rPATntwDA" supplier="_ESKSgIIVEeStbpNcMqf5hQ" contract="_ESKSgIIVEeStbpNcMqf5hQ"/>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_PhhG4IIVEeStbpNcMqf5hQ" name="Realization2" client="_jkbPEHyEEeS59rPATntwDA" supplier="_NImHsIIVEeStbpNcMqf5hQ" contract="_NImHsIIVEeStbpNcMqf5hQ"/>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_WxXYwIIVEeStbpNcMqf5hQ" name="Realization3" client="_jkbPEHyEEeS59rPATntwDA" supplier="_U25QIIIVEeStbpNcMqf5hQ" contract="_U25QIIIVEeStbpNcMqf5hQ"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_HhgjYIIVEeStbpNcMqf5hQ" name="Realization0" client="_jkbPEHyEEeS59rPATntwDA"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_H-c-EIIVEeStbpNcMqf5hQ" name="Realization1" client="_jkbPEHyEEeS59rPATntwDA"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_PhhG4IIVEeStbpNcMqf5hQ" name="Realization2" client="_jkbPEHyEEeS59rPATntwDA"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_WxXYwIIVEeStbpNcMqf5hQ" name="Realization3" client="_jkbPEHyEEeS59rPATntwDA"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_dFKKsIIYEeStbpNcMqf5hQ" memberEnd="_dFKKsYIYEeStbpNcMqf5hQ _dFJjoIIYEeStbpNcMqf5hQ">
     <ownedEnd xmi:type="uml:Property" xmi:id="_dFKKsYIYEeStbpNcMqf5hQ" name="reservationManager" type="_zzWuEHx_EeSzd-4yXNUKkQ" association="_dFKKsIIYEeStbpNcMqf5hQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dFKKsoIYEeStbpNcMqf5hQ" value="1"/>

@@ -191,6 +191,10 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Mq91HjDEeSDBKbFcXcsYQ"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_1Mq91XjDEeSDBKbFcXcsYQ" type="7018">
+        <children xmi:type="notation:Shape" xmi:id="_IPRDQJWHEeSRvKzQt4VgPw" type="3013">
+          <element xmi:type="uml:Operation" href="HotelCore.uml#_ILZ28JWHEeSRvKzQt4VgPw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_IPRDQZWHEeSRvKzQt4VgPw"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_1Mq91njDEeSDBKbFcXcsYQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_1Mq913jDEeSDBKbFcXcsYQ"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_1Mq92HjDEeSDBKbFcXcsYQ"/>

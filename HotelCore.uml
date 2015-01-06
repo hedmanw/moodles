@@ -29,6 +29,17 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_OcEQ0IIMEeStbpNcMqf5hQ" name="name" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ILZ28JWHEeSRvKzQt4VgPw" name="getCostForStay">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gQ0XwJWHEeSRvKzQt4VgPw" name="startOfStay">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iXESkJWHEeSRvKzQt4VgPw" name="endOfStay">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Geo9sJWIEeSRvKzQt4VgPw" name="cost" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_8xwx0HjBEeSDBKbFcXcsYQ" name="Room">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_UShtcHjCEeSDBKbFcXcsYQ" name="roomNumber" visibility="private">

@@ -2,8 +2,10 @@ package se.chalmers.mdsd1415.group11.usecase
 
 import bankingService.BankingSingleton
 import bankingService.CustomerProvides
+import datastructs.EArrayList
 import hotelCore.Customer
 import hotelCore.Room
+import hotelCore.RoomType
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
 /**
@@ -11,15 +13,17 @@ import se.chalmers.mdsd1415.group11.HotelBaseSpecification
  */
 class MakeABookingTest extends HotelBaseSpecification {
     def bank = Mock(CustomerProvides)
+    RoomType roomType
 
     def setup() {
         BankingSingleton.instance.CUSTOMER_PROVIDES = bank
+        roomType = roomTypeManager.createSleepRoom("double room", 1000, 2)
+
     }
 
     def "success scenario"() {
         setup:
         bank.isCreditCardValid("123", "123", 1, 2016, "Robert Cecil", "Martin") >> true
-        def roomType = roomTypeManager.createSleepRoom("double room", 1000, 2)
         Room room = roomManager.createRoom(1, roomType)
         Room room2 = roomManager.createRoom(2, roomType)
         Customer bookingOwner = customerManager.createCustomer("1", "Robert C. Martin")
@@ -49,7 +53,6 @@ class MakeABookingTest extends HotelBaseSpecification {
         setup:
         bank.isCreditCardValid("123", "123", 1, 2016, "Robert Cecil", "Martin") >> true
         bank.isCreditCardValid("124", "124", 1, 2016, "Karl", "Hern") >> true
-        def roomType = roomTypeManager.createSleepRoom("double room", 1000, 2)
         Room room = roomManager.createRoom(1, roomType)
         Room room2 = roomManager.createRoom(2, roomType)
         Customer bookingOwner = customerManager.createCustomer("1", "Robert C. Martin")
@@ -77,6 +80,10 @@ class MakeABookingTest extends HotelBaseSpecification {
         thrown(RuntimeException)
         bookingStatus
         !bookingFailedStatus
+    }
+
+    def "no rooms available"(){
+        expect: roomManager.getAvailableRooms(today, tomorrow, new EArrayList<RoomType>()).size() == 0
     }
 
 }

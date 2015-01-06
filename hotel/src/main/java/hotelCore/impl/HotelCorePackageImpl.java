@@ -358,6 +358,15 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getRoomType__GetCostForStay__Date_Date() {
+		return roomTypeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRoom() {
 		return roomEClass;
 	}
@@ -868,6 +877,7 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 		roomTypeEClass = createEClass(ROOM_TYPE);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__COST_PER_NIGHT);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__NAME);
+		createEOperation(roomTypeEClass, ROOM_TYPE___GET_COST_FOR_STAY__DATE_DATE);
 
 		roomEClass = createEClass(ROOM);
 		createEAttribute(roomEClass, ROOM__ROOM_NUMBER);
@@ -984,6 +994,10 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 		initEAttribute(getRoomType_CostPerNight(), ecorePackage.getEDouble(), "costPerNight", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomType_Name(), ecorePackage.getEString(), "name", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		EOperation op = initEOperation(getRoomType__GetCostForStay__Date_Date(), ecorePackage.getEDouble(), "getCostForStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "startOfStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "endOfStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoom_RoomNumber(), ecorePackage.getEInt(), "roomNumber", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoom_RoomType(), this.getRoomType(), null, "roomType", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -993,7 +1007,7 @@ public class HotelCorePackageImpl extends EPackageImpl implements HotelCorePacka
 		initEClass(scheduledEventsEClass, ScheduledEvents.class, "ScheduledEvents", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getScheduledEvents_Events(), ecorePackage.getEMap(), "events", null, 1, 1, ScheduledEvents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		EOperation op = initEOperation(getScheduledEvents__AddEvent__String_long(), null, "addEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getScheduledEvents__AddEvent__String_long(), null, "addEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "eventName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getELong(), "timestamp", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

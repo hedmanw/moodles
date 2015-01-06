@@ -3,6 +3,8 @@
 package hotelService.impl;
 
 import datastructs.EArrayList;
+import hotelCore.Room;
+import hotelCore.RoomType;
 import hotelCore.*;
 import hotelService.HotelServicePackage;
 import hotelService.ManagerSingleton;
@@ -103,7 +105,7 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<Room> getReservedRooms(Date fromDate, Date toDate) {
 		EList<Room> availableRooms = getAvailableRooms(fromDate, toDate, new EArrayList<RoomType>());
@@ -207,7 +209,7 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 			case HotelServicePackage.ROOM_MANAGER___GET_AVAILABLE_ROOMS__DATE_DATE_ELIST:
 				return getAvailableRooms((Date)arguments.get(0), (Date)arguments.get(1), (EList<RoomType>)arguments.get(2));
 			case HotelServicePackage.ROOM_MANAGER___GET_RESERVED_ROOMS__DATE_DATE:
-				return getReservedRooms((Date) arguments.get(0), (Date) arguments.get(1));
+				return getReservedRooms((Date)arguments.get(0), (Date)arguments.get(1));
 			case HotelServicePackage.ROOM_MANAGER___CREATE_ROOM__INT_ROOMTYPE:
 				return createRoom((Integer)arguments.get(0), (RoomType)arguments.get(1));
 		}

@@ -125,6 +125,7 @@ public class TabImpl extends MinimalEObjectImpl.Container implements Tab {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

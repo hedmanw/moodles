@@ -54,6 +54,10 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="hotelCore.ecore#//RoomType">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//RoomType/costPerNight"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//RoomType/name"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelCore.ecore#//RoomType/getCostForStay">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelCore.ecore#//RoomType/getCostForStay/startOfStay"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelCore.ecore#//RoomType/getCostForStay/endOfStay"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="hotelCore.ecore#//Room">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute hotelCore.ecore#//Room/roomNumber"/>
@@ -145,10 +149,6 @@
   <genPackages xsi:type="genmodel:GenPackage" prefix="HotelService" disposableProviderFactory="true"
       ecorePackage="hotelService.ecore#/">
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="hotelService.ecore#//SystemUser"/>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="hotelService.ecore#//ExternalUser"/>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="hotelService.ecore#//HotelStaff"/>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="hotelService.ecore#//HotelReceptionist"/>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="hotelService.ecore#//HotelManager"/>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="hotelService.ecore#//IRoomManager">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="hotelService.ecore#//IRoomManager/getAvailableRooms">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="hotelService.ecore#//IRoomManager/getAvailableRooms/fromDate"/>

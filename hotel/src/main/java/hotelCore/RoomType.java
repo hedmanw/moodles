@@ -2,6 +2,7 @@
  */
 package hotelCore;
 
+import java.util.Date;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -73,5 +74,13 @@ public interface RoomType extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" startOfStayRequired="true" startOfStayOrdered="false" endOfStayRequired="true" endOfStayOrdered="false"
+	 * @generated
+	 */
+	double getCostForStay(Date startOfStay, Date endOfStay);
 
 } // RoomType
