@@ -6,31 +6,37 @@ import datastructs.EArrayList
 import hotelCore.Customer
 import hotelCore.Room
 import hotelCore.RoomType
+import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires
+import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
 /**
  * Created by emmawestman on 14-12-15.
  */
 class MakeABookingTest extends HotelBaseSpecification {
-    def bank = Mock(CustomerProvides)
+
+    def bank = CustomerRequires.instance()
     RoomType roomType
     Customer customer
 
     def setup() {
-        BankingSingleton.instance.CUSTOMER_PROVIDES = bank
+        AdministratorRequires.instance().addCreditCard("1123", "123", 1, 16, "Robert Cecil", "Martin")
+        AdministratorRequires.instance().addCreditCard("11456", "456", 1, 16, "Jonathan", "Hedman")
+        AdministratorRequires.instance().makeDeposit("11456", "456", 1, 16, "Jonathan", "Hedman", 30000000);
+        AdministratorRequires.instance().makeDeposit("1123", "123", 1, 16, "Robert Cecil", "Martin", 30000000);
+
         roomType = roomTypeManager.createSleepRoom("double room", 1000, 2)
         customer = customerManager.createCustomer("2", "Jonathan Hedman")
-        customerManager.setPaymentDetailsForCustomer(customer, "Jonathan", "Hedman", "456", "456", 1, 2016)
+        customerManager.setPaymentDetailsForCustomer(customer, "Jonathan", "Hedman", "11456", "456", 1, 16)
 
     }
 
     def "success scenario with new customer"() {
         setup:
-        bank.isCreditCardValid("123", "123", 1, 2016, "Robert Cecil", "Martin") >> true
         Room room = roomManager.createRoom(1, roomType)
         Room room2 = roomManager.createRoom(2, roomType)
         Customer bookingOwner = customerManager.createCustomer("1", "Robert C. Martin")
-        customerManager.setPaymentDetailsForCustomer(bookingOwner, "Robert Cecil", "Martin", "123", "123", 1, 2016)
+        customerManager.setPaymentDetailsForCustomer(bookingOwner, "Robert Cecil", "Martin", "1123", "123", 1, 16)
 
         when: "Reservations are made for the booking..."
         def booking = bookingManager.createBooking()
@@ -55,7 +61,7 @@ class MakeABookingTest extends HotelBaseSpecification {
     def "success scenario with existing customer"() {
         setup:
         bank.isCreditCardValid(customer.paymentDetails.ccNumber, customer.paymentDetails.ccv, customer.paymentDetails.expiryMonth,
-            customer.paymentDetails.expiryYear, customer.paymentDetails.firstName, customer.paymentDetails.lastName) >> true
+            customer.paymentDetails.expiryYear, customer.paymentDetails.firstName, customer.paymentDetails.lastName)
         Room room = roomManager.createRoom(1, roomType)
         Room room2 = roomManager.createRoom(2, roomType)
 
@@ -81,15 +87,12 @@ class MakeABookingTest extends HotelBaseSpecification {
 
     def "Multiple bookings fail"(){
         setup:
-        bank.isCreditCardValid("123", "123", 1, 2016, "Robert Cecil", "Martin") >> true
-        bank.isCreditCardValid("124", "124", 1, 2016, "Karl", "Hern") >> true
+        bank.isCreditCardValid("1123", "123", 1, 16, "Robert Cecil", "Martin")
+        bank.isCreditCardValid("11456", "456", 1, 16, "Jonathan", "Hedman")
         Room room = roomManager.createRoom(1, roomType)
         Room room2 = roomManager.createRoom(2, roomType)
         Customer bookingOwner = customerManager.createCustomer("1", "Robert C. Martin")
-        customerManager.setPaymentDetailsForCustomer(bookingOwner, "Robert Cecil", "Martin", "123", "123", 1, 2016)
-        Customer bookingOwner2 = customerManager.createCustomer("2", "Karl Hern")
-        customerManager.setPaymentDetailsForCustomer(bookingOwner2, "Karl", "Hern", "124", "124", 1, 2016)
-
+        customerManager.setPaymentDetailsForCustomer(bookingOwner, "Robert Cecil", "Martin", "1123", "123", 1, 16)
 
         when: "When two bookings are made simultaneously, it's first come first serve"
         def booking = bookingManager.createBooking()
@@ -107,7 +110,7 @@ class MakeABookingTest extends HotelBaseSpecification {
         boolean bookingFailedStatus = bookingManager.confirmBooking(booking2)
 
         then:
-        thrown(RuntimeException)
+        thrown(IllegalArgumentException)
         bookingStatus
         !bookingFailedStatus
     }
