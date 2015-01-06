@@ -216,10 +216,11 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected ReservationImpl() {
 		super();
+		tab = new TabImpl();
 	}
 
 	/**
