@@ -4,26 +4,25 @@ package se.chalmers.mdsd1415.group11.usecase
 import bankingService.CustomerProvides
 import hotelCore.Customer
 import hotelCore.Room
+import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires
+import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
-/**
- * Created by Hanna on 14-12-17.
- */
 public class ViewABookingTest extends HotelBaseSpecification {
     def booking
-    def bank = Mock(CustomerProvides)
+    def bank = CustomerRequires.instance()
 
     def setup() {
-        BankingSingleton.instance.CUSTOMER_PROVIDES = bank
+        AdministratorRequires.instance().addCreditCard("1123", "123", 1, 16, "Robert Cecil", "Martin")
     }
 
     def "success scenario"() {
         setup:
-        bank.isCreditCardValid("123", "123", 1, 2016, "Robert Cecil", "Martin") >> true
+        bank.isCreditCardValid("1123", "123", 1, 16, "Robert Cecil", "Martin") >> true
         def roomType = roomTypeManager.createSleepRoom("double room", 1000, 2)
         Room room = roomManager.createRoom(1, roomType)
         Customer bookingOwner = customerManager.createCustomer("1", "Robert C. Martin")
-        customerManager.setPaymentDetailsForCustomer(bookingOwner, "Robert Cecil", "Martin", "123", "123", 1, 2016)
+        customerManager.setPaymentDetailsForCustomer(bookingOwner, "Robert Cecil", "Martin", "1123", "123", 1, 16)
         booking = bookingManager.createBooking()
         def customer = customerManager.getCustomerByIdNumber("1")
         booking.setCustomer(customer)
