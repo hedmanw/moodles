@@ -45,7 +45,6 @@ class CheckOutTest extends HotelBaseSpecification {
 
         when:
         reservation.endDay = day
-        reservation.tab = new TabImpl()
         def currentCost = reservation.getTab().getTotalCost()
         reservationManager.checkOutReservation(reservation)
 
