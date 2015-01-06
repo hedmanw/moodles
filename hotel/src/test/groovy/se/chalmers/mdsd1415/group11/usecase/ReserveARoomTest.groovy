@@ -1,5 +1,6 @@
 package se.chalmers.mdsd1415.group11.usecase
 
+import groovy.time.TimeCategory
 import hotelCore.Booking
 import hotelCore.Reservation
 import hotelCore.Room
@@ -73,11 +74,18 @@ class ReserveARoomTest extends HotelBaseSpecification {
         bookingManager.allBookings.add(booking)
 
         when:
-        Reservation reservation = reservationManager.createReservation(booking, today, tomorrow, availableRooms.get(0), conferenceRoom)
+        Date rightNow = new Date()
+
+        Date afterAnHour
+        use( TimeCategory ) {
+            afterAnHour = rightNow + 1.hour
+        }
+
+        Reservation reservation = reservationManager.createReservation(booking, rightNow, afterAnHour, availableRooms.get(0), conferenceRoom)
 
         then:
-        reservation.getStartDay() == today
-        reservation.getEndDay()  == tomorrow
+        reservation.getStartDay() == rightNow
+        reservation.getEndDay() == afterAnHour
         reservation.getRoom() == conferenceRoom1
         reservation.getRoom().getRoomType() == conferenceRoom
         booking.getReservations().size() == 1

@@ -8,6 +8,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import java.util.Date;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Conference Room</b></em>'.
@@ -82,7 +84,13 @@ public class ConferenceRoomImpl extends RoomTypeImpl implements ConferenceRoom {
 			eNotify(new ENotificationImpl(this, Notification.SET, HotelCorePackage.CONFERENCE_ROOM__MAX_NBR_OF_PEOPLE, oldMaxNbrOfPeople, maxNbrOfPeople));
 	}
 
-	/**
+    @Override
+    public double getCostForStay(Date startOfStay, Date endOfStay) {
+        int hours = (int) ((endOfStay.getTime() - startOfStay.getTime()) / (60*60*1000));
+        return getCostPerNight() * hours;
+    }
+
+    /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

@@ -117,16 +117,16 @@
             <artifactId>objenesis</artifactId>
             <version>2.1</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>se.chalmers.cse.mdsd1415.banking</groupId>-->
-            <!--<artifactId>administratorRequires</artifactId>-->
-            <!--<version>1.0</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>se.chalmers.cse.mdsd1415.banking</groupId>-->
-            <!--<artifactId>customerRequires</artifactId>-->
-            <!--<version>1.0</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>se.chalmers.cse.mdsd1415.banking</groupId>
+            <artifactId>administratorRequires</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>se.chalmers.cse.mdsd1415.banking</groupId>
+            <artifactId>customerRequires</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     <repositories>
         <!-- Only required if a snapshot version of Spock is used -->

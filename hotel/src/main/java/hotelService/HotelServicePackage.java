@@ -85,118 +85,6 @@ public interface HotelServicePackage extends EPackage {
 	int SYSTEM_USER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link hotelService.ExternalUser <em>External User</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see hotelService.ExternalUser
-	 * @see hotelService.impl.HotelServicePackageImpl#getExternalUser()
-	 * @generated
-	 */
-	int EXTERNAL_USER = 1;
-
-	/**
-	 * The number of structural features of the '<em>External User</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTERNAL_USER_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>External User</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTERNAL_USER_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link hotelService.HotelStaff <em>Hotel Staff</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see hotelService.HotelStaff
-	 * @see hotelService.impl.HotelServicePackageImpl#getHotelStaff()
-	 * @generated
-	 */
-	int HOTEL_STAFF = 2;
-
-	/**
-	 * The number of structural features of the '<em>Hotel Staff</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_STAFF_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Hotel Staff</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_STAFF_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link hotelService.HotelReceptionist <em>Hotel Receptionist</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see hotelService.HotelReceptionist
-	 * @see hotelService.impl.HotelServicePackageImpl#getHotelReceptionist()
-	 * @generated
-	 */
-	int HOTEL_RECEPTIONIST = 3;
-
-	/**
-	 * The number of structural features of the '<em>Hotel Receptionist</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_RECEPTIONIST_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Hotel Receptionist</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_RECEPTIONIST_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link hotelService.HotelManager <em>Hotel Manager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see hotelService.HotelManager
-	 * @see hotelService.impl.HotelServicePackageImpl#getHotelManager()
-	 * @generated
-	 */
-	int HOTEL_MANAGER = 4;
-
-	/**
-	 * The number of structural features of the '<em>Hotel Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_MANAGER_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Hotel Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_MANAGER_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link hotelService.IRoomManager <em>IRoom Manager</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -204,7 +92,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @see hotelService.impl.HotelServicePackageImpl#getIRoomManager()
 	 * @generated
 	 */
-	int IROOM_MANAGER = 5;
+	int IROOM_MANAGER = 1;
 
 	/**
 	 * The number of structural features of the '<em>IRoom Manager</em>' class.
@@ -259,7 +147,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @see hotelService.impl.HotelServicePackageImpl#getRoomManager()
 	 * @generated
 	 */
-	int ROOM_MANAGER = 6;
+	int ROOM_MANAGER = 2;
 
 	/**
 	 * The feature id for the '<em><b>All Rooms</b></em>' reference list.
@@ -323,7 +211,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @see hotelService.impl.HotelServicePackageImpl#getIRoomTypeManager()
 	 * @generated
 	 */
-	int IROOM_TYPE_MANAGER = 7;
+	int IROOM_TYPE_MANAGER = 3;
 
 	/**
 	 * The number of structural features of the '<em>IRoom Type Manager</em>' class.
@@ -378,7 +266,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @see hotelService.impl.HotelServicePackageImpl#getRoomTypeManager()
 	 * @generated
 	 */
-	int ROOM_TYPE_MANAGER = 8;
+	int ROOM_TYPE_MANAGER = 4;
 
 	/**
 	 * The feature id for the '<em><b>All Room Types</b></em>' reference list.
@@ -442,7 +330,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @see hotelService.impl.HotelServicePackageImpl#getIReservationManager()
 	 * @generated
 	 */
-	int IRESERVATION_MANAGER = 9;
+	int IRESERVATION_MANAGER = 5;
 
 	/**
 	 * The number of structural features of the '<em>IReservation Manager</em>' class.
@@ -515,7 +403,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @see hotelService.impl.HotelServicePackageImpl#getReservationManager()
 	 * @generated
 	 */
-	int RESERVATION_MANAGER = 10;
+	int RESERVATION_MANAGER = 6;
 
 	/**
 	 * The feature id for the '<em><b>All Reservations</b></em>' reference list.
@@ -597,7 +485,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @see hotelService.impl.HotelServicePackageImpl#getIBookingManager()
 	 * @generated
 	 */
-	int IBOOKING_MANAGER = 11;
+	int IBOOKING_MANAGER = 7;
 
 	/**
 	 * The number of structural features of the '<em>IBooking Manager</em>' class.
@@ -706,7 +594,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @see hotelService.impl.HotelServicePackageImpl#getBookingManager()
 	 * @generated
 	 */
-	int BOOKING_MANAGER = 12;
+	int BOOKING_MANAGER = 8;
 
 	/**
 	 * The feature id for the '<em><b>All Bookings</b></em>' reference list.
@@ -824,7 +712,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @see hotelService.impl.HotelServicePackageImpl#getICustomerManager()
 	 * @generated
 	 */
-	int ICUSTOMER_MANAGER = 13;
+	int ICUSTOMER_MANAGER = 9;
 
 	/**
 	 * The number of structural features of the '<em>ICustomer Manager</em>' class.
@@ -897,7 +785,7 @@ public interface HotelServicePackage extends EPackage {
 	 * @see hotelService.impl.HotelServicePackageImpl#getCustomerManager()
 	 * @generated
 	 */
-	int CUSTOMER_MANAGER = 14;
+	int CUSTOMER_MANAGER = 10;
 
 	/**
 	 * The feature id for the '<em><b>All Customers</b></em>' reference list.
@@ -981,46 +869,6 @@ public interface HotelServicePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSystemUser();
-
-	/**
-	 * Returns the meta object for class '{@link hotelService.ExternalUser <em>External User</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>External User</em>'.
-	 * @see hotelService.ExternalUser
-	 * @generated
-	 */
-	EClass getExternalUser();
-
-	/**
-	 * Returns the meta object for class '{@link hotelService.HotelStaff <em>Hotel Staff</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Hotel Staff</em>'.
-	 * @see hotelService.HotelStaff
-	 * @generated
-	 */
-	EClass getHotelStaff();
-
-	/**
-	 * Returns the meta object for class '{@link hotelService.HotelReceptionist <em>Hotel Receptionist</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Hotel Receptionist</em>'.
-	 * @see hotelService.HotelReceptionist
-	 * @generated
-	 */
-	EClass getHotelReceptionist();
-
-	/**
-	 * Returns the meta object for class '{@link hotelService.HotelManager <em>Hotel Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Hotel Manager</em>'.
-	 * @see hotelService.HotelManager
-	 * @generated
-	 */
-	EClass getHotelManager();
 
 	/**
 	 * Returns the meta object for class '{@link hotelService.IRoomManager <em>IRoom Manager</em>}'.
@@ -1459,46 +1307,6 @@ public interface HotelServicePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SYSTEM_USER = eINSTANCE.getSystemUser();
-
-		/**
-		 * The meta object literal for the '{@link hotelService.ExternalUser <em>External User</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see hotelService.ExternalUser
-		 * @see hotelService.impl.HotelServicePackageImpl#getExternalUser()
-		 * @generated
-		 */
-		EClass EXTERNAL_USER = eINSTANCE.getExternalUser();
-
-		/**
-		 * The meta object literal for the '{@link hotelService.HotelStaff <em>Hotel Staff</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see hotelService.HotelStaff
-		 * @see hotelService.impl.HotelServicePackageImpl#getHotelStaff()
-		 * @generated
-		 */
-		EClass HOTEL_STAFF = eINSTANCE.getHotelStaff();
-
-		/**
-		 * The meta object literal for the '{@link hotelService.HotelReceptionist <em>Hotel Receptionist</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see hotelService.HotelReceptionist
-		 * @see hotelService.impl.HotelServicePackageImpl#getHotelReceptionist()
-		 * @generated
-		 */
-		EClass HOTEL_RECEPTIONIST = eINSTANCE.getHotelReceptionist();
-
-		/**
-		 * The meta object literal for the '{@link hotelService.HotelManager <em>Hotel Manager</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see hotelService.HotelManager
-		 * @see hotelService.impl.HotelServicePackageImpl#getHotelManager()
-		 * @generated
-		 */
-		EClass HOTEL_MANAGER = eINSTANCE.getHotelManager();
 
 		/**
 		 * The meta object literal for the '{@link hotelService.IRoomManager <em>IRoom Manager</em>}' class.

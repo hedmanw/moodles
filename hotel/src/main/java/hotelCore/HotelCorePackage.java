@@ -289,13 +289,22 @@ public interface HotelCorePackage extends EPackage {
 	int ROOM_TYPE_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>Get Cost For Stay</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE___GET_COST_FOR_STAY__DATE_DATE = 0;
+
+	/**
 	 * The number of operations of the '<em>Room Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_OPERATION_COUNT = 0;
+	int ROOM_TYPE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link hotelCore.impl.RoomImpl <em>Room</em>}' class.
@@ -570,6 +579,15 @@ public interface HotelCorePackage extends EPackage {
 	 * @ordered
 	 */
 	int SLEEP_ROOM_FEATURE_COUNT = ROOM_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Cost For Stay</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLEEP_ROOM___GET_COST_FOR_STAY__DATE_DATE = ROOM_TYPE___GET_COST_FOR_STAY__DATE_DATE;
 
 	/**
 	 * The number of operations of the '<em>Sleep Room</em>' class.
@@ -964,6 +982,15 @@ public interface HotelCorePackage extends EPackage {
 	int CONFERENCE_ROOM_FEATURE_COUNT = ROOM_TYPE_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Get Cost For Stay</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFERENCE_ROOM___GET_COST_FOR_STAY__DATE_DATE = ROOM_TYPE___GET_COST_FOR_STAY__DATE_DATE;
+
+	/**
 	 * The number of operations of the '<em>Conference Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1121,6 +1148,16 @@ public interface HotelCorePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRoomType_Name();
+
+	/**
+	 * Returns the meta object for the '{@link hotelCore.RoomType#getCostForStay(java.util.Date, java.util.Date) <em>Get Cost For Stay</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Cost For Stay</em>' operation.
+	 * @see hotelCore.RoomType#getCostForStay(java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	EOperation getRoomType__GetCostForStay__Date_Date();
 
 	/**
 	 * Returns the meta object for class '{@link hotelCore.Room <em>Room</em>}'.
@@ -1822,6 +1859,14 @@ public interface HotelCorePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROOM_TYPE__NAME = eINSTANCE.getRoomType_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Cost For Stay</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_TYPE___GET_COST_FOR_STAY__DATE_DATE = eINSTANCE.getRoomType__GetCostForStay__Date_Date();
 
 		/**
 		 * The meta object literal for the '{@link hotelCore.impl.RoomImpl <em>Room</em>}' class.

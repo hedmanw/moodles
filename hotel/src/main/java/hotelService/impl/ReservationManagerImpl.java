@@ -3,6 +3,10 @@
 package hotelService.impl;
 
 import datastructs.EArrayList;
+import hotelCore.Booking;
+import hotelCore.Reservation;
+import hotelCore.Room;
+import hotelCore.RoomType;
 import hotelCore.*;
 import hotelService.BookingManager;
 import hotelService.HotelServicePackage;
@@ -101,9 +105,8 @@ public class ReservationManagerImpl extends MinimalEObjectImpl.Container impleme
 		reservation.setEndDay(toDate);
 		reservation.setRoom(room);
 		booking.getReservations().add(reservation);
-
-		int nights = (int) ((toDate.getTime() - fromDate.getTime()) / (24*60*60*1000));
-		booking.getBill().addToBill(costCategory.getCostPerNight() * nights);
+        double cost = costCategory.getCostForStay(fromDate, toDate);
+		booking.getBill().addToBill(cost);
 		return reservation;
 	}
 

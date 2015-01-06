@@ -5,8 +5,11 @@ package hotelCore.impl;
 import hotelCore.HotelCorePackage;
 import hotelCore.RoomType;
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -131,6 +134,16 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public double getCostForStay(Date startOfStay, Date endOfStay) {
+        int nights = (int) ((endOfStay.getTime() - startOfStay.getTime()) / (24*60*60*1000));
+        return getCostPerNight() * nights;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -194,6 +207,20 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case HotelCorePackage.ROOM_TYPE___GET_COST_FOR_STAY__DATE_DATE:
+				return getCostForStay((Date)arguments.get(0), (Date)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

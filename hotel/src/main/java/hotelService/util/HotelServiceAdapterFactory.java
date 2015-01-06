@@ -72,22 +72,6 @@ public class HotelServiceAdapterFactory extends AdapterFactoryImpl {
 				return createSystemUserAdapter();
 			}
 			@Override
-			public Adapter caseExternalUser(ExternalUser object) {
-				return createExternalUserAdapter();
-			}
-			@Override
-			public Adapter caseHotelStaff(HotelStaff object) {
-				return createHotelStaffAdapter();
-			}
-			@Override
-			public Adapter caseHotelReceptionist(HotelReceptionist object) {
-				return createHotelReceptionistAdapter();
-			}
-			@Override
-			public Adapter caseHotelManager(HotelManager object) {
-				return createHotelManagerAdapter();
-			}
-			@Override
 			public Adapter caseIRoomManager(IRoomManager object) {
 				return createIRoomManagerAdapter();
 			}
@@ -158,62 +142,6 @@ public class HotelServiceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSystemUserAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link hotelService.ExternalUser <em>External User</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see hotelService.ExternalUser
-	 * @generated
-	 */
-	public Adapter createExternalUserAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link hotelService.HotelStaff <em>Hotel Staff</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see hotelService.HotelStaff
-	 * @generated
-	 */
-	public Adapter createHotelStaffAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link hotelService.HotelReceptionist <em>Hotel Receptionist</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see hotelService.HotelReceptionist
-	 * @generated
-	 */
-	public Adapter createHotelReceptionistAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link hotelService.HotelManager <em>Hotel Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see hotelService.HotelManager
-	 * @generated
-	 */
-	public Adapter createHotelManagerAdapter() {
 		return null;
 	}
 

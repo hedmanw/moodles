@@ -58,34 +58,6 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass externalUserEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass hotelStaffEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass hotelReceptionistEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass hotelManagerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass iRoomManagerEClass = null;
 
 	/**
@@ -233,42 +205,6 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 	 */
 	public EClass getSystemUser() {
 		return systemUserEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getExternalUser() {
-		return externalUserEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getHotelStaff() {
-		return hotelStaffEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getHotelReceptionist() {
-		return hotelReceptionistEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getHotelManager() {
-		return hotelManagerEClass;
 	}
 
 	/**
@@ -661,14 +597,6 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 		// Create classes and their features
 		systemUserEClass = createEClass(SYSTEM_USER);
 
-		externalUserEClass = createEClass(EXTERNAL_USER);
-
-		hotelStaffEClass = createEClass(HOTEL_STAFF);
-
-		hotelReceptionistEClass = createEClass(HOTEL_RECEPTIONIST);
-
-		hotelManagerEClass = createEClass(HOTEL_MANAGER);
-
 		iRoomManagerEClass = createEClass(IROOM_MANAGER);
 		createEOperation(iRoomManagerEClass, IROOM_MANAGER___GET_AVAILABLE_ROOMS__DATE_DATE_ELIST);
 		createEOperation(iRoomManagerEClass, IROOM_MANAGER___GET_RESERVED_ROOMS__DATE_DATE);
@@ -760,14 +688,6 @@ public class HotelServicePackageImpl extends EPackageImpl implements HotelServic
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(systemUserEClass, SystemUser.class, "SystemUser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(externalUserEClass, ExternalUser.class, "ExternalUser", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(hotelStaffEClass, HotelStaff.class, "HotelStaff", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(hotelReceptionistEClass, HotelReceptionist.class, "HotelReceptionist", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(hotelManagerEClass, HotelManager.class, "HotelManager", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iRoomManagerEClass, IRoomManager.class, "IRoomManager", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

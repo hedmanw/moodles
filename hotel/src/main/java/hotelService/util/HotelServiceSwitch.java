@@ -72,30 +72,6 @@ public class HotelServiceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case HotelServicePackage.EXTERNAL_USER: {
-				ExternalUser externalUser = (ExternalUser)theEObject;
-				T result = caseExternalUser(externalUser);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelServicePackage.HOTEL_STAFF: {
-				HotelStaff hotelStaff = (HotelStaff)theEObject;
-				T result = caseHotelStaff(hotelStaff);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelServicePackage.HOTEL_RECEPTIONIST: {
-				HotelReceptionist hotelReceptionist = (HotelReceptionist)theEObject;
-				T result = caseHotelReceptionist(hotelReceptionist);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelServicePackage.HOTEL_MANAGER: {
-				HotelManager hotelManager = (HotelManager)theEObject;
-				T result = caseHotelManager(hotelManager);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case HotelServicePackage.IROOM_MANAGER: {
 				IRoomManager iRoomManager = (IRoomManager)theEObject;
 				T result = caseIRoomManager(iRoomManager);
@@ -177,66 +153,6 @@ public class HotelServiceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSystemUser(SystemUser object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>External User</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>External User</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseExternalUser(ExternalUser object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Hotel Staff</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Hotel Staff</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseHotelStaff(HotelStaff object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Hotel Receptionist</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Hotel Receptionist</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseHotelReceptionist(HotelReceptionist object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Hotel Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Hotel Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseHotelManager(HotelManager object) {
 		return null;
 	}
 
