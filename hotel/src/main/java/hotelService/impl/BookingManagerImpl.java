@@ -2,7 +2,6 @@
  */
 package hotelService.impl;
 
-import bankingService.CustomerProvides;
 import datastructs.EArrayList;
 import hotelCore.Booking;
 import hotelCore.Customer;
@@ -102,12 +101,16 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated NOT
      */
     public void deleteBooking(Booking booking) {
-        // TODO: implement this method
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        if(getBookingByBookingNumber(booking.getBookingUUID()) != null){
+            int index = getAllBookings().indexOf(booking);
+            getAllBookings().remove(index);
+        }else{
+            throw new NullPointerException("The booking does not exist");
+        }
+
     }
 
     /**
@@ -220,16 +223,10 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 
         customer.setLoyaltyPoints((int) (customer.getLoyaltyPoints() + bill.getGrandTotal()));
 
-        CustomerRequires banking = null;
-        try {
-            banking = CustomerRequires.instance();
-        } catch (SOAPException e) {
-            e.printStackTrace();
-        }
         PaymentDetails pd = customer.getPaymentDetails();
         boolean success = false;
         try {
-            success = banking.makePayment(pd.getCcNumber(), pd.getCcv(), pd.getExpiryMonth(),
+            success = CustomerRequires.instance().makePayment(pd.getCcNumber(), pd.getCcv(), pd.getExpiryMonth(),
                     pd.getExpiryYear(), pd.getFirstName(), pd.getLastName(), bill.getGrandTotal());
         } catch (SOAPException e) {
             e.printStackTrace();

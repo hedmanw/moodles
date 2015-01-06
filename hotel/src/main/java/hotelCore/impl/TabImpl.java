@@ -69,14 +69,6 @@ public class TabImpl extends MinimalEObjectImpl.Container implements Tab {
 		return tabItems;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void addItemToTab(String item, double cost) {
-		tabItems.put(item, cost);
-	}
 
 	/**
 	 * <!-- begin-user-doc -->

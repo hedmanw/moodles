@@ -35,27 +35,32 @@ class CheckInTest extends HotelBaseSpecification{
         EList<Integer> keyCardIDs = new EArrayList<>()
         keyCardIDs.addAll([1,2])
         keyCards.assignCardsToReservation(reservation, 2) >> keyCardIDs
+        reservation.getRoom().setHousekept(true)
 
-        when:
+        when: "a reservation is found by customer and checked in"
         def customers = customerManager.getCustomersByName("Mona")
         def theBooking = bookingManager.getBookingsByCustomer(customers.get(0)).get(0)
         def theReservation = theBooking.getReservations().get(0)
+        theReservation.getRoom().isHousekept()
+        reservationManager.getCurrentReservationByRoomNumber(theReservation.getRoom().getRoomNumber()) == null
         reservationManager.checkInReservation(theReservation, "Kim", 2, 2)
 
 
-        then:
+        then: "...the reservation is checked in with values"
         reservation == theReservation
         reservation.getResponsible() == "Kim"
         reservation.getNumberOfGuests() == 2
         ((SleepRoom)theReservation.getRoom().getRoomType()).getNbrOfBeds() >= theReservation.getNumberOfGuests()
+        reservation.getKeyCards().get(0).getKeyCardID() == keyCardIDs.get(0)
+        reservation.getKeyCards().get(1).getKeyCardID() == keyCardIDs.get(1)
         reservation.getCheckedIn() != 0
     }
 
     def "find by bookingNumber"() {
-        when:
+        when: "a booking is found by a booking number"
         def theBooking = bookingManager.getBookingByBookingNumber(booking.getBookingUUID())
 
-        then:
+        then: "...the correct booking is found"
         theBooking == booking
     }
 
@@ -64,18 +69,18 @@ class CheckInTest extends HotelBaseSpecification{
         def customer2 = customerManager.createCustomer("125", "Mona")
         booking.setCustomer(customer2)
 
-        expect:
+        expect: "customers to be more than one"
         customerManager.getCustomersByName("Mona").size() == 2
     }
 
     def "no customer found"() {
-        expect:
+        expect: "no customers to be found"
         customerManager.getCustomersByName("Mon").isEmpty()
 
     }
 
     def "no booking number found"() {
-        expect:
+        expect: "no booking number to be found"
         bookingManager.getBookingByBookingNumber("hihi") == null
 
     }
@@ -84,17 +89,38 @@ class CheckInTest extends HotelBaseSpecification{
         setup:
         def customer = customerManager.createCustomer("124", "Cecilia")
 
-        expect:
+        expect: "the customer to not have any bookings"
         bookingManager.getBookingsByCustomer(customer).isEmpty()
     }
 
+    def "room not available"() {
+        setup:
+        def oldBooking = bookingManager.createBooking()
+        def oldReservation = reservationManager.createReservation(oldBooking, today-2, today-1, room, roomType)
+        def customer = customerManager.createCustomer("1234", "Rutger")
+        oldBooking.setCustomer(customer)
+        bookingManager.getAllBookings().add(oldBooking)
+        oldReservation.setCheckedIn(today-2)
+        
+        when: "a room is occupied by a previous reservation and not housekept"
+        def customers = customerManager.getCustomersByName("Mona")
+        def theBooking = bookingManager.getBookingsByCustomer(customers.get(0)).get(0)
+        def theReservation = theBooking.getReservations().get(0)
+        def housekept = theReservation.getRoom().isHousekept()
+        def currentReservation = reservationManager.getCurrentReservationByRoomNumber(theReservation.getRoom().getRoomNumber())
+        
+        then: "...the room is not available for check in"
+        !housekept
+        currentReservation != null
+    }
+    
     def "more guests than beds"() {
         setup:
         EList<Integer> keyCardIDs = new EArrayList<>()
         keyCardIDs.addAll([1,2])
         keyCards.assignCardsToReservation(reservation, 2) >> keyCardIDs
 
-        expect:
+        expect: "the reservation not to be checked in"
         !reservationManager.checkInReservation(reservation, "My", 3, 2)
     }
 

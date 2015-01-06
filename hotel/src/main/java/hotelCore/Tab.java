@@ -47,4 +47,5 @@ public interface Tab extends EObject {
 	 */
 	double getTotalCost();
 
+
 } // Tab

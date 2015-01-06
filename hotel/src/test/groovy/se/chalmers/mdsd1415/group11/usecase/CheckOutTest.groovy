@@ -1,9 +1,6 @@
 package se.chalmers.mdsd1415.group11.usecase
 
-
-import bankingService.CustomerProvides
 import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires
-import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
 /**
