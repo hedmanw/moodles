@@ -42,6 +42,14 @@ class CheckOutTest extends HotelBaseSpecification {
         bill.isPaid()
     }
 
+    def "no use case exists"() {
+        when:
+        def reservation = reservationManager.getCurrentReservationByRoomNumber(345876)
+
+        then:
+        reservation == null
+    }
+
     def "check out is too late"() {
         setup:
         def reservation = reservationManager.getCurrentReservationByRoomNumber(501)
