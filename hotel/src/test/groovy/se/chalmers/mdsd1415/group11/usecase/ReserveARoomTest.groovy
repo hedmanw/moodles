@@ -61,6 +61,7 @@ class ReserveARoomTest extends HotelBaseSpecification {
 
         expect:
         roomManager.getAvailableRooms(today, tomorrow, searchCriteria).isEmpty()
+
     }
 
     def "conference room"() {
