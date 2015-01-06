@@ -1,12 +1,9 @@
 package se.chalmers.mdsd1415.group11.usecase
 
-import bankingService.BankingSingleton
+
 import bankingService.CustomerProvides
-import datastructs.EArrayList
 import hotelCore.Customer
 import hotelCore.Room
-import hotelCore.RoomType
-import org.eclipse.emf.common.util.EList
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
 
 /**

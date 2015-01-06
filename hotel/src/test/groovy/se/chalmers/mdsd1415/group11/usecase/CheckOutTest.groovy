@@ -1,6 +1,6 @@
 package se.chalmers.mdsd1415.group11.usecase
 
-import bankingService.BankingSingleton
+
 import bankingService.CustomerProvides
 import hotelCore.impl.TabImpl
 import se.chalmers.mdsd1415.group11.HotelBaseSpecification
