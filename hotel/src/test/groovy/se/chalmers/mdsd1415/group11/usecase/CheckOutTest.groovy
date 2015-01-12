@@ -15,7 +15,7 @@ class CheckOutTest extends HotelBaseSpecification {
         def customer = customerManager.createCustomer("123456789", "herp derp")
         AdministratorRequires.instance().addCreditCard("1187123498762345", "345", 12, 15, "herp", "derp")
         AdministratorRequires.instance().makeDeposit("1187123498762345", "345", 12, 15, "herp", "derp", 100000000)
-        customerManager.setPaymentDetailsForCustomer(customer, "herp", "derp", "0987123498762345", "345", 12, 15)
+        customerManager.setPaymentDetailsForCustomer(customer, "herp", "derp", "1187123498762345", "345", 12, 15)
         booking.setCustomer(customer)
         def reservation = reservationManager.createReservation(booking, today-3, today+1, room, roomType)
         bookingManager.allBookings.add(booking)
